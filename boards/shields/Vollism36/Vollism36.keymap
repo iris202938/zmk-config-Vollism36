@@ -108,11 +108,6 @@
             display-name = "Toggle Layer Off";
             toggle-mode = "off";
         };
-        usb_l2: usb_l2 { // USB接続を選択し、レイヤー2を有効化
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&to WINDOWS &out OUT_USB &to QWERTY>;
-        };
     };
 
     macros {
@@ -170,6 +165,12 @@
                 <&macro_release &kp MACRO_PLACEHOLDER>,
                 <&macro_tap &sl MOUSE>;
         };
+        usb_l2: usb_l2 { // USB接続を選択し、レイヤー2を有効化
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to WINDOWS &out OUT_USB &to QWERTY>;
+        };
+
         
     };
 
