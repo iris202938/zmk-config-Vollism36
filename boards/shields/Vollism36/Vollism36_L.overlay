@@ -71,6 +71,7 @@
         status = "okay";
         compatible = "pixart,pmw3610";
         reg = <0>;
+        evt-type = <INPUT_EV_REL>; // あるいは <INPUT_EV_ABS>
         spi-max-frequency = <2000000>;
         irq-gpios = <&xiao_d 0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
         arrows {
@@ -80,7 +81,7 @@
                     <&kp LEFT_ARROW>,
                     <&kp UP_ARROW>,
                     <&kp DOWN_ARROW>;
-                evt-type = <INPUT_EV_REL>; // あるいは <INPUT_EV_ABS>
+
                 tick = <10>;
                 wait-ms = <0>;
                 tap-ms = <10>;
