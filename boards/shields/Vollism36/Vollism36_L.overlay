@@ -2,6 +2,7 @@
 #include <input/processors.dtsi>
 #include <dt-bindings/zmk/input_transform.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/input/input-event-codes.h>
 
 #define WINDOWS 0
 #define LINUX 1
@@ -74,6 +75,10 @@
         evt-type = <INPUT_EV_REL>; // あるいは <INPUT_EV_ABS>
         spi-max-frequency = <2000000>;
         irq-gpios = <&xiao_d 0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        cpi = <600>;
+        evt-type = <INPUT_EV_REL>;
+        x-input-code = <INPUT_REL_X>;
+        y-input-code = <INPUT_REL_Y>;
         arrows {
                 layers = <SYMBOL>;
                 bindings =
