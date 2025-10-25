@@ -80,7 +80,7 @@
                     <&kp LEFT_ARROW>,
                     <&kp UP_ARROW>,
                     <&kp DOWN_ARROW>;
-        
+                evt-type = <INPUT_EV_REL>; // あるいは <INPUT_EV_ABS>
                 tick = <10>;
                 wait-ms = <0>;
                 tap-ms = <10>;
