@@ -64,26 +64,26 @@
             timeout-ms = <80>;
         };
 
-        // linux_on {
-        //     bindings = <&tog_on LINUX>;
-        //     key-positions = <26 29>;
-        //     timeout-ms = <80>;
-        //     layers = <WINDOWS LINUX QWERTY>;
-        // };
+        linux_on {
+            bindings = <&tog_on LINUX>;
+            key-positions = <26 29>;
+            timeout-ms = <80>;
+            layers = <WINDOWS LINUX QWERTY>;
+        };
 
-        // linux_off {
-        //     bindings = <&tog_off LINUX>;
-        //     key-positions = <20 23>;
-        //     timeout-ms = <80>;
-        //     layers = <WINDOWS LINUX QWERTY>;
-        // };
+        linux_off {
+            bindings = <&tog_off LINUX>;
+            key-positions = <20 23>;
+            timeout-ms = <80>;
+            layers = <WINDOWS LINUX QWERTY>;
+        };
 
-        // qwerty_on_off {
-        //     bindings = <&tog QWERTY>;
-        //     key-positions = <4 5>;
-        //     timeout-ms = <80>;
-        //     layers = <WINDOWS LINUX QWERTY>;
-        // };
+        qwerty_on_off {
+            bindings = <&tog QWERTY>;
+            key-positions = <4 5>;
+            timeout-ms = <80>;
+            layers = <WINDOWS LINUX QWERTY>;
+        };
 
         system_on_off {
             bindings = <&mo SYSTEM>;
@@ -93,35 +93,35 @@
     };
 
     behaviors {
-        // com_excl: comma_exclamation {
-        //     compatible = "zmk,behavior-mod-morph";
-        //     #binding-cells = <0>;
-        //     bindings = <&kp COMMA>, <&kp EXCL>;
-        //     mods = <(MOD_LSFT)>;
-        // };
-        // dot_qmark: dot_question {
-        //     compatible = "zmk,behavior-mod-morph";
-        //     #binding-cells = <0>;
-        //     bindings = <&kp DOT>, <&kp QMARK>;
-        //     mods = <(MOD_LSFT)>;
-        // };            
-        // tog_on: toggle_layer_on_only {
-        //     compatible = "zmk,behavior-toggle-layer";
-        //     #binding-cells = <1>;
-        //     display-name = "Toggle Layer On";
-        //     toggle-mode = "on";
-        // };
-        // tog_off: toggle_layer_off_only {
-        //     compatible = "zmk,behavior-toggle-layer";
-        //     #binding-cells = <1>;
-        //     display-name = "Toggle Layer Off";
-        //     toggle-mode = "off";
-        // };
-        // usb_l2: usb_l2 { // USB接続を選択し、レイヤー2を有効化
-        //     compatible = "zmk,behavior-macro";
-        //     #binding-cells = <0>;
-        //     bindings = <&to 0 &out OUT_USB &to 2>;
-        // };
+        com_excl: comma_exclamation {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp COMMA>, <&kp EXCL>;
+            mods = <(MOD_LSFT)>;
+        };
+        dot_qmark: dot_question {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp DOT>, <&kp QMARK>;
+            mods = <(MOD_LSFT)>;
+        };            
+        tog_on: toggle_layer_on_only {
+            compatible = "zmk,behavior-toggle-layer";
+            #binding-cells = <1>;
+            display-name = "Toggle Layer On";
+            toggle-mode = "on";
+        };
+        tog_off: toggle_layer_off_only {
+            compatible = "zmk,behavior-toggle-layer";
+            #binding-cells = <1>;
+            display-name = "Toggle Layer Off";
+            toggle-mode = "off";
+        };
+        usb_l2: usb_l2 { // USB接続を選択し、レイヤー2を有効化
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to 0 &out OUT_USB &to 2>;
+        };
     };
 
     macros {
