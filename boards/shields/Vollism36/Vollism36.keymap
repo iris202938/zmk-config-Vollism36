@@ -199,16 +199,16 @@
             &kp Q    &kp L    &kp U    &com_excl           &dot_qmark                                             &kp F             &kp W              &kp R    &kp Y    &kp P
             &kp E    &kp I    &kp A    &kp O                                                     &kp SEMICOLON    &kp K             &kp T              &kp N    &kp S    &kp H
             &kp Z    &kp X    &kp C    &kp V                                                     &kp SLASH        &kp G             &kp D              &kp M    &kp J    &kp B
-                                       &mt LSHIFT SPACE    &lt ARROW_NUM F15    &qm LCTRL        &qm LALT         &lt SYMBOL F14    &qmt LGUI ENTER
+                                       &mt LSHIFT SPACE    &kp SPACE       &lt ARROW_NUM LANG2   &lt SYMBOL LANG1 &kp INT4          &qmt LGUI ENTER
             >;
         };
 
         QWERTY {
             bindings = <
-            &kp Q           &kp W    &kp E    &kp R               &kp T                                               &kp Y               &kp U              &kp I        &kp O      &kp P
-            &kp A           &kp S    &kp D    &kp F                                                       &kp G       &kp H               &kp J              &kp K        &kp L      &kp SEMICOLON
-            &mt LSHIFT Z    &kp X    &kp C    &kp V                                                       &kp B       &kp N               &kp M              &kp COMMA    &kp DOT    &kp SLASH
-                                              &mt LSHIFT SPACE    &lt ARROW_NUM LANG2    &qm LCTRL        &qm LALT    &lt SYMBOL LANG1    &qmt LGUI ENTER
+            &kp Q           &kp W    &kp E    &kp R               &kp T                                                     &kp Y           &kp U              &kp I        &kp O      &kp P
+            &kp A           &kp S    &kp D    &kp F                                                       &kp G             &kp H           &kp J              &kp K        &kp L      &kp SEMICOLON
+            &mt LSHIFT Z    &kp X    &kp C    &kp V                                                       &kp B             &kp N           &kp M              &kp COMMA    &kp DOT    &kp SLASH
+                                              &mt LSHIFT SPACE    &kp SPACE       &lt ARROW_NUM LANG2     &lt SYMBOL LANG1  &kp INT4        &qmt LGUI ENTER
             >;
         };
 
@@ -217,44 +217,44 @@
             &kp PG_UP           &kp HOME     &kp UP       &kp END             &kp LC(Y)                                                  &kp EQUAL           &kp N7             &kp N8    &kp N9    &kp COMMA
             &kp PG_DN           &kp LEFT     &kp DOWN     &kp RIGHT                                                   &kp PLUS           &kp BSPC            &kp N4             &kp N5    &kp N6    &kp DOT
             &mt LSHIFT LC(Z)    &kp LC(X)    &kp LC(C)    &kp LC(V)                                                   &kp MINUS          &kp DEL             &kp N1             &kp N2    &kp N3    &kp N0
-                                                          &mt LSHIFT SPACE    &lt ARROW_NUM LANG2    &qm LCTRL        &qmt LALT ASTRK    &lt SYMBOL SLASH    &qmt LGUI ENTER
+                                                          &mt LSHIFT SPACE    &qm LCTRL     &lt ARROW_NUM LANG2       &lt SYMBOL SLASH   &qmt LALT ASTRK     &qmt LGUI ENTER
             >;
         };
 
         SYMBOL {
             bindings = <
-            &kp GRAVE    &kp AT       &kp HASH     &kp DLLR            &kp PRCNT                                            &kp CARET           &kp AMPS           &kp ASTRK    &kp LPAR    &kp RPAR
-            &kp TILDE    &kp SLASH    &kp UNDER    &kp MINUS                                                   &kp EQUAL    &kp BSPC            &kp SEMI           &kp COLON    &kp LBKT    &kp RBKT
-            &kp PIPE     &kp BSLH     &kp LT       &kp GT                                                      &kp K_APP    &kp DEL             &kp SQT            &kp DQT      &kp LBRC    &kp RBRC
-                                                   &mt LSHIFT SPACE    &lt ARROW_NUM LANG2    &qm LCTRL        &qm LALT     &lt SYMBOL LANG1    &qmt LGUI ENTER
+            &kp GRAVE    &kp AT       &kp HASH     &kp DLLR            &kp PRCNT                                                    &kp CARET   &kp AMPS           &kp ASTRK    &kp LPAR    &kp RPAR
+            &kp TILDE    &kp SLASH    &kp UNDER    &kp MINUS                                                   &kp EQUAL            &kp BSPC    &kp SEMI           &kp COLON    &kp LBKT    &kp RBKT
+            &kp PIPE     &kp BSLH     &kp LT       &kp GT                                                      &kp K_APP            &kp DEL     &kp SQT            &kp DQT      &kp LBRC    &kp RBRC
+                                                   &mt LSHIFT SPACE    &qm LCTRL    &lt ARROW_NUM LANG2        &lt SYMBOL LANG1     &qm LALT    &qmt LGUI ENTER
             >;
         };
 
         FUNCTION {
             bindings = <
-            &kp LC(PG_UP)    &kp LC(HOME)    &kp LC(UP)      &kp LC(END)         &kp PAUSE_BREAK                                         &kp C_MUTE          &kp F7             &kp F8    &kp F9    &kp F12
-            &kp LC(PG_DN)    &kp LC(LEFT)    &kp LC(DOWN)    &kp LC(RIGHT)                                               &kp C_VOL_UP    &kp LC(BSPC)        &kp F4             &kp F5    &kp F6    &kp F11
-            &kp LSHIFT       &kp SLCK        &kp PSCRN       &kp INS                                                     &kp C_VOL_DN    &kp LC(DEL)         &kp F1             &kp F2    &kp F3    &kp F10
-                                                             &mt LSHIFT SPACE    &lt ARROW_NUM LANG2    &qm LCTRL        &qm LALT        &lt SYMBOL LANG1    &qmt LGUI ENTER
+            &kp LC(PG_UP)    &kp LC(HOME)    &kp LC(UP)      &kp LC(END)         &kp PAUSE_BREAK                                                    &kp C_MUTE    &kp F7             &kp F8    &kp F9    &kp F12
+            &kp LC(PG_DN)    &kp LC(LEFT)    &kp LC(DOWN)    &kp LC(RIGHT)                                                    &kp C_VOL_UP          &kp LC(BSPC)  &kp F4             &kp F5    &kp F6    &kp F11
+            &kp LSHIFT       &kp SLCK        &kp PSCRN       &kp INS                                                          &kp C_VOL_DN          &kp LC(DEL)   &kp F1             &kp F2    &kp F3    &kp F10
+                                                             &mt LSHIFT SPACE    &qm LCTRL           &lt ARROW_NUM LANG2      &lt SYMBOL LANG1      &qm LALT      &qmt LGUI ENTER
             >;
 
         };
 
         MOUSE {
             bindings = <
-            &kp_aml LC(W)        &kp_aml LC(PG_UP)    &kp_aml LC(PG_DN)   &kp_aml LC(T)        &kp_aml LC(R)                    &trans            &trans             &trans    &trans    &trans
-            &kp_aml LS(LC(T))    &mkp_aml MB3         &mkp_aml MB1        &mkp_aml MB2                              &trans      &trans            &trans             &trans    &trans    &trans
-            &trans               &trans               &kp_aml LA(LEFT)    &kp_aml LA(RIGHT)                         &trans      &trans            &trans             &trans    &trans    &trans
-                                                      &mt LSHIFT SPACE    &mo ARROW_NUM        &qm LCTRL            &qm LALT    &lt SYMBOL LANG1    &qmt LGUI ENTER
+            &kp_aml LC(W)        &kp_aml LC(PG_UP)    &kp_aml LC(PG_DN)   &kp_aml LC(T)        &kp_aml LC(R)                            &trans      &trans             &trans    &trans    &trans
+            &kp_aml LS(LC(T))    &mkp_aml MB3         &mkp_aml MB1        &mkp_aml MB2                              &trans              &trans      &trans             &trans    &trans    &trans
+            &trans               &trans               &kp_aml LA(LEFT)    &kp_aml LA(RIGHT)                         &trans              &trans      &trans             &trans    &trans    &trans
+                                                      &mt LSHIFT SPACE    &qm LCTRL            &mo ARROW_NUM        &lt SYMBOL LANG1    &qm LALT    &qmt LGUI ENTER
             >;
         };
 
         SYSTEM {
             bindings = <
-            &trans    &trans    &trans    &trans              &trans                                                 &bt BT_SEL 0           &bt BT_SEL 1       &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4
-            &trans    &out OUT_USB &trans    &trans                                                      &bootloader    &trans                 &ind_bat           &ind_con        &trans          &trans
-            &trans    &trans    &trans    &trans                                                      &trans         &trans                 &trans             &trans          &bt BT_CLR      &bt BT_CLR_ALL
-                                          &mt LSHIFT SPACE    &lt ARROW_NUM LANG2    &qm LCTRL        &qm LALT       &lt SYMBOL LANG1       &qmt LGUI ENTER
+            &trans    &trans        &trans    &trans              &trans                                                    &bt BT_SEL 0           &bt BT_SEL 1       &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4
+            &trans    &out OUT_USB  &trans    &trans                                                      &bootloader       &trans                 &ind_bat           &ind_con        &trans          &trans
+            &trans    &trans        &trans    &trans                                                      &trans            &trans                 &trans             &trans          &bt BT_CLR      &bt BT_CLR_ALL
+                                              &mt LSHIFT SPACE    &qm LCTRL    &lt ARROW_NUM LANG2        &lt SYMBOL LANG1  &qmt LGUI ENTER        &qm LALT
             >;
         };
     };
