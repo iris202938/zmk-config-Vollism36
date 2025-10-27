@@ -462,29 +462,37 @@
 
         ADJ {
             bindings = <
-            &kp F11        &kp F12        &kp C_MUTE        &kp C_VOL_DN   &kp C_VOL_UP   &kp CAPS       &kp PSCRN      &kp SLCK         &kp PAUSE_BREAK   &kp LS(UP)
-            &out OUT_BLE   &usb_l2        &bt3_l4           &kp LS(RIGHT)  &kp G          &kp INT5       &file_r        &pr_pg           &nx_pg            &file_f
-            &bt0_l0        &bt1_l4        &bt2_l4           &kp K_APP      &kp LS(LEFT)   &kp LS(DOWN)   &kp LS(HOME)   &kp LS(LC(LEFT)) &kp LS(LC(RIGHT)) &kp LS(END)
-                                                &to QWE           &grave_uc      &trans         &trans         &tilde_uc	  &to WIN
+            &kp F11        &kp F12        &kp C_MUTE        &kp C_VOL_DN   &kp C_VOL_UP                                    &kp CAPS       &kp PSCRN      &kp SLCK         &kp PAUSE_BREAK   &kp LS(UP)
+            &out OUT_BLE   &usb_l2        &bt3_l4           &kp LS(RIGHT)                                   &kp G          &kp INT5       &file_r        &pr_pg           &nx_pg            &file_f
+            &bt0_l0        &bt1_l4        &bt2_l4           &kp K_APP                                       &kp LS(LEFT)   &kp LS(DOWN)   &kp LS(HOME)   &kp LS(LC(LEFT)) &kp LS(LC(RIGHT)) &kp LS(END)
+                                                            &to QWE        &grave_uc        &trans          &trans         &tilde_uc	  &to WIN
             >;
 
         };
 
         MOV {
             bindings = <
-            &kp_aml LC(W)        &kp_aml LC(PG_UP)    &kp_aml LC(PG_DN)   &kp_aml LC(T)        &kp_aml LC(R)                            &trans      &trans             &trans    &trans    &trans
-            &kp_aml LS(LC(T))    &mkp_aml MB3         &mkp_aml MB1        &mkp_aml MB2                              &trans              &trans      &trans             &trans    &trans    &trans
-            &trans               &trans               &kp_aml LA(LEFT)    &kp_aml LA(RIGHT)                         &trans              &trans      &trans             &trans    &trans    &trans
-                                                      &mt LSHIFT SPACE    &qm LCTRL            &mo ARROW_NUM        &lt SYMBOL LANG1    &qm LALT    &qmt LGUI ENTER
+            &kp_aml LS(LC(TAB))   &msc SCRL_LEFT  &mmv MOVE_UP      &msc SCRL_RIGHT   &msc SCRL_UP                                      &kp LC(Y)      &kp HOME         &kp UP        &kp END        &kp PG_UP
+            &mkp_aml MB1          &mmv MOVE_LEFT  &mmv MOVE_DOWN    &mmv MOVE_RIGHT                                    &msc SCRL_DOWN   &lt BLE BSPC   &kp LEFT         &kp DOWN      &kp RIGHT      &kp PG_DN
+            &kp_aml W             &kp LA(LEFT)    &mkp_aml MB3      &kp LA(RIGHT)                                      &kp LC(TAB)      &kp LC(Z)      &kp LC(PG_UP)    &kp LG(LBKT)  &kp LG(RBKT)   &kp LC(PG_DN)
+                                                                    &kp LC(C)         &kp LC(V)        &mkp_aml MB2    &kp ENTER        &mkp MB1       &to_WIN_i5
             >;
         };
 
         NUM {
             bindings = <
-            &trans    &trans        &trans    &trans              &trans                                                    &bt BT_SEL 0           &bt BT_SEL 1       &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4
-            &trans    &out OUT_USB  &trans    &trans                                                      &bootloader       &trans                 &ind_bat           &ind_con        &trans          &trans
-            &trans    &trans        &trans    &trans                                                      &trans            &trans                 &trans             &trans          &bt BT_CLR      &bt BT_CLR_ALL
-                                              &mt LSHIFT SPACE    &qm LCTRL    &lt ARROW_NUM LANG2        &lt SYMBOL LANG1  &qmt LGUI ENTER        &qm LALT
+            &kp PG_UP     &kp HOME        &kp UP        &kp END         &kp CARET         &kp KP_SLASH                                      &kp KP_N7   &kp KP_N8   &kp KP_N9     &kp KP_N0
+            &kp PG_DN     &kp LEFT        &kp DOWN      &kp RIGHT       &lt BLE DEL                                         &kp BSPC        &kp KP_N4   &kp KP_N5   &kp KP_N6     &kp KP_MINUS
+            &alt_left	  &alt_down       &alt_up       &alt_right      &kp EQUAL                                           &kp KP_MULTIPLY &kp KP_N1   &kp KP_N2   &kp KP_N3     &kp KP_PLUS
+                                                        &to_WIN_i5      &pr_pg	    	  &nx_pg          &kp KP_ENTER      &kp UNDER       &kp SPACE
+            >;
+        };
+        BLE {
+            bindings = <
+            &bt BT_DISC 0     &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3   &bt BT_CLR_ALL  &bt BT_CLR_ALL                                &bt BT_DISC 4   &bt BT_DISC 5 &bt BT_DISC 6 &bt BT_DISC 7
+            &kp LC(LG(T))     &kp LC(LG(C))  &kp LC(LG(P))  &kp LC(LG(G))   &trans                                         &trans         &kp LC(LG(E))   &kp LC(LG(A)) &kp LC(LG(L)) &kp LC(LG(X))
+            &bt BT_SEL 0      &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3    &bootloader                                    &bootloader    &bt4_l2     	  &bt BT_SEL 5  &bt BT_SEL 6  &bt BT_SEL 7
+                                                            &trans          &kp LS(LG(F23)) &bt BT_CLR     &bt BT_CLR      &kp LA(LG(G))  &trans
             >;
         };
     };
