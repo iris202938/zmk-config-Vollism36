@@ -4,14 +4,23 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/input/input-event-codes.h>
 
-#define WINDOWS 0
-#define LINUX 1
-#define QWERTY 2
-#define ARROW_NUM 3
-#define SYMBOL 4
-#define FUNCTION 5
-#define MOUSE 6
-#define SYSTEM 7
+// #define WINDOWS 0
+// #define LINUX 1
+// #define QWERTY 2
+// #define ARROW_NUM 3
+// #define SYMBOL 4
+// #define FUNCTION 5
+// #define MOV 6
+// #define SYSTEM 7
+
+#define WIN 0
+#define LWR 1
+#define RSE 2
+#define ADJ 3
+#define MOV 4
+#define NUM 5
+#define BLE 6
+
 
 
 &kscan0 {
@@ -28,12 +37,12 @@
         compatible = "zmk,input-listener";
         device = <&trackball>;
         automouse {
-                layers = <WINDOWS LINUX QWERTY>;
-                input-processors = <&zip_temp_layer MOUSE 600>;
+                layers = <WIN>;
+                input-processors = <&zip_temp_layer MOV 600>;
                 process-next;
         };
         scroll {
-                layers = <ARROW_NUM>;
+                layers = <RSE>;
                 input-processors = <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>
                                  , <&zip_xy_scaler 1 30>
                                  , <&zip_xy_to_scroll_mapper>;
@@ -80,7 +89,7 @@
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
         arrows {
-                layers = <SYMBOL>;
+                layers = <ADJ>;
                 bindings =
                     <&kp RIGHT_ARROW>,
                     <&kp LEFT_ARROW>,

@@ -105,52 +105,76 @@
         //     toggle-mode = "off";
         // };
 
-        // bt0_l0: bt0_l0 { // Bluetoothプロファイル0を選択し、レイヤー0を有効化
-        //     compatible = "zmk,behavior-macro";
-        //     #binding-cells = <0>;
-        //     bindings = <&to QWE &bt BT_SEL 0 &to QWE>;
-        // };
+        bt0_l0: bt0_l0 { // Bluetoothプロファイル0を選択し、レイヤー0を有効化
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to WIN &bt BT_SEL 0 &to WIN>;
+        };
 
         bt1_l4: bt1_l4 { // Bluetoothプロファイル1を選択し、レイヤー4を有効化
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to QWE &bt BT_SEL 1 &to WIN>;
+            bindings = <&to WIN &bt BT_SEL 1 &to WIN>;
         };
 
         bt2_l4: bt2_l4 { // Bluetoothプロファイル2を選択し、レイヤー4を有効化
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to QWE &bt BT_SEL 2 &to WIN>;
+            bindings = <&to WIN &bt BT_SEL 2 &to WIN>;
         };
 
         bt3_l4: bt3_l4 { // Bluetoothプロファイル3を選択し、レイヤー4を有効化
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to QWE &bt BT_SEL 3 &to WIN>;
+            bindings = <&to WIN &bt BT_SEL 3 &to WIN>;
         };
 
-        // bt4_l2: bt4_l2 { // Bluetoothプロファイル4を選択し、レイヤー2を有効化
-        //     compatible = "zmk,behavior-macro";
-        //     #binding-cells = <0>;
-        //     bindings = <&to QWE &bt BT_SEL 4 &to LIN>;
-        // };
+        bt4_l2: bt4_l2 { // Bluetoothプロファイル4を選択し、レイヤー2を有効化
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to WIN &bt BT_SEL 4 &to WIN>;
+        };
 
-        // bt4_l3: bt4_l3 { // Bluetoothプロファイル4を選択し、レイヤー3を有効化
-        //     compatible = "zmk,behavior-macro";
-        //     #binding-cells = <0>;
-        //     bindings = <&to QWE &bt BT_SEL 4 &to NICL>;
-        // };
+        bt4_l3: bt4_l3 { // Bluetoothプロファイル4を選択し、レイヤー3を有効化
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to WIN &bt BT_SEL 4 &to WIN>;
+        };
 
         usb_l0: usb_l0 { // USB接続を選択し、レイヤー0を有効化
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 0 &out OUT_USB &to 0>;
+            bindings = <&to WIN &out OUT_USB &to WIN>;
         };
-        // usb_l2: usb_l2 { // USB接続を選択し、レイヤー2を有効化
-        //     compatible = "zmk,behavior-macro";
+        usb_l2: usb_l2 { // USB接続を選択し、レイヤー2を有効化
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to WIN &out OUT_USB &to WIN>;
+        };
+        // td_lt_mov_l1: tap_dance_layer_tap_mov_l1 {  // タップでLANG1、ホールドでMOVレイヤ、ダブルタップでMOVレイヤ保持
+        //     compatible = "zmk,behavior-tap-dance";
         //     #binding-cells = <0>;
-        //     bindings = <&to 0 &out OUT_USB &to 2>;
+        //     tapping-term-ms = <200>;
+        //     bindings = <&lt MOV LANG1>, <&to MOV>;
         // };
+		// td_lt_num_l2: tap_dance_layer_tap_num_l2 {  // タップでLANG2、ホールドでNUMレイヤ、ダブルタップでNUMレイヤ保持
+        //     compatible = "zmk,behavior-tap-dance";
+        //     #binding-cells = <0>;
+        //     tapping-term-ms = <200>;
+        //     bindings = <&lt NUM LANG2>, <&to NUM>;
+        // };
+		td_lt_mov_i2: tap_dance_layer_tap_mov_i2 {  // タップでINT2、ホールドでMOVレイヤ、ダブルタップでMOVレイヤ保持
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&lt MOV INT2>, <&to_MOV_i5>;
+        };
+		td_lt_num_i5: tap_dance_layer_tap_num_i5 {  // タップでINT5、ホールドでNUMレイヤ、ダブルタップでNUMレイヤ保持
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&lt NUM INT5>, <&to_NUM_i5>;
+        };
     };
 
     macros {
@@ -358,10 +382,10 @@
             bindings = <&to WIN>, <&kp INT5>;
         };
 
-        to_MOVW_i5: to_MOVW_INT5{
+        to_MOV_i5: to_MOV_INT5{
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to MOVW>, <&kp INT5>;
+            bindings = <&to MOV>, <&kp INT5>;
         };
 
         to_NUM_i5: to_NUM_INT5{
@@ -447,7 +471,7 @@
             &kp PG_UP  &kp HOME    &kp UP        &kp END       &mkp MB3                             &kp DEL        &msc SCRL_LEFT &mmv MOVE_UP   &msc SCRL_RIGHT   &msc SCRL_UP
             &kp PG_DN  &kp LEFT    &kp DOWN      &kp RIGHT   	                        &mkp MB1    &kp BSPC       &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT   &msc SCRL_DOWN
             &kp LC(V)  &mkp MB1    &mkp MB3      &mkp MB2		                        &mkp MB2    &mkp MB1       &kp ENTER      &kp LC(LEFT)   &kp LC(RIGHT)     &kp LG(V)
-                                                 &kp LSHFT     &macro_INT5L	&trans      &trans      &kp LS(LC(V))  &kp RSHFT
+                                                 &kp LSHFT     &trans   	&trans      &trans      &kp LS(LC(V))  &kp RSHFT
             >;
         };
 
@@ -456,7 +480,7 @@
             &kp F1            &kp F2      &kp F3      &kp F4      &kp F5         		    		   &kp F6         &kp F7    	&kp F8      	&kp F9      &kp F10
             &kp N1            &kp N2      &kp N3      &kp N4      		     		    &kp N5         &kp N6         &kp N7    	&kp N8      	&kp N9      &kp N0
             &kp INT1          &kp BSLH    &kp INT3    &kp SLASH   		     		    &kp ASTRK      &kp MINUS      &kp PLUS  	&kp LBKT    	&kp RBKT    &kp LC(V)
-                                                      &kp LSHFT   &kp SPACE &trans      &trans         &macro_INT4L	  &kp RSHFT
+                                                      &kp LSHFT   &kp SPACE &trans      &trans         &trans   	  &kp RSHFT
             >;
         };
 
@@ -465,7 +489,7 @@
             &kp F11        &kp F12        &kp C_MUTE        &kp C_VOL_DN   &kp C_VOL_UP                                    &kp CAPS       &kp PSCRN      &kp SLCK         &kp PAUSE_BREAK   &kp LS(UP)
             &out OUT_BLE   &usb_l2        &bt3_l4           &kp LS(RIGHT)                                   &kp G          &kp INT5       &file_r        &pr_pg           &nx_pg            &file_f
             &bt0_l0        &bt1_l4        &bt2_l4           &kp K_APP                                       &kp LS(LEFT)   &kp LS(DOWN)   &kp LS(HOME)   &kp LS(LC(LEFT)) &kp LS(LC(RIGHT)) &kp LS(END)
-                                                            &to QWE        &grave_uc        &trans          &trans         &tilde_uc	  &to WIN
+                                                            &trans         &grave_uc        &trans          &trans         &tilde_uc	  &trans
             >;
 
         };
