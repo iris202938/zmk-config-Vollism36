@@ -208,7 +208,226 @@
                 <&macro_release &kp MACRO_PLACEHOLDER>,
                 <&macro_tap &sl MOVE>;
         };
-        
+        file_f: file_f { // ファイルの切り替え正
+            compatible = "zmk,behavior-macro";
+            wait-ms = <40>;
+            tap-ms = <40>;
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL &kp F6> // マクロキー押下時にLCTRLとF6を同時に押す
+                , <&macro_release &kp LCTRL &kp F6> // マクロキー解放時にLCTRLとF6を同時に離す
+                // = <&macro_press &kp LCTRL>
+                // , <&macro_tap &kp F6>
+                // , <&macro_release &kp LCTRL>
+                ;
+        };
+
+        file_r: file_r { // ファイルの切り替え逆
+            compatible = "zmk,behavior-macro";
+            wait-ms = <40>;
+            tap-ms = <40>;
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSHFT &kp LCTRL &kp F6> // マクロキー押下時にLSHFTとLCTRLとF6を同時に押す
+                , <&macro_release &kp LSHFT &kp LCTRL &kp F6> // マクロキー解放時にLSHFTとLCTRLとF6を同時に離す
+                // = <&macro_press &kp LSHFT>
+                // , <&macro_press &kp LCTRL>
+                // , <&macro_tap &kp F6>
+                // , <&macro_release &kp LCTRL>
+                // , <&macro_release &kp LSHFT>
+                ;
+        };
+
+        pr_pg: pr_pg { // 前ページ切り替え
+            compatible = "zmk,behavior-macro";
+            wait-ms = <40>;
+            tap-ms = <40>;
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSHFT &kp F5> // マクロキー押下時にLSHFTとF5を同時に押す
+                , <&macro_release &kp LSHFT &kp F5> // マクロキー解放時にLSHFTとF5を同時に離す
+                // = <&macro_press &kp LSHFT>
+                // , <&macro_tap &kp F5>
+                // , <&macro_release &kp LSHFT>
+                ;
+        };
+
+        nx_pg: nx_pg { // 次ページ切り替え
+            compatible = "zmk,behavior-macro";
+            wait-ms = <40>;
+            tap-ms = <40>;
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSHFT &kp F6> // マクロキー押下時にLSHFTとF6を同時に押す
+                , <&macro_release &kp LSHFT &kp F6> // マクロキー解放時にLSHFTとF6を同時に離す
+                // = <&macro_press &kp LSHFT>
+                // , <&macro_tap &kp F6>
+                // , <&macro_release &kp LSHFT>
+                ;
+        };
+
+        alt_right: alt_right { // フォルダ移動進む
+            compatible = "zmk,behavior-macro";
+            wait-ms = <40>;
+            tap-ms = <40>;
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LALT &kp RIGHT>
+                , <&macro_release &kp LALT &kp RIGHT>
+                // = <&macro_press &kp LALT>
+                // , <&macro_tap &kp RIGHT>
+                // , <&macro_release &kp LALT>
+                ;
+        };
+
+        alt_left: alt_left { // フォルダ移動戻る
+            compatible = "zmk,behavior-macro";
+            wait-ms = <40>;
+            tap-ms = <40>;
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LALT &kp LEFT>
+                , <&macro_release &kp LALT &kp LEFT>
+                // = <&macro_press &kp LALT>
+                // , <&macro_tap &kp LEFT>
+                // , <&macro_release &kp LALT>
+                ;
+        };
+
+        alt_up: alt_up { // フォルダ移動上
+            compatible = "zmk,behavior-macro";
+            wait-ms = <40>;
+            tap-ms = <40>;
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LALT &kp  UP>
+                , <&macro_release &kp LALT &kp UP>
+                // = <&macro_press &kp LALT>
+                // , <&macro_tap &kp UP>
+                // , <&macro_release &kp LALT>
+                ;
+        };
+
+        alt_down: alt_down { // フォルダ移動下
+            compatible = "zmk,behavior-macro";
+            wait-ms = <40>;
+            tap-ms = <40>;
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LALT &kp DOWN>
+                , <&macro_release &kp LALT &kp DOWN>
+                // = <&macro_press &kp LALT>
+                // , <&macro_tap &kp DOWN>
+                // , <&macro_release &kp LALT>
+                ;
+        };
+
+        grave_uc: grave_uc {
+            compatible = "zmk,behavior-macro";
+            wait-ms = <40>;
+            tap-ms = <40>;
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press   &kp LALT>
+                , <&macro_tap     &kp KP_N9 &kp KP_N6>
+                , <&macro_release &kp LALT>
+                ;
+        };
+
+        tilde_uc: tilde_uc {
+            compatible = "zmk,behavior-macro";
+            wait-ms = <40>;
+            tap-ms = <40>;
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press   &kp LALT>
+                , <&macro_tap     &kp KP_N1 &kp KP_N2 &kp KP_N6>
+                , <&macro_release &kp LALT>
+                ;
+        };
+
+        // to_QWE_l2: to_QWE_LANG2{
+        // 	compatible = "zmk,behavior-macro";
+        // 	#binding-cells = <0>;
+        // 	bindings = <&to QWE>, <&kp LANG2>;
+        // };
+
+        to_WIN_i5: to_WIN_INT5{
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to WIN>, <&kp INT5>;
+        };
+
+        to_MOVW_i5: to_MOVW_INT5{
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to MOVW>, <&kp INT5>;
+        };
+
+        to_NUM_i5: to_NUM_INT5{
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to NUM>, <&kp INT5>;
+        };
+
+        int5_g: int5_g { // 端点再設定(AHK)
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp INT5>
+                , <&macro_wait_time 40>
+                , <&macro_tap &kp G>
+                , <&macro_wait_time 40>
+                , <&macro_release &kp INT5>
+                ;
+        };	
+
+        alt_int4: alt_int4 { // Alt+変換 選択位置移動(複写)(AHK)
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press   &kp RALT>
+                , <&macro_tap     &kp INT4>
+                , <&macro_release &kp RALT>
+                ;
+        };	
+
+        alt_int5: alt_int5 { // Alt+無変換 選択位置移動(移動)(AHK)
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press   &kp RALT>
+                , <&macro_tap     &kp INT5>
+                , <&macro_release &kp RALT>
+                ;
+        };	
+
+        // m_alt_tab: m_alt_tab {
+        // 	label = "ALT_TAB_HOLD";
+        // 	compatible = "zmk,behavior-macro";
+        //     #binding-cells = <0>;
+        //     bindings
+        //         = <&macro_press &kp LALT>
+        //         , <&macro_tap &kp TAB>
+        //         , <&macro_wait_time 1000>
+        //         , <&macro_release &kp LALT>
+        //         ;
+        // };
+
+        // m_alt_s_tab: m_alt_s_tab {
+        //     label = "ALT_SHFT_TAB_HOLD";
+        //     compatible = "zmk,behavior-macro";
+        //     #binding-cells = <0>;
+        //     bindings
+        //         = <&macro_press &kp LALT>
+        //         , <&macro_press &kp LSHFT>
+        //         , <&macro_tap &kp TAB>
+        //         , <&macro_wait_time 50>
+        //         , <&macro_release &kp LSHFT>
+        //         , <&macro_wait_time 1000>
+        //         , <&macro_release &kp LALT>
+        //         ;
+        // };
     };
 
     keymap {
