@@ -9,15 +9,6 @@
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 600
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 10
 
-// #define WINDOWS 0
-// #define LINUX 1
-// #define QWERTY 2
-// #define ARROW_NUM 3
-// #define SYMBOL 4
-// #define FUNCTION 5
-// #define MOUSE 6
-// #define SYSTEM 7
-
 #define WIN 0
 #define LWR 1
 #define RSE 2
@@ -25,7 +16,6 @@
 #define MOV 4
 #define NUM 5
 #define BLE 6
-
 
 &mt {
     flavor = "hold-preferred";
