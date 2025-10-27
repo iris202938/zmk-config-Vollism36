@@ -453,19 +453,19 @@
 
         RSE {
             bindings = <
-            &kp GRAVE    &kp AT       &kp HASH     &kp DLLR            &kp PRCNT                                                    &kp CARET   &kp AMPS           &kp ASTRK    &kp LPAR    &kp RPAR
-            &kp TILDE    &kp SLASH    &kp UNDER    &kp MINUS                                                   &kp EQUAL            &kp BSPC    &kp SEMI           &kp COLON    &kp LBKT    &kp RBKT
-            &kp PIPE     &kp BSLH     &kp LT       &kp GT                                                      &kp K_APP            &kp DEL     &kp SQT            &kp DQT      &kp LBRC    &kp RBRC
-                                                   &mt LSHIFT SPACE    &qm LCTRL    &lt ARROW_NUM LANG2        &lt SYMBOL LANG1     &qm LALT    &qmt LGUI ENTER
+            &kp F1            &kp F2      &kp F3      &kp F4      &kp F5         		    		   &kp F6         &kp F7    	&kp F8      	&kp F9      &kp F10
+            &kp N1            &kp N2      &kp N3      &kp N4      		     		    &kp N5         &kp N6         &kp N7    	&kp N8      	&kp N9      &kp N0
+            &kp INT1          &kp BSLH    &kp INT3    &kp SLASH   		     		    &kp ASTRK      &kp MINUS      &kp PLUS  	&kp LBKT    	&kp RBKT    &kp LC(V)
+                                                      &kp LSHFT   &kp SPACE &trans      &trans         &macro_INT4L	  &kp RSHFT
             >;
         };
 
         ADJ {
             bindings = <
-            &kp LC(PG_UP)    &kp LC(HOME)    &kp LC(UP)      &kp LC(END)         &kp PAUSE_BREAK                                                    &kp C_MUTE    &kp F7             &kp F8    &kp F9    &kp F12
-            &kp LC(PG_DN)    &kp LC(LEFT)    &kp LC(DOWN)    &kp LC(RIGHT)                                                    &kp C_VOL_UP          &kp LC(BSPC)  &kp F4             &kp F5    &kp F6    &kp F11
-            &kp LSHIFT       &kp SLCK        &kp PSCRN       &kp INS                                                          &kp C_VOL_DN          &kp LC(DEL)   &kp F1             &kp F2    &kp F3    &kp F10
-                                                             &mt LSHIFT SPACE    &qm LCTRL           &lt ARROW_NUM LANG2      &lt SYMBOL LANG1      &qm LALT      &qmt LGUI ENTER
+            &kp F11        &kp F12        &kp C_MUTE        &kp C_VOL_DN   &kp C_VOL_UP   &kp CAPS       &kp PSCRN      &kp SLCK         &kp PAUSE_BREAK   &kp LS(UP)
+            &out OUT_BLE   &usb_l2        &bt3_l4           &kp LS(RIGHT)  &kp G          &kp INT5       &file_r        &pr_pg           &nx_pg            &file_f
+            &bt0_l0        &bt1_l4        &bt2_l4           &kp K_APP      &kp LS(LEFT)   &kp LS(DOWN)   &kp LS(HOME)   &kp LS(LC(LEFT)) &kp LS(LC(RIGHT)) &kp LS(END)
+                                                &to QWE           &grave_uc      &trans         &trans         &tilde_uc	  &to WIN
             >;
 
         };
