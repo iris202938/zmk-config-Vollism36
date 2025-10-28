@@ -22,10 +22,6 @@
             ;
 };
 
-// &sensor_rotation {
-//     rotation-angle = <340>;
-// };
-
 / {
     trackball_listener {
         compatible = "zmk,input-listener";
