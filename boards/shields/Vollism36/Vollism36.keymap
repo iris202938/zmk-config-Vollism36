@@ -69,14 +69,14 @@
         };
 
         wind_l {
-            bindings = <&kp LG(LEFT)>;
+            bindings = <&win_left>;
             key-positions = <1 11>;
             layers = <LWR>;
             timeout-ms = <80>;
         };
 
         wind_r {
-            bindings = <&kp LG(RIGHT)>;
+            bindings = <&win_right>;
             key-positions = <3 13>;
             layers = <LWR>;
             timeout-ms = <80>;
@@ -444,7 +444,35 @@
                 , <&macro_tap     &kp INT5>
                 , <&macro_release &kp RALT>
                 ;
-        };	
+        };
+
+        win_right: win_right { // デスクトップ移動進む
+            compatible = "zmk,behavior-macro";
+            wait-ms = <40>;
+            tap-ms = <40>;
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI &kp RIGHT>
+                , <&macro_release &kp LGUI &kp RIGHT>
+                // = <&macro_press &kp LGUI>
+                // , <&macro_tap &kp RIGHT>
+                // , <&macro_release &kp LGUI>
+                ;
+        };
+
+        win_left: win_left { // デスクトップ移動戻る
+            compatible = "zmk,behavior-macro";
+            wait-ms = <40>;
+            tap-ms = <40>;
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI &kp LEFT>
+                , <&macro_release &kp LGUI &kp LEFT>
+                // = <&macro_press &kp LGUI>
+                // , <&macro_tap &kp LEFT>
+                // , <&macro_release &kp LGUI>
+                ;
+        };
 
         // m_alt_tab: m_alt_tab {
         // 	label = "ALT_TAB_HOLD";
