@@ -122,17 +122,7 @@
         //     display-name = "Toggle Layer Off";
         //     toggle-mode = "off";
         // };
-        int5_g: int5_g { // 端点再設定(AHK)
-		compatible = "zmk,behavior-macro";
-		#binding-cells = <0>;
-		bindings
-			= <&macro_press &kp INT5>
-			, <&macro_wait_time 40>
-			, <&macro_tap &kp G>
-			, <&macro_wait_time 40>
-			, <&macro_release &kp INT5>
-			;
-        };
+        
         bt0_l0: bt0_l0 { // Bluetoothプロファイル0を選択し、レイヤー0を有効化
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
