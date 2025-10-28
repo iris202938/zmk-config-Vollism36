@@ -553,17 +553,17 @@
 
         NUM {
             bindings = <
-            &kp PG_UP     &kp HOME        &kp UP        &kp END         &kp CARET         &kp KP_SLASH                                      &kp KP_N7   &kp KP_N8   &kp KP_N9     &kp KP_N0
-            &kp PG_DN     &kp LEFT        &kp DOWN      &kp RIGHT       &lt BLE DEL                                         &kp BSPC        &kp KP_N4   &kp KP_N5   &kp KP_N6     &kp KP_MINUS
-            &alt_left	  &alt_down       &alt_up       &alt_right      &kp EQUAL                                           &kp KP_MULTIPLY &kp KP_N1   &kp KP_N2   &kp KP_N3     &kp KP_PLUS
+            &kp PG_UP     &kp HOME        &kp UP        &kp END         &kp CARET                                           &kp KP_SLASH    &kp KP_N7   &kp KP_N8   &kp KP_N9     &kp KP_N0
+            &kp PG_DN     &kp LEFT        &kp DOWN      &kp RIGHT                                         &lt BLE DEL       &kp BSPC        &kp KP_N4   &kp KP_N5   &kp KP_N6     &kp KP_MINUS
+            &alt_left	  &alt_down       &alt_up       &alt_right                                        &kp EQUAL         &kp KP_MULTIPLY &kp KP_N1   &kp KP_N2   &kp KP_N3     &kp KP_PLUS
                                                         &to_WIN_i5      &pr_pg	    	  &nx_pg          &kp KP_ENTER      &kp UNDER       &kp SPACE
             >;
         };
         BLE {
             bindings = <
-            &bt BT_DISC 0     &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3   &bt BT_CLR_ALL  &bt BT_CLR_ALL                                &bt BT_DISC 4   &bt BT_DISC 5 &bt BT_DISC 6 &bt BT_DISC 7
-            &kp LC(LG(T))     &kp LC(LG(C))  &kp LC(LG(P))  &kp LC(LG(G))   &trans                                         &trans         &kp LC(LG(E))   &kp LC(LG(A)) &kp LC(LG(L)) &kp LC(LG(X))
-            &bt BT_SEL 0      &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3    &bootloader                                    &bootloader    &bt4_l2     	  &bt BT_SEL 5  &bt BT_SEL 6  &bt BT_SEL 7
+            &bt BT_DISC 0     &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3   &bt BT_CLR_ALL                                 &bt BT_CLR_ALL &bt BT_DISC 4   &bt BT_DISC 5 &bt BT_DISC 6 &bt BT_DISC 7
+            &kp LC(LG(T))     &kp LC(LG(C))  &kp LC(LG(P))  &kp LC(LG(G))                                  &trans          &trans         &kp LC(LG(E))   &kp LC(LG(A)) &kp LC(LG(L)) &kp LC(LG(X))
+            &bt BT_SEL 0      &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3                                   &bootloader     &bootloader    &bt4_l2     	  &bt BT_SEL 5  &bt BT_SEL 6  &bt BT_SEL 7
                                                             &trans          &kp LS(LG(F23)) &bt BT_CLR     &bt BT_CLR      &kp LA(LG(G))  &trans
             >;
         };
