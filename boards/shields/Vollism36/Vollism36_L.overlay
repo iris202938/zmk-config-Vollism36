@@ -30,6 +30,7 @@
     trackball_listener {
         compatible = "zmk,input-listener";
         device = <&trackball>;
+        input-processors = <&sensor_rotation>;
         automouse {
                 layers = <WIN>;
                 input-processors = <&zip_temp_layer MOV 600>;
@@ -40,6 +41,16 @@
                 input-processors = <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>
                                  , <&zip_xy_scaler 1 30>
                                  , <&zip_xy_to_scroll_mapper>;
+        };
+    };
+};
+
+/ {
+    input_processors {
+        sensor_rotation: sensor_rotation {
+            compatible = "zmk,input-processor-sensor-rotation";
+            #input-processor-cells = <0>;
+            rotation-angle = <30>;
         };
     };
 };
