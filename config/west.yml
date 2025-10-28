@@ -6,6 +6,8 @@ manifest:
       url-base: https://github.com/Reinmuth66
     - name: caksoylar  # <-- led
       url-base: https://github.com/caksoylar
+    - name: hsgw
+      url-base: https://github.com/hsgw
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -17,5 +19,10 @@ manifest:
     - name: zmk-rgbled-widget  # <-- led
       remote: caksoylar
       revision: main
+      # https://github.com/hsgw/zmk-feature-sensor_rotation
+    - name: zmk-feature-sensor_rotation
+      remote: hsgw
+      revision: main
+      path: modules/zmk-feature-sensor_rotation
   self:
     path: config
