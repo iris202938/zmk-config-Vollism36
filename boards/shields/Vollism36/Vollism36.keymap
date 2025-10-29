@@ -89,6 +89,13 @@
             timeout-ms = <80>;
         };
 
+        alt_r {
+            bindings = <&kp RALT>;
+            key-positions = <33 35>;
+            // layers = <WIN>;
+            timeout-ms = <80>;
+        };
+
         int5_g {
             bindings = <&int5_g>;
             key-positions = <30 32>;
@@ -452,11 +459,13 @@
             tap-ms = <40>;
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp LGUI &kp LCTRL &kp RIGHT>
-                , <&macro_release &kp LGUI &kp LCTRL &kp RIGHT>
-                // = <&macro_press &kp LGUI>
-                // , <&macro_tap &kp RIGHT>
-                // , <&macro_release &kp LGUI>
+                = <&macro_press &kp LGUI>
+                , <&macro_press &kp LCTRL>
+                // , <&macro_wait_time 40>
+                , <&macro_tap &kp RIGHT>
+                // , <&macro_wait_time 40>
+                , <&macro_release &kp LCTRL>
+                , <&macro_release &kp LGUI>
                 ;
         };
 
@@ -466,11 +475,13 @@
             tap-ms = <40>;
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp LGUI &kp LCTRL &kp LEFT>
-                , <&macro_release &kp LGUI &kp LCTRL &kp LEFT>
-                // = <&macro_press &kp LGUI>
-                // , <&macro_tap &kp LEFT>
-                // , <&macro_release &kp LGUI>
+                = <&macro_press &kp LGUI>
+                , <&macro_press &kp LCTRL>
+                // , <&macro_wait_time 40>
+                , <&macro_tap &kp LEFT>
+                // , <&macro_wait_time 40>
+                , <&macro_release &kp LCTRL>
+                , <&macro_release &kp LGUI>
                 ;
         };
 
@@ -547,7 +558,7 @@
             &kp_aml LS(LC(TAB))   &msc SCRL_LEFT  &msc SCRL_UP      &msc SCRL_RIGHT   &kp LCTRL                                         &kp LC(Y)      &kp HOME         &kp UP        &kp END        &kp PG_UP
             &mkp_aml MB1          &mkp_aml MB1    &msc SCRL_DOWN    &mkp_aml MB1                                       &msc SCRL_DOWN   &lt BLE BSPC   &kp LEFT         &kp DOWN      &kp RIGHT      &kp PG_DN
             &kp_aml W             &kp LA(LEFT)    &mkp_aml MB3      &kp LA(RIGHT)                                      &kp LC(TAB)      &kp LC(Z)      &kp LC(PG_UP)    &kp LG(LBKT)  &kp LG(RBKT)   &kp LC(PG_DN)
-                                                                    &kp LC(C)         &mo RSE          &mkp_aml MB2    &kp ENTER        &mkp MB1       &to_WIN_i5
+                                                                    &kp LC(C)         &kp LSHFT        &mkp_aml MB2    &kp ENTER        &mkp MB1       &to_WIN_i5
             >;
         };
 
