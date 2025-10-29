@@ -544,10 +544,10 @@
 
         MOV {
             bindings = <
-            &kp_aml LS(LC(TAB))   &msc SCRL_LEFT  &msc SCRL_UP      &msc SCRL_RIGHT   &msc SCRL_UP                                      &kp LC(Y)      &kp HOME         &kp UP        &kp END        &kp PG_UP
-            &mkp_aml MB1          &mkp_aml MB1    &msc SCRL_DOWN    &mkp_aml MB2                                       &msc SCRL_DOWN   &lt BLE BSPC   &kp LEFT         &kp DOWN      &kp RIGHT      &kp PG_DN
+            &kp_aml LS(LC(TAB))   &msc SCRL_LEFT  &msc SCRL_UP      &msc SCRL_RIGHT   &kp LCTRL                                         &kp LC(Y)      &kp HOME         &kp UP        &kp END        &kp PG_UP
+            &mkp_aml MB1          &mkp_aml MB1    &msc SCRL_DOWN    &mkp_aml MB1                                       &msc SCRL_DOWN   &lt BLE BSPC   &kp LEFT         &kp DOWN      &kp RIGHT      &kp PG_DN
             &kp_aml W             &kp LA(LEFT)    &mkp_aml MB3      &kp LA(RIGHT)                                      &kp LC(TAB)      &kp LC(Z)      &kp LC(PG_UP)    &kp LG(LBKT)  &kp LG(RBKT)   &kp LC(PG_DN)
-                                                                    &kp LC(C)         &kp LC(V)        &mkp_aml MB2    &kp ENTER        &mkp MB1       &to_WIN_i5
+                                                                    &kp LC(C)         &mo RSE          &mkp_aml MB2    &kp ENTER        &mkp MB1       &to_WIN_i5
             >;
         };
 
