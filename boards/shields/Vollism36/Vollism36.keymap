@@ -126,13 +126,6 @@
 
         mb1 {
             bindings = <&mkp MB1>;
-            key-positions = <14 24>;
-            // layers = <WIN>;
-            timeout-ms = <80>;
-        };
-
-        mb3 {
-            bindings = <&mkp MB3>;
             key-positions = <15 25>;
             // layers = <WIN>;
             timeout-ms = <80>;
@@ -141,6 +134,13 @@
         mb2 {
             bindings = <&mkp MB2>;
             key-positions = <16 26>;
+            // layers = <WIN>;
+            timeout-ms = <80>;
+        };
+        
+        mb3 {
+            bindings = <&mkp MB3>;
+            key-positions = <14 24>;
             // layers = <WIN>;
             timeout-ms = <80>;
         };
