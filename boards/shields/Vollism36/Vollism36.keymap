@@ -58,7 +58,7 @@
 
         esc {
             bindings = <&kp ESC>;
-            key-positions = <0 1>;
+            key-positions = <0 10>;
             timeout-ms = <80>;
         };
 
@@ -84,49 +84,70 @@
 
         shift_l {
             bindings = <&kp LSHFT>;
-            key-positions = <0 30>;
+            key-positions = <0 1>;
             // layers = <WIN>;
             timeout-ms = <80>;
         };
 
         shift_r {
             bindings = <&kp RSHFT>;
-            key-positions = <35 9>;
+            key-positions = <8 9>;
             // layers = <WIN>;
             timeout-ms = <80>;
         };
 
         ctrl_l {
             bindings = <&kp LCTRL>;
-            key-positions = <20 32>;
+            key-positions = <10 11>;
             // layers = <WIN>;
             timeout-ms = <80>;
         };
 
         ctrl_r {
             bindings = <&kp RCTRL>;
-            key-positions = <29 33>;
+            key-positions = <18 19>;
             // layers = <WIN>;
             timeout-ms = <80>;
         };
 
         gui_l {
             bindings = <&kp LGUI>;
-            key-positions = <30 32>;
+            key-positions = <20 21>;
             // layers = <WIN>;
             timeout-ms = <80>;
         };
 
         alt_r {
             bindings = <&kp RALT>;
-            key-positions = <33 35>;
+            key-positions = <28 29>;
+            // layers = <WIN>;
+            timeout-ms = <80>;
+        };
+
+        mb1 {
+            bindings = <&mkp MB1>;
+            key-positions = <14 24>;
+            // layers = <WIN>;
+            timeout-ms = <80>;
+        };
+
+        mb3 {
+            bindings = <&mkp MB3>;
+            key-positions = <15 25>;
+            // layers = <WIN>;
+            timeout-ms = <80>;
+        };
+
+        mb2 {
+            bindings = <&mkp MB2>;
+            key-positions = <16 26>;
             // layers = <WIN>;
             timeout-ms = <80>;
         };
 
         int5_g {
             bindings = <&int5_g>;
-            key-positions = <30 32>;
+            key-positions = <19 29>;
             layers = <WIN>;
             timeout-ms = <80>;
         };
