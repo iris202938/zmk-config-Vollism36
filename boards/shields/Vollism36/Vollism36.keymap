@@ -102,6 +102,13 @@
             timeout-ms = <80>;
         };
 
+        combo_TSHIFT {
+            bindings = <&kp RSHIFT>;
+            key-positions = <30 35>;
+            layers = <WIN>;
+            timeout-ms = <80>;
+        };
+
         ctrl_l {
             bindings = <&kp LCTRL>;
             key-positions = <10 11>;
