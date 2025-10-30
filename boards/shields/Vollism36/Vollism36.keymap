@@ -575,7 +575,7 @@
             bindings = <
             &kp Q           &kp W    &kp E          &kp R               &kp T                                                     &kp Y           &kp U              &kp I          &kp O      &kp P
             &kp A           &kp S    &kp D          &kp F                                                       &kp G             &kp H           &kp J              &kp K          &kp L      &kp SEMICOLON
-            &mt LSHIFT Z    &kp X    &kp C          &kp V                                                       &kp B             &kp N           &kp M              &kp COMMA      &kp DOT    &kp SLASH
+            &kp Z           &kp X    &kp C          &kp V                                                       &kp B             &kp N           &kp M              &kp COMMA      &kp DOT    &kp SLASH
                                                     &td_lt_num_i5       &kp SPACE             &mo LWR           &lt RSE ENTER     &kp INT4        &td_lt_mov_i2
             >;
         };
@@ -611,7 +611,7 @@
         MOV {
             bindings = <
             &kp_aml LS(LC(TAB))   &msc SCRL_LEFT  &msc SCRL_UP      &msc SCRL_RIGHT   &kp LCTRL                                         &kp LC(Y)      &kp HOME         &kp UP        &kp END        &kp PG_UP
-            &mkp_aml MB1          &mkp_aml MB1    &msc SCRL_DOWN    &mkp_aml MB1                                       &msc SCRL_DOWN   &lt BLE BSPC   &kp LEFT         &kp DOWN      &kp RIGHT      &kp PG_DN
+            &mkp_aml MB1          &mkp_aml MB1    &msc SCRL_DOWN    &mkp_aml MB2                                       &msc SCRL_DOWN   &lt BLE BSPC   &kp LEFT         &kp DOWN      &kp RIGHT      &kp PG_DN
             &kp_aml W             &kp LA(LEFT)    &mkp_aml MB3      &kp LA(RIGHT)                                      &kp LC(TAB)      &kp LC(Z)      &kp LC(PG_UP)    &kp LG(LBKT)  &kp LG(RBKT)   &kp LC(PG_DN)
                                                                     &kp LC(C)         &kp LSHFT        &mkp_aml MB2    &kp ENTER        &mkp MB1       &to_WIN_i5
             >;
