@@ -90,7 +90,7 @@
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
         arrows {
-                layers = <ADJ>;
+                layers = <NUM>;
                 bindings =
                     <&kp RIGHT_ARROW>,
                     <&kp LEFT_ARROW>,
