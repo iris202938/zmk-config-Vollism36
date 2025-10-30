@@ -29,7 +29,7 @@
         input-processors = <&sensor_rotation>;
         automouse {
                 layers = <WIN>;
-                input-processors = <&zip_temp_layer MOV 600>;
+                input-processors = <&zip_temp_layer MOV 100>; // Move layer for 600ms after activity
                 process-next;
         };
         scroll {
