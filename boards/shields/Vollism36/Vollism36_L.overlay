@@ -38,13 +38,13 @@
                                  , <&zip_xy_scaler 1 30>
                                  , <&zip_xy_to_scroll_mapper>;
         };
-        // 👈 **このセクションを追加**
-        // arrows_processor {
-        //     layers = <NUM>;
-        //     // ここでは何もしないダミーのプロセッサで十分
-        //     // トラックボール入力がこのレイヤーで「処理中」であることをリスナーに伝える
-        //     input-processors = <&zip_nop>; 
-        // };
+        // 👈 【追加】NUMレイヤーでの方向キー変換を明示的に定義
+        arrows_mapper {
+                layers = <NUM>;
+                input-processors = <&zip_xy_to_arrow_mapper>; // トラックボールの動きを方向キーに変換
+            // zip_xy_to_arrow_mapper のパラメーターを調整したい場合は以下のように記述
+            // input-processors = <&zip_xy_to_arrow_mapper 10>; // 10は感度/閾値 (任意)
+        };
     };
 };
 
