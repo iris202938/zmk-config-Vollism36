@@ -55,6 +55,11 @@
             #input-processor-cells = <0>;
             rotation-angle = <345>;
         };
+        // 👈 【保持】このセクションが NUM レイヤーでの方向キー動作を強制します。
+        arrows_mapper {
+            layers = <NUM>;
+            input-processors = <&zip_xy_to_arrow_mapper>; // 定義が追加されたのでOK
+        };
     };
 };
 
