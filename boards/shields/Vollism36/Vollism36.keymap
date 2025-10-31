@@ -304,30 +304,30 @@
         //         , <&macro_release &mo QWERTY>
         //         ;
         // };
-        mkp_aml: mkp_automosuelayer {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings
-                = <&macro_param_1to1>
-                , <&macro_press &mkp MACRO_PLACEHOLDER>
-                , <&macro_pause_for_release>
-                , <&macro_param_1to1>
-                , <&macro_release &mkp MACRO_PLACEHOLDER>
-                , <&macro_tap &sl MOV>
-                ;
-        };
-        kp_aml: kp_automosuelayer {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings
-                = <&macro_param_1to1>
-                , <&macro_press &kp MACRO_PLACEHOLDER>
-                , <&macro_pause_for_release>
-                , <&macro_param_1to1>
-                , <&macro_release &kp MACRO_PLACEHOLDER>
-                , <&macro_tap &sl MOV>
-                ;
-        };
+        // mkp_aml: mkp_automosuelayer {
+        //     compatible = "zmk,behavior-macro-one-param";
+        //     #binding-cells = <1>;
+        //     bindings
+        //         = <&macro_param_1to1>
+        //         , <&macro_press &mkp MACRO_PLACEHOLDER>
+        //         , <&macro_pause_for_release>
+        //         , <&macro_param_1to1>
+        //         , <&macro_release &mkp MACRO_PLACEHOLDER>
+        //         , <&macro_tap &sl MOV>
+        //         ;
+        // };
+        // kp_aml: kp_automosuelayer {
+        //     compatible = "zmk,behavior-macro-one-param";
+        //     #binding-cells = <1>;
+        //     bindings
+        //         = <&macro_param_1to1>
+        //         , <&macro_press &kp MACRO_PLACEHOLDER>
+        //         , <&macro_pause_for_release>
+        //         , <&macro_param_1to1>
+        //         , <&macro_release &kp MACRO_PLACEHOLDER>
+        //         , <&macro_tap &sl MOV>
+        //         ;
+        // };
         file_f: file_f { // ファイルの切り替え正
             compatible = "zmk,behavior-macro";
             wait-ms = <40>;
@@ -635,9 +635,9 @@
         MOV {
             bindings = <
             &kp_aml LS(LC(TAB))   &msc SCRL_LEFT  &msc SCRL_UP      &msc SCRL_RIGHT   &kp LCTRL                                         &kp LC(Y)      &kp HOME         &kp UP        &kp END        &kp PG_UP
-            &mkp_aml MB1          &mkp_aml MB1    &msc SCRL_DOWN    &mkp_aml MB2                                       &msc SCRL_DOWN   &lt BLE BSPC   &kp LEFT         &kp DOWN      &kp RIGHT      &kp PG_DN
-            &kp_aml W             &kp LA(LEFT)    &mkp_aml MB3      &kp LA(RIGHT)                                      &kp LC(TAB)      &kp LC(Z)      &kp LC(PG_UP)    &kp LG(LBKT)  &kp LG(RBKT)   &kp LC(PG_DN)
-                                                                    &kp LC(C)         &kp LSHFT        &mkp_aml MB2    &kp ENTER        &mkp MB1       &to_WIN_i5
+            &mkp MB1              &mkp MB1        &msc SCRL_DOWN    &mkp MB2                                           &msc SCRL_DOWN   &lt BLE BSPC   &kp LEFT         &kp DOWN      &kp RIGHT      &kp PG_DN
+            &kp_aml W             &kp LA(LEFT)    &mkp MB3          &kp LA(RIGHT)                                      &kp LC(TAB)      &kp LC(Z)      &kp LC(PG_UP)    &kp LG(LBKT)  &kp LG(RBKT)   &kp LC(PG_DN)
+                                                                    &kp LC(C)         &kp LSHFT        &mkp MB2        &kp ENTER        &mkp MB1       &to_WIN_i5
             >;
         };
 
