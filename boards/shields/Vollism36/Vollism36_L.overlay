@@ -38,6 +38,13 @@
                                  , <&zip_xy_scaler 1 30>
                                  , <&zip_xy_to_scroll_mapper>;
         };
+        // 👈 **このセクションを追加**
+        arrows_processor {
+            layers = <NUM>;
+            // ここでは何もしないダミーのプロセッサで十分
+            // トラックボール入力がこのレイヤーで「処理中」であることをリスナーに伝える
+            input-processors = <&zip_nop>; 
+        };
     };
 };
 
