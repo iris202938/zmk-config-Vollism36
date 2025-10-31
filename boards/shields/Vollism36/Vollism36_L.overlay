@@ -39,12 +39,12 @@
                                  , <&zip_xy_to_scroll_mapper>;
         };
         // 👈 【追加】NUMレイヤーでの方向キー変換を明示的に定義
-        arrows_mapper {
-                layers = <NUM>;
-                input-processors = <&zip_xy_to_arrow_mapper>; // トラックボールの動きを方向キーに変換
-            // zip_xy_to_arrow_mapper のパラメーターを調整したい場合は以下のように記述
-            // input-processors = <&zip_xy_to_arrow_mapper 10>; // 10は感度/閾値 (任意)
-        };
+        // arrows_mapper {
+        //         layers = <NUM>;
+        //         input-processors = <&zip_xy_to_arrow_mapper>; // トラックボールの動きを方向キーに変換
+        //     // zip_xy_to_arrow_mapper のパラメーターを調整したい場合は以下のように記述
+        //     // input-processors = <&zip_xy_to_arrow_mapper 10>; // 10は感度/閾値 (任意)
+        // };
     };
 };
 
@@ -55,16 +55,16 @@
             #input-processor-cells = <0>;
             rotation-angle = <345>;
         };
-        // 👈 【必須】この定義を追加してください
-        zip_xy_to_arrow_mapper: zip_xy_to_arrow_mapper {
-            compatible = "zmk,input-processor-xy-to-arrow-mapper";
-            #input-processor-cells = <0>; 
-        };
-        // 👈 【保持】このセクションが NUM レイヤーでの方向キー動作を強制します。
-        arrows_mapper {
-            layers = <NUM>;
-            input-processors = <&zip_xy_to_arrow_mapper>; // 定義が追加されたのでOK
-        };
+        // // 👈 【必須】この定義を追加してください
+        // zip_xy_to_arrow_mapper: zip_xy_to_arrow_mapper {
+        //     compatible = "zmk,input-processor-xy-to-arrow-mapper";
+        //     #input-processor-cells = <0>; 
+        // };
+        // // 👈 【保持】このセクションが NUM レイヤーでの方向キー動作を強制します。
+        // arrows_mapper {
+        //     layers = <NUM>;
+        //     input-processors = <&zip_xy_to_arrow_mapper>; // 定義が追加されたのでOK
+        // };
     };
 };
 
