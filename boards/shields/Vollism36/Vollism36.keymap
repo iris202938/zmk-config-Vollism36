@@ -60,21 +60,21 @@
         esc_l {
             bindings = <&kp ESC>;
             key-positions = <0 10>;
-            layers = <WIN>;
+            layers = <QWE>;
             timeout-ms = <80>;
         };
 
         esc_r {
             bindings = <&kp ESC>;
             key-positions = <9 19>;
-            layers = <WIN>;
+            layers = <QWE>;
             timeout-ms = <80>;
         };
 
         tab {
             bindings = <&kp TAB>;
             key-positions = <1 3>;
-            layers = <WIN>;
+            layers = <QWE>;
             timeout-ms = <80>;
         };
 
@@ -95,84 +95,84 @@
         shift_l {
             bindings = <&kp LSHFT>;
             key-positions = <0 1>;
-            layers = <WIN>;
+            layers = <QWE>;
             timeout-ms = <80>;
         };
 
         shift_r {
             bindings = <&kp RSHFT>;
             key-positions = <8 9>;
-            layers = <WIN>;
+            layers = <QWE>;
             timeout-ms = <80>;
         };
 
         combo_TSHIFT {
             bindings = <&kp RSHIFT>;
             key-positions = <30 35>;
-            layers = <WIN>;
+            layers = <QWE>;
             timeout-ms = <80>;
         };
 
         ctrl_l {
             bindings = <&kp LCTRL>;
             key-positions = <10 11>;
-            layers = <WIN>;
+            layers = <QWE>;
             timeout-ms = <80>;
         };
 
         ctrl_r {
             bindings = <&kp RCTRL>;
             key-positions = <18 19>;
-            layers = <WIN>;
+            layers = <QWE>;
             timeout-ms = <80>;
         };
 
         gui_l {
             bindings = <&kp LGUI>;
             key-positions = <20 21>;
-            layers = <WIN>;
+            layers = <QWE>;
             timeout-ms = <80>;
         };
 
         alt_r {
             bindings = <&kp RALT>;
             key-positions = <28 29>;
-            layers = <WIN>;
+            layers = <QWE>;
             timeout-ms = <80>;
         };
 
         mb1 {
             bindings = <&mkp MB1>;
             key-positions = <15 25>;
-            layers = <WIN>;
+            layers = <QWE>;
             timeout-ms = <80>;
         };
 
         mb2 {
             bindings = <&mkp MB2>;
             key-positions = <16 26>;
-            layers = <WIN>;
+            layers = <QWE>;
             timeout-ms = <80>;
         };
 
         mb3 {
             bindings = <&mkp MB3>;
             key-positions = <14 24>;
-            layers = <WIN>;
+            layers = <QWE>;
             timeout-ms = <80>;
         };
 
         int5_g {
             bindings = <&int5_g>;
             key-positions = <19 29>;
-            layers = <WIN>;
+            layers = <QWE>;
             timeout-ms = <80>;
         };
 
         alt_slash {
             bindings = <&alt_slash>;
             key-positions = <18 29>;
-            layers = <WIN>;
+            layers = <QWE>;
             timeout-ms = <80>;
         };
     };
