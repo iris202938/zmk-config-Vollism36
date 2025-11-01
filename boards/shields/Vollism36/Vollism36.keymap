@@ -9,13 +9,14 @@
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 600
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 10
 
-#define WIN 0
-#define LWR 1
-#define RSE 2
-#define ADJ 3
-#define MOV 4
-#define NUM 5
-#define BLE 6
+#define QWE 0
+#define WIN 1
+#define LWR 2
+#define RSE 3
+#define ADJ 4
+#define MOV 5
+#define NUM 6
+#define BLE 7
 
 &mt {
     flavor = "hold-preferred";
@@ -59,18 +60,21 @@
         esc_l {
             bindings = <&kp ESC>;
             key-positions = <0 10>;
+            layers = <WIN>;
             timeout-ms = <80>;
         };
 
         esc_r {
             bindings = <&kp ESC>;
             key-positions = <9 19>;
+            layers = <WIN>;
             timeout-ms = <80>;
         };
 
         tab {
             bindings = <&kp TAB>;
             key-positions = <1 3>;
+            layers = <WIN>;
             timeout-ms = <80>;
         };
 
@@ -91,14 +95,14 @@
         shift_l {
             bindings = <&kp LSHFT>;
             key-positions = <0 1>;
-            // layers = <WIN>;
+            layers = <WIN>;
             timeout-ms = <80>;
         };
 
         shift_r {
             bindings = <&kp RSHFT>;
             key-positions = <8 9>;
-            // layers = <WIN>;
+            layers = <WIN>;
             timeout-ms = <80>;
         };
 
@@ -112,49 +116,49 @@
         ctrl_l {
             bindings = <&kp LCTRL>;
             key-positions = <10 11>;
-            // layers = <WIN>;
+            layers = <WIN>;
             timeout-ms = <80>;
         };
 
         ctrl_r {
             bindings = <&kp RCTRL>;
             key-positions = <18 19>;
-            // layers = <WIN>;
+            layers = <WIN>;
             timeout-ms = <80>;
         };
 
         gui_l {
             bindings = <&kp LGUI>;
             key-positions = <20 21>;
-            // layers = <WIN>;
+            layers = <WIN>;
             timeout-ms = <80>;
         };
 
         alt_r {
             bindings = <&kp RALT>;
             key-positions = <28 29>;
-            // layers = <WIN>;
+            layers = <WIN>;
             timeout-ms = <80>;
         };
 
         mb1 {
             bindings = <&mkp MB1>;
             key-positions = <15 25>;
-            // layers = <WIN>;
+            layers = <WIN>;
             timeout-ms = <80>;
         };
 
         mb2 {
             bindings = <&mkp MB2>;
             key-positions = <16 26>;
-            // layers = <WIN>;
+            layers = <WIN>;
             timeout-ms = <80>;
         };
 
         mb3 {
             bindings = <&mkp MB3>;
             key-positions = <14 24>;
-            // layers = <WIN>;
+            layers = <WIN>;
             timeout-ms = <80>;
         };
 
@@ -198,6 +202,18 @@
         //     display-name = "Toggle Layer Off";
         //     toggle-mode = "off";
         // };
+        macro_LANG1: macro_LANG1 {
+            compatible = "zmk,behavior-macro";
+            label = "macro_LANG1";
+            #binding-cells = <0>;
+            bindings = <&kp LANG1>, <&to WIN>;
+        };
+        macro_LANG2: macro_LANG2 {
+            compatible = "zmk,behavior-macro";
+            label = "macro_LANG2";
+            #binding-cells = <0>;
+            bindings = <&kp LANG2>, <&to QWE>;
+        };
         
         bt0_l0: bt0_l0 { // Bluetoothプロファイル0を選択し、レイヤー0を有効化
             compatible = "zmk,behavior-macro";
@@ -595,6 +611,15 @@
     keymap {
         compatible = "zmk,keymap";
 
+        QWE {
+            bindings = <
+            &kp Q           &kp W    &kp E          &kp R               &kp T                                                     &kp Y           &kp U              &kp I          &kp O      &kp P
+            &kp A           &kp S    &kp D          &kp F                                                       &kp G             &kp H           &kp J              &kp K          &kp L      &kp SEMICOLON
+            &kp Z           &kp X    &kp C          &kp V                                                       &kp B             &kp N           &kp M              &kp COMMA      &kp DOT    &kp SLASH
+                                                    &td_lt_num_i5       &kp SPACE             &mo LWR           &lt RSE ENTER     &kp INT4        &td_lt_mov_i2
+            >;
+        };
+
         WIN {
             bindings = <
             &kp Q           &kp W    &kp E          &kp R               &kp T                                                     &kp Y           &kp U              &kp I          &kp O      &kp P
@@ -609,7 +634,7 @@
             &kp PG_UP  &kp HOME    &kp UP        &kp END       &mkp MB3                             &kp DEL        &msc SCRL_LEFT &mmv MOVE_UP   &msc SCRL_RIGHT   &msc SCRL_UP
             &kp PG_DN  &kp LEFT    &kp DOWN      &kp RIGHT   	                        &mkp MB1    &kp BSPC       &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT   &msc SCRL_DOWN
             &kp LC(V)  &mkp MB1    &mkp MB3      &mkp MB2		                        &mkp MB2    &mkp MB1       &kp ENTER      &kp LC(LEFT)   &kp LC(RIGHT)     &kp LG(V)
-                                                 &kp LSHFT     &trans   	&trans      &trans      &kp LS(LC(V))  &kp RSHFT
+                                                 &kp LSHFT     &macro_LANG2	&trans      &trans      &kp LS(LC(V))  &kp RSHFT
             >;
         };
 
@@ -618,7 +643,7 @@
             &kp F1            &kp F2      &kp F3      &kp F4      &kp F5         		    		   &kp F6         &kp F7    	&kp F8      	&kp F9      &kp F10
             &kp N1            &kp N2      &kp N3      &kp N4      		     		    &kp N5         &kp N6         &kp N7    	&kp N8      	&kp N9      &kp N0
             &kp INT1          &kp BSLH    &kp INT3    &kp SLASH   		     		    &kp ASTRK      &kp MINUS      &kp PLUS  	&kp LBKT    	&kp RBKT    &kp LC(V)
-                                                      &kp LSHFT   &kp SPACE &trans      &trans         &trans   	  &kp RSHFT
+                                                      &kp LSHFT   &kp SPACE &trans      &trans         &macro_LANG1	  &kp RSHFT
             >;
         };
 
