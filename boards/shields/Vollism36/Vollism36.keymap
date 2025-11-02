@@ -195,7 +195,7 @@
             layers = <NUM>;
             timeout-ms = <80>;
         };
-        
+
         dot_question {
             bindings = <&kp KP_DOT>;
             key-positions = <18 19>;
@@ -245,48 +245,48 @@
         bt0_l0: bt0_l0 { // Bluetoothプロファイル0を選択し、レイヤー0を有効化
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to WIN &bt BT_SEL 0 &to WIN>;
+            bindings = <&to QWE &bt BT_SEL 0 &to QWE>;
         };
 
         bt1_l4: bt1_l4 { // Bluetoothプロファイル1を選択し、レイヤー4を有効化
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to WIN &bt BT_SEL 1 &to WIN>;
+            bindings = <&to QWE &bt BT_SEL 1 &to QWE>;
         };
 
         bt2_l4: bt2_l4 { // Bluetoothプロファイル2を選択し、レイヤー4を有効化
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to WIN &bt BT_SEL 2 &to WIN>;
+            bindings = <&to QWE &bt BT_SEL 2 &to QWE>;
         };
 
         bt3_l4: bt3_l4 { // Bluetoothプロファイル3を選択し、レイヤー4を有効化
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to WIN &bt BT_SEL 3 &to WIN>;
+            bindings = <&to QWE &bt BT_SEL 3 &to QWE>;
         };
 
         bt4_l2: bt4_l2 { // Bluetoothプロファイル4を選択し、レイヤー2を有効化
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to WIN &bt BT_SEL 4 &to WIN>;
+            bindings = <&to QWE &bt BT_SEL 4 &to QWE>;
         };
 
         bt4_l3: bt4_l3 { // Bluetoothプロファイル4を選択し、レイヤー3を有効化
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to WIN &bt BT_SEL 4 &to WIN>;
+            bindings = <&to QWE &bt BT_SEL 4 &to QWE>;
         };
 
         usb_l0: usb_l0 { // USB接続を選択し、レイヤー0を有効化
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to WIN &out OUT_USB &to WIN>;
+            bindings = <&to QWE &out OUT_USB &to QWE>;
         };
         usb_l2: usb_l2 { // USB接続を選択し、レイヤー2を有効化
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to WIN &out OUT_USB &to WIN>;
+            bindings = <&to QWE &out OUT_USB &to QWE>;
         };
         // td_lt_mov_l1: tap_dance_layer_tap_mov_l1 {  // タップでLANG1、ホールドでMOVレイヤ、ダブルタップでMOVレイヤ保持
         //     compatible = "zmk,behavior-tap-dance";
