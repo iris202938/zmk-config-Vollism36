@@ -116,28 +116,28 @@
         ctrl_l {
             bindings = <&kp LCTRL>;
             key-positions = <10 11>;
-            layers = <QWE>;
+            layers = <QWE LWR RSE>;
             timeout-ms = <80>;
         };
 
         ctrl_r {
             bindings = <&kp RCTRL>;
             key-positions = <18 19>;
-            layers = <QWE>;
+            layers = <QWE LWR RSE>;
             timeout-ms = <80>;
         };
 
         gui_l {
             bindings = <&kp LGUI>;
             key-positions = <20 21>;
-            layers = <QWE>;
+            layers = <QWE LWR RSE>;
             timeout-ms = <80>;
         };
 
         alt_r {
             bindings = <&kp RALT>;
             key-positions = <28 29>;
-            layers = <QWE>;
+            layers = <QWE LWR RSE>;
             timeout-ms = <80>;
         };
 
@@ -173,6 +173,18 @@
             bindings = <&alt_slash>;
             key-positions = <18 29>;
             layers = <QWE>;
+            timeout-ms = <80>;
+        };
+        nlck {
+            bindings = <&kp KP_NLCK>;
+            key-positions = <8 9>;
+            layers = <NUM>;
+            timeout-ms = <80>;
+        };
+        dot_question {
+            bindings = <&kp KP_DOT>;
+            key-positions = <18 19>;
+            layers = <NUM>;
             timeout-ms = <80>;
         };
     };
@@ -662,7 +674,7 @@
             &kp LS(LC(TAB))       &msc SCRL_LEFT  &msc SCRL_UP      &msc SCRL_RIGHT   &kp LCTRL                                         &kp LC(Y)      &kp HOME         &kp UP        &kp END        &kp PG_UP
             &mkp MB1              &mkp MB1        &msc SCRL_DOWN    &mkp MB2                                           &msc SCRL_DOWN   &lt BLE BSPC   &kp LEFT         &kp DOWN      &kp RIGHT      &kp PG_DN
             &mt LGUI SPACE        &kp LA(LEFT)    &mkp MB3          &kp LA(RIGHT)                                      &kp LC(TAB)      &kp LC(Z)      &kp LC(PG_UP)    &kp LG(LBKT)  &kp LG(RBKT)   &kp LC(PG_DN)
-                                                                    &kp LC(C)         &kp LSHFT        &mkp MB2        &kp ENTER        &mkp MB1       &to_WIN_i5
+                                                                    &kp LC(C)         &kp LSHFT        &mkp MB2        &kp ENTER        &mkp MB1       &trans
             >;
         };
 
@@ -671,7 +683,7 @@
             &kp PG_UP     &kp HOME        &kp UP        &kp END         &kp CARET                                           &kp KP_SLASH    &kp KP_N7   &kp KP_N8   &kp KP_N9     &kp KP_N0
             &kp PG_DN     &kp LEFT        &kp DOWN      &kp RIGHT                                         &lt BLE DEL       &kp BSPC        &kp KP_N4   &kp KP_N5   &kp KP_N6     &kp KP_MINUS
             &alt_left	  &alt_down       &alt_up       &alt_right                                        &kp EQUAL         &kp KP_MULTIPLY &kp KP_N1   &kp KP_N2   &kp KP_N3     &kp KP_PLUS
-                                                        &to_WIN_i5      &pr_pg	    	  &nx_pg          &kp KP_ENTER      &kp UNDER       &kp SPACE
+                                                        &trans          &pr_pg	    	  &nx_pg          &kp KP_ENTER      &kp UNDER       &kp SPACE
             >;
         };
         BLE {
