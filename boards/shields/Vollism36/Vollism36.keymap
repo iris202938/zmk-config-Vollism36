@@ -202,6 +202,20 @@
             layers = <NUM>;
             timeout-ms = <80>;
         };
+        
+        mt_LCTRL_GRAVE {
+            bindings = <&mt LCTRL GRAVE>;
+            key-positions = <10 11>;
+            layers = <RSE>;
+            timeout-ms = <80>;
+        };
+
+        mt_LCTRL_LANG5 {
+            bindings = <&mt LCTRL LANG5>;
+            key-positions = <10 11>;
+            layers = <ADJ>;
+            timeout-ms = <80>;
+        };
     };
 
     behaviors {
