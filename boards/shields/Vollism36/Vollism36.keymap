@@ -175,12 +175,27 @@
             layers = <QWE>;
             timeout-ms = <80>;
         };
+
+        ctrl_x {
+            bindings = <&kp LC(X)>;
+            key-positions = <8 9>;
+            layers = <RSE>;
+            timeout-ms = <80>;
+        };
+
+        ctrl_c {
+            bindings = <&kp LC(C)>;
+            key-positions = <18 19>;
+            layers = <RSE>;
+            timeout-ms = <80>;
+        };
         nlck {
             bindings = <&kp KP_NLCK>;
             key-positions = <8 9>;
             layers = <NUM>;
             timeout-ms = <80>;
         };
+        
         dot_question {
             bindings = <&kp KP_DOT>;
             key-positions = <18 19>;
