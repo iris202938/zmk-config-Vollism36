@@ -54,18 +54,8 @@
         sensor_rotation: sensor_rotation {
             compatible = "zmk,input-processor-sensor-rotation";
             #input-processor-cells = <0>;
-            rotation-angle = <345>;
+            rotation-angle = <340>;
         };
-        // // 👈 【必須】この定義を追加してください
-        // zip_xy_to_arrow_mapper: zip_xy_to_arrow_mapper {
-        //     compatible = "zmk,input-processor-xy-to-arrow-mapper";
-        //     #input-processor-cells = <0>; 
-        // };
-        // // 👈 【保持】このセクションが NUM レイヤーでの方向キー動作を強制します。
-        // arrows_mapper {
-        //     layers = <NUM>;
-        //     input-processors = <&zip_xy_to_arrow_mapper>; // 定義が追加されたのでOK
-        // };
     };
 };
 

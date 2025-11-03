@@ -175,7 +175,21 @@
             layers = <QWE>;
             timeout-ms = <80>;
         };
-
+        
+        CTRL_PG_DN {
+            bindings = <&kp LC(PG_DN)>;
+            key-positions = <0 1>;
+            layers = <LWR>;
+            timeout-ms = <80>;
+        };
+        
+        CTRL_PG_UP {
+            bindings = <&kp LC(PG_UP)>;
+            key-positions = <10 11>;
+            layers = <LWR>;
+            timeout-ms = <80>;
+        };
+        
         ctrl_x {
             bindings = <&kp LC(X)>;
             key-positions = <8 9>;
@@ -189,6 +203,7 @@
             layers = <RSE>;
             timeout-ms = <80>;
         };
+
         nlck {
             bindings = <&kp KP_NLCK>;
             key-positions = <8 9>;
@@ -640,10 +655,10 @@
 
         QWE {
             bindings = <
-            &mt LSHFT Q     &kp W    &kp E          &kp R               &kp T                                                     &kp Y           &kp U              &kp I          &kp O      &mt RSHFT P
-            &mt LCTRL A     &kp S    &kp D          &kp F                                                       &kp G             &kp H           &kp J              &kp K          &kp L      &mt RCTRL SEMICOLON
-            &mt LGUI Z      &kp X    &kp C          &kp V                                                       &kp B             &kp N           &kp M              &kp COMMA      &kp DOT    &mt RALT SLASH
-                                                    &lt NUM LANG2       &mt LSHFT SPACE       &mo LWR           &lt RSE ENTER     &kp INT4        &lt MOV LANG1
+            &mt LSHFT Q   &kp W         &kp E          &kp R               &kp T                                                     &kp Y           &kp U              &kp I          &kp O      &mt RSHFT P
+            &mt LCTRL A   &mt LALT S    &mt LSHFT D    &mt LGUI F                                                  &kp G             &kp H           &mt RGUI J         &mt RSHFT K    &mt RALT L &mt RCTRL SEMICOLON
+            &mt LGUI Z    &kp X         &kp C          &kp V                                                       &kp B             &kp N           &kp M              &kp COMMA      &kp DOT    &mt RALT SLASH
+                                                       &lt NUM LANG2       &mt LSHFT SPACE       &mo LWR           &lt RSE ENTER     &kp INT4        &lt MOV LANG1
             >;
         };
 
