@@ -696,16 +696,16 @@
 
         RSE {
             bindings = <
-            &kp F1            &kp F2      &kp F3      &kp F4      &kp F5         		    		   &kp F6         &kp F7    	&kp F8      	&kp F9      &kp F10
-            &kp N1            &kp N2      &kp N3      &kp N4      		     		    &kp N5         &kp N6         &kp N7    	&kp N8      	&kp N9      &kp N0
-            &kp INT1          &kp BSLH    &kp INT3    &kp SLASH   		     		    &kp ASTRK      &kp MINUS      &kp PLUS  	&kp LBKT    	&kp RBKT    &kp LC(V)
+            &mt LSHFT F1      &kp F2      &kp F3      &kp F4      &kp F5         		    		   &kp F6         &kp F7    	&kp F8      	&kp F9      &kp F10
+            &mt LCTRL N1      &kp N2      &kp N3      &kp N4      		     		    &kp N5         &kp N6         &kp N7    	&kp N8      	&kp N9      &kp N0
+            &mt LGUI INT1     &kp BSLH    &kp INT3    &kp SLASH   		     		    &kp ASTRK      &kp MINUS      &kp PLUS  	&kp LBKT    	&kp RBKT    &mt  RALT LC(V)
                                                       &kp LSHFT   &kp SPACE &trans      &trans         &macro_LANG1	  &kp RSHFT
             >;
         };
 
         ADJ {
             bindings = <
-            &kp F11        &kp F12        &kp C_MUTE        &kp C_VOL_DN   &kp C_VOL_UP                                    &kp CAPS       &kp PSCRN      &kp SLCK         &kp PAUSE_BREAK   &kp LS(UP)
+            &mt LSHFT F11  &kp F12        &kp C_MUTE        &kp C_VOL_DN   &kp C_VOL_UP                                    &kp CAPS       &kp PSCRN      &kp SLCK         &kp PAUSE_BREAK   &kp LS(UP)
             &out OUT_BLE   &usb_l2        &bt3_l4           &kp LS(RIGHT)                                   &kp G          &kp INT5       &file_r        &pr_pg           &nx_pg            &file_f
             &bt0_l0        &bt1_l4        &bt2_l4           &kp K_APP                                       &kp LS(LEFT)   &kp LS(DOWN)   &kp LS(HOME)   &kp LS(LC(LEFT)) &kp LS(LC(RIGHT)) &kp LS(END)
                                                             &trans         &grave_uc        &trans          &trans         &tilde_uc	  &trans
@@ -715,8 +715,8 @@
 
         MOV {
             bindings = <
-            &kp LS(LC(TAB))       &msc SCRL_LEFT  &msc SCRL_UP      &msc SCRL_RIGHT   &kp LCTRL                                         &kp LC(Y)      &kp HOME         &kp UP        &kp END        &kp PG_UP
-            &mkp MB1              &mkp MB1        &msc SCRL_DOWN    &mkp MB2                                           &msc SCRL_DOWN   &lt BLE BSPC   &kp LEFT         &kp DOWN      &kp RIGHT      &kp PG_DN
+            &kp LS(LC(TAB))       &msc SCRL_LEFT  &msc SCRL_UP      &msc SCRL_RIGHT   &kp LC(T)                                         &kp LC(Y)      &kp HOME         &kp UP        &kp END        &kp PG_UP
+            &kp LC(TAB)           &mkp MB1        &msc SCRL_DOWN    &mkp MB2                                           &msc SCRL_DOWN   &lt BLE BSPC   &kp LEFT         &kp DOWN      &kp RIGHT      &kp PG_DN
             &mt LGUI SPACE        &kp LA(LEFT)    &mkp MB3          &kp LA(RIGHT)                                      &kp LC(TAB)      &kp LC(Z)      &kp LC(PG_UP)    &kp LG(LBKT)  &kp LG(RBKT)   &kp LC(PG_DN)
                                                                     &kp LC(C)         &kp LSHFT        &mkp MB2        &kp ENTER        &mkp MB1       &trans
             >;
