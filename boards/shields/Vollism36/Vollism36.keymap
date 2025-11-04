@@ -345,7 +345,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&lt MOV INT2>, <&to_MOV_i5>;
+            bindings = <&lt MOV INT2>, <&to_MOV_i2>;
         };
 		td_lt_num_i5: tap_dance_layer_tap_num_i5 {  // タップでINT5、ホールドでNUMレイヤ、ダブルタップでNUMレイヤ保持
             compatible = "zmk,behavior-tap-dance";
@@ -568,10 +568,10 @@
             bindings = <&to WIN>, <&kp INT5>;
         };
 
-        to_MOV_i5: to_MOV_INT5{
+        to_MOV_i2: to_MOV_INT2{
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to MOV>, <&kp INT5>;
+            bindings = <&to MOV>, <&kp INT2>;
         };
 
         to_NUM_i5: to_NUM_INT5{
@@ -690,7 +690,7 @@
             &mt LSHFT Q   &kp W         &kp E          &kp R               &kp T                                                     &kp Y           &kp U              &kp I          &kp O      &mt RSHFT P
             &mt LCTRL A   &mt LALT S    &mt LSHFT D    &mt LGUI F                                                  &kp G             &kp H           &mt RGUI J         &mt RSHFT K    &mt RALT L &mt RCTRL SEMICOLON
             &mt LGUI Z    &kp X         &kp C          &kp V                                                       &kp B             &kp N           &kp M              &kp COMMA      &kp DOT    &mt RALT SLASH
-                                                       &lt NUM LANG2       &mt LSHFT SPACE       &mo LWR           &lt RSE ENTER     &kp INT4        &td_lt_mov_l1
+                                                       &lt NUM INT5        &mt LSHFT SPACE       &mo LWR           &lt RSE ENTER     &kp INT4        &td_lt_mov_i2
 
             >;
         };
