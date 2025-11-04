@@ -544,6 +544,12 @@
         // 	bindings = <&to QWE>, <&kp LANG2>;
         // };
 
+        to_QWE_i5: to_QWE_INT5{
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to QWE>, <&kp INT5>;
+        };
+
         to_WIN_i5: to_WIN_INT5{
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
