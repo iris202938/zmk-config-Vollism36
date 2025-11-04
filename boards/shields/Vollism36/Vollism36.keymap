@@ -258,6 +258,18 @@
         //     display-name = "Toggle Layer Off";
         //     toggle-mode = "off";
         // };
+        macro_INT2: macro_INT2 {
+            compatible = "zmk,behavior-macro";
+            label = "macro_INT2";
+            #binding-cells = <0>;
+            bindings = <&kp INT2>, <&to WIN>;
+        };
+        macro_INT5: macro_INT5 {
+            compatible = "zmk,behavior-macro";
+            label = "macro_INT5";
+            #binding-cells = <0>;
+            bindings = <&kp INT5>, <&to QWE>;
+        };
         macro_LANG1: macro_LANG1 {
             compatible = "zmk,behavior-macro";
             label = "macro_LANG1";
@@ -678,7 +690,8 @@
             &mt LSHFT Q   &kp W         &kp E          &kp R               &kp T                                                     &kp Y           &kp U              &kp I          &kp O      &mt RSHFT P
             &mt LCTRL A   &mt LALT S    &mt LSHFT D    &mt LGUI F                                                  &kp G             &kp H           &mt RGUI J         &mt RSHFT K    &mt RALT L &mt RCTRL SEMICOLON
             &mt LGUI Z    &kp X         &kp C          &kp V                                                       &kp B             &kp N           &kp M              &kp COMMA      &kp DOT    &mt RALT SLASH
-                                                       &lt NUM LANG2       &mt LSHFT SPACE       &mo LWR           &lt RSE ENTER     &kp INT4        &td_lt_mov_l2
+                                                       &lt NUM LANG2       &mt LSHFT SPACE       &mo LWR           &lt RSE ENTER     &kp INT4        &td_lt_mov_l1
+
             >;
         };
 
@@ -696,7 +709,7 @@
             &mt LSHFT PG_UP  &kp HOME    &kp UP        &kp END       &mkp MB3                               &kp DEL        &msc SCRL_LEFT &mmv MOVE_UP   &msc SCRL_RIGHT   &msc SCRL_UP
             &mt LCTRL PG_DN  &kp LEFT    &kp DOWN      &kp RIGHT   	                            &mkp MB1    &kp BSPC       &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT   &msc SCRL_DOWN
             &mt LGUI LC(V)   &mkp MB1    &mkp MB3      &mkp MB2		                            &mkp MB2    &mkp MB1       &kp ENTER      &kp LC(LEFT)   &kp LC(RIGHT)     &mt  RALT LG(V)
-                                                       &kp LSHFT     &macro_LANG2	&trans      &trans      &kp LS(LC(V))  &kp RSHFT
+                                                       &kp LSHFT     &macro_INT5	&trans      &trans      &kp LS(LC(V))  &kp RSHFT
             >;
         };
 
@@ -705,7 +718,7 @@
             &mt LSHFT F1      &kp F2      &kp F3      &kp F4      &kp F5         		    		   &kp F6         &kp F7    	&kp F8      	&kp F9      &kp F10
             &mt LCTRL N1      &kp N2      &kp N3      &kp N4      		     		    &kp N5         &kp N6         &kp N7    	&kp N8      	&kp N9      &kp N0
             &mt LGUI INT1     &kp BSLH    &kp INT3    &kp SLASH   		     		    &kp ASTRK      &kp MINUS      &kp PLUS  	&kp LBKT    	&kp RBKT    &mt  RALT LC(V)
-                                                      &kp LSHFT   &kp SPACE &trans      &trans         &macro_LANG1	  &kp RSHFT
+                                                      &kp LSHFT   &kp SPACE &trans      &trans         &macro_INT2	  &kp RSHFT
             >;
         };
 
