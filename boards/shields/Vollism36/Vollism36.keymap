@@ -678,7 +678,7 @@
             &mt LSHFT Q   &kp W         &kp E          &kp R               &kp T                                                     &kp Y           &kp U              &kp I          &kp O      &mt RSHFT P
             &mt LCTRL A   &mt LALT S    &mt LSHFT D    &mt LGUI F                                                  &kp G             &kp H           &mt RGUI J         &mt RSHFT K    &mt RALT L &mt RCTRL SEMICOLON
             &mt LGUI Z    &kp X         &kp C          &kp V                                                       &kp B             &kp N           &kp M              &kp COMMA      &kp DOT    &mt RALT SLASH
-                                                       &lt NUM LANG2       &mt LSHFT SPACE       &mo LWR           &lt RSE ENTER     &kp INT4        &td_lt_mov_i2
+                                                       &lt NUM LANG2       &mt LSHFT SPACE       &mo LWR           &lt RSE ENTER     &kp INT4        &td_lt_mov_l2
             >;
         };
 
@@ -687,7 +687,7 @@
             &kp Q           &kp W    &kp E          &kp R               &kp T                                                     &kp Y           &kp U              &kp I          &kp O      &kp P
             &kp A           &kp S    &kp D          &kp F                                                       &kp G             &kp H           &kp J              &kp K          &kp L      &kp SEMICOLON
             &kp Z           &kp X    &kp C          &kp V                                                       &kp B             &kp N           &kp M              &kp COMMA      &kp DOT    &kp SLASH
-                                                    &lt NUM LANG2       &kp SPACE             &lt LWR TAB       &lt RSE ENTER     &kp INT4        &td_lt_mov_i2
+                                                    &lt NUM INT5        &kp SPACE             &lt LWR TAB       &lt RSE ENTER     &kp INT4        &td_lt_mov_i2
             >;
         };
 
