@@ -678,7 +678,7 @@
             &mt LSHFT Q   &kp W         &kp E          &kp R               &kp T                                                     &kp Y           &kp U              &kp I          &kp O      &mt RSHFT P
             &mt LCTRL A   &mt LALT S    &mt LSHFT D    &mt LGUI F                                                  &kp G             &kp H           &mt RGUI J         &mt RSHFT K    &mt RALT L &mt RCTRL SEMICOLON
             &mt LGUI Z    &kp X         &kp C          &kp V                                                       &kp B             &kp N           &kp M              &kp COMMA      &kp DOT    &mt RALT SLASH
-                                                       &lt NUM INT5        &mt LSHFT SPACE       &mo LWR           &lt RSE ENTER     &kp INT4        &td_lt_mov_i2
+                                                       &lt NUM LANG2       &mt LSHFT SPACE       &mo LWR           &lt RSE ENTER     &kp INT4        &td_lt_mov_i2
             >;
         };
 
@@ -687,7 +687,7 @@
             &kp Q           &kp W    &kp E          &kp R               &kp T                                                     &kp Y           &kp U              &kp I          &kp O      &kp P
             &kp A           &kp S    &kp D          &kp F                                                       &kp G             &kp H           &kp J              &kp K          &kp L      &kp SEMICOLON
             &kp Z           &kp X    &kp C          &kp V                                                       &kp B             &kp N           &kp M              &kp COMMA      &kp DOT    &kp SLASH
-                                                    &lt NUM INT5        &kp SPACE             &lt LWR TAB       &lt RSE ENTER     &kp INT4        &td_lt_mov_i2
+                                                    &lt NUM LANG2       &kp SPACE             &lt LWR TAB       &lt RSE ENTER     &kp INT4        &td_lt_mov_i2
             >;
         };
 
@@ -723,8 +723,8 @@
             bindings = <
             &kp LS(LC(TAB))       &msc SCRL_LEFT  &msc SCRL_UP      &msc SCRL_RIGHT   &kp LC(T)                                         &kp LC(Y)      &kp HOME         &kp UP        &kp END        &kp PG_UP
             &kp LC(TAB)           &mkp MB1        &msc SCRL_DOWN    &mkp MB2                                           &msc SCRL_DOWN   &lt BLE BSPC   &kp LEFT         &kp DOWN      &kp RIGHT      &kp PG_DN
-            &mt LGUI SPACE        &kp LA(LEFT)    &mkp MB3          &kp LA(RIGHT)                                      &kp LC(TAB)      &kp LC(Z)      &kp LC(PG_UP)    &kp LG(LBKT)  &kp LG(RBKT)   &kp LC(PG_DN)
-                                                                    &kp LC(C)         &kp LSHFT        &mkp MB2        &kp ENTER        &mkp MB1       &to_QWE_i5
+            &mt LGUI SPACE        &kp LA(LEFT)    &mkp MB3          &kp LA(RIGHT)                                      &mkp MB2         &mkp MB1       &kp LC(PG_UP)    &kp LG(LBKT)  &kp LG(RBKT)   &kp LC(PG_DN)
+                                                                    &kp LC(C)         &kp LSHFT        &mkp MB2        &kp ENTER        &mkp MB3       &to_QWE_i5
             >;
         };
 
