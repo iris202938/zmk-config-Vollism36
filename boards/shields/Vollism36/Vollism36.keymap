@@ -16,7 +16,8 @@
 #define ADJ 4
 #define MOV 5
 #define NUM 6
-#define BLE 7
+#define CAD 7
+#define BLE 8
 
 &mt {
     flavor = "hold-preferred";
@@ -60,21 +61,21 @@
         esc_l {
             bindings = <&kp ESC>;
             key-positions = <0 10>;
-            layers = <QWE MOV>;
+            layers = <QWE MOV CAD>;
             timeout-ms = <80>;
         };
 
         esc_r {
             bindings = <&kp ESC>;
             key-positions = <9 19>;
-            layers = <QWE>;
+            layers = <QWE CAD>;
             timeout-ms = <80>;
         };
 
         tab {
             bindings = <&kp TAB>;
             key-positions = <1 3>;
-            layers = <QWE MOV>;
+            layers = <QWE MOV CAD>;
             timeout-ms = <80>;
         };
 
@@ -235,28 +236,28 @@
         file_f {
             bindings = <&file_f>;
             key-positions = <1 2>;
-            layers = <MOV>;
+            layers = <CAD>;
             timeout-ms = <80>;
         };
 
         file_r {
             bindings = <&file_r>;
             key-positions = <2 3>;
-            layers = <MOV>;
+            layers = <CAD>;
             timeout-ms = <80>;
         };
 
         pr_pg {
             bindings = <&pr_pg>;
             key-positions = <21 22>;
-            layers = <MOV>;
+            layers = <CAD>;
             timeout-ms = <80>;
         };
 
         nx_pg {
             bindings = <&nx_pg>;
             key-positions = <22 23>;
-            layers = <MOV>;
+            layers = <CAD>;
             timeout-ms = <80>;
         };
     };
@@ -374,6 +375,12 @@
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&lt MOV INT2>, <&to_MOV_i2>;
+        };
+        td_lt_cad_i2: tap_dance_layer_tap_cad_i2 {  // タップでINT2、ホールドでCADレイヤ、ダブルタップでCADレイヤ保持
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&lt MOV INT2>, <&to_CAD_i2>;
         };
 		td_lt_num_i5: tap_dance_layer_tap_num_i5 {  // タップでINT5、ホールドでNUMレイヤ、ダブルタップでNUMレイヤ保持
             compatible = "zmk,behavior-tap-dance";
@@ -602,6 +609,12 @@
             bindings = <&to MOV>, <&kp INT2>;
         };
 
+        to_CAD_i2: to_CAD_INT2{
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to CAD>, <&kp INT2>;
+        };
+
         to_NUM_i5: to_NUM_INT5{
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -718,35 +731,35 @@
             &mt LSHFT Q   &kp W         &kp E           &kp R               &kp T                                                     &kp Y           &kp U              &kp I          &kp O      &mt RSHFT P
             &mt LCTRL A   &mt LALT S    &mt LSHFT D     &mt LGUI F                                                  &kp G             &kp H           &mt RGUI J         &mt RSHFT K    &mt RALT L &mt RCTRL SEMICOLON
             &mt LGUI Z    &kp X         &kp C           &kp V                                                       &kp B             &kp N           &kp M              &kp COMMA      &kp DOT    &mt RALT SLASH
-                                                        &lt NUM INT5        &mt LSHFT SPACE       &mo LWR           &lt RSE ENTER     &kp INT4        &td_lt_mov_i2
+                                                        &lt NUM INT5        &mt LSHFT SPACE       &mo LWR           &lt RSE ENTER     &kp INT4        &td_lt_cad_i2
 
             >;
         };
 
         WIN {
             bindings = <
-            &kp Q           &kp W    &kp E          &kp R               &kp T                                                     &kp Y           &kp U              &kp I          &kp O      &kp P
-            &kp A           &kp S    &kp D          &kp F                                                       &kp G             &kp H           &kp J              &kp K          &kp L      &kp SEMICOLON
-            &kp Z           &kp X    &kp C          &kp V                                                       &kp B             &kp N           &kp M              &kp COMMA      &kp DOT    &kp SLASH
-                                                    &lt NUM INT5        &kp SPACE             &lt LWR TAB       &lt RSE ENTER     &kp INT4        &td_lt_mov_i2
+            &kp Q           &kp W       &kp E           &kp R               &kp T                                                     &kp Y           &kp U              &kp I          &kp O      &kp P
+            &kp A           &kp S       &kp D           &kp F                                                       &kp G             &kp H           &kp J              &kp K          &kp L      &kp SEMICOLON
+            &kp Z           &kp X       &kp C           &kp V                                                       &kp B             &kp N           &kp M              &kp COMMA      &kp DOT    &kp SLASH
+                                                        &lt NUM INT5        &kp SPACE             &lt LWR TAB       &lt RSE ENTER     &kp INT4        &td_lt_mov_i2
             >;
         };
 
         LWR {
             bindings = <
-            &mt LSHFT PG_UP &kp HOME    &kp UP          &kp END       &mkp MB3                               &kp DEL        &msc SCRL_LEFT &mmv MOVE_UP   &msc SCRL_RIGHT   &msc SCRL_UP
-            &mt LCTRL PG_DN &kp LEFT    &kp DOWN        &kp RIGHT   	                            &mkp MB1    &kp BSPC       &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT   &msc SCRL_DOWN
-            &mt LGUI LC(V)  &mkp MB1    &mkp MB3        &mkp MB2		                            &mkp MB2    &mkp MB1       &kp ENTER      &kp LC(LEFT)   &kp LC(RIGHT)     &mt  RALT LG(V)
-                                                        &kp LSHFT     &macro_INT5	&trans      &trans      &kp LS(LC(V))  &kp RSHFT
+            &mt LSHFT PG_UP &kp HOME    &kp UP          &kp END       &mkp MB3                                  &kp DEL        &msc SCRL_LEFT   &mmv MOVE_UP    &msc SCRL_RIGHT   &msc SCRL_UP
+            &mt LCTRL PG_DN &kp LEFT    &kp DOWN        &kp RIGHT   	                            &mkp MB1    &kp BSPC       &mmv MOVE_LEFT   &mmv MOVE_DOWN  &mmv MOVE_RIGHT   &msc SCRL_DOWN
+            &mt LGUI LC(V)  &mkp MB1    &mkp MB3        &mkp MB2		                            &mkp MB2    &mkp MB1       &kp ENTER        &kp LC(LEFT)    &kp LC(RIGHT)     &mt  RALT LG(V)
+                                                        &kp LSHFT     &macro_INT5	&trans          &trans      &kp LS(LC(V))  &kp RSHFT
             >;
         };
 
         RSE {
             bindings = <
-            &mt LSHFT F1      &kp F2      &kp F3      &kp F4      &kp F5         		    		   &kp F6         &kp F7    	&kp F8      	&kp F9      &kp F10
-            &mt LCTRL N1      &kp N2      &kp N3      &kp N4      		     		    &kp N5         &kp N6         &kp N7    	&kp N8      	&kp N9      &kp N0
-            &mt LGUI INT1     &kp BSLH    &kp INT3    &kp SLASH   		     		    &kp ASTRK      &kp MINUS      &kp PLUS  	&kp LBKT    	&kp RBKT    &mt  RALT LC(V)
-                                                      &kp LSHFT   &kp SPACE &trans      &trans         &macro_INT2	  &kp RSHFT
+            &mt LSHFT F1    &kp F2      &kp F3      &kp F4      &kp F5         		         		   &kp F6         &kp F7    	&kp F8      	&kp F9      &kp F10
+            &mt LCTRL N1    &kp N2      &kp N3      &kp N4      		     		    &kp N5         &kp N6         &kp N7    	&kp N8      	&kp N9      &kp N0
+            &mt LGUI INT1   &kp BSLH    &kp INT3    &kp SLASH   		     		    &kp ASTRK      &kp MINUS      &kp PLUS  	&kp LBKT    	&kp RBKT    &mt  RALT LC(V)
+                                                    &kp LSHFT   &kp SPACE   &trans      &trans         &macro_INT2	  &kp RSHFT
             >;
         };
 
@@ -763,7 +776,7 @@
         MOV {
             bindings = <
             &mt LSHFT Q           &kp W           &kp E             &kp R             &int5_g                                           &kp LC(Y)      &kp HOME         &kp UP        &kp END        &kp PG_UP
-            &mt LCTRL A           &kp S           &mo RSE           &mkp MB1                                           &msc SCRL_DOWN   &lt BLE BSPC   &kp LEFT         &kp DOWN      &kp RIGHT      &kp PG_DN
+            &mt LCTRL A           &kp S           &lt RSE D         &mkp MB1                                           &msc SCRL_DOWN   &lt BLE BSPC   &kp LEFT         &kp DOWN      &kp RIGHT      &kp PG_DN
             &mt LGUI Z            &kp X           &kp C             &kp V                                              &mkp MB2         &mkp MB1       &kp LC(PG_UP)    &kp LG(LBKT)  &kp LG(RBKT)   &kp LC(PG_DN)
                                                                     &kp LALT          &mkp MB3         &mkp MB2        &lt RSE ENTER    &mkp MB3       &to_QWE_i5
             >;
@@ -777,6 +790,16 @@
                                                     &trans          &pr_pg	    	  &nx_pg          &kp KP_ENTER      &kp UNDER       &kp SPACE
             >;
         };
+
+        CAD {
+            bindings = <
+            &mt LSHFT Q           &kp W           &kp E             &kp R             &int5_g                                           &kp Y           &kp U              &kp I          &kp O      &mt RSHFT P
+            &mt LCTRL A           &kp S           &lt RSE D         &mkp MB1                                           &kp G            &kp H           &mt RGUI J         &mt RSHFT K    &mt RALT L &mt RCTRL SEMICOLON
+            &mt LGUI Z            &kp X           &kp C             &kp V                                              &kp B            &kp N           &kp M              &kp COMMA      &kp DOT    &mt RALT SLASH
+                                                                    &mo NUM           &mkp MB3         &mkp MB2        &lt RSE ENTER    &mkp MB3        &to_QWE_i5
+            >;
+        };
+
         BLE {
             bindings = <
             &bt BT_DISC 0   &bt BT_DISC 1   &bt BT_DISC 2   &bt BT_DISC 3   &bt BT_CLR_ALL                                 &bt BT_CLR_ALL &bt BT_DISC 4   &bt BT_DISC 5 &bt BT_DISC 6 &bt BT_DISC 7

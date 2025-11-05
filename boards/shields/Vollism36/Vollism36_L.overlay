@@ -12,7 +12,8 @@
 #define ADJ 4
 #define MOV 5
 #define NUM 6
-#define BLE 7
+#define CAD 7
+#define BLE 8
 
 &kscan0 {
         col-gpios
