@@ -640,7 +640,7 @@
                 ;
         };
 
-        alt_slash: alt_slash { // ファイル切替　Alt+/ (AHK)
+        alt_slash: alt_slash { // ファイル切替 Alt+/ (AHK)
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -715,10 +715,10 @@
 
         QWE {
             bindings = <
-            &mt LSHFT Q   &kp W         &kp E          &kp R               &kp T                                                     &kp Y           &kp U              &kp I          &kp O      &mt RSHFT P
-            &mt LCTRL A   &mt LALT S    &mt LSHFT D    &mt LGUI F                                                  &kp G             &kp H           &mt RGUI J         &mt RSHFT K    &mt RALT L &mt RCTRL SEMICOLON
-            &mt LGUI Z    &kp X         &kp C          &kp V                                                       &kp B             &kp N           &kp M              &kp COMMA      &kp DOT    &mt RALT SLASH
-                                                       &lt NUM INT5        &mt LSHFT SPACE       &mo LWR           &lt RSE ENTER     &kp INT4        &td_lt_mov_i2
+            &mt LSHFT Q   &kp W         &kp E           &kp R               &kp T                                                     &kp Y           &kp U              &kp I          &kp O      &mt RSHFT P
+            &mt LCTRL A   &mt LALT S    &mt LSHFT D     &mt LGUI F                                                  &kp G             &kp H           &mt RGUI J         &mt RSHFT K    &mt RALT L &mt RCTRL SEMICOLON
+            &mt LGUI Z    &kp X         &kp C           &kp V                                                       &kp B             &kp N           &kp M              &kp COMMA      &kp DOT    &mt RALT SLASH
+                                                        &lt NUM INT5        &mt LSHFT SPACE       &mo LWR           &lt RSE ENTER     &kp INT4        &td_lt_mov_i2
 
             >;
         };
@@ -734,10 +734,10 @@
 
         LWR {
             bindings = <
-            &mt LSHFT PG_UP  &kp HOME    &kp UP        &kp END       &mkp MB3                               &kp DEL        &msc SCRL_LEFT &mmv MOVE_UP   &msc SCRL_RIGHT   &msc SCRL_UP
-            &mt LCTRL PG_DN  &kp LEFT    &kp DOWN      &kp RIGHT   	                            &mkp MB1    &kp BSPC       &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT   &msc SCRL_DOWN
-            &mt LGUI LC(V)   &mkp MB1    &mkp MB3      &mkp MB2		                            &mkp MB2    &mkp MB1       &kp ENTER      &kp LC(LEFT)   &kp LC(RIGHT)     &mt  RALT LG(V)
-                                                       &kp LSHFT     &macro_INT5	&trans      &trans      &kp LS(LC(V))  &kp RSHFT
+            &mt LSHFT PG_UP &kp HOME    &kp UP          &kp END       &mkp MB3                               &kp DEL        &msc SCRL_LEFT &mmv MOVE_UP   &msc SCRL_RIGHT   &msc SCRL_UP
+            &mt LCTRL PG_DN &kp LEFT    &kp DOWN        &kp RIGHT   	                            &mkp MB1    &kp BSPC       &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT   &msc SCRL_DOWN
+            &mt LGUI LC(V)  &mkp MB1    &mkp MB3        &mkp MB2		                            &mkp MB2    &mkp MB1       &kp ENTER      &kp LC(LEFT)   &kp LC(RIGHT)     &mt  RALT LG(V)
+                                                        &kp LSHFT     &macro_INT5	&trans      &trans      &kp LS(LC(V))  &kp RSHFT
             >;
         };
 
@@ -771,17 +771,17 @@
 
         NUM {
             bindings = <
-            &kp PG_UP     &kp HOME        &kp UP        &kp END         &kp CARET                                           &kp KP_SLASH    &kp KP_N7   &kp KP_N8   &kp KP_N9     &kp KP_N0
-            &kp PG_DN     &kp LEFT        &kp DOWN      &kp RIGHT                                         &lt BLE DEL       &kp BSPC        &kp KP_N4   &kp KP_N5   &kp KP_N6     &kp KP_MINUS
-            &alt_left	  &alt_down       &alt_up       &alt_right                                        &kp EQUAL         &kp KP_MULTIPLY &kp KP_N1   &kp KP_N2   &kp KP_N3     &kp KP_PLUS
-                                                        &trans          &pr_pg	    	  &nx_pg          &kp KP_ENTER      &kp UNDER       &kp SPACE
+            &kp PG_UP   &kp HOME        &kp UP      &kp END         &kp CARET                                           &kp KP_SLASH    &kp KP_N7   &kp KP_N8   &kp KP_N9     &kp KP_N0
+            &kp PG_DN   &kp LEFT        &kp DOWN    &kp RIGHT                                         &lt BLE DEL       &kp BSPC        &kp KP_N4   &kp KP_N5   &kp KP_N6     &kp KP_MINUS
+            &alt_left	&alt_down       &alt_up     &alt_right                                        &kp EQUAL         &kp KP_MULTIPLY &kp KP_N1   &kp KP_N2   &kp KP_N3     &kp KP_PLUS
+                                                    &trans          &pr_pg	    	  &nx_pg          &kp KP_ENTER      &kp UNDER       &kp SPACE
             >;
         };
         BLE {
             bindings = <
-            &bt BT_DISC 0     &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3   &bt BT_CLR_ALL                                 &bt BT_CLR_ALL &bt BT_DISC 4   &bt BT_DISC 5 &bt BT_DISC 6 &bt BT_DISC 7
-            &kp LC(LG(T))     &kp LC(LG(C))  &kp LC(LG(P))  &kp LC(LG(G))                                  &trans          &trans         &kp LC(LG(E))   &kp LC(LG(A)) &kp LC(LG(L)) &kp LC(LG(X))
-            &bt BT_SEL 0      &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3                                   &bootloader     &bootloader    &bt4_l2     	  &bt BT_SEL 5  &bt BT_SEL 6  &bt BT_SEL 7
+            &bt BT_DISC 0   &bt BT_DISC 1   &bt BT_DISC 2   &bt BT_DISC 3   &bt BT_CLR_ALL                                 &bt BT_CLR_ALL &bt BT_DISC 4   &bt BT_DISC 5 &bt BT_DISC 6 &bt BT_DISC 7
+            &kp LC(LG(T))   &kp LC(LG(C))   &kp LC(LG(P))   &kp LC(LG(G))                                  &trans          &trans         &kp LC(LG(E))   &kp LC(LG(A)) &kp LC(LG(L)) &kp LC(LG(X))
+            &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3                                   &bootloader     &bootloader    &bt4_l2     	  &bt BT_SEL 5  &bt BT_SEL 6  &bt BT_SEL 7
                                                             &trans          &kp LS(LG(F23)) &bt BT_CLR     &bt BT_CLR      &kp LA(LG(G))  &trans
             >;
         };
