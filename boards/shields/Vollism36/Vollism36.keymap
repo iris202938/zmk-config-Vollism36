@@ -734,10 +734,10 @@
 
         MOV {
             bindings = <
-            &int5_g               &kp W           &kp E             &kp R             &kp LC(T)                                         &kp LC(Y)      &kp HOME         &kp UP        &kp END        &kp PG_UP
-            &kp A                 &mkp MB1        &mo RSE           &mkp MB1                                           &msc SCRL_DOWN   &lt BLE BSPC   &kp LEFT         &kp DOWN      &kp RIGHT      &kp PG_DN
-            &kp Z                 &kp LA(LEFT)    &kp C             &kp LA(RIGHT)                                      &mkp MB2         &mkp MB1       &kp LC(PG_UP)    &kp LG(LBKT)  &kp LG(RBKT)   &kp LC(PG_DN)
-                                                                    &kp LCTRL         &kp LSHFT        &mkp MB2        &lt RSE ENTER    &mkp MB3       &to_QWE_i5
+            &mt LSHFT Q           &kp W           &kp E             &kp R             &int5_g                                           &kp LC(Y)      &kp HOME         &kp UP        &kp END        &kp PG_UP
+            &mt LCTRL A           &kp S           &mo RSE           &mkp MB1                                           &msc SCRL_DOWN   &lt BLE BSPC   &kp LEFT         &kp DOWN      &kp RIGHT      &kp PG_DN
+            &mt LGUI Z            &kp X           &kp C             &kp V                                              &mkp MB2         &mkp MB1       &kp LC(PG_UP)    &kp LG(LBKT)  &kp LG(RBKT)   &kp LC(PG_DN)
+                                                                    &kp LCTRL         &mkp MB3         &mkp MB2        &lt RSE ENTER    &mkp MB3       &to_QWE_i5
             >;
         };
 
