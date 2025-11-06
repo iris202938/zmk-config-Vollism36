@@ -842,7 +842,7 @@
                 , <&macro_tap &kp TAB>
                 , <&macro_tap &kp TAB>
                 , <&macro_tap &kp TAB>
-                , <&to WIN> // ADJWのベースレイヤー（例としてWINレイヤー）に戻る※rsewレイヤロック強制解除用
+                // , <&to WIN> // ADJWのベースレイヤー（例としてWINレイヤー）に戻る※rsewレイヤロック強制解除用
                 ;
         };
         ctrl_d_a: ctrl_d_a { // ツイスト線
@@ -866,7 +866,7 @@
                 , <&macro_release &kp LALT>
                 // , <&macro_wait_time 40>
                 , <&macro_release &kp LCTRL>
-                , <&to WIN> // ADJWのベースレイヤー（例としてWINレイヤー）に戻る※rsewレイヤロック強制解除用
+                // , <&to WIN> // ADJWのベースレイヤー（例としてWINレイヤー）に戻る※rsewレイヤロック強制解除用
                 ;
         };	
         ctrl_d_w: ctrl_d_w { // 渡りページ編集
@@ -877,7 +877,7 @@
                 , <&macro_tap &kp D>
                 , <&macro_release &kp LCTRL>
                 , <&macro_tap &kp W>
-                , <&to WIN> // ADJWのベースレイヤー（例としてWINレイヤー）に戻る※rsewレイヤロック強制解除用
+                // , <&to WIN> // ADJWのベースレイヤー（例としてWINレイヤー）に戻る※rsewレイヤロック強制解除用
                 ;
         };
         ctrl_d_r: ctrl_d_r { // リファレンス編集
@@ -888,7 +888,7 @@
                 , <&macro_tap &kp D>
                 , <&macro_release &kp LCTRL>
                 , <&macro_tap &kp R>
-                , <&to WIN> // ADJWのベースレイヤー（例としてWINレイヤー）に戻る※rsewレイヤロック強制解除用
+                // , <&to WIN> // ADJWのベースレイヤー（例としてWINレイヤー）に戻る※rsewレイヤロック強制解除用
                 ;
         };
         ctrl_f_r: ctrl_f_r { // R枠変更
