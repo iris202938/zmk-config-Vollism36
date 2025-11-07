@@ -319,48 +319,48 @@
             bindings = <&lt NUM INT5>, <&to_NUM_i5>;
             
         };
-        td_g: tap_dance_g {  // タップで図形グループ化、ダブルタップで図形グループ化解除
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp G>, <&ctrl_d_g>; 
-        };
-        td_i: tap_dance_i {  // タップで2点間寸法線、ダブルタップで連続寸法線
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp I>, <&ctrl_d_i>; 
-        };
-        td_b: tap_dance_b {  // タップで長方形(2頂点)、ダブルタップで長方形(サイズ)､トリプルタップで面取り
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp B>, <&ctrl_a_b>, <&ctrl_d_b>; 
-        };
-        td_y: tap_dance_y {  // タップでレイヤ変更、ダブルタップでシンボルレイヤ変更
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp Y>, <&ctrl_d_t>; 
-        };
-        td_l: tap_dance_l {  // タップで直線(2点間)、ダブルタップで平行補助線入力､トリプルタップで補助線削除
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp L>, <&ctrl_d_l>, <&ctrl_d_d>; 
-        };
-        td_r: tap_dance_r {  // タップで連続寸法線追加、ダブルタップで連続寸法線削除
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp P>, <&kp R>; 
-        };
-        td_t: tap_dance_t {  // タップで文字修正、ダブルタップで文字種別変更
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp E>, <&ctrl_d_e>; 
-        };
+        // td_g: tap_dance_g {  // タップで図形グループ化、ダブルタップで図形グループ化解除
+        //     compatible = "zmk,behavior-tap-dance";
+        //     #binding-cells = <0>;
+        //     tapping-term-ms = <200>;
+        //     bindings = <&kp G>, <&ctrl_d_g>; 
+        // };
+        // td_i: tap_dance_i {  // タップで2点間寸法線、ダブルタップで連続寸法線
+        //     compatible = "zmk,behavior-tap-dance";
+        //     #binding-cells = <0>;
+        //     tapping-term-ms = <200>;
+        //     bindings = <&kp I>, <&ctrl_d_i>; 
+        // };
+        // td_b: tap_dance_b {  // タップで長方形(2頂点)、ダブルタップで長方形(サイズ)､トリプルタップで面取り
+        //     compatible = "zmk,behavior-tap-dance";
+        //     #binding-cells = <0>;
+        //     tapping-term-ms = <200>;
+        //     bindings = <&kp B>, <&ctrl_a_b>, <&ctrl_d_b>; 
+        // };
+        // td_y: tap_dance_y {  // タップでレイヤ変更、ダブルタップでシンボルレイヤ変更
+        //     compatible = "zmk,behavior-tap-dance";
+        //     #binding-cells = <0>;
+        //     tapping-term-ms = <200>;
+        //     bindings = <&kp Y>, <&ctrl_d_t>; 
+        // };
+        // td_l: tap_dance_l {  // タップで直線(2点間)、ダブルタップで平行補助線入力､トリプルタップで補助線削除
+        //     compatible = "zmk,behavior-tap-dance";
+        //     #binding-cells = <0>;
+        //     tapping-term-ms = <200>;
+        //     bindings = <&kp L>, <&ctrl_d_l>, <&ctrl_d_d>; 
+        // };
+        // td_r: tap_dance_r {  // タップで連続寸法線追加、ダブルタップで連続寸法線削除
+        //     compatible = "zmk,behavior-tap-dance";
+        //     #binding-cells = <0>;
+        //     tapping-term-ms = <200>;
+        //     bindings = <&kp P>, <&kp R>; 
+        // };
+        // td_t: tap_dance_t {  // タップで文字修正、ダブルタップで文字種別変更
+        //     compatible = "zmk,behavior-tap-dance";
+        //     #binding-cells = <0>;
+        //     tapping-term-ms = <200>;
+        //     bindings = <&kp E>, <&ctrl_d_e>; 
+        // };
     };
 
     macros {
