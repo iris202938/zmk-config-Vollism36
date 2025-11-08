@@ -1033,16 +1033,6 @@
                 , <&macro_tap &kp T>
                 ;
         }; 
-        ctrl_d_d: ctrl_d_d { //補助線削除
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LCTRL>
-                , <&macro_tap &kp D>
-                , <&macro_release &kp LCTRL>
-                , <&macro_tap &kp D>
-                ;
-        }; 
 
         // m_alt_tab: m_alt_tab {
         // 	label = "ALT_TAB_HOLD";
