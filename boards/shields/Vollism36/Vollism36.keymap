@@ -1132,7 +1132,7 @@
 
         CAD {
             bindings = <
-            &mt LSHFT Q           &kp W           &kp E             &kp R             &int5_g                                           &td_y           &kp U              &td_i          &kp O      &mt RSHFT P
+            &mt LSHFT Q           &kp W           &kp E             &td_r             &int5_g                                           &td_y           &kp U              &td_i          &kp O      &mt RSHFT P
             &mt LCTRL A           &kp S           &lt RSE D         &mkp MB1                                           &td_g            &kp H           &mt RGUI J         &mt RSHFT K    &td_l      &mt RCTRL SEMICOLON
             &mt LGUI Z            &kp X           &kp C             &kp V                                              &td_b            &kp N           &kp M              &kp COMMA      &kp DOT    &mt RALT SLASH
                                                                     &mo NUM           &mkp MB3         &mkp MB2        &lt RSE ENTER    &mkp MB3        &to_QWE_i5
