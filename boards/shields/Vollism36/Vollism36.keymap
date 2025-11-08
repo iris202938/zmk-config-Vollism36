@@ -135,10 +135,17 @@
             timeout-ms = <80>;
         };
 
-        alt_r {
-            bindings = <&kp RALT>;
-            key-positions = <28 29>;
-            layers = <QWE LWR RSE>;
+        sqt {
+            bindings = <&kp SQT>;
+            key-positions = <18 19>;
+            layers = <QWE>;
+            timeout-ms = <80>;
+        };
+
+        alt_slash {
+            bindings = <&alt_slash>;
+            key-positions = <18 29>;
+            layers = <QWE>;
             timeout-ms = <80>;
         };
 
