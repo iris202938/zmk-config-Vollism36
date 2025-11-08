@@ -82,14 +82,14 @@
         wind_l {
             bindings = <&win_left>;
             key-positions = <11 12>;
-            layers = <LWR>;
+            layers = <LWR CAD>;
             timeout-ms = <80>;
         };
 
         wind_r {
             bindings = <&win_right>;
             key-positions = <12 13>;
-            layers = <LWR>;
+            layers = <LWR CAD>;
             timeout-ms = <80>;
         };
 
