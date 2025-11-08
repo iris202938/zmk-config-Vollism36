@@ -1002,6 +1002,7 @@
                 , <&macro_release &kp LCTRL>
                 , <&macro_tap &kp B>
                 ;
+        };
         ctrl_d_i: ctrl_d_i { // 連続寸法線
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
