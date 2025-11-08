@@ -731,26 +731,26 @@
             #binding-cells = <0>;
             bindings = <&to QWE &out OUT_USB &to QWE>;
         };
-        // ctrl_d_x: ctrl_d_x { // 図面管理情報
-        //     compatible = "zmk,behavior-macro";
-        //     #binding-cells = <0>;
-        //     bindings
-        //         = <&macro_press &kp LCTRL>
-        //         , <&macro_tap &kp D>
-        //         , <&macro_release &kp LCTRL>
-        //         , <&macro_tap &kp X>
-        //         ;
-        // };
-        // ctrl_d_y: ctrl_d_y { // ページ管理情報
-        //     compatible = "zmk,behavior-macro";
-        //     #binding-cells = <0>;
-        //     bindings
-        //         = <&macro_press &kp LCTRL>
-        //         , <&macro_tap &kp D>
-        //         , <&macro_release &kp LCTRL>
-        //         , <&macro_tap &kp Y>
-        //         ;
-        // };
+        ctrl_d_x: ctrl_d_x { // 図面管理情報
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp D>
+                , <&macro_release &kp LCTRL>
+                , <&macro_tap &kp X>
+                ;
+        };
+        ctrl_d_y: ctrl_d_y { // ページ管理情報
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp D>
+                , <&macro_release &kp LCTRL>
+                , <&macro_tap &kp Y>
+                ;
+        };
         // ctrl_d_z: ctrl_d_z { // 全ページ情報
         //     compatible = "zmk,behavior-macro";
         //     #binding-cells = <0>;
