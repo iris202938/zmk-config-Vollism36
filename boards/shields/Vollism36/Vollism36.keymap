@@ -319,12 +319,12 @@
             bindings = <&lt NUM INT5>, <&to_NUM_i5>;
             
         };
-        // td_g: tap_dance_g {  // タップで図形グループ化、ダブルタップで図形グループ化解除
-        //     compatible = "zmk,behavior-tap-dance";
-        //     #binding-cells = <0>;
-        //     tapping-term-ms = <200>;
-        //     bindings = <&kp G>, <&ctrl_d_g>; 
-        // };
+        td_g: tap_dance_g {  // タップで図形グループ化、ダブルタップで図形グループ化解除
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp G>, <&ctrl_d_g>; 
+        };
         // td_i: tap_dance_i {  // タップで2点間寸法線、ダブルタップで連続寸法線
         //     compatible = "zmk,behavior-tap-dance";
         //     #binding-cells = <0>;
@@ -982,76 +982,76 @@
         //         , <&macro_release &kp LALT>
         //         ;
         // };
-        // ctrl_d_g: ctrl_d_g { // グループ化解除
-        //     compatible = "zmk,behavior-macro";
-        //     #binding-cells = <0>;
-        //     bindings
-        //         = <&macro_press &kp LCTRL>
-        //         , <&macro_tap &kp D>
-        //         , <&macro_release &kp LCTRL>
-        //         , <&macro_tap &kp G>
-        //         // , <&to WIN> // ADJWのベースレイヤー（例としてWINレイヤー）に戻る※rsewレイヤロック強制解除用
-        //         ;
-        // }; 
-        // ctrl_a_b: ctrl_a_b { // 長方形(サイズ)
-        //     compatible = "zmk,behavior-macro";
-        //     #binding-cells = <0>;
-        //     bindings
-        //         = <&macro_press &kp LCTRL>
-        //         , <&macro_tap &kp A>
-        //         , <&macro_release &kp LCTRL>
-        //         , <&macro_tap &kp B>
-        //         ;
-        // ctrl_d_i: ctrl_d_i { // 連続寸法線
-        //     compatible = "zmk,behavior-macro";
-        //     #binding-cells = <0>;
-        //     bindings
-        //         = <&macro_press &kp LCTRL>
-        //         , <&macro_tap &kp D>
-        //         , <&macro_release &kp LCTRL>
-        //         , <&macro_tap &kp I>
-        //         ;
-        // }; 
-        // ctrl_d_b: ctrl_d_b { // 面取り
-        //     compatible = "zmk,behavior-macro";
-        //     #binding-cells = <0>;
-        //     bindings
-        //         = <&macro_press &kp LCTRL>
-        //         , <&macro_tap &kp D>
-        //         , <&macro_release &kp LCTRL>
-        //         , <&macro_tap &kp B>
-        //         ;
-        // }; 
-        // ctrl_d_t: ctrl_d_t { // シンボルレイヤ変更
-        //     compatible = "zmk,behavior-macro";
-        //     #binding-cells = <0>;
-        //     bindings
-        //         = <&macro_press &kp LCTRL>
-        //         , <&macro_tap &kp D>
-        //         , <&macro_release &kp LCTRL>
-        //         , <&macro_tap &kp T>
-        //         ;
-        // }; 
-        // ctrl_d_l: ctrl_d_l { // 平行補助線入力
-        //     compatible = "zmk,behavior-macro";
-        //     #binding-cells = <0>;
-        //     bindings
-        //         = <&macro_press &kp LCTRL>
-        //         , <&macro_tap &kp D>
-        //         , <&macro_release &kp LCTRL>
-        //         , <&macro_tap &kp L>
-        //         ;
-        // }; 
-        // ctrl_d_d: ctrl_d_d { //補助線削除
-        //     compatible = "zmk,behavior-macro";
-        //     #binding-cells = <0>;
-        //     bindings
-        //         = <&macro_press &kp LCTRL>
-        //         , <&macro_tap &kp D>
-        //         , <&macro_release &kp LCTRL>
-        //         , <&macro_tap &kp D>
-        //         ;
-        // }; 
+        ctrl_d_g: ctrl_d_g { // グループ化解除
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp D>
+                , <&macro_release &kp LCTRL>
+                , <&macro_tap &kp G>
+                // , <&to WIN> // ADJWのベースレイヤー（例としてWINレイヤー）に戻る※rsewレイヤロック強制解除用
+                ;
+        }; 
+        ctrl_a_b: ctrl_a_b { // 長方形(サイズ)
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp A>
+                , <&macro_release &kp LCTRL>
+                , <&macro_tap &kp B>
+                ;
+        ctrl_d_i: ctrl_d_i { // 連続寸法線
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp D>
+                , <&macro_release &kp LCTRL>
+                , <&macro_tap &kp I>
+                ;
+        }; 
+        ctrl_d_b: ctrl_d_b { // 面取り
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp D>
+                , <&macro_release &kp LCTRL>
+                , <&macro_tap &kp B>
+                ;
+        }; 
+        ctrl_d_t: ctrl_d_t { // シンボルレイヤ変更
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp D>
+                , <&macro_release &kp LCTRL>
+                , <&macro_tap &kp T>
+                ;
+        }; 
+        ctrl_d_l: ctrl_d_l { // 平行補助線入力
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp D>
+                , <&macro_release &kp LCTRL>
+                , <&macro_tap &kp L>
+                ;
+        }; 
+        ctrl_d_d: ctrl_d_d { //補助線削除
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp D>
+                , <&macro_release &kp LCTRL>
+                , <&macro_tap &kp D>
+                ;
+        }; 
 
         // m_alt_tab: m_alt_tab {
         // 	label = "ALT_TAB_HOLD";
