@@ -199,14 +199,14 @@
         };
         
         ctrl_x {
-            bindings = <&kp LC(X)>;
+            bindings = <&ctrl_x>;
             key-positions = <8 9>;
             layers = <RSE>;
             timeout-ms = <80>;
         };
 
         ctrl_c {
-            bindings = <&kp LC(C)>;
+            bindings = <&ctrl_c>;
             key-positions = <18 19>;
             layers = <RSE>;
             timeout-ms = <80>;
@@ -540,6 +540,25 @@
                 // , <&macro_release &kp LALT>
                 ;
         };
+        ctrl_x: ctrl_x { // 切り取り
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp X>
+                , <&macro_release &kp LCTRL>
+                ;
+        };
+        ctrl_c: ctrl_c { // コピー
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp C>
+                , <&macro_release &kp LCTRL>
+                ;
+        };
+
 
         grave_uc: grave_uc {
             compatible = "zmk,behavior-macro";
