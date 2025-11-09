@@ -1058,7 +1058,7 @@
                 ;
         };
 
-        // Ctrl + D, B: 長方形(サイズ)
+        // Ctrl + D, B: 面取り
         ctrl_d_b: ctrl_d_b {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
