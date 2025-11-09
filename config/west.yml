@@ -21,9 +21,9 @@ manifest:
     - name: zmk-input-processor-keybind
       remote: zettaface
       revision: main
-    - name: zmk-input-transform-processors
-      remote: zmkfirmware
-      revision: main
+    # - name: zmk-input-transform-processors
+    #   remote: zmkfirmware
+    #   revision: main
     - name: zmk-rgbled-widget  # <-- led
       remote: caksoylar
       revision: main
