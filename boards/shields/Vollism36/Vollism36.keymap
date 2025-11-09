@@ -261,7 +261,7 @@
             timeout-ms = <80>;
         };
         
-        mb3 {
+        mb3_cad {
             bindings = <&mkp MB3>;
             key-positions = <13 31>;
             layers = <CAD>;
