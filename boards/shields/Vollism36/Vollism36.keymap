@@ -267,6 +267,12 @@
             layers = <CAD>;
             timeout-ms = <80>;
         };
+        int5_g_c {
+            bindings = <&int5_g>;
+            key-positions = <11 13>;
+            layers = <CAD>;
+            timeout-ms = <80>;
+        };
     };
 
     behaviors {
@@ -1760,10 +1766,10 @@
 
         CAD {
             bindings = <
-            &mt LSHFT Q         &kp W           &kp E           &td_r             &int5_g                                           &td_y           &kp U              &td_i          &kp O      &mt RSHFT P
+            &mt LSHFT Q         &kp W           &kp E           &td_r             &td_t                                             &td_y           &kp U              &td_i          &kp O      &mt RSHFT P
             &mt LCTRL A         &kp S           &lt RSE D       &mkp MB1                                           &td_g            &kp H           &mt RGUI J         &mt RSHFT K    &td_l      &mt RCTRL SEMICOLON
             &mt LGUI Z          &kp X           &kp C           &kp V                                              &td_b            &kp N           &kp M              &kp COMMA      &kp DOT    &mt RALT SLASH
-                                                                &mo NUM           &mkp MB2         &lt LWR TAB     &lt RSE ENTER    &mkp MB3        &to_QWE_i5
+                                                                &mo NUM           &mkp MB2         &mo LWR         &lt RSE ENTER    &mkp MB3        &to_QWE_i5
             >;
         };
 
