@@ -7,12 +7,12 @@
 
 #define QWE 0
 #define WIN 1
-#define LWR 2
-#define RSE 3
-#define ADJ 4
-#define MOV 5
-#define NUM 6
-#define CAD 7
+#define CAD 2
+#define LWR 3
+#define RSE 4
+#define ADJ 5
+#define MOV 6
+#define NUM 7
 #define BLE 8
 
 &kscan0 {
