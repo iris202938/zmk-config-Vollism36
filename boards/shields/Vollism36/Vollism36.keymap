@@ -176,7 +176,7 @@
             layers = <QWE>;
             timeout-ms = <80>;
         };
-        
+
         CTRL_PG_DN {
             bindings = <&kp LC(PG_DN)>;
             key-positions = <0 1>;
@@ -257,6 +257,13 @@
         nx_pg {
             bindings = <&nx_pg>;
             key-positions = <22 23>;
+            layers = <CAD>;
+            timeout-ms = <80>;
+        };
+        
+        mb3 {
+            bindings = <&mkp MB3>;
+            key-positions = <13 31>;
             layers = <CAD>;
             timeout-ms = <80>;
         };
@@ -1151,10 +1158,10 @@
 
         CAD {
             bindings = <
-            &mt LSHFT Q           &kp W           &kp E             &td_r             &int5_g                                           &td_y           &kp U              &td_i          &kp O      &mt RSHFT P
-            &mt LCTRL A           &kp S           &lt RSE D         &mkp MB1                                           &td_g            &kp H           &mt RGUI J         &mt RSHFT K    &td_l      &mt RCTRL SEMICOLON
-            &mt LGUI Z            &kp X           &kp C             &kp V                                              &td_b            &kp N           &kp M              &kp COMMA      &kp DOT    &mt RALT SLASH
-                                                                    &mo NUM           &mkp MB3         &mkp MB2        &lt RSE ENTER    &mkp MB3        &to_QWE_i5
+            &mt LSHFT Q         &kp W           &kp E           &td_r             &int5_g                                           &td_y           &kp U              &td_i          &kp O      &mt RSHFT P
+            &mt LCTRL A         &kp S           &lt RSE D       &mkp MB1                                           &td_g            &kp H           &mt RGUI J         &mt RSHFT K    &td_l      &mt RCTRL SEMICOLON
+            &mt LGUI Z          &kp X           &kp C           &kp V                                              &td_b            &kp N           &kp M              &kp COMMA      &kp DOT    &mt RALT SLASH
+                                                                &mo NUM           &mkp MB2         &lt LWR TAB     &lt RSE ENTER    &mkp MB3        &to_QWE_i5
             >;
         };
 
