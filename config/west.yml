@@ -4,6 +4,8 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: Reinmuth66
       url-base: https://github.com/Reinmuth66
+    - name: zettaface
+      url-base: https://github.com/zettaface
     - name: caksoylar  # <-- led
       url-base: https://github.com/caksoylar
     - name: hsgw
@@ -15,6 +17,9 @@ manifest:
       import: app/west.yml
     - name: zmk-pmw3610-driver  # <-- トラボドライバ
       remote: Reinmuth66
+      revision: main
+    - name: zmk-input-processor-keybind
+      remote: zettaface
       revision: main
     - name: zmk-rgbled-widget  # <-- led
       remote: caksoylar
