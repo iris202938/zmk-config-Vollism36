@@ -373,11 +373,11 @@
             tapping-term-ms = <240>;
             bindings = <&kp L>, <&ctrl_d_l>, <&ctrl_d_d>; 
         };
-        td_r: tap_dance_r {  // タップで連続寸法線追加、ダブルタップで連続寸法線削除
+        td_r: tap_dance_r {  // タップで連続寸法線削除､ダブルタップで連続寸法線追加
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <240>;
-            bindings = <&kp P>, <&kp R>; 
+            bindings = <&kp R>, <&kp P>; 
         };
         td_t: tap_dance_t {  // タップで文字修正、ダブルタップで文字種別変更
             compatible = "zmk,behavior-tap-dance";
