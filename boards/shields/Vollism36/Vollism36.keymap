@@ -260,10 +260,21 @@
             layers = <CAD>;
             timeout-ms = <80>;
         };
-        
+        mb1_cad {
+            bindings = <&mkp MB1>;
+            key-positions = <16 17>;
+            layers = <CAD>;
+            timeout-ms = <80>;
+        };
+        mb2_cad {
+            bindings = <&mkp MB2>;
+            key-positions = <18 19>;
+            layers = <CAD>;
+            timeout-ms = <80>;
+        };
         mb3_cad {
             bindings = <&mkp MB3>;
-            key-positions = <13 31>;
+            key-positions = <17 18>;
             layers = <CAD>;
             timeout-ms = <80>;
         };
@@ -1721,9 +1732,9 @@
         CAD {
             bindings = <
             &mt LSHFT Q         &kp W           &kp E           &td_r             &td_t                                             &td_y           &kp U              &td_i          &kp O      &mt RSHFT P
-            &mt LCTRL A         &kp S           &lt RSE D       &mkp MB1                                           &td_g            &kp H           &mt RGUI J         &mt RSHFT K    &td_l      &mt RCTRL SEMICOLON
+            &mt LCTRL A         &kp S           &kp D           &kp F                                              &td_g            &kp H           &mt RGUI J         &mt RSHFT K    &td_l      &mt RCTRL SEMICOLON
             &mt LGUI Z          &kp X           &kp C           &kp V                                              &td_b            &kp N           &kp M              &kp COMMA      &kp DOT    &mt RALT SLASH
-                                                                &mo NUM           &mkp MB2         &mo LWR         &lt RSE ENTER    &mkp MB3        &to_QWE_i5
+                                                                &lt NUM INT5      &mt LSHFT SPACE  &mo LWR         &lt RSE ENTER    &kp INT4        &to_QWE_i5
             >;
         };
 
