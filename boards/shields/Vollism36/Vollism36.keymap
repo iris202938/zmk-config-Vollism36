@@ -145,7 +145,7 @@
         alt_slash {
             bindings = <&alt_slash>;
             key-positions = <18 29>;
-            layers = <QWE>;
+            layers = <QWE CAD>;
             timeout-ms = <80>;
         };
 
