@@ -149,33 +149,33 @@
             timeout-ms = <80>;
         };
 
-        mb1 {
-            bindings = <&mkp MB1>;
-            key-positions = <15 25>;
-            layers = <QWE>;
-            timeout-ms = <80>;
-        };
+        // mb1 {
+        //     bindings = <&mkp MB1>;
+        //     key-positions = <15 25>;
+        //     layers = <QWE>;
+        //     timeout-ms = <80>;
+        // };
 
-        mb2 {
-            bindings = <&mkp MB2>;
-            key-positions = <16 26>;
-            layers = <QWE>;
-            timeout-ms = <80>;
-        };
+        // mb2 {
+        //     bindings = <&mkp MB2>;
+        //     key-positions = <16 26>;
+        //     layers = <QWE>;
+        //     timeout-ms = <80>;
+        // };
 
-        mb3 {
-            bindings = <&mkp MB3>;
-            key-positions = <14 24>;
-            layers = <QWE>;
-            timeout-ms = <80>;
-        };
+        // mb3 {
+        //     bindings = <&mkp MB3>;
+        //     key-positions = <14 24>;
+        //     layers = <QWE>;
+        //     timeout-ms = <80>;
+        // };
 
-        int5_g {
-            bindings = <&int5_g>;
-            key-positions = <19 29>;
-            layers = <QWE>;
-            timeout-ms = <80>;
-        };
+        // int5_g {
+        //     bindings = <&int5_g>;
+        //     key-positions = <19 29>;
+        //     layers = <QWE>;
+        //     timeout-ms = <80>;
+        // };
 
         CTRL_PG_DN {
             bindings = <&kp LC(PG_DN)>;
@@ -263,25 +263,25 @@
         mb1_cad {
             bindings = <&mkp MB1>;
             key-positions = <16 17>;
-            layers = <CAD>;
+            layers = <QWE CAD>;
             timeout-ms = <80>;
         };
         mb2_cad {
             bindings = <&mkp MB2>;
             key-positions = <17 18>;
-            layers = <CAD>;
+            layers = <QWE CAD>;
             timeout-ms = <80>;
         };
         mb3_cad {
             bindings = <&mkp MB3>;
             key-positions = <16 18>;
-            layers = <CAD>;
+            layers = <QWE CAD>;
             timeout-ms = <80>;
         };
         int5_g_c {
             bindings = <&int5_g>;
-            key-positions = <11 13>;
-            layers = <CAD>;
+            key-positions = <19 29>;
+            layers = <QWE CAD>;
             timeout-ms = <80>;
         };
     };
