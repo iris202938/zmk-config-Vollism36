@@ -268,13 +268,13 @@
         };
         mb2_cad {
             bindings = <&mkp MB2>;
-            key-positions = <18 19>;
+            key-positions = <17 18>;
             layers = <CAD>;
             timeout-ms = <80>;
         };
         mb3_cad {
             bindings = <&mkp MB3>;
-            key-positions = <17 18>;
+            key-positions = <16 18>;
             layers = <CAD>;
             timeout-ms = <80>;
         };
