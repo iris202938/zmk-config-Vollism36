@@ -61,7 +61,7 @@
         adj {
             bindings = <&mo ADJ>;
             key-positions = <32 33>;
-            layers = <QWE WIN CAD>;
+            layers = <QWE WIN CAD LWR RSE>;
             timeout-ms = <80>;
         };
         esc_l {
