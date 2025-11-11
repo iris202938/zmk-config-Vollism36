@@ -49,9 +49,9 @@
         compatible = "zmk,input-processor-keybind";
         #input-processor-cells = <0>;
         bindings = <&kp RIGHT>,
-                  <&kp LEFT>,
-                  <&kp DOWN>,
-                  <&kp UP>;
+                    <&kp LEFT>,
+                    <&kp DOWN>,
+                    <&kp UP>;
         tick = <10>;
         wait-ms = <0>;
         tap-ms = <50>;
@@ -104,13 +104,26 @@
         status = "okay";
         compatible = "pixart,pmw3610";
         reg = <0>;
-        evt-type = <INPUT_EV_REL>; // ã‚ã‚‹ã„ã¯ <INPUT_EV_ABS>
+        evt-type = <INPUT_EV_REL>;
         spi-max-frequency = <2000000>;
         irq-gpios = <&xiao_d 0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
         cpi = <600>;
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
-        // arrows { ... };
+
+        arrows {
+                layers = <NUM>;
+                bindings =
+                    <&kp RIGHT_ARROW>, // トラックボールのX+ (右)
+                    <&kp LEFT_ARROW>,  // トラックボールのX- (左)
+                    <&kp UP_ARROW>,    // トラックボールのY+ (上)
+                    <&kp DOWN_ARROW>;  // トラックボールのY- (下)
+
+                // この設定はZMKのデフォルト設定に依存しますが、以前のコメントを参考にそのまま残します
+                tick = <10>;
+                wait-ms = <0>;
+                tap-ms = <10>;
+        };
     };
 };
