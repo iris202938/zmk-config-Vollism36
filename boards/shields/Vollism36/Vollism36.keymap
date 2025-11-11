@@ -155,6 +155,25 @@
             timeout-ms = <80>;
         };
 
+        alt_enter {
+            bindings = <&RALT(ENTER)>;
+            key-positions = <33 35>;
+            layers = <WIN>;
+            timeout-ms = <80>;
+        };
+        gui_enter {
+            bindings = <&LGUI(ENTER)>;
+            key-positions = <30 33>;
+            layers = <WIN>;
+            timeout-ms = <80>;
+        };
+        gui_backspace {
+            bindings = <&LGUI(BACKSPACE)>;
+            key-positions = <30 32>;
+            layers = <WIN>;
+            timeout-ms = <80>;
+        };
+
         // mb1 {
         //     bindings = <&mkp MB1>;
         //     key-positions = <15 25>;
@@ -396,6 +415,24 @@
             #binding-cells = <0>;
             tapping-term-ms = <220>;
             bindings = <&kp E>, <&ctrl_d_e>; 
+        };
+        td_s: tap_dance_s {  // タップでシンボル(ファイル)、ダブルタップでシンボル一覧(AHK)
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <220>;
+            bindings = <&kp S>, <&ctrl_alt_s>; 
+        };
+        td_f: tap_dance_f {  // タップで結線、ダブルタップで多相結線
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <220>;
+            bindings = <&kp F>, <&ctrl_d_f>; 
+        };
+        td_n: tap_dance_n {  // タップで線番、ダブルタップで自動線番範囲選択(AHK)
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <220>;
+            bindings = <&kp N>, <&ctrl_d_n>; 
         };
     };
 
@@ -1744,8 +1781,8 @@
         CAD {
             bindings = <
             &mt LSHFT Q         &kp W           &kp E           &td_r             &td_t                                             &td_y           &kp U              &td_i          &kp O      &mt RSHFT P
-            &mt LCTRL A         &kp S           &kp D           &kp F                                              &td_g            &kp H           &mt RGUI J         &mt RSHFT K    &td_l      &mt RCTRL SEMICOLON
-            &mt LGUI Z          &kp X           &kp C           &kp V                                              &td_b            &kp N           &kp M              &kp COMMA      &kp DOT    &mt RALT SLASH
+            &mt LCTRL A         &td_s           &kp D           &td_f                                              &td_g            &kp H           &mt RGUI J         &mt RSHFT K    &td_l      &mt RCTRL SEMICOLON
+            &mt LGUI Z          &kp X           &kp C           &kp V                                              &td_b            &td_n           &kp M              &kp COMMA      &kp DOT    &mt RALT SLASH
                                                                 &lt NUM INT5      &mt LSHFT SPACE  &mo LWR         &lt RSE ENTER    &kp INT4        &to_QWE_i5
             >;
         };
