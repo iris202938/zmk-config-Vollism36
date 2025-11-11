@@ -25,31 +25,12 @@
             ;
 };
 
-&trackball_listener {
-    status = "okay";
-    device = <&trackball>;
+// &trackball_listener {
+//     status = "okay";
+//     device = <&trackball>;
 
-    input-processors = <&zip_keybind_keys>;
-};
-
-
-/ {
-    zip_keybind_arrows: zip_keybind_arrows {
-        compatible = "zmk,input-processor-keybind";
-        #input-processor-cells = <0>;
-        bindings = <&kp RIGHT>,
-                  <&kp LEFT>,
-                  <&kp DOWN>,
-                  <&kp UP>;
-        tick = <10>;
-        wait-ms = <0>;
-        tap-ms = <50>;
-        threshold = <2>;
-        mode = <2>;
-        continuous_key_press;
-    };
-};
-
+//     input-processors = <&zip_keybind_keys>;
+// };
 
 / {
     trackball_listener {
@@ -68,6 +49,23 @@
                                  , <&zip_xy_to_scroll_mapper>;
         };
     };
+    / {
+    zip_keybind_arrows: zip_keybind_arrows {
+        compatible = "zmk,input-processor-keybind";
+        #input-processor-cells = <0>;
+        bindings = <&kp RIGHT>,
+                  <&kp LEFT>,
+                  <&kp DOWN>,
+                  <&kp UP>;
+        tick = <10>;
+        wait-ms = <0>;
+        tap-ms = <50>;
+        threshold = <2>;
+        mode = <2>;
+        continuous_key_press;
+    };
+};
+
 };
 
 / {
