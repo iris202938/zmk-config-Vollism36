@@ -156,19 +156,19 @@
         };
 
         alt_enter {
-            bindings = <&RALT(ENTER)>;
+            bindings = <&kp RA(ENTER)>;
             key-positions = <33 35>;
             layers = <WIN>;
             timeout-ms = <80>;
         };
         gui_enter {
-            bindings = <&LGUI(ENTER)>;
+            bindings = <&kp LG(ENTER)>;
             key-positions = <30 33>;
             layers = <WIN>;
             timeout-ms = <80>;
         };
         gui_backspace {
-            bindings = <&LGUI(BACKSPACE)>;
+            bindings = <&kp LG(BACKSPACE)>;
             key-positions = <30 32>;
             layers = <WIN>;
             timeout-ms = <80>;
