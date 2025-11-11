@@ -25,26 +25,14 @@
             ;
 };
 
-// &trackball_listener のオーバーレイはコメントアウトのまま
-
 / {
-    // ⬇️ すべてのカスタムノード定義をこのルートブロック内に統合
-    
-    // 1. trackball_listener ノードの定義
     trackball_listener: trackball_listener {
         compatible = "zmk,input-listener";
         device = <&trackball>;
         input-processors = <&sensor_rotation>;
-        // automouse { ... }
-        // scroll {
-        //         layers = <RSE>;
-        //         input-processors = <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>
-        //                          , <&zip_xy_scaler 1 30>
-        //                          , <&zip_xy_to_scroll_mapper>;
-        // };
+        // scroll ブロックはコメントアウト状態を維持
     };
 
-    // 2. zip_keybind_arrows ノードの定義
     zip_keybind_arrows: zip_keybind_arrows {
         compatible = "zmk,input-processor-keybind";
         #input-processor-cells = <0>;
@@ -60,7 +48,6 @@
         continuous_key_press;
     };
     
-    // 3. input_processors ノード（sensor_rotation を含む）の定義
     input_processors {
         sensor_rotation: sensor_rotation {
             compatible = "zmk,input-processor-sensor-rotation";
@@ -69,48 +56,9 @@
         };
     };
 
-}; // ⬆️ すべての定義を終えて、ルートノードを閉じる
+}; 
 
-&joystick_listener {
-		status = "okay";
-		r_layer13 {
-			layers = <NUM>; // レイヤー13がアクティブな場合
-			input-processors = <&zip_keybind_arrows>; // zip_keybind_arrows を使用
-			process-next; // 他のプロセッサも処理を継続
-		};
-		r_layer13-prevent {
-			layers = <NUM>; // レイヤー13がアクティブな場合
-			input-processors = <&zip_xy_scaler 0 1>; // ジョイスティックの動きをゼロにスケーリング（無効化）
-		};
-		r_mouse_speed_full {
-			layers = <ADJ>; // レイヤー9がアクティブな場合
-			input-processors = <&zip_xy_transform (0)> // 変換なし (Y軸反転を無効化)
-							, <&zip_xy_scaler 80 100>; // 速度を80/100に設定 (乗数80, 除数100)
-		};
-		r_scroll {
-			layers = <LWR>; // レイヤー5がアクティブな場合
-			input-processors = <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>
-							, <&zip_xy_scaler 10 100> // スケーリング（10/100）
-							, <&zip_xy_to_scroll_mapper>; // スクロールイベントにマッピング
-		};
-		r_layer4 {
-			layers = <WIN>; // レイヤー4がアクティブな場合
-			input-processors = <&zip_keybind_keys_directionH>; // zip_keybind_keys_directionH を使用
-			process-next;
-		};
-		r_layer4-prevent {
-			layers = <WIN>; // レイヤー4がアクティブな場合
-			input-processors = <&zip_xy_scaler 0 1>; // ジョイスティックの動きをゼロにスケーリング（無効化）
-		};
-		r_default {
-			layers = <QWE>; // レイヤー0（デフォルト）がアクティブな場合
-			input-processors = <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>
-							, <&zip_xy_scaler 8 100> // スケーリング（8/100）
-							, <&zip_xy_to_scroll_mapper>; // スクロールイベントにマッピング
-		};
-};
-
-// --- 既存の &pinctrl と &spi0 ブロックはそのまま継続 ---
+// 🚨 74行目付近の &joystick_listener { ... }; ブロックを削除しました。
 
 &pinctrl {
     spi0_default: spi0_default {
@@ -152,14 +100,13 @@
         y-input-code = <INPUT_REL_Y>;
 
         arrows {
+                compatible = "zmk,mouse-keybind"; // ⬅️ NUMレイヤーでの方向キー化のために必須
                 layers = <NUM>;
                 bindings =
-                    <&kp RIGHT_ARROW>, // トラックボールのX+ (右)
-                    <&kp LEFT_ARROW>,  // トラックボールのX- (左)
-                    <&kp UP_ARROW>,    // トラックボールのY+ (上)
-                    <&kp DOWN_ARROW>;  // トラックボールのY- (下)
-
-                // この設定はZMKのデフォルト設定に依存しますが、以前のコメントを参考にそのまま残します
+                    <&kp RIGHT_ARROW>,
+                    <&kp LEFT_ARROW>,
+                    <&kp UP_ARROW>,
+                    <&kp DOWN_ARROW>;
                 tick = <10>;
                 wait-ms = <0>;
                 tap-ms = <10>;
