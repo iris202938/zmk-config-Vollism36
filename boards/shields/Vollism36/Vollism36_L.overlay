@@ -57,15 +57,15 @@
     };
 };
 
-/ {
-    input_processors {
-        sensor_rotation: sensor_rotation {
-            compatible = "zmk,input-processor-sensor-rotation";
-            #input-processor-cells = <0>;
-            rotation-angle = <340>;
-        };
-    };
-};
+// / {
+//     input_processors {
+//         sensor_rotation: sensor_rotation {
+//             compatible = "zmk,input-processor-sensor-rotation";
+//             #input-processor-cells = <0>;
+//             rotation-angle = <340>;
+//         };
+//     };
+// };
 
 &pinctrl {
     spi0_default: spi0_default {
