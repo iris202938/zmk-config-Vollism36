@@ -291,7 +291,7 @@
             timeout-ms = <80>;
         };
         int5_g_r {
-            bindings = <&int5_r>;
+            bindings = <&int5_g>;
             key-positions = <11 13>;
             layers = <QWE CAD>;
             timeout-ms = <80>;
