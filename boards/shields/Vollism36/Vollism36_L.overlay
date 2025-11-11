@@ -25,30 +25,26 @@
             ;
 };
 
-// &trackball_listener {
-//     status = "okay";
-//     device = <&trackball>;
-
-//     input-processors = <&zip_keybind_keys>;
-// };
+// &trackball_listener のオーバーレイはコメントアウトのまま
 
 / {
-    trackball_listener {
+    // ⬇️ すべてのカスタムノード定義をこのルートブロック内に統合
+    
+    // 1. trackball_listener ノードの定義
+    trackball_listener: trackball_listener {
         compatible = "zmk,input-listener";
         device = <&trackball>;
         input-processors = <&sensor_rotation>;
-        // automouse {
-        //         layers = <WIN>;
-        //         input-processors = <&zip_temp_layer MOV 100>; // Move layer for 600ms after activity
-        //         process-next;
-        // };
+        // automouse { ... }
         scroll {
                 layers = <RSE>;
                 input-processors = <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>
                                  , <&zip_xy_scaler 1 30>
                                  , <&zip_xy_to_scroll_mapper>;
         };
-            / {
+    };
+
+    // 2. zip_keybind_arrows ノードの定義
     zip_keybind_arrows: zip_keybind_arrows {
         compatible = "zmk,input-processor-keybind";
         #input-processor-cells = <0>;
@@ -63,13 +59,8 @@
         mode = <2>;
         continuous_key_press;
     };
-};
-
-    };
-
-};
-
-/ {
+    
+    // 3. input_processors ノード（sensor_rotation を含む）の定義
     input_processors {
         sensor_rotation: sensor_rotation {
             compatible = "zmk,input-processor-sensor-rotation";
@@ -77,7 +68,10 @@
             rotation-angle = <340>;
         };
     };
-};
+
+}; // ⬆️ すべての定義を終えて、ルートノードを閉じる
+
+// --- 既存の &pinctrl と &spi0 ブロックはそのまま継続 ---
 
 &pinctrl {
     spi0_default: spi0_default {
@@ -110,24 +104,13 @@
         status = "okay";
         compatible = "pixart,pmw3610";
         reg = <0>;
-        evt-type = <INPUT_EV_REL>; // あるいは <INPUT_EV_ABS>
+        evt-type = <INPUT_EV_REL>; // ã‚ã‚‹ã„ã¯ <INPUT_EV_ABS>
         spi-max-frequency = <2000000>;
         irq-gpios = <&xiao_d 0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
         cpi = <600>;
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
-        // arrows {
-        //         layers = <NUM>;
-        //         bindings =
-        //             <&kp RIGHT_ARROW>,
-        //             <&kp LEFT_ARROW>,
-        //             <&kp UP_ARROW>,
-        //             <&kp DOWN_ARROW>;
-
-        //         tick = <10>;
-        //         wait-ms = <0>;
-        //         tap-ms = <10>;
-        // };
+        // arrows { ... };
     };
 };
