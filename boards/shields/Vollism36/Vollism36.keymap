@@ -156,7 +156,7 @@
         };
 
         alt_enter {
-            bindings = <&kp RA(ENTER)>;
+            bindings = <&kp LA(ENTER)>;
             key-positions = <33 35>;
             layers = <WIN>;
             timeout-ms = <80>;
