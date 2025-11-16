@@ -471,11 +471,11 @@
             tap-ms = <40>;
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp LCTRL &kp F6> // マクロキー押下時にLCTRLとF6を同時に押す
-                , <&macro_release &kp LCTRL &kp F6> // マクロキー解放時にLCTRLとF6を同時に離す
-                // = <&macro_press &kp LCTRL>
-                // , <&macro_tap &kp F6>
-                // , <&macro_release &kp LCTRL>
+                // = <&macro_press &kp LCTRL &kp F6> // マクロキー押下時にLCTRLとF6を同時に押す
+                // , <&macro_release &kp LCTRL &kp F6> // マクロキー解放時にLCTRLとF6を同時に離す
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp F6>
+                , <&macro_release &kp LCTRL>
                 ;
         };
 
@@ -485,13 +485,13 @@
             tap-ms = <40>;
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp LSHFT &kp LCTRL &kp F6> // マクロキー押下時にLSHFTとLCTRLとF6を同時に押す
-                , <&macro_release &kp LSHFT &kp LCTRL &kp F6> // マクロキー解放時にLSHFTとLCTRLとF6を同時に離す
-                // = <&macro_press &kp LSHFT>
-                // , <&macro_press &kp LCTRL>
-                // , <&macro_tap &kp F6>
-                // , <&macro_release &kp LCTRL>
-                // , <&macro_release &kp LSHFT>
+                // = <&macro_press &kp LSHFT &kp LCTRL &kp F6> // マクロキー押下時にLSHFTとLCTRLとF6を同時に押す
+                // , <&macro_release &kp LSHFT &kp LCTRL &kp F6> // マクロキー解放時にLSHFTとLCTRLとF6を同時に離す
+                = <&macro_press &kp LSHFT>
+                , <&macro_press &kp LCTRL>
+                , <&macro_tap &kp F6>
+                , <&macro_release &kp LCTRL>
+                , <&macro_release &kp LSHFT>
                 ;
         };
 
@@ -501,11 +501,11 @@
             tap-ms = <40>;
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp LSHFT &kp F5> // マクロキー押下時にLSHFTとF5を同時に押す
-                , <&macro_release &kp LSHFT &kp F5> // マクロキー解放時にLSHFTとF5を同時に離す
-                // = <&macro_press &kp LSHFT>
-                // , <&macro_tap &kp F5>
-                // , <&macro_release &kp LSHFT>
+                // = <&macro_press &kp LSHFT &kp F5> // マクロキー押下時にLSHFTとF5を同時に押す
+                // , <&macro_release &kp LSHFT &kp F5> // マクロキー解放時にLSHFTとF5を同時に離す
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp F5>
+                , <&macro_release &kp LSHFT>
                 ;
         };
 
@@ -515,11 +515,11 @@
             tap-ms = <40>;
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp LSHFT &kp F6> // マクロキー押下時にLSHFTとF6を同時に押す
-                , <&macro_release &kp LSHFT &kp F6> // マクロキー解放時にLSHFTとF6を同時に離す
-                // = <&macro_press &kp LSHFT>
-                // , <&macro_tap &kp F6>
-                // , <&macro_release &kp LSHFT>
+                // = <&macro_press &kp LSHFT &kp F6> // マクロキー押下時にLSHFTとF6を同時に押す
+                // , <&macro_release &kp LSHFT &kp F6> // マクロキー解放時にLSHFTとF6を同時に離す
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp F6>
+                , <&macro_release &kp LSHFT>
                 ;
         };
 
@@ -529,11 +529,11 @@
             tap-ms = <40>;
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp LALT &kp RIGHT>
-                , <&macro_release &kp LALT &kp RIGHT>
-                // = <&macro_press &kp LALT>
-                // , <&macro_tap &kp RIGHT>
-                // , <&macro_release &kp LALT>
+                // = <&macro_press &kp LALT &kp RIGHT>
+                // , <&macro_release &kp LALT &kp RIGHT>
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp RIGHT>
+                , <&macro_release &kp LALT>
                 ;
         };
 
@@ -543,11 +543,11 @@
             tap-ms = <40>;
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp LALT &kp LEFT>
-                , <&macro_release &kp LALT &kp LEFT>
-                // = <&macro_press &kp LALT>
-                // , <&macro_tap &kp LEFT>
-                // , <&macro_release &kp LALT>
+                // = <&macro_press &kp LALT &kp LEFT>
+                // , <&macro_release &kp LALT &kp LEFT>
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp LEFT>
+                , <&macro_release &kp LALT>
                 ;
         };
 
@@ -557,11 +557,11 @@
             tap-ms = <40>;
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp LALT &kp  UP>
-                , <&macro_release &kp LALT &kp UP>
-                // = <&macro_press &kp LALT>
-                // , <&macro_tap &kp UP>
-                // , <&macro_release &kp LALT>
+                // = <&macro_press &kp LALT &kp  UP>
+                // , <&macro_release &kp LALT &kp UP>
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp UP>
+                , <&macro_release &kp LALT>
                 ;
         };
 
@@ -571,11 +571,11 @@
             tap-ms = <40>;
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp LALT &kp DOWN>
-                , <&macro_release &kp LALT &kp DOWN>
-                // = <&macro_press &kp LALT>
-                // , <&macro_tap &kp DOWN>
-                // , <&macro_release &kp LALT>
+                // = <&macro_press &kp LALT &kp DOWN>
+                // , <&macro_release &kp LALT &kp DOWN>
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp DOWN>
+                , <&macro_release &kp LALT>
                 ;
         };
         ctrl_x: ctrl_x { // 切り取り
