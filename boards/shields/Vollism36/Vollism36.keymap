@@ -755,27 +755,27 @@
             #binding-cells = <0>;
             bindings = <&kp LANG2>, <&to QWE>;
         };
-        bt0_l0: bt0_l0 { // Bluetoothプロファイル0を選択し、レイヤー0を有効化
+        bt0_l0: bt0_l0 { // Bluetoothプロファイル0を選択し、レイヤーQWEを有効化
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&to QWE &bt BT_SEL 0 &to QWE>;
         };
-        bt1_l4: bt1_l4 { // Bluetoothプロファイル1を選択し、レイヤー4を有効化
+        bt1_l4: bt1_l4 { // Bluetoothプロファイル1を選択し、レイヤーWINを有効化
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to QWE &bt BT_SEL 1 &to QWE>;
+            bindings = <&to QWE &bt BT_SEL 1 &to WIN>;
         };
-        bt2_l4: bt2_l4 { // Bluetoothプロファイル2を選択し、レイヤー4を有効化
+        bt2_l4: bt2_l4 { // Bluetoothプロファイル2を選択し、レイヤーWINを有効化
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to QWE &bt BT_SEL 2 &to QWE>;
+            bindings = <&to QWE &bt BT_SEL 2 &to WIN>;
         };
-        bt3_l4: bt3_l4 { // Bluetoothプロファイル3を選択し、レイヤー4を有効化
+        bt3_l4: bt3_l4 { // Bluetoothプロファイル3を選択し、レイヤーCADを有効化
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to QWE &bt BT_SEL 3 &to QWE>;
+            bindings = <&to QWE &bt BT_SEL 3 &to CAD>;
         };
-        bt4_l2: bt4_l2 { // Bluetoothプロファイル4を選択し、レイヤー2を有効化
+        bt4_l2: bt4_l2 { // Bluetoothプロファイル4を選択し、レイヤーQWEを有効化
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&to QWE &bt BT_SEL 4 &to QWE>;
@@ -785,10 +785,10 @@
             #binding-cells = <0>;
             bindings = <&to QWE &bt BT_SEL 4 &to QWE>;
         };
-        usb_l0: usb_l0 { // USB接続を選択し、レイヤー0を有効化
+        usb_l0: usb_l0 { // USB接続を選択し、レイヤーCADを有効化
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to QWE &out OUT_USB &to QWE>;
+            bindings = <&to QWE &out OUT_USB &to CAD>;
         };
         usb_l2: usb_l2 { // USB接続を選択し、レイヤー2を有効化
             compatible = "zmk,behavior-macro";
@@ -1780,7 +1780,7 @@
         ADJ {
             bindings = <
             &mt LSHFT F11  &kp F12        &kp C_MUTE        &kp C_VOL_DN   &kp C_VOL_UP                                    &kp CAPS       &kp PSCRN      &kp SLCK         &kp PAUSE_BREAK   &kp LS(UP)
-            &out OUT_BLE   &usb_l2        &bt3_l4           &kp LS(RIGHT)                                   &kp G          &kp INT5       &file_r        &pr_pg           &nx_pg            &file_f
+            &out OUT_BLE   &usb_l0        &bt3_l4           &kp LS(RIGHT)                                   &kp G          &kp INT5       &file_r        &pr_pg           &nx_pg            &file_f
             &bt0_l0        &bt1_l4        &bt2_l4           &kp K_APP                                       &kp LS(LEFT)   &kp LS(DOWN)   &kp LS(HOME)   &kp LS(LC(LEFT)) &kp LS(LC(RIGHT)) &kp LS(END)
                                                             &trans         &grave_uc        &trans          &trans         &tilde_uc	  &trans
             >;
