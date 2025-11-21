@@ -6,16 +6,18 @@
 #include <input/processors/sensor_rotation.dtsi>
 #include <input/processors/zmk-input-processor-keybind.dtsi>
 // #include <zephyr/dt-bindings/input/input-event-codes.h>
+#include <behaviors/naginata.dtsi>
 
 #define QWE 0
-#define WIN 1
-#define CAD 2
-#define LWR 3
-#define RSE 4
-#define ADJ 5
-#define MOV 6
-#define NUM 7
-#define BLE 8
+#define NGN 1
+#define WIN 2
+#define CAD 3
+#define LWR 4
+#define RSE 5
+#define ADJ 6
+#define MOV 7
+#define NUM 8
+#define BLE 9
 
 &kscan0 {
         col-gpios
