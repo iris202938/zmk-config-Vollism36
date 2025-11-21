@@ -10,6 +10,8 @@ manifest:
       url-base: https://github.com/caksoylar
     - name: hsgw
       url-base: https://github.com/hsgw
+    - name: eswai # ここを追加
+      url-base: https://github.com/eswai
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -32,5 +34,8 @@ manifest:
       remote: hsgw
       revision: main
       path: modules/zmk-feature-sensor_rotation
+    - name: zmk-naginata # ここを追加
+      remote: eswai
+      revision: main
   self:
     path: config

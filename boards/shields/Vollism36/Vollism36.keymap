@@ -1,4 +1,5 @@
 #include <behaviors.dtsi>
+#include <behaviors/naginata.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/mouse.h>
@@ -10,14 +11,15 @@
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 10
 
 #define QWE 0
-#define WIN 1
-#define CAD 2
-#define LWR 3
-#define RSE 4
-#define ADJ 5
-#define MOV 6
-#define NUM 7
-#define BLE 8
+#define NGN 1
+#define WIN 2
+#define CAD 3
+#define LWR 4
+#define RSE 5
+#define ADJ 6
+#define MOV 7
+#define NUM 8
+#define BLE 9
 
 &mt {
     flavor = "hold-preferred";
@@ -57,7 +59,18 @@
     // 10 11 12 13          14 15 16 17 18 19
     // 20 21 22 23          24 25 26 27 28 29	
     //          30 31 32    33 34 35 
-
+        combo_ng_on {
+            timeout-ms = <300>;
+            key-positions = <13 14>; // H, Jのキー位置に書き換えてください
+            bindings = <&ng_on>;
+            layers = <QWE>; // デフォルトレイヤーが0の前提
+        };
+        combo_ng_off {
+            timeout-ms = <300>;
+            key-positions = <15 16>; // F, Gのキー位置に書き換えてください
+            bindings = <&ng_off>;
+            layers = <QWE NGN>; // デフォルトレイヤーが0、薙刀式レイヤーが1の前提
+        };
         adj {
             bindings = <&mo ADJ>;
             key-positions = <32 33>;
@@ -1699,6 +1712,20 @@
                 , <&macro_release &kp LALT>
                 ;
         };
+        ng_on: ng_on {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp LANGUAGE_1 &kp INTERNATIONAL_4 &to 1>
+                ;
+        };
+        ng_off: ng_off {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp LANGUAGE_2 &kp INTERNATIONAL_5 &to 0>
+                ;
+        };
 
         // m_alt_tab: m_alt_tab {
         // 	label = "ALT_TAB_HOLD";
@@ -1739,6 +1766,18 @@
                                                         &lt NUM INT5        &mt LSHFT SPACE       &mo LWR           &lt RSE ENTER     &kp INT4        &td_lt_cad_i2
 
             >;
+        };
+
+        // 薙刀式に必要な31キー(Enterもシフトキーにしたいときは32キー)を定義してください。
+        // &kpの代わりに&ngを使います。通常はデフォルトレイヤーの次に配置してください(レイヤー番号1)。
+        NGN { 
+            bindings = <
+            // +----------+----------+----------+----------+----------+----------+----------+----------+----------+----------
+                &ng Q      &ng W      &ng E      &ng R      &ng T      &ng Y      &ng U      &ng I      &ng O      &ng P
+                &ng A      &ng S      &ng D      &ng F      &ng G      &ng H      &ng J      &ng K      &ng L      &ng SEMI
+                &ng Z      &ng X      &ng C      &ng V      &ng B      &ng N      &ng M      &ng COMMA  &ng DOT    &ng SLASH
+                                      &kp LSHIFT &ng SPACE  &mo LOWER  &mo RAISE  &ng ENTER  &kp RCTRL
+                >;
         };
 
         WIN {
