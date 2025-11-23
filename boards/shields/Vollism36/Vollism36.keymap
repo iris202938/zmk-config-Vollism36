@@ -74,13 +74,13 @@
         adj {
             bindings = <&mo ADJ>;
             key-positions = <32 33>;
-            layers = <QWE WIN CAD LWR RSE>;
+            layers = <QWE NGN WIN CAD LWR RSE>;
             timeout-ms = <80>;
         };
         esc_l {
             bindings = <&kp ESC>;
             key-positions = <0 10>;
-            layers = <QWE MOV CAD>;
+            layers = <QWE NGN MOV CAD>;
             timeout-ms = <80>;
         };
 
@@ -1772,11 +1772,12 @@
         // &kpの代わりに&ngを使います。通常はデフォルトレイヤーの次に配置してください(レイヤー番号1)。
         NGN { 
             bindings = <
-            // +----------+----------+----------+----------+----------+----------+----------+----------+----------+----------
-                &ng Q      &ng W      &ng E      &ng R      &ng T      &ng Y      &ng U      &ng I      &ng O      &ng P
-                &ng A      &ng S      &ng D      &ng F      &ng G      &ng H      &ng J      &ng K      &ng L      &ng SEMI
-                &ng Z      &ng X      &ng C      &ng V      &ng B      &ng N      &ng M      &ng COMMA  &ng DOT    &ng SLASH
-                                      &kp LSHFT  &ng SPACE  &mo LWR    &mo RSE    &ng ENTER  &kp RCTRL
+            // +-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------
+                &ng Q       &ng W       &ng E       &ng R       &ng T                               &ng Y       &ng U       &ng I       &ng O       &ng P
+                &ng A       &ng S       &ng D       &ng F                               &ng G       &ng H       &ng J       &ng K       &ng L       &ng SEMI
+                &ng Z       &ng X       &ng C       &ng V                               &ng B       &ng N       &ng M       &ng COMMA   &ng DOT     &ng SLASH
+                                                    &kp LSHFT   &ng SPACE   &lt LWR TAB &mp RSE     &ng ENTER   &kp RCTRL
+  
                 >;
         };
 
