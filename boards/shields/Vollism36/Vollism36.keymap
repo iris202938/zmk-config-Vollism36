@@ -1760,11 +1760,11 @@
 
         QWE {
             bindings = <
-        // +-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------
-            &mt LSHFT Q   &kp W         &kp E           &kp R               &kp T                                                     &kp Y           &kp U              &kp I          &kp O      &mt RSHFT P
-            &mt LCTRL A   &mt LALT S    &mt LSHFT D     &mt LGUI F                                                  &kp G             &kp H           &mt RGUI J         &mt RSHFT K    &mt RALT L &mt RCTRL SEMICOLON
-            &mt LGUI Z    &kp X         &kp C           &kp V                                                       &kp B             &kp N           &kp M              &kp COMMA      &kp DOT    &mt RALT SLASH
-                                                        &lt NUM INT5        &mt LSHFT SPACE       &mo LWR           &lt RSE ENTER     &kp INT4        &td_lt_cad_i2
+        // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
+            &mt LSHFT Q     &kp W           &kp E           &kp R           &kp T                                           &kp Y           &kp U           &kp I           &kp O           &mt RSHFT P
+            &mt LCTRL A     &mt LALT S      &mt LSHFT D     &mt LGUI F                                      &kp G           &kp H           &mt RGUI J      &mt RSHFT K     &mt RALT L      &mt RCTRL SEMICOLON
+            &mt LGUI Z      &kp X           &kp C           &kp V                                           &kp B           &kp N           &kp M           &kp COMMA       &kp DOT         &mt RALT SLASH
+                                                            &lt NUM INT5    &mt LSHFT SPACE &mo LWR         &lt RSE ENTER   &kp INT4        &td_lt_cad_i2
 
             >;
         };
@@ -1773,92 +1773,92 @@
         // &kpの代わりに&ngを使います。通常はデフォルトレイヤーの次に配置してください(レイヤー番号1)。
         NGN { 
             bindings = <
-        // +-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------
-            &ng Q       &ng W       &ng E       &ng R       &ng T                               &ng Y       &ng U       &ng I       &ng O       &ng P
-            &ng A       &ng S       &ng D       &ng F                               &ng G       &ng H       &ng J       &ng K       &ng L       &ng SEMI
-            &ng Z       &ng X       &ng C       &ng V                               &ng B       &ng N       &ng M       &ng COMMA   &ng DOT     &ng SLASH
-                                                &kp LSHFT   &ng SPACE   &lt LWR TAB &mo RSE     &ng ENTER   &kp RCTRL
+        // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
+            &ng Q           &ng W           &ng E           &ng R           &ng T                                           &ng Y           &ng U           &ng I           &ng O           &ng P
+            &ng A           &ng S           &ng D           &ng F                                           &ng G           &ng H           &ng J           &ng K           &ng L           &ng SEMI
+            &ng Z           &ng X           &ng C           &ng V                                           &ng B           &ng N           &ng M           &ng COMMA       &ng DOT         &ng SLASH
+                                                            &kp LSHFT       &ng SPACE       &lt LWR TAB     &mo RSE         &ng ENTER       &kp RCTRL
             >;
         };
 
         WIN {
             bindings = <
-        // +-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------            
-            &kp Q           &kp W       &kp E           &kp R               &kp T                                                     &kp Y           &kp U              &kp I          &kp O      &kp P
-            &kp A           &kp S       &kp D           &kp F                                                       &kp G             &kp H           &kp J              &kp K          &kp L      &kp SEMICOLON
-            &kp Z           &kp X       &kp C           &kp V                                                       &kp B             &kp N           &kp M              &kp COMMA      &kp DOT    &kp SLASH
-                                                        &lt NUM INT5        &kp SPACE             &lt LWR TAB       &lt RSE ENTER     &kp INT4        &td_lt_mov_i2
+        // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
+            &kp Q           &kp W           &kp E           &kp R           &kp T                                           &kp Y           &kp U           &kp I           &kp O           &kp P
+            &kp A           &kp S           &kp D           &kp F                                           &kp G           &kp H           &kp J           &kp K           &kp L           &kp SEMICOLON
+            &kp Z           &kp X           &kp C           &kp V                                           &kp B           &kp N           &kp M           &kp COMMA       &kp DOT         &kp SLASH
+                                                            &lt NUM INT5    &kp SPACE       &lt LWR TAB     &lt RSE ENTER   &kp INT4        &td_lt_mov_i2
             >;
         };
 
         CAD {
             bindings = <
-        // +-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------            
-            &mt LSHFT Q         &kp W           &kp E           &td_r             &td_t                                             &td_y           &kp U              &td_i          &kp O      &mt RSHFT P
-            &mt LCTRL A         &td_s           &kp D           &td_f                                              &td_g            &kp H           &kp J              &kp K          &td_l      &mt RCTRL SEMICOLON
-            &mt LGUI Z          &kp X           &kp C           &kp V                                              &td_b            &td_n           &kp M              &kp COMMA      &kp DOT    &mt RALT SLASH
-                                                                &lt NUM INT5      &mt LSHFT SPACE  &mo LWR         &lt RSE ENTER    &kp INT4        &to_QWE_i5
+        // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
+            &mt LSHFT Q     &kp W           &kp E           &td_r           &td_t                                           &td_y           &kp U           &td_i           &kp O           &mt RSHFT P
+            &mt LCTRL A     &td_s           &kp D           &td_f                                           &td_g           &kp H           &kp J           &kp K           &td_l           &mt RCTRL SEMICOLON
+            &mt LGUI Z      &kp X           &kp C           &kp V                                           &td_b           &td_n           &kp M           &kp COMMA       &kp DOT         &mt RALT SLASH
+                                                            &lt NUM INT5    &mt LSHFT SPACE &mo LWR         &lt RSE ENTER   &kp INT4        &to_QWE_i5
             >;
         };
 
         LWR {
             bindings = <
-        // +-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------            
-            &mt LSHFT PG_UP &kp HOME    &kp UP          &kp END       &mkp MB3                                  &kp DEL        &msc SCRL_LEFT   &mmv MOVE_UP    &msc SCRL_RIGHT   &msc SCRL_UP
-            &mt LCTRL PG_DN &kp LEFT    &kp DOWN        &kp RIGHT   	                            &mkp MB1    &kp BSPC       &mmv MOVE_LEFT   &mmv MOVE_DOWN  &mmv MOVE_RIGHT   &msc SCRL_DOWN
-            &mt LGUI LC(V)  &mkp MB1    &mkp MB3        &mkp MB2		                            &mkp MB2    &mkp MB1       &kp ENTER        &kp LC(LEFT)    &kp LC(RIGHT)     &mt  RALT LG(V)
-                                                        &kp LSHFT     &kp INT5	    &trans          &macro_INT2 &kp LS(LC(V))  &kp RSHFT
+        // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
+            &mt LSHFT PG_UP &kp HOME        &kp UP          &kp END         &mkp MB3                                        &kp DEL         &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT &msc SCRL_UP
+            &mt LCTRL PG_DN &kp LEFT        &kp DOWN        &kp RIGHT   	                                &mkp MB1        &kp BSPC        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT &msc SCRL_DOWN
+            &mt LGUI LC(V)  &mkp MB1        &mkp MB3        &mkp MB2		                                &mkp MB2        &mkp MB1        &kp ENTER       &kp LC(LEFT)    &kp LC(RIGHT)   &mt  RALT LG(V)
+                                                            &kp LSHFT       &kp INT5	    &trans          &macro_INT2     &kp LS(LC(V))   &kp RSHFT
             >;
         };
 
         RSE {
             bindings = <
-        // +-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------            
-            &mt LSHFT F1    &kp F2      &kp F3      &kp F4      &kp F5         		         		   &kp F6         &kp F7    	&kp F8      	&kp F9      &kp F10
-            &mt LCTRL N1    &kp N2      &kp N3      &kp N4      		     		    &kp N5         &kp N6         &kp N7    	&kp N8      	&kp N9      &kp N0
-            &mt LGUI INT1   &kp BSLH    &kp INT3    &kp SLASH   		     		    &kp ASTRK      &kp MINUS      &kp PLUS  	&kp LBKT    	&kp RBKT    &mt RALT LC(V)
-                                                    &kp LSHFT   &kp SPACE   &macro_INT5 &trans         &kp INT4	      &kp RSHFT
+        // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
+            &mt LSHFT F1    &kp F2          &kp F3          &kp F4          &kp F5         		         		            &kp F6          &kp F7    	    &kp F8          &kp F9          &kp F10
+            &mt LCTRL N1    &kp N2          &kp N3          &kp N4      		     		                &kp N5          &kp N6          &kp N7    	    &kp N8          &kp N9          &kp N0
+            &mt LGUI INT1   &kp BSLH        &kp INT3        &kp SLASH   		     		                &kp ASTRK       &kp MINUS       &kp PLUS  	    &kp LBKT        &kp RBKT        &mt RALT LC(V)
+                                                            &kp LSHFT       &kp SPACE       &macro_INT5     &trans          &kp INT4	    &kp RSHFT
             >;
         };
 
         ADJ {
             bindings = <
-        // +-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------            
-            &mt LSHFT F11  &kp F12        &kp C_MUTE        &kp C_VOL_DN   &kp C_VOL_UP                                    &kp CAPS       &kp PSCRN      &kp SLCK         &kp PAUSE_BREAK   &kp LS(UP)
-            &out OUT_BLE   &usb_l0        &bt3_l4           &kp LS(RIGHT)                                   &kp G          &kp INT5       &file_r        &pr_pg           &nx_pg            &file_f
-            &bt0_l0        &bt1_l4        &bt2_l4           &kp K_APP                                       &kp LS(LEFT)   &kp LS(DOWN)   &kp LS(HOME)   &kp LS(LC(LEFT)) &kp LS(LC(RIGHT)) &kp LS(END)
-                                                            &trans         &grave_uc        &trans          &trans         &tilde_uc	  &trans
+        // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
+            &mt LSHFT F11   &kp F12         &kp C_MUTE      &kp C_VOL_DN    &kp C_VOL_UP                                    &kp CAPS        &kp PSCRN       &kp SLCK        &kp PAUSE_BREAK &kp LS(UP)
+            &out OUT_BLE    &usb_l0         &bt3_l4         &kp LS(RIGHT)                                   &kp G           &kp INT5        &file_r         &pr_pg          &nx_pg          &file_f
+            &bt0_l0         &bt1_l4         &bt2_l4         &kp K_APP                                       &kp LS(LEFT)    &kp LS(DOWN)    &kp LS(HOME) &kp LS(LC(LEFT)) &kp LS(LC(RIGHT)) &kp LS(END)
+                                                            &trans          &grave_uc       &trans          &trans          &tilde_uc	    &trans
             >;
 
         };
 
         MOV {
             bindings = <
-        // +-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------            
-            &kp LS(LC(TAB))       &msc SCRL_LEFT  &mmv MOVE_UP      &msc SCRL_RIGHT   &msc SCRL_UP                                      &kp LC(Y)      &kp HOME         &kp UP        &kp END        &kp PG_UP
-            &mt LCTRL MB1         &mmv MOVE_LEFT  &mmv MOVE_DOWN    &mmv MOVE_RIGHT                                    &msc SCRL_DOWN   &lt BLE BSPC   &kp LEFT         &kp DOWN      &kp RIGHT      &kp PG_DN
-            &mt LGUI Z            &kp LA(LEFT)    &mkp MB3          &kp LA(RIGHT)                                      &kp LC(TAB)      &kp LC(Z)      &kp LC(PG_UP)    &kp LG(LBKT)  &kp LG(RBKT)   &kp LC(PG_DN)
-                                                                    &kp LC(C)         &kp LC(V)        &mkp MB2        &lt RSE ENTER    &kp ENTER      &to_QWE_i5
+        // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
+            &kp LS(LC(TAB)) &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT &msc SCRL_UP                                    &kp LC(Y)       &kp HOME        &kp UP          &kp END         &kp PG_UP
+            &mt LCTRL MB1   &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT                                 &msc SCRL_DOWN  &lt BLE BSPC    &kp LEFT        &kp DOWN        &kp RIGHT       &kp PG_DN
+            &mt LGUI Z      &kp LA(LEFT)    &mkp MB3        &kp LA(RIGHT)                                   &kp LC(TAB)     &kp LC(Z)       &kp LC(PG_UP)   &kp LG(LBKT)    &kp LG(RBKT)    &kp LC(PG_DN)
+                                                            &kp LC(C)       &kp LC(V)       &mkp MB2        &lt RSE ENTER   &kp ENTER       &to_QWE_i5
             >;
         };
 
         NUM {
             bindings = <
-        // +-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------            
-            &kp PG_UP   &kp HOME        &kp UP      &kp END         &kp CARET                                           &kp KP_SLASH    &kp KP_N7   &kp KP_N8   &kp KP_N9     &kp KP_N0
-            &kp PG_DN   &kp LEFT        &kp DOWN    &kp RIGHT                                         &lt BLE DEL       &kp BSPC        &kp KP_N4   &kp KP_N5   &kp KP_N6     &kp KP_MINUS
-            &alt_left	&alt_down       &alt_up     &alt_right                                        &kp EQUAL         &kp KP_MULTIPLY &kp KP_N1   &kp KP_N2   &kp KP_N3     &kp KP_PLUS
-                                                    &trans          &pr_pg	    	  &nx_pg          &kp KP_ENTER      &kp UNDER       &kp SPACE
+        // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
+            &kp PG_UP       &kp HOME        &kp UP          &kp END         &kp CARET                                       &kp KP_SLASH    &kp KP_N7       &kp KP_N8       &kp KP_N9       &kp KP_N0
+            &kp PG_DN       &kp LEFT        &kp DOWN        &kp RIGHT                                       &lt BLE DEL     &kp BSPC        &kp KP_N4       &kp KP_N5       &kp KP_N6       &kp KP_MINUS
+            &alt_left	    &alt_down       &alt_up         &alt_right                                      &kp EQUAL       &kp KP_MULTIPLY &kp KP_N1       &kp KP_N2       &kp KP_N3       &kp KP_PLUS
+                                                            &trans          &pr_pg	        &nx_pg          &kp KP_ENTER    &kp UNDER       &kp SPACE
             >;
         };
 
         BLE {
             bindings = <
-        // +-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------            
-            &bt BT_DISC 0   &bt BT_DISC 1   &bt BT_DISC 2   &bt BT_DISC 3   &bt BT_CLR_ALL                                 &bt BT_CLR_ALL &bt BT_DISC 4   &bt BT_DISC 5 &bt BT_DISC 6 &bt BT_DISC 7
-            &kp LC(LG(T))   &kp LC(LG(C))   &kp LC(LG(P))   &kp LC(LG(G))                                  &trans          &trans         &kp LC(LG(E))   &kp LC(LG(A)) &kp LC(LG(L)) &kp LC(LG(X))
-            &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3                                   &bootloader     &bootloader    &bt4_l2     	  &bt BT_SEL 5  &bt BT_SEL 6  &bt BT_SEL 7
-                                                            &trans          &kp LS(LG(F23)) &bt BT_CLR     &bt BT_CLR      &kp LA(LG(G))  &trans
+        // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
+            &bt BT_DISC 0   &bt BT_DISC 1   &bt BT_DISC 2   &bt BT_DISC 3   &bt BT_CLR_ALL                                  &bt BT_CLR_ALL  &bt BT_DISC 4   &bt BT_DISC 5   &bt BT_DISC 6   &bt BT_DISC 7
+            &kp LC(LG(T))   &kp LC(LG(C))   &kp LC(LG(P))   &kp LC(LG(G))                                   &trans          &trans          &kp LC(LG(E))   &kp LC(LG(A))   &kp LC(LG(L))   &kp LC(LG(X))
+            &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3                                    &bootloader     &bootloader     &bt4_l2         &bt BT_SEL 5    &bt BT_SEL 6    &bt BT_SEL 7
+                                                            &trans          &kp LS(LG(F23)) &bt BT_CLR      &bt BT_CLR      &kp LA(LG(G))   &trans
             >;
         };
     };
