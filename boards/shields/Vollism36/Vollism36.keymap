@@ -1777,7 +1777,7 @@
             &ng Q           &ng W           &ng E           &ng R           &ng T                                           &ng Y           &ng U           &ng I           &ng O           &ng P
             &ng A           &ng S           &ng D           &ng F                                           &ng G           &ng H           &ng J           &ng K           &ng L           &ng SEMI
             &ng Z           &ng X           &ng C           &ng V                                           &ng B           &ng N           &ng M           &ng COMMA       &ng DOT         &ng SLASH
-                                                            &kp LSHFT       &ng SPACE       &lt LWR TAB     &mo RSE         &ng ENTER       &kp RCTRL
+                                                            &qm LSHFT       &ng SPACE       &lt LWR TAB     &mo RSE         &ng ENTER       &qm RCTRL
             >;
         };
 
