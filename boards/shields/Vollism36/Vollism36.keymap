@@ -161,8 +161,8 @@
             timeout-ms = <80>;
         };
 
-        alt_slash {
-            bindings = <&alt_slash>;
+        file_f {
+            bindings = <&file_f>;
             key-positions = <18 29>;
             layers = <QWE CAD>;
             timeout-ms = <80>;
@@ -703,15 +703,15 @@
                 ;
         };
 
-        alt_slash: alt_slash { // ファイル切替 Alt+/ (AHK)
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press   &kp RALT>
-                , <&macro_tap     &kp SLASH>
-                , <&macro_release &kp RALT>
-                ;
-        };
+        // alt_slash: alt_slash { // ファイル切替 Alt+/ (AHK)
+        //     compatible = "zmk,behavior-macro";
+        //     #binding-cells = <0>;
+        //     bindings
+        //         = <&macro_press   &kp RALT>
+        //         , <&macro_tap     &kp SLASH>
+        //         , <&macro_release &kp RALT>
+        //         ;
+        // };
 
         win_right: win_right { // デスクトップ移動進む
             compatible = "zmk,behavior-macro";
