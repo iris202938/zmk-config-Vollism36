@@ -161,7 +161,7 @@
             timeout-ms = <80>;
         };
 
-        file_f {
+        alt_slash {
             bindings = <&file_f>;
             key-positions = <18 29>;
             layers = <QWE CAD>;
