@@ -395,11 +395,11 @@
             tapping-term-ms = <240>;
             bindings = <&kp R>, <&kp P>; 
         };
-        td_t: tap_dance_t {  // タップで文字、ダブルタップで文字種別変更､トリプルタップで文章修正
+        td_e: tap_dance_e {  // タップで文字修正、ダブルタップで文字種別変更､トリプルタップで文章修正
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <220>;
-            bindings = <&kp T>, <&ctrl_d_e>, <&ctrl_f_f>; 
+            bindings = <&kp E>, <&ctrl_d_e>, <&ctrl_f_f>; 
         };
         td_s: tap_dance_s {  // タップでシンボル(ファイル)、ダブルタップでシンボル一覧(AHK)
             compatible = "zmk,behavior-tap-dance";
@@ -1799,7 +1799,7 @@
         CAD {
             bindings = <
         // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
-            &mt LSHFT Q     &kp W           &kp E           &td_r           &td_t                                           &td_y           &kp U           &td_i           &kp O           &mt RSHFT P
+            &mt LSHFT Q     &kp W           &td_e           &td_r           &kp T                                           &td_y           &kp U           &td_i           &kp O           &mt RSHFT P
             &mt LCTRL A     &td_s           &kp D           &td_f                                           &td_g           &kp H           &kp J           &kp K           &td_l           &mt RCTRL SEMICOLON
             &mt LGUI Z      &kp X           &kp C           &kp V                                           &td_b           &td_n           &kp M           &kp COMMA       &kp DOT         &mt RALT SLASH
                                                             &lt NUM INT5    &mt LSHFT SPACE &mo LWR         &lt RSE ENTER   &kp INT4        &to_QWE_i5
