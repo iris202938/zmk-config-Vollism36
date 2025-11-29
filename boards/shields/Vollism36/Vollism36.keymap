@@ -988,239 +988,878 @@
             bindings = <&to QWE &out OUT_USB &to QWE>;
         };  
 
-        // // --- Tap Dance A ---
-        // td_A: tap_dance_A {
-        //     compatible = "zmk,behavior-tap-dance";
-        //     #binding-cells = <0>;
-        //     tapping-term-ms = <220>;
-        //     // 1-Tap: 領域移動 (A), 2-Taps: 領域移動 (Ctrl+A+A), 3-Taps: ツイスト線 (Ctrl+D+A), 4-Taps: 拡大・縮小 (Ctrl+F+A)
-        //     bindings = <&kp A>, <&ctrl_a_A>, <&ctrl_d_A>, <&ctrl_f_A>;
-        // };
+        // =========================================================================
+        // --- 2. Ctrl + A (<Key1> + Ctrl + A) ---
+        // =========================================================================
+        
+        // Ctrl + A, A: 回転
+        ctrl_a_a: ctrl_a_a {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp A>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp A>
+                ;
+        };
 
-        // // --- Tap Dance B ---
-        // td_B: tap_dance_B {
-        //     compatible = "zmk,behavior-tap-dance";
-        //     #binding-cells = <0>;
-        //     tapping-term-ms = <220>;
-        //     // 1-Tap: 長方形(２頂点) (B), 2-Taps: 長方形(サイズ) (Ctrl+A+B), 3-Taps: 面取り (Ctrl+D+B), 4-Taps: 正方形(一辺) (Ctrl+F+B)
-        //     bindings = <&kp B>, <&ctrl_a_B>, <&ctrl_d_B>, <&ctrl_f_B>; 
-        // };
+        // Ctrl + A, B: 長方形(サイズ)
+        ctrl_a_b: ctrl_a_b {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp A>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp B>
+                ;
+        };
 
-        // // --- Tap Dance C ---
-        // td_C: tap_dance_C {
-        //     compatible = "zmk,behavior-tap-dance";
-        //     #binding-cells = <0>;
-        //     tapping-term-ms = <220>;
-        //     // 1-Tap: 複写 (C), 2-Taps: コピー (Ctrl+A+C), 3-Taps: 製品情報 (Ctrl+D+C), 4-Taps: 回転 (Ctrl+F+C)
-        //     bindings = <&kp C>, <&ctrl_a_C>, <&ctrl_d_C>, <&ctrl_f_C>; 
-        // };
+        // Ctrl + A, C: コピー
+        ctrl_a_c: ctrl_a_c {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp A>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp C>
+                ;
+        };
 
-        // // --- Tap Dance D ---
-        // td_D: tap_dance_D {
-        //     compatible = "zmk,behavior-tap-dance";
-        //     #binding-cells = <0>;
-        //     tapping-term-ms = <220>;
-        //     // 1-Tap: 削除 (D), 2-Taps: 削除 (Ctrl+A+D), 3-Taps: 補助線削除 (Ctrl+D+D), 4-Taps: 補助線全削除 (Ctrl+F+D)
-        //     bindings = <&kp D>, <&ctrl_a_D>, <&ctrl_d_D>, <&ctrl_f_D>; 
-        // };
+        // Ctrl + A, D: 補助線削除
+        ctrl_a_d: ctrl_a_d {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp A>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp D>
+                ;
+        };
 
-        // // --- Tap Dance E ---
-        // td_E: tap_dance_E {
-        //     compatible = "zmk,behavior-tap-dance";
-        //     #binding-cells = <0>;
-        //     tapping-term-ms = <220>;
-        //     // 1-Tap: 文字修正 (E), 2-Taps: 文字修正 (Ctrl+A+E), 3-Taps: 文字種別変更 (Ctrl+D+E), 4-Taps: 閉じる (Ctrl+F+E)
-        //     bindings = <&kp E>, <&ctrl_a_E>, <&ctrl_d_E>, <&ctrl_f_E>; 
-        // };
+        // Ctrl + A, E: 文字種別変更
+        ctrl_a_e: ctrl_a_e {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp A>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp E>
+                ;
+        };
 
-        // // --- Tap Dance F ---
-        // td_F: tap_dance_F {
-        //     compatible = "zmk,behavior-tap-dance";
-        //     #binding-cells = <0>;
-        //     tapping-term-ms = <220>;
-        //     // 1-Tap: 結線 (F), 2-Taps: 結線 (Ctrl+A+F), 3-Taps: 多相結線 (Ctrl+D+F), 4-Taps: 文章修正 (Ctrl+F+F)
-        //     bindings = <&kp F>, <&ctrl_a_F>, <&ctrl_d_F>, <&ctrl_f_F>; 
-        // };
+        // Ctrl + A, F: 多相結線
+        ctrl_a_f: ctrl_a_f {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp A>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp F>
+                ;
+        };
 
-        // // --- Tap Dance G ---
-        // td_G: tap_dance_G {
-        //     compatible = "zmk,behavior-tap-dance";
-        //     #binding-cells = <0>;
-        //     tapping-term-ms = <220>;
-        //     // 1-Tap: 図形グループ化 (G), 2-Taps: 図形グループ化 (Ctrl+A+G), 3-Taps: 図形グループ化解除 (Ctrl+D+G), 4-Taps: 寸法線グループ化解除 (Ctrl+F+G)
-        //     bindings = <&kp G>, <&ctrl_a_G>, <&ctrl_d_G>, <&ctrl_f_G>; 
-        // };
+        // Ctrl + A, G: 図形グループ化解除
+        ctrl_a_g: ctrl_a_g {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp A>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp G>
+                ;
+        };
 
-        // // --- Tap Dance H ---
-        // td_H: tap_dance_H {
-        //     compatible = "zmk,behavior-tap-dance";
-        //     #binding-cells = <0>;
-        //     tapping-term-ms = <220>;
-        //     // 1-Tap: シンボル文字入力 (H), 2-Taps: シンボル文字入力 (Ctrl+A+H), 3-Taps: ハッチング (Ctrl+D+H), 4-Taps: 平行補助線入力 (Ctrl+F+H)
-        //     bindings = <&kp H>, <&ctrl_a_H>, <&ctrl_d_H>, <&ctrl_f_H>; 
-        // };
+        // Ctrl + A, H: 文字列置換
+        ctrl_a_h: ctrl_a_h {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp A>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp H>
+                ;
+        };
 
-        // // --- Tap Dance I ---
-        // td_I: tap_dance_I {
-        //     compatible = "zmk,behavior-tap-dance";
-        //     #binding-cells = <0>;
-        //     tapping-term-ms = <220>;
-        //     // 1-Tap: ２点間寸法線 (I), 2-Taps: ２点間寸法線 (Ctrl+A+I), 3-Taps: 連続寸法線 (Ctrl+D+I), 4-Taps: 直線(中心線) (Ctrl+F+I)
-        //     bindings = <&kp I>, <&ctrl_a_I>, <&ctrl_d_I>, <&ctrl_f_I>; 
-        // };
+        // Ctrl + A, I: 連続寸法線
+        ctrl_a_i: ctrl_a_i {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp A>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp I>
+                ;
+        };
 
-        // // --- Tap Dance J ---
-        // td_J: tap_dance_J {
-        //     compatible = "zmk,behavior-tap-dance";
-        //     #binding-cells = <0>;
-        //     tapping-term-ms = <220>;
-        //     // 1-Tap: 端点再設定 (J), 2-Taps: 端点再設定 (Ctrl+A+J), 3-Taps: 上下中央間隔揃え (Ctrl+D+J), 4-Taps: 直線整合 (Ctrl+F+J)
-        //     bindings = <&kp J>, <&ctrl_a_J>, <&ctrl_d_J>, <&ctrl_f_J>; 
-        // };
+        // Ctrl + A, J: 図面管理情報
+        ctrl_a_j: ctrl_a_j {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp A>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp J>
+                ;
+        };
 
-        // // --- Tap Dance K ---
-        // td_K: tap_dance_K {
-        //     compatible = "zmk,behavior-tap-dance";
-        //     #binding-cells = <0>;
-        //     tapping-term-ms = <220>;
-        //     // 1-Tap: カウントアップ (K), 2-Taps: コメント (Ctrl+A+K), 3-Taps: 左右中央間隔揃え (Ctrl+D+K), 4-Taps: シンボル置換 (Ctrl+F+K)
-        //     bindings = <&kp K>, <&ctrl_a_K>, <&ctrl_d_K>, <&ctrl_f_K>; 
-        // };
+        // Ctrl + A, K: コメント
+        ctrl_a_k: ctrl_a_k {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp A>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp K>
+                ;
+        };
 
-        // // --- Tap Dance L ---
-        // td_L: tap_dance_L {
-        //     compatible = "zmk,behavior-tap-dance";
-        //     #binding-cells = <0>;
-        //     tapping-term-ms = <220>;
-        //     // 1-Tap: 直線(２点間) (L), 2-Taps: 直線(２点間) (Ctrl+A+L), 3-Taps: 平行補助線入力 (Ctrl+D+L), 4-Taps: 点 (Ctrl+F+L)
-        //     bindings = <&kp L>, <&ctrl_a_L>, <&ctrl_d_L>, <&ctrl_f_L>; 
-        // };
+        // Ctrl + A, L: 直線(中心線)
+        ctrl_a_l: ctrl_a_l {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp A>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp L>
+                ;
+        };
 
-        // // --- Tap Dance M ---
-        // td_M: tap_dance_M {
-        //     compatible = "zmk,behavior-tap-dance";
-        //     #binding-cells = <0>;
-        //     tapping-term-ms = <220>;
-        //     // 1-Tap: 移動 (M), 2-Taps: 移動 (Ctrl+A+M), 3-Taps: 複数シンボル置換 (Ctrl+D+M), 4-Taps: 従属文字位置変更 (Ctrl+F+M)
-        //     bindings = <&kp M>, <&ctrl_a_M>, <&ctrl_d_M>, <&ctrl_f_M>; 
-        // };
+        // Ctrl + A, M: 上下中央間隔揃え
+        ctrl_a_m: ctrl_a_m {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp A>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp M>
+                ;
+        };
 
-        // // --- Tap Dance N ---
-        // td_N: tap_dance_N {
-        //     compatible = "zmk,behavior-tap-dance";
-        //     #binding-cells = <0>;
-        //     tapping-term-ms = <220>;
-        //     // 1-Tap: 線番 (N), 2-Taps: 線番 (Ctrl+A+N), 3-Taps: 自動線番 (Ctrl+D+N), 4-Taps: 三相線番 (Ctrl+F+N)
-        //     bindings = <&kp N>, <&ctrl_a_N>, <&ctrl_d_N>, <&ctrl_f_N>; 
-        // };
+        // Ctrl + A, N: 自動線番
+        ctrl_a_n: ctrl_a_n {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp A>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp N>
+                ;
+        };
 
-        // // --- Tap Dance O ---
-        // td_O: tap_dance_O {
-        //     compatible = "zmk,behavior-tap-dance";
-        //     #binding-cells = <0>;
-        //     tapping-term-ms = <220>;
-        //     // 1-Tap: ページ切替 (O), 2-Taps: ページ切替 (Ctrl+A+O), 3-Taps: オフセット (Ctrl+D+O), 4-Taps: 図形要素分割 (Ctrl+F+O)
-        //     bindings = <&kp O>, <&ctrl_a_O>, <&ctrl_d_O>, <&ctrl_f_O>; 
-        // };
+        // Ctrl + A, O: 図形要素分解
+        ctrl_a_o: ctrl_a_o {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp A>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp O>
+                ;
+        };
 
-        // // --- Tap Dance P ---
-        // td_P: tap_dance_P {
-        //     compatible = "zmk,behavior-tap-dance";
-        //     #binding-cells = <0>;
-        //     tapping-term-ms = <220>;
-        //     // 1-Tap: 連続寸法線追加 (P), 2-Taps: 連続寸法線削除 (Ctrl+A+P), 3-Taps: 印刷情報 (Ctrl+D+P), 4-Taps: 印刷 (Ctrl+F+P)
-        //     bindings = <&kp P>, <&ctrl_a_P>, <&ctrl_d_P>, <&ctrl_f_P>; 
-        // };
+        // Ctrl + A, P: ページ編集
+        ctrl_a_p: ctrl_a_p {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp A>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp P>
+                ;
+        };
 
-        // // --- Tap Dance Q ---
-        // td_Q: tap_dance_Q {
-        //     compatible = "zmk,behavior-tap-dance";
-        //     #binding-cells = <0>;
-        //     tapping-term-ms = <220>;
-        //     // 1-Tap: 水平垂直補助線入力 (Q), 2-Taps: 水平垂直補助線入力 (Ctrl+A+Q), 3-Taps: 円(中心) (Ctrl+D+Q), 4-Taps: 雲形 (Ctrl+F+Q)
-        //     bindings = <&kp Q>, <&ctrl_a_Q>, <&ctrl_d_Q>, <&ctrl_f_Q>; 
-        // };
+        // Ctrl + A, Q: 円(中心)
+        ctrl_a_q: ctrl_a_q {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp A>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp Q>
+                ;
+        };
 
-        // // --- Tap Dance R ---
-        // td_R: tap_dance_R {
-        //     compatible = "zmk,behavior-tap-dance";
-        //     #binding-cells = <0>;
-        //     tapping-term-ms = <220>;
-        //     // 1-Tap: 連続寸法線削除 (R), 2-Taps: 連続寸法線削除 (Ctrl+A+R), 3-Taps: リファレンス編集 (Ctrl+D+R), 4-Taps: R枠変更 (Ctrl+F+R)
-        //     bindings = <&kp R>, <&ctrl_a_R>, <&ctrl_d_R>, <&ctrl_f_R>; 
-        // };
+        // Ctrl + A, R: Ｒ枠変更
+        ctrl_a_r: ctrl_a_r {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp A>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp R>
+                ;
+        };
 
-        // // --- Tap Dance S ---
-        // td_S: tap_dance_S {
-        //     compatible = "zmk,behavior-tap-dance";
-        //     #binding-cells = <0>;
-        //     tapping-term-ms = <220>;
-        //     // 1-Tap: シンボル(ファイル) (S), 2-Taps: シンボル(ファイル) (Ctrl+A+S), 3-Taps: コメント (Ctrl+D+S), 4-Taps: 上書き保存 (Ctrl+F+S)
-        //     bindings = <&kp S>, <&ctrl_a_S>, <&ctrl_d_S>, <&ctrl_f_S>; 
-        // };
+        // Ctrl + A, S: シンボル置換
+        ctrl_a_s: ctrl_a_s {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp A>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp S>
+                ;
+        };
 
-        // // --- Tap Dance T ---
-        // td_T: tap_dance_T {
-        //     compatible = "zmk,behavior-tap-dance";
-        //     #binding-cells = <0>;
-        //     tapping-term-ms = <220>;
-        //     // 1-Tap: 文字 (T), 2-Taps: 文章 (Ctrl+A+T), 3-Taps: シンボルレイヤ変更 (Ctrl+D+T), 4-Taps: シンボル(外形) (Ctrl+F+T)
-        //     bindings = <&kp T>, <&ctrl_a_T>, <&ctrl_d_T>, <&ctrl_f_T>; 
-        // };
+        // Ctrl + A, T: 文章
+        ctrl_a_t: ctrl_a_t {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp A>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp T>
+                ;
+        };
 
-        // // --- Tap Dance U ---
-        // td_U: tap_dance_U {
-        //     compatible = "zmk,behavior-tap-dance";
-        //     #binding-cells = <0>;
-        //     tapping-term-ms = <220>;
-        //     // 1-Tap: フォーマット情報 (U), 2-Taps: 文字列置換 (Ctrl+A+U), 3-Taps: 機器入力 (Ctrl+D+U), 4-Taps: 図面種別情報 (Ctrl+F+U)
-        //     bindings = <&kp U>, <&ctrl_a_U>, <&ctrl_d_U>, <&ctrl_f_U>; 
-        // };
+        // Ctrl + A, U: 連続寸法線削除
+        ctrl_a_u: ctrl_a_u {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp A>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp U>
+                ;
+        };
 
-        // // --- Tap Dance V ---
-        // td_V: tap_dance_V {
-        //     compatible = "zmk,behavior-tap-dance";
-        //     #binding-cells = <0>;
-        //     tapping-term-ms = <220>;
-        //     // 1-Tap: シンボル(回路) (V), 2-Taps: 貼り付け (Ctrl+A+V), 3-Taps: 盤枠線(矩形) (Ctrl+D+V), 4-Taps: ページ編集 (Ctrl+F+V)
-        //     bindings = <&kp V>, <&ctrl_a_V>, <&ctrl_d_V>, <&ctrl_f_V>; 
-        // };
+        // Ctrl + A, V: 貼り付け
+        ctrl_a_v: ctrl_a_v {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp A>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp V>
+                ;
+        };
 
-        // // --- Tap Dance W ---
-        // td_W: tap_dance_W {
-        //     compatible = "zmk,behavior-tap-dance";
-        //     #binding-cells = <0>;
-        //     tapping-term-ms = <220>;
-        //     // 1-Tap: 図形情報表示 (W), 2-Taps: 図形情報表示 (Ctrl+A+W), 3-Taps: 渡りページ編集 (Ctrl+D+W), 4-Taps: 接続点 (Ctrl+F+W)
-        //     bindings = <&kp W>, <&ctrl_a_W>, <&ctrl_d_W>, <&ctrl_f_W>; 
-        // };
+        // Ctrl + A, W: 渡りページ編集
+        ctrl_a_w: ctrl_a_w {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp A>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp W>
+                ;
+        };
 
-        // // --- Tap Dance X ---
-        // td_X: tap_dance_X {
-        //     compatible = "zmk,behavior-tap-dance";
-        //     #binding-cells = <0>;
-        //     tapping-term-ms = <220>;
-        //     // 1-Tap: 交点間削除 (X), 2-Taps: 交点間削除 (Ctrl+A+X), 3-Taps: 図面管理情報 (Ctrl+D+X), 4-Taps: 範囲切断 (Ctrl+F+X)
-        //     bindings = <&kp X>, <&ctrl_a_X>, <&ctrl_d_X>, <&ctrl_f_X>; 
-        // };
+        // Ctrl + A, X: 範囲切断
+        ctrl_a_x: ctrl_a_x {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp A>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp X>
+                ;
+        };
 
-        // // --- Tap Dance Y ---
-        // td_Y: tap_dance_Y {
-        //     compatible = "zmk,behavior-tap-dance";
-        //     #binding-cells = <0>;
-        //     tapping-term-ms = <220>;
-        //     // 1-Tap: レイヤ変更 (Y), 2-Taps: レイヤ変更 (Ctrl+A+Y), 3-Taps: ページ管理情報 (Ctrl+D+Y), 4-Taps: 製品区分枠 (Ctrl+F+Y)
-        //     bindings = <&kp Y>, <&ctrl_a_Y>, <&ctrl_d_Y>, <&ctrl_f_Y>; 
-        // };
+        // Ctrl + A, Y: シンボルレイヤ変更
+        ctrl_a_y: ctrl_a_y {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp A>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp Y>
+                ;
+        };
 
-        // // --- Tap Dance Z ---
-        // td_Z: tap_dance_Z {
-        //     compatible = "zmk,behavior-tap-dance";
-        //     #binding-cells = <0>;
-        //     tapping-term-ms = <220>;
-        //     // 1-Tap: 属性変更 (Z), 2-Taps: 属性変更 (Ctrl+A+Z), 3-Taps: 全ページ情報 (Ctrl+D+Z), 4-Taps: 引出し寸法線 (Ctrl+F+Z)
-        //     bindings = <&kp Z>, <&ctrl_a_Z>, <&ctrl_d_Z>, <&ctrl_f_Z>; 
-        // };
+        // Ctrl + A, Z: フォーマット情報
+        ctrl_a_z: ctrl_a_z {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp A>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp Z>
+                ;
+        };
+
+
+        // =========================================================================
+        // --- 3. Ctrl + D (<Key1> + Ctrl + D) ---
+        // =========================================================================
+
+        // Ctrl + D, A: 拡大・縮小
+        ctrl_d_a: ctrl_d_a {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp D>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp A>
+                ;
+        };
+
+        // Ctrl + D, B: 面取り
+        ctrl_d_b: ctrl_d_b {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp D>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp B>
+                ;
+        };
+
+        // Ctrl + D, C: (空き)
+        /* ctrl_d_c: ctrl_d_c {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp D>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp C>
+                ;
+        }; */
+
+        // Ctrl + D, D: 補助線全削除
+        ctrl_d_d: ctrl_d_d {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp D>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp D>
+                ;
+        };
+
+        // Ctrl + D, E: 文章修正
+        ctrl_d_e: ctrl_d_e {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp D>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp E>
+                ;
+        };
+
+        // Ctrl + D, F: ツイスト線
+        ctrl_d_f: ctrl_d_f {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp D>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp F>
+                ;
+        };
+
+        // Ctrl + D, G: (空き)
+        /* ctrl_d_g: ctrl_d_g {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp D>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp G>
+                ;
+        }; */
+
+        // Ctrl + D, H: 文字揃え
+        ctrl_d_h: ctrl_d_h {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp D>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp H>
+                ;
+        };
+
+        // Ctrl + D, I: 寸法線グループ化解除
+        ctrl_d_i: ctrl_d_i {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp D>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp I>
+                ;
+        };
+
+        // Ctrl + D, J: ページ管理情報
+        ctrl_d_j: ctrl_d_j {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp D>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp J>
+                ;
+        };
+
+        // Ctrl + D, K: (空き)
+        /* ctrl_d_k: ctrl_d_k {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp D>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp K>
+                ;
+        }; */
+
+        // Ctrl + D, L: 平行補助線入力
+        ctrl_d_l: ctrl_d_l {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp D>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp L>
+                ;
+        };
+
+        // Ctrl + D, M: 左右中央間隔揃え
+        ctrl_d_m: ctrl_d_m {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp D>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp M>
+                ;
+        };
+
+        // Ctrl + D, N: 三相線番
+        ctrl_d_n: ctrl_d_n {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp D>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp N>
+                ;
+        };
+
+        // Ctrl + D, O: 図形要素分割
+        ctrl_d_o: ctrl_d_o {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp D>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp O>
+                ;
+        };
+
+        // Ctrl + D, P: 印刷情報
+        ctrl_d_p: ctrl_d_p {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp D>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp P>
+                ;
+        };
+
+        // Ctrl + D, Q: 雲形
+        ctrl_d_q: ctrl_d_q {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp D>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp Q>
+                ;
+        };
+
+        // Ctrl + D, R: 製品情報
+        ctrl_d_r: ctrl_d_r {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp D>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp R>
+                ;
+        };
+
+        // Ctrl + D, S: 複数シンボル置換
+        ctrl_d_s: ctrl_d_s {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp D>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp S>
+                ;
+        };
+
+        // Ctrl + D, T: 引出し寸法線
+        ctrl_d_t: ctrl_d_t {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp D>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp T>
+                ;
+        };
+
+        // Ctrl + D, U: 寸法線グループ化
+        ctrl_d_u: ctrl_d_u {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp D>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp U>
+                ;
+        };
+
+        // Ctrl + D, V: 盤枠線(矩形)
+        ctrl_d_v: ctrl_d_v {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp D>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp V>
+                ;
+        };
+
+        // Ctrl + D, W: 接続点
+        ctrl_d_w: ctrl_d_w {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp D>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp W>
+                ;
+        };
+
+        // Ctrl + D, X: 長円
+        ctrl_d_x: ctrl_d_x {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp D>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp X>
+                ;
+        };
+
+        // Ctrl + D, Y: シンボル(外形)
+        ctrl_d_y: ctrl_d_y {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp D>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp Y>
+                ;
+        };
+
+        // Ctrl + D, Z: 図面種別情報
+        ctrl_d_z: ctrl_d_z {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp D>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp Z>
+                ;
+        };
+
+
+        // =========================================================================
+        // --- 4. Ctrl + F (<Key1> + Ctrl + F) ---
+        // =========================================================================
+        
+        // Ctrl + F, A: 図形配列
+        ctrl_f_a: ctrl_f_a {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp F>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp A>
+                ;
+        };
+
+        // Ctrl + F, B: 正方形(一辺)
+        ctrl_f_b: ctrl_f_b {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp F>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp B>
+                ;
+        };
+
+        // Ctrl + F, C: (空き)
+        /* ctrl_f_c: ctrl_f_c {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp F>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp C>
+                ;
+        }; */
+
+        // Ctrl + F, D: 一時補助線全削除
+        ctrl_f_d: ctrl_f_d {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp F>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp D>
+                ;
+        };
+
+        // Ctrl + F, E: 閉じる
+        ctrl_f_e: ctrl_f_e {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp F>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp E>
+                ;
+        };
+
+        // Ctrl + F, F: (空き)
+        /* ctrl_f_f: ctrl_f_f {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp F>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp F>
+                ;
+        }; */
+
+        // Ctrl + F, G: (空き)
+        /* ctrl_f_g: ctrl_f_g {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp F>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp G>
+                ;
+        }; */
+
+        // Ctrl + F, H: (空き)
+        /* ctrl_f_h: ctrl_f_h {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp F>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp H>
+                ;
+        }; */
+
+        // Ctrl + F, I: (空き)
+        /* ctrl_f_i: ctrl_f_i {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp F>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp I>
+                ;
+        }; */
+
+        // Ctrl + F, J: 直線整合
+        ctrl_f_j: ctrl_f_j {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp F>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp J>
+                ;
+        };
+
+        // Ctrl + F, K: (空き)
+        /* ctrl_f_k: ctrl_f_k {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp F>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp K>
+                ;
+        }; */
+
+        // Ctrl + F, L: 点
+        ctrl_f_l: ctrl_f_l {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp F>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp L>
+                ;
+        };
+
+        // Ctrl + F, M: 従属文字位置変更
+        ctrl_f_m: ctrl_f_m {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp F>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp M>
+                ;
+        };
+
+        // Ctrl + F, N: (空き)
+        /* ctrl_f_n: ctrl_f_n {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp F>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp N>
+                ;
+        }; */
+
+        // Ctrl + F, O: (空き)
+        /* ctrl_f_o: ctrl_f_o {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp F>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp O>
+                ;
+        }; */
+
+        // Ctrl + F, P: 印刷
+        ctrl_f_p: ctrl_f_p {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp F>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp P>
+                ;
+        };
+
+        // Ctrl + F, Q: (空き)
+        /* ctrl_f_q: ctrl_f_q {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp F>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp Q>
+                ;
+        }; */
+
+        // Ctrl + F, R: (空き)
+        /* ctrl_f_r: ctrl_f_r {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp F>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp R>
+                ;
+        }; */
+
+        // Ctrl + F, S: 上書き保存
+        ctrl_f_s: ctrl_f_s {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp F>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp S>
+                ;
+        };
+
+        // Ctrl + F, T: (空き)
+        /* ctrl_f_t: ctrl_f_t {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp F>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp T>
+                ;
+        }; */
+
+        // Ctrl + F, U: (空き)
+        /* ctrl_f_u: ctrl_f_u {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp F>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp U>
+                ;
+        }; */
+
+        // Ctrl + F, V: (空き)
+        /* ctrl_f_v: ctrl_f_v {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp F>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp V>
+                ;
+        }; */
+
+        // Ctrl + F, W: (空き)
+        /* ctrl_f_w: ctrl_f_w {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp F>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp W>
+                ;
+        }; */
+
+        // Ctrl + F, X: (空き)
+        /* ctrl_f_x: ctrl_f_x {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp F>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp X>
+                ;
+        }; */
+
+        // Ctrl + F, Y: (空き)
+        /* ctrl_f_y: ctrl_f_y {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp F>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp Y>
+                ;
+        }; */
+
+        // Ctrl + F, Z: (空き)
+        /* ctrl_f_z: ctrl_f_z {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp F>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp Z>
+                ;
+        }; */
+
 
         ctrl_alt_s: ctrl_alt_s { // シンボル一覧(AHK)
             compatible = "zmk,behavior-macro";
