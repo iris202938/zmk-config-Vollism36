@@ -1974,9 +1974,9 @@
         CAD {
             bindings = <
         // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
-            &mt LSHFT Q     &kp W           &kp E           &td_R           &td_T                                           &td_Y           &kp U           &td_I           &kp O           &mt RSHFT P
-            &mt LCTRL A     &td_S           &kp D           &td_F                                           &td_G           &kp H           &kp J           &kp K           &td_L           &mt RCTRL SEMICOLON
-            &mt LGUI Z      &kp X           &kp C           &kp V                                           &td_B           &td_N           &kp M           &kp COMMA       &kp DOT         &mt RALT SLASH
+            &mt LSHFT td_Q  &td_W           &td_E           &td_R           &td_T                                           &td_Y           &kp U           &td_I           &kp O           &mt RSHFT P
+            &mt LCTRL A     &td_S           &td_D           &td_F                                           &td_G           &kp H           &kp J           &kp K           &td_L           &mt RCTRL SEMICOLON
+            &mt LGUI Z      &td_X           &td_C           &td_V                                           &td_B           &td_N           &kp M           &kp COMMA       &kp DOT         &mt RALT SLASH
                                                             &lt NUM INT5    &mt LSHFT SPACE &mo LWR         &lt RSE ENTER   &kp INT4        &to_QWE_i5
             >;
         };
