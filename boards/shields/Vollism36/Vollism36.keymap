@@ -383,12 +383,12 @@
             tapping-term-ms = <220>;
             bindings = <&kp Y>, <&ctrl_d_t>; 
         };
-        td_l: tap_dance_l {  // タップで直線(2点間)、ダブルタップで直線(中心線)､トリプルタップで平行補助線入力
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <240>;
-            bindings = <&kp L>, <&ctrl_f_i>, <&ctrl_d_l>; 
-        };
+        // td_l: tap_dance_l {  // タップで直線(2点間)、ダブルタップで直線(中心線)､トリプルタップで平行補助線入力
+        //     compatible = "zmk,behavior-tap-dance";
+        //     #binding-cells = <0>;
+        //     tapping-term-ms = <240>;
+        //     bindings = <&kp L>, <&ctrl_f_i>, <&ctrl_d_l>; 
+        // };
         td_r: tap_dance_r {  // タップで連続寸法線削除､ダブルタップで連続寸法線追加
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
