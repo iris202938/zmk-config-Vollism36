@@ -2,8 +2,10 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: Reinmuth66
-      url-base: https://github.com/Reinmuth66
+    # - name: Reinmuth66
+    #   url-base: https://github.com/Reinmuth66
+    - name: badjeff
+      url-base: https://github.com/badjeff
     - name: zettaface
       url-base: https://github.com/zettaface
     - name: caksoylar  # <-- led
