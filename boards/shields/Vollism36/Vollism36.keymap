@@ -1947,6 +1947,21 @@
         // };
     };
 
+    &trackball {
+        arrows {
+            layers = <MOV>;
+            bindings =
+                <&kp RIGHT_ARROW>,
+                <&kp LEFT_ARROW>,
+                <&kp UP_ARROW>,
+                <&kp DOWN_ARROW>;
+
+            tick = <10>;
+            // wait-ms = <5>;
+            // tap-ms = <5>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
