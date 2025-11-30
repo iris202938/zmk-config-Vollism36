@@ -108,17 +108,17 @@
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
-        // arrows {
-        //         layers = <NUM>;
-        //         bindings =
-        //             <&kp RIGHT_ARROW>,
-        //             <&kp LEFT_ARROW>,
-        //             <&kp UP_ARROW>,
-        //             <&kp DOWN_ARROW>;
+        arrows {
+                layers = <NUM>;
+                bindings =
+                    <&kp RIGHT_ARROW>,
+                    <&kp LEFT_ARROW>,
+                    <&kp UP_ARROW>,
+                    <&kp DOWN_ARROW>;
 
-        //         tick = <10>;
-        //         wait-ms = <0>;
-        //         tap-ms = <10>;
-        // };
+                tick = <10>;
+                wait-ms = <0>;
+                tap-ms = <10>;
+        };
     };
 };
