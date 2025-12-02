@@ -428,7 +428,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <220>;
-            // 1-Tap: シンボル文字入力 (H), 2-Taps: 文字列置換 (Ctrl+A+h), 3-Taps: 文字列置換 (Ctrl+D+h), 4-Taps: 未設定 (Ctrl+F+h)
+            // 1-Tap: シンボル文字入力 (H), 2-Taps: 文字列置換 (Ctrl+A+h), 3-Taps: 文字列検索 (Ctrl+D+h), 4-Taps: 未設定 (Ctrl+F+h)
             bindings = <&kp H>, <&ctrl_a_h>, <&ctrl_d_h>, <&ctrl_f_h>; 
         };
 
@@ -1366,7 +1366,7 @@
                 ;
         };
 
-        // Ctrl + D, H: 文字列置換
+        // Ctrl + D, H: 文字列検索
         ctrl_d_h: ctrl_d_h {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
