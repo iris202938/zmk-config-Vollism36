@@ -115,42 +115,49 @@
         shift_l {
             bindings = <&kp LSHFT>;
             key-positions = <0 1>;
-            layers = <QWE>;
+            layers = <QWE CAD>;
             timeout-ms = <80>;
         };
 
         shift_r {
             bindings = <&kp RSHFT>;
             key-positions = <8 9>;
-            layers = <QWE>;
+            layers = <QWE CAD>;
             timeout-ms = <80>;
         };
 
         combo_TSHIFT {
             bindings = <&kp RSHIFT>;
             key-positions = <30 35>;
-            layers = <QWE>;
+            layers = <QWE CAD>;
+            timeout-ms = <80>;
+        };
+
+        combo_RALT {
+            bindings = <&kp RALT>;
+            key-positions = <28 29>;
+            layers = <QWE CAD>;
             timeout-ms = <80>;
         };
 
         ctrl_l {
             bindings = <&kp LCTRL>;
             key-positions = <10 11>;
-            layers = <QWE LWR RSE>;
+            layers = <QWE CAD LWR RSE>;
             timeout-ms = <80>;
         };
 
         ctrl_r {
             bindings = <&kp RCTRL>;
             key-positions = <18 19>;
-            layers = <QWE LWR RSE>;
+            layers = <QWE CAD LWR RSE>;
             timeout-ms = <80>;
         };
 
         gui_l {
             bindings = <&kp LGUI>;
             key-positions = <20 21>;
-            layers = <QWE LWR RSE>;
+            layers = <QWE CAD LWR RSE>;
             timeout-ms = <80>;
         };
 
@@ -267,6 +274,13 @@
         nx_pg {
             bindings = <&nx_pg>;
             key-positions = <22 23>;
+            layers = <CAD>;
+            timeout-ms = <80>;
+        };
+
+        j_ahk {
+            bindings = <&int5_g>;
+            key-positions = <16 26>;
             layers = <CAD>;
             timeout-ms = <80>;
         };
