@@ -608,14 +608,14 @@
             bindings = <&kp Z>, <&ctrl_a_z>, <&ctrl_d_z>, <&ctrl_f_z>; 
         };
 
-        // // --- Tap Dance SEMICOLON ---
-        // td_SEMI: tap_dance_SEMI {
-        //     compatible = "zmk,behavior-tap-dance";
-        //     #binding-cells = <0>;
-        //     tapping-term-ms = <220>;
-        //     // 1-Tap: 通常キー, 2-Taps: 0.5mm , 3-Taps: 0.25mm
-        //     bindings = <&kp SEMICOLON>, <&kp LALT LC(L)>, <&kp LALT LC(SEMICOLON)>; 
-        // };
+	    // --- Tap Dance SEMICOLON ---
+        td_SEMI: tap_dance_SEMI {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <220>;
+            // 1-Tap: 通常キー, 2-Taps: 0.5mm , 3-Taps: 0.25mm
+            bindings = <&kp SEMICOLON>, <&ctrl_alt_l>, <&ctrl_alt_semi>; 
+        };
 
         // --- Tap Dance COMMA ---
         td_COMMA: tap_dance_COMMA {
@@ -635,14 +635,14 @@
             bindings = <&kp DOT>, <&ctrl_f_g>, <&ctrl_f_h>;
         };
 
-        // // --- Tap Dance SLASH ---
-        // td_SLASH: tap_dance_SLASH {
-        //     compatible = "zmk,behavior-tap-dance";
-        //     #binding-cells = <0>;
-        //     tapping-term-ms = <220>;
-        //     // 1-Tap: 通常キー, 2-Taps: 1G , 3-Taps: 1/4G
-        //     bindings = <&kp SLASH>, <&kp LALT LC(J)>, <&kp LALT LC(K)>; 
-        // };
+ 	    // --- Tap Dance SLASH ---
+        td_SLASH: tap_dance_SLASH {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <220>;
+            // 1-Tap: 通常キー, 2-Taps: 1G , 3-Taps: 1/4G
+            bindings = <&kp SLASH>, <&ctrl_alt_j>, <&ctrl_alt_k>; 
+        };
     };
 
     macros {
@@ -1916,6 +1916,58 @@
                 ;
         };
 
+	    // Ctrl+Alt+J: 1G
+        ctrl_alt_j: ctrl_alt_j {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+		        , <&macro_press &kp LALT>
+                , <&macro_tap &kp J>, <&macro_release &kp LCTRL>
+		        , <&macro_release &kp LALT>
+                , <&macro_tap &kp J>
+                ;
+        };
+
+    	// Ctrl+Alt+K: 1/4G
+        ctrl_alt_k: ctrl_alt_k {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+		        , <&macro_press &kp LALT>
+                , <&macro_tap &kp K>, <&macro_release &kp LCTRL>
+		        , <&macro_release &kp LALT>
+                , <&macro_tap &kp K>
+                ;
+        };
+
+    	// Ctrl+Alt+L: 0.5mm
+        ctrl_alt_l: ctrl_alt_l {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+		        , <&macro_press &kp LALT>
+                , <&macro_tap &kp L>, <&macro_release &kp LCTRL>
+		        , <&macro_release &kp LALT>
+                , <&macro_tap &kp L>
+                ;
+        };
+
+    	// Ctrl+Alt+;: 0.25mm
+        ctrl_alt_semi: ctrl_alt_semi {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+		        , <&macro_press &kp LALT>
+                , <&macro_tap &kp SEMICOLON>, <&macro_release &kp LCTRL>
+		        , <&macro_release &kp LALT>
+                , <&macro_tap &kp SEMICOLON>
+                ;
+        };
+
         ctrl_alt_s: ctrl_alt_s { // シンボル一覧(AHK)
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -2031,8 +2083,8 @@
             bindings = <
         // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
             &td_Q           &td_W           &td_E           &td_R           &td_T                                           &td_Y           &td_U           &td_I           &td_O           &td_P
-            &td_A           &td_S           &td_D           &td_F                                           &td_G           &td_H           &td_J           &td_K           &td_L           &kp SEMICOLON
-            &td_Z           &td_X           &td_C           &td_V                                           &td_B           &td_N           &td_M           &td_COMMA       &td_DOT         &kp SLASH
+            &td_A           &td_S           &td_D           &td_F                                           &td_G           &td_H           &td_J           &td_K           &td_L           &td_SEMI
+            &td_Z           &td_X           &td_C           &td_V                                           &td_B           &td_N           &td_M           &td_COMMA       &td_DOT         &td_SLASH
                                                             &lt NUM INT5    &mt LSHFT SPACE &mo LWR         &lt RSE ENTER   &kp INT4        &to_QWE_i5
             >;
         };
