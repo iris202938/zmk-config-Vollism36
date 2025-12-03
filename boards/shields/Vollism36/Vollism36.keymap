@@ -379,7 +379,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <220>;
-            // 1-Tap: 領域移動 (A), 2-Taps: 回転 (Ctrl+A+a), 3-Taps: 拡大・縮小 (Ctrl+D+a), 4-Taps: 図形配列 (Ctrl+F+a)
+            // 1-Tap: 領域移動 (A), 2-Taps: 回転 (Ctrl+A+a), 3-Taps: 拡大・縮小 (Ctrl+D+a), 4-Taps: 未設定 (Ctrl+F+a)
             bindings = <&kp A>, <&ctrl_a_a>, <&ctrl_d_a>, <&ctrl_f_a>;
         };
 
@@ -397,7 +397,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <220>;
-            // 1-Tap: 複写 (C), 2-Taps: コピー (Ctrl+A+c), 3-Taps: 部品表編集 (Ctrl+D+c), 4-Taps: 銘板表編集 (Ctrl+F+c)
+            // 1-Tap: 複写 (C), 2-Taps: コピー (Ctrl+A+c), 3-Taps: 円弧(中心) (Ctrl+D+c), 4-Taps: 銘板表編集 (Ctrl+F+c)
             bindings = <&kp C>, <&ctrl_a_c>, <&ctrl_d_c>, <&ctrl_f_c>; 
         };
 
@@ -406,7 +406,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <220>;
-            // 1-Tap: 削除 (D), 2-Taps: 補助線削除 (Ctrl+A+d), 3-Taps: 補助線全削除 (Ctrl+D+d), 4-Taps: 一時補助線全削除 (Ctrl+F+d)
+            // 1-Tap: 削除 (D), 2-Taps: 補助線削除 (Ctrl+A+d), 3-Taps: 補助線全削除 (Ctrl+D+d), 4-Taps: 銘板表 (Ctrl+F+d)
             bindings = <&kp D>, <&ctrl_a_d>, <&ctrl_d_d>, <&ctrl_f_d>; 
         };
 
@@ -424,7 +424,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <220>;
-            // 1-Tap: 結線 (F), 2-Taps: 多相結線 (Ctrl+A+f), 3-Taps: ツイスト線 (Ctrl+D+f), 4-Taps: 銘板表 (Ctrl+F+f)
+            // 1-Tap: 結線 (F), 2-Taps: 多相結線 (Ctrl+A+f), 3-Taps: ツイスト線 (Ctrl+D+f), 4-Taps: 未設定 (Ctrl+F+f)
             bindings = <&kp F>, <&ctrl_a_f>, <&ctrl_d_f>, <&ctrl_f_f>; 
         };
 
@@ -433,7 +433,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <220>;
-            // 1-Tap: 図形グループ化 (G), 2-Taps: 図形グループ化解除 (Ctrl+A+g), 3-Taps: 集計表 (Ctrl+D+g), 4-Taps: 未設定 (Ctrl+F+g)
+            // 1-Tap: 図形グループ化 (G), 2-Taps: 図形グループ化解除 (Ctrl+A+g), 3-Taps: 図形配列 (Ctrl+D+g), 4-Taps: 部品表編集 (Ctrl+F+g)
             bindings = <&kp G>, <&ctrl_a_g>, <&ctrl_d_g>, <&ctrl_f_g>; 
         };
 
@@ -442,7 +442,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <220>;
-            // 1-Tap: シンボル文字入力 (H), 2-Taps: 文字列置換 (Ctrl+A+h), 3-Taps: 文字列検索 (Ctrl+D+h), 4-Taps: 未設定 (Ctrl+F+h)
+            // 1-Tap: シンボル文字入力 (H), 2-Taps: 文字列置換 (Ctrl+A+h), 3-Taps: 文字列検索 (Ctrl+D+h), 4-Taps: 集計表 (Ctrl+F+h)
             bindings = <&kp H>, <&ctrl_a_h>, <&ctrl_d_h>, <&ctrl_f_h>; 
         };
 
@@ -532,7 +532,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <220>;
-            // 1-Tap: リファレンス編集 (R), 2-Taps: R枠変更 (Ctrl+A+r), 3-Taps: 製品情報 (Ctrl+D+r), 4-Taps: 未設定 (Ctrl+F+r)
+            // 1-Tap: リファレンス編集 (R), 2-Taps: R枠変更 (Ctrl+A+r), 3-Taps: 接続点 (Ctrl+D+r), 4-Taps: 未設定 (Ctrl+F+r)
             bindings = <&kp R>, <&ctrl_a_r>, <&ctrl_d_r>, <&ctrl_f_r>; 
         };
 
@@ -550,7 +550,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <220>;
-            // 1-Tap: 文字 (T), 2-Taps: 文章 (Ctrl+A+t), 3-Taps: 引出し寸法線 (Ctrl+D+t), 4-Taps: 未設定 (Ctrl+F+t)
+            // 1-Tap: 文字 (T), 2-Taps: 文章 (Ctrl+A+t), 3-Taps: 製品情報 (Ctrl+D+t), 4-Taps: 未設定 (Ctrl+F+t)
             bindings = <&kp T>, <&ctrl_a_t>, <&ctrl_d_t>, <&ctrl_f_t>; 
         };
 
@@ -568,7 +568,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <220>;
-            // 1-Tap: シンボル(回路) (V), 2-Taps: 貼り付け (Ctrl+A+v), 3-Taps: 盤枠線(矩形) (Ctrl+D+v), 4-Taps: 未設定 (Ctrl+F+v)
+            // 1-Tap: シンボル(回路) (V), 2-Taps: 貼り付け (Ctrl+A+v), 3-Taps: 盤枠線(矩形) (Ctrl+D+v), 4-Taps: シンボル(外形) (Ctrl+F+v)
             bindings = <&kp V>, <&ctrl_a_v>, <&ctrl_d_v>, <&ctrl_f_v>; 
         };
 
@@ -577,7 +577,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <220>;
-            // 1-Tap: 図形情報表示 (W), 2-Taps: 渡りページ編集 (Ctrl+A+w), 3-Taps: 接続点 (Ctrl+D+w), 4-Taps: 未設定 (Ctrl+F+w)
+            // 1-Tap: 図形情報表示 (W), 2-Taps: 渡りページ編集 (Ctrl+A+w), 3-Taps: 一時補助線全削除 (Ctrl+D+w), 4-Taps: 未設定 (Ctrl+F+w)
             bindings = <&kp W>, <&ctrl_a_w>, <&ctrl_d_w>, <&ctrl_f_w>; 
         };
 
@@ -595,7 +595,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <220>;
-            // 1-Tap: レイヤ変更 (Y), 2-Taps: シンボルレイヤ設定変更 (Ctrl+A+y), 3-Taps: シンボル(外形) (Ctrl+D+y), 4-Taps: 未設定 (Ctrl+F+y)
+            // 1-Tap: レイヤ変更 (Y), 2-Taps: シンボルレイヤ設定変更 (Ctrl+A+y), 3-Taps: 引出寸法線 (Ctrl+D+y), 4-Taps: 未設定 (Ctrl+F+y)
             bindings = <&kp Y>, <&ctrl_a_y>, <&ctrl_d_y>, <&ctrl_f_y>; 
         };
 
@@ -617,13 +617,22 @@
             bindings = <&kp SEMICOLON>, <&ctrl_d_c>, <&ctrl_d_g>; 
         };
 
+        // --- Tap Dance COMMA ---
+        td_COMMA: tap_dance_COMMA {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <220>;
+            // 1-Tap: 通常キー, 2-Taps: 銘板表編集 (Ctrl+F+c), 3-Taps:  銘板表 (Ctrl+F+d)
+            bindings = <&kp COMMA>, <&ctrl_f_c>, <&ctrl_f_d>;
+        };
+
         // --- Tap Dance DOT ---
         td_DOT: tap_dance_DOT {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <220>;
-            // 1-Tap: 通常キー, 2-Taps: 銘板表編集 (Ctrl+F+c), 3-Taps:  銘板表 (Ctrl+F+f)
-            bindings = <&kp DOT>, <&ctrl_f_c>, <&ctrl_f_f>; 
+            // 1-Tap: 通常キー, 2-Taps: 部品表編集 (Ctrl+F+g), 3-Taps:  集計表 (Ctrl+F+h)
+            bindings = <&kp DOT>, <&ctrl_f_g>, <&ctrl_f_h>;
         };
     };
 
@@ -1343,7 +1352,7 @@
                 ;
         };
 
-        // Ctrl + D, C: 部品表編集
+        // Ctrl + D, C: 円弧(中心)
         ctrl_d_c: ctrl_d_c {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -1387,7 +1396,7 @@
                 ;
         };
 
-        // Ctrl + D, G: 集計表
+        // Ctrl + D, G: 図形配列
         ctrl_d_g: ctrl_d_g {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -1464,7 +1473,7 @@
                 ;
         };
 
-        // Ctrl + D, N: 自動線番範囲選択
+        // Ctrl + D, N: 三相線番
         ctrl_d_n: ctrl_d_n {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -1472,12 +1481,6 @@
                 = <&macro_press &kp LCTRL>
                 , <&macro_tap &kp D>, <&macro_release &kp LCTRL>
                 , <&macro_tap &kp N>
-                , <&macro_wait_time 80>
-                , <&macro_tap &kp TAB>
-                , <&macro_wait_time 50>
-                , <&macro_tap &kp TAB>
-                , <&macro_wait_time 50>
-                , <&macro_tap &kp TAB>
                 ;
         };
 
@@ -1514,7 +1517,7 @@
                 ;
         };
 
-        // Ctrl + D, R: 製品情報
+        // Ctrl + D, R: 接続点
         ctrl_d_r: ctrl_d_r {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -1536,7 +1539,7 @@
                 ;
         };
 
-        // Ctrl + D, T: 引出し寸法線
+        // Ctrl + D, T: 製品情報
         ctrl_d_t: ctrl_d_t {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -1569,7 +1572,7 @@
                 ;
         };
 
-        // Ctrl + D, W: 接続点
+        // Ctrl + D, W: 一時補助線全削除
         ctrl_d_w: ctrl_d_w {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -1591,7 +1594,7 @@
                 ;
         };
 
-        // Ctrl + D, Y: シンボル(外形)
+        // Ctrl + D, Y: 引出寸法線
         ctrl_d_y: ctrl_d_y {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -1618,7 +1621,7 @@
         // --- 4. Ctrl + F (<Key1> + Ctrl + F) ---
         // =========================================================================
         
-        // Ctrl + F, A: 図形配列
+        // Ctrl + F, A: 未設定
         ctrl_f_a: ctrl_f_a {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -1651,7 +1654,7 @@
                 ;
         };
 
-        // Ctrl + F, D: 一時補助線全削除
+        // Ctrl + F, D: 銘板表
         ctrl_f_d: ctrl_f_d {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -1673,7 +1676,7 @@
                 ;
         };
 
-        // Ctrl + F, F: 銘板表
+        // Ctrl + F, F: 未設定
         ctrl_f_f: ctrl_f_f {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -1684,7 +1687,7 @@
                 ;
         };
 
-        // Ctrl + F, G: (空き)
+        // Ctrl + F, G: 部品表編集
         ctrl_f_g: ctrl_f_g {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -1695,7 +1698,7 @@
                 ;
         };
 
-        // Ctrl + F, H: (空き)
+        // Ctrl + F, H: 集計表
         ctrl_f_h: ctrl_f_h {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -1706,7 +1709,7 @@
                 ;
         };
 
-        // Ctrl + F, I: (空き)
+        // Ctrl + F, I: 未設定
         ctrl_f_i: ctrl_f_i {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -1728,7 +1731,7 @@
                 ;
         };
 
-        // Ctrl + F, K: (空き)
+        // Ctrl + F, K: 未設定
         ctrl_f_k: ctrl_f_k {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -1761,7 +1764,7 @@
                 ;
         };
 
-        // Ctrl + F, N: (空き)
+        // Ctrl + F, N: 未設定
         ctrl_f_n: ctrl_f_n {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -1772,7 +1775,7 @@
                 ;
         };
 
-        // Ctrl + F, O: (空き)
+        // Ctrl + F, O: 未設定
         ctrl_f_o: ctrl_f_o {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -1794,7 +1797,7 @@
                 ;
         };
 
-        // Ctrl + F, Q: (空き)
+        // Ctrl + F, Q: 未設定
         ctrl_f_q: ctrl_f_q {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -1805,7 +1808,7 @@
                 ;
         };
 
-        // Ctrl + F, R: (空き)
+        // Ctrl + F, R: 未設定
         ctrl_f_r: ctrl_f_r {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -1827,7 +1830,7 @@
                 ;
         };
 
-        // Ctrl + F, T: (空き)
+        // Ctrl + F, T: 未設定
         ctrl_f_t: ctrl_f_t {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -1838,7 +1841,7 @@
                 ;
         };
 
-        // Ctrl + F, U: (空き)
+        // Ctrl + F, U: 未設定
         ctrl_f_u: ctrl_f_u {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -1849,7 +1852,7 @@
                 ;
         };
 
-        // Ctrl + F, V: (空き)
+        // Ctrl + F, V: シンボル(外形)
         ctrl_f_v: ctrl_f_v {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -1860,7 +1863,7 @@
                 ;
         };
 
-        // Ctrl + F, W: (空き)
+        // Ctrl + F, W: 未設定
         ctrl_f_w: ctrl_f_w {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -1871,7 +1874,7 @@
                 ;
         };
 
-        // Ctrl + F, X: (空き)
+        // Ctrl + F, X: 未設定
         ctrl_f_x: ctrl_f_x {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -1882,7 +1885,7 @@
                 ;
         };
 
-        // Ctrl + F, Y: (空き)
+        // Ctrl + F, Y: 未設定
         ctrl_f_y: ctrl_f_y {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -1893,7 +1896,7 @@
                 ;
         };
 
-        // Ctrl + F, Z: (空き)
+        // Ctrl + F, Z: 未設定
         ctrl_f_z: ctrl_f_z {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -2020,7 +2023,7 @@
         // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
             &td_Q           &td_W           &td_E           &td_R           &td_T                                           &td_Y           &td_U           &td_I           &td_O           &td_P
             &td_A           &td_S           &td_D           &td_F                                           &td_G           &td_H           &td_J           &td_K           &td_L           &td_SEMI
-            &td_Z           &td_X           &td_C           &td_V                                           &td_B           &td_N           &td_M           &kp COMMA       &td_DOT         &mt RALT SLASH
+            &td_Z           &td_X           &td_C           &td_V                                           &td_B           &td_N           &td_M           &td_COMMA       &td_DOT         &mt RALT SLASH
                                                             &lt NUM INT5    &mt LSHFT SPACE &mo LWR         &lt RSE ENTER   &kp INT4        &to_QWE_i5
             >;
         };
