@@ -613,8 +613,8 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <220>;
-            // 1-Tap: 通常キー, 2-Taps: 部品表編集 (Ctrl+D+c), 3-Taps: 集計表 (Ctrl+D+g)
-            bindings = <&kp SEMICOLON>, <&ctrl_d_c>, <&ctrl_d_g>; 
+            // 1-Tap: 通常キー, 2-Taps: 0.5mm , 3-Taps: 0.25mm
+            bindings = <&kp SEMICOLON>, <&kp LALT LC(L)>, <&kp LALT LC(SEMICOLON)>; 
         };
 
         // --- Tap Dance COMMA ---
@@ -633,6 +633,15 @@
             tapping-term-ms = <220>;
             // 1-Tap: 通常キー, 2-Taps: 部品表編集 (Ctrl+F+g), 3-Taps:  集計表 (Ctrl+F+h)
             bindings = <&kp DOT>, <&ctrl_f_g>, <&ctrl_f_h>;
+        };
+
+        // --- Tap Dance SLASH ---
+        td_SLASH: tap_dance_SLASH {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <220>;
+            // 1-Tap: 通常キー, 2-Taps: 1G , 3-Taps: 1/4G
+            bindings = <&kp SLASH>, <&kp LALT LC(J)>, <&kp LALT LC(K)>; 
         };
     };
 
@@ -2023,7 +2032,7 @@
         // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
             &td_Q           &td_W           &td_E           &td_R           &td_T                                           &td_Y           &td_U           &td_I           &td_O           &td_P
             &td_A           &td_S           &td_D           &td_F                                           &td_G           &td_H           &td_J           &td_K           &td_L           &td_SEMI
-            &td_Z           &td_X           &td_C           &td_V                                           &td_B           &td_N           &td_M           &td_COMMA       &td_DOT         &mt RALT SLASH
+            &td_Z           &td_X           &td_C           &td_V                                           &td_B           &td_N           &td_M           &td_COMMA       &td_DOT         &td_SLASH
                                                             &lt NUM INT5    &mt LSHFT SPACE &mo LWR         &lt RSE ENTER   &kp INT4        &to_QWE_i5
             >;
         };
