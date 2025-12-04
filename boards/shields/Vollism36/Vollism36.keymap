@@ -451,7 +451,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <220>;
-            // 1-Tap: ２点間寸法線 (I), 2-Taps: 連続寸法線 (Ctrl+A+i), 3-Taps: 寸法線グループ化解除 (Ctrl+D+i), 4-Taps: 未設定 (Ctrl+F+i)
+            // 1-Tap: ２点間寸法線 (I), 2-Taps: 連続寸法線 (Ctrl+A+i), 3-Taps: 寸法線グループ化解除 (Ctrl+D+i), 4-Taps: 上揃え (Ctrl+F+i)
             bindings = <&kp I>, <&ctrl_a_i>, <&ctrl_d_i>, <&ctrl_f_i>; 
         };
 
@@ -460,7 +460,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <220>;
-            // 1-Tap: 端点再設定 (J), 2-Taps: 図面管理情報 (Ctrl+A+j), 3-Taps: ページ管理情報 (Ctrl+D+j), 4-Taps: 直線整合 (Ctrl+F+j)
+            // 1-Tap: 端点再設定 (J), 2-Taps: 図面管理情報 (Ctrl+A+j), 3-Taps: ページ管理情報 (Ctrl+D+j), 4-Taps: 左揃え (Ctrl+F+j)
             bindings = <&kp J>, <&ctrl_a_j>, <&ctrl_d_j>, <&ctrl_f_j>; 
         };
 
@@ -469,7 +469,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <220>;
-            // 1-Tap: カウントアップ (K), 2-Taps: コメント (Ctrl+A+k), 3-Taps: 目次作成 (Ctrl+D+k), 4-Taps: 未設定 (Ctrl+F+k)
+            // 1-Tap: カウントアップ (K), 2-Taps: コメント (Ctrl+A+k), 3-Taps: 目次作成 (Ctrl+D+k), 4-Taps: 下揃え (Ctrl+F+k)
             bindings = <&kp K>, <&ctrl_a_k>, <&ctrl_d_k>, <&ctrl_f_k>; 
         };
 
@@ -478,7 +478,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <220>;
-            // 1-Tap: 直線(２点間) (L), 2-Taps: 直線(中心線) (Ctrl+A+l), 3-Taps: 平行補助線入力 (Ctrl+D+l), 4-Taps: 点 (Ctrl+F+l)
+            // 1-Tap: 直線(２点間) (L), 2-Taps: 直線(中心線) (Ctrl+A+l), 3-Taps: 平行補助線入力 (Ctrl+D+l), 4-Taps: 右揃え (Ctrl+F+l)
             bindings = <&kp L>, <&ctrl_a_l>, <&ctrl_d_l>, <&ctrl_f_l>; 
         };
 
@@ -505,7 +505,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <220>;
-            // 1-Tap: ページ切替 (O), 2-Taps: 図面要素分解 (Ctrl+A+o), 3-Taps: 図面要素分割 (Ctrl+D+o), 4-Taps: 未設定 (Ctrl+F+o)
+            // 1-Tap: ページ切替 (O), 2-Taps: 図面要素分解 (Ctrl+A+o), 3-Taps: 図面要素分割 (Ctrl+D+o), 4-Taps: 上下中央揃え (Ctrl+F+o)
             bindings = <&kp O>, <&ctrl_a_o>, <&ctrl_d_o>, <&ctrl_f_o>; 
         };
 
@@ -559,7 +559,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <220>;
-            // 1-Tap: 連続寸法線追加 (U), 2-Taps: 連続寸法線削除 (Ctrl+A+u), 3-Taps: 寸法線グループ化 (Ctrl+D+u), 4-Taps: 未設定 (Ctrl+F+u)
+            // 1-Tap: 連続寸法線追加 (U), 2-Taps: 連続寸法線削除 (Ctrl+A+u), 3-Taps: 寸法線グループ化 (Ctrl+D+u), 4-Taps: 左右中央揃え (Ctrl+F+u)
             bindings = <&kp U>, <&ctrl_a_u>, <&ctrl_d_u>, <&ctrl_f_u>; 
         };
 
@@ -1718,7 +1718,7 @@
                 ;
         };
 
-        // Ctrl + F, I: 未設定
+        // Ctrl + F, I: 上揃え
         ctrl_f_i: ctrl_f_i {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -1729,7 +1729,7 @@
                 ;
         };
 
-        // Ctrl + F, J: 直線整合
+        // Ctrl + F, J: 左揃え
         ctrl_f_j: ctrl_f_j {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -1740,7 +1740,7 @@
                 ;
         };
 
-        // Ctrl + F, K: 未設定
+        // Ctrl + F, K: 下揃え
         ctrl_f_k: ctrl_f_k {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -1751,7 +1751,7 @@
                 ;
         };
 
-        // Ctrl + F, L: 点
+        // Ctrl + F, L: 右揃え
         ctrl_f_l: ctrl_f_l {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -1784,7 +1784,7 @@
                 ;
         };
 
-        // Ctrl + F, O: 未設定
+        // Ctrl + F, O: 上下中央揃え
         ctrl_f_o: ctrl_f_o {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -1850,7 +1850,7 @@
                 ;
         };
 
-        // Ctrl + F, U: 未設定
+        // Ctrl + F, U: 左右中央揃え
         ctrl_f_u: ctrl_f_u {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
