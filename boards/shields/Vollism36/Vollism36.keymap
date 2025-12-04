@@ -568,7 +568,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <220>;
-            // 1-Tap: シンボル(回路) (V), 2-Taps: 貼り付け (Ctrl+A+v), 3-Taps: 盤枠線(矩形) (Ctrl+D+v), 4-Taps: シンボル(外形) (Ctrl+F+v)
+            // 1-Tap: シンボル(回路) (V), 2-Taps: 貼り付け (Ctrl+A+v), 3-Taps: 盤枠線(矩形) (Ctrl+D+v), 4-Taps: 盤枠製品番号 (Ctrl+F+v)
             bindings = <&kp V>, <&ctrl_a_v>, <&ctrl_d_v>, <&ctrl_f_v>; 
         };
 
@@ -1861,7 +1861,7 @@
                 ;
         };
 
-        // Ctrl + F, V: シンボル(外形)
+        // Ctrl + F, V: 盤枠製品番号
         ctrl_f_v: ctrl_f_v {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
