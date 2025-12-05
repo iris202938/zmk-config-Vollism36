@@ -133,6 +133,13 @@
             timeout-ms = <80>;
         };
 
+        combo_CAPSWORD {
+            timeout-ms = <80>;
+            key-positions = <20 29>;
+            layers = <QWE CAD>;
+            bindings = <&caps_word>;
+        };
+
         combo_RALT {
             bindings = <&kp RALT>;
             key-positions = <28 29>;
