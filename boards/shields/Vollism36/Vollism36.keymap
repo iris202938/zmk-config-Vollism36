@@ -1922,9 +1922,15 @@
             #binding-cells = <0>;
             bindings
                 = <&macro_press &kp LCTRL>
+                , <&macro_wait_time 20>
 		        , <&macro_press &kp LALT>
-                , <&macro_tap &kp J>, <&macro_release &kp LCTRL>
+                , <&macro_wait_time 20>
+                , <&macro_tap &kp J>
+                , <&macro_wait_time 20>
+                , <&macro_release &kp LCTRL>
+                , <&macro_wait_time 20>
 		        , <&macro_release &kp LALT>
+                , <&macro_wait_time 20>
                 , <&macro_tap &kp J>
                 ;
         };
