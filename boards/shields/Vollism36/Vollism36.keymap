@@ -616,7 +616,7 @@
         td_T: tap_dance_T {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            
+            tapping-term-ms = <250>;
             // 1-Tap: 文字 (T), 2-Taps: 文章 (Ctrl+A+t), 3-Taps: 製品情報 (Ctrl+D+t), 4-Taps: 未設定 (Ctrl+F+t)
             bindings = <&kp T>, <&ctrl_a_t>, <&ctrl_d_t>, <&ctrl_f_t>; 
         };
