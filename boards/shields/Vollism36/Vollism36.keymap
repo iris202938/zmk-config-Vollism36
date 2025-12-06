@@ -321,12 +321,6 @@
             layers = <QWE CAD>;
             timeout-ms = <80>;
         };
-        tab_2 {
-            bindings = <&tab_2>;
-            key-positions = <1 3 27>;
-            layers = <QWE CAD>;
-            timeout-ms = <80>;
-        };
     };
 
     behaviors {
@@ -2019,14 +2013,6 @@
                 = <&macro_press &kp LALT>
                 , <&macro_tap &kp END>
                 , <&macro_release &kp LALT>
-                ;
-        };
-        tab_2: tab_2 { // TAB*回数
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_tap &kp TAB>
-                , <&macro_tap &kp TAB>
                 ;
         };
         ng_on: ng_on {
