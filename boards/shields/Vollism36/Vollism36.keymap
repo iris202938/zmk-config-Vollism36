@@ -382,7 +382,7 @@
             timeout-ms = <80>;
         };
         exl_ecd_paste {
-            bindings = <&e_e_p1>;
+            bindings = <&exl_ecd_paste>;
             key-positions = <0 10>;
             layers = <BLE>;
             timeout-ms = <80>;
