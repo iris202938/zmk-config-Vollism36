@@ -381,6 +381,12 @@
             layers = <QWE CAD NUM>;
             timeout-ms = <80>;
         };
+        e_e_p1 {
+            bindings = <&e_e_p1>;
+            key-positions = <0 10>;
+            layers = <BLE>;
+            timeout-ms = <80>;
+        };
     };
 
     behaviors {
@@ -2190,6 +2196,39 @@
                 , <&macro_tap &kp TAB>
                 ;
         };
+        exl_ecd_paste: exl_ecd_paste {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <40>;
+            tap-ms = <40>;
+            bindings
+                // 1. F2 (セル編集モードへ)
+                = <&kp F2>
+                // 2. Ctrl + A (全選択に変更)
+                , <&macro_press &kp LCTRL>
+                , <&kp A>
+                , <&macro_release &kp LCTRL>
+                // 3. Ctrl + C (コピー)
+                , <&macro_press &kp LCTRL>
+                , <&kp C>
+                , <&macro_release &kp LCTRL>
+                // 4. Enter (セルの編集を確定して抜ける)
+                , <&kp ENTER>
+                // 5. Alt + Tab (ウィンドウ切り替え)
+                , <&macro_press &kp LALT>
+                , <&kp TAB>
+                , <&macro_release &kp LALT>
+                // 6. Ctrl + V (貼り付け)
+                , <&macro_press &kp LCTRL>
+                , <&kp V>
+                , <&macro_release &kp LCTRL>
+                // 7. Enter
+                , <&kp ENTER>
+                // 8. Alt + Tab (元のウィンドウに戻る)
+                , <&macro_press &kp LALT>
+                , <&kp TAB>
+                , <&macro_release &kp LALT>;
+        };
         ng_on: ng_on {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -2333,7 +2372,7 @@
         BLE {
             bindings = <
         // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
-            &bt BT_DISC 0   &bt BT_DISC 1   &bt BT_DISC 2   &bt BT_DISC 3   &bt BT_CLR_ALL                                  &bt BT_CLR_ALL  &bt BT_DISC 4   &bt BT_DISC 5   &bt BT_DISC 6   &bt BT_DISC 7
+            &e_e_p1         &bt BT_DISC 1   &bt BT_DISC 2   &bt BT_DISC 3   &bt BT_CLR_ALL                                  &bt BT_CLR_ALL  &bt BT_DISC 4   &bt BT_DISC 5   &bt BT_DISC 6   &bt BT_DISC 7
             &kp LC(LG(T))   &kp LC(LG(C))   &kp LC(LG(P))   &kp LC(LG(G))                                   &trans          &trans          &kp LC(LG(E))   &kp LC(LG(A))   &kp LC(LG(L))   &kp LC(LG(X))
             &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3                                    &bootloader     &bootloader     &bt4_l2         &bt BT_SEL 5    &bt BT_SEL 6    &bt BT_SEL 7
                                                             &trans          &kp LS(LG(F23)) &bt BT_CLR      &bt BT_CLR      &kp LA(LG(G))   &trans
