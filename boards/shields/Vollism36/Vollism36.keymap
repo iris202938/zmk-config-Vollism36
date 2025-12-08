@@ -2204,13 +2204,13 @@
             bindings
                 // --- 1回目の実行 ---
                 = <&kp F2>
-                , <&macro_press &kp LCTRL>, <&kp A>, <&macro_release &kp LCTRL>
-                , <&macro_press &kp LCTRL>, <&kp C>, <&macro_release &kp LCTRL>
-                , <&kp ENTER>
-                , <&macro_press &kp LALT>, <&kp TAB>, <&macro_release &kp LALT>
-                , <&macro_press &kp LCTRL>, <&kp V>, <&macro_release &kp LCTRL>
-                , <&kp ENTER>
-                , <&macro_press &kp LALT>, <&kp TAB>, <&macro_release &kp LALT>
+                , <&macro_press &kp LCTRL>, <&macro_tap &kp A>, <&macro_release &kp LCTRL>
+                , <&macro_press &kp LCTRL>, <&macro_tap &kp C>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp ENTER>
+                , <&macro_press &kp LALT>, <&macro_tap &kp TAB>, <&macro_release &kp LALT>
+                , <&macro_press &kp LCTRL>, <&macro_tap &kp V>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp ENTER>
+                , <&macro_press &kp LALT>, <&macro_tap &kp TAB>, <&macro_release &kp LALT>
             ;
         };
 
@@ -2222,23 +2222,22 @@
             bindings
                 // --- 1回目の実行 ---
                 = <&kp F2>
-                , <&macro_press &kp LCTRL>, <&kp A>, <&macro_release &kp LCTRL>
-                , <&macro_press &kp LCTRL>, <&kp C>, <&macro_release &kp LCTRL>
-                , <&kp ENTER>
-                , <&macro_press &kp LALT>, <&kp TAB>, <&macro_release &kp LALT>
-                , <&macro_press &kp LCTRL>, <&kp V>, <&macro_release &kp LCTRL>
-                , <&kp ENTER>
-                , <&macro_press &kp LALT>, <&kp TAB>, <&macro_release &kp LALT>
-
+                , <&macro_press &kp LCTRL>, <&macro_tap &kp A>, <&macro_release &kp LCTRL>
+                , <&macro_press &kp LCTRL>, <&macro_tap &kp C>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp ENTER>
+                , <&macro_press &kp LALT>, <&macro_tap &kp TAB>, <&macro_release &kp LALT>
+                , <&macro_press &kp LCTRL>, <&macro_tap &kp V>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp ENTER>
+                , <&macro_press &kp LALT>, <&macro_tap &kp TAB>, <&macro_release &kp LALT>
                 // --- 2回目の実行 ---
-                , <&kp F2>
-                , <&macro_press &kp LCTRL>, <&kp A>, <&macro_release &kp LCTRL>
-                , <&macro_press &kp LCTRL>, <&kp C>, <&macro_release &kp LCTRL>
-                , <&kp ENTER>
-                , <&macro_press &kp LALT>, <&kp TAB>, <&macro_release &kp LALT>
-                , <&macro_press &kp LCTRL>, <&kp V>, <&macro_release &kp LCTRL>
-                , <&kp ENTER>
-                , <&macro_press &kp LALT>, <&kp TAB>, <&macro_release &kp LALT>
+                = <&kp F2>
+                , <&macro_press &kp LCTRL>, <&macro_tap &kp A>, <&macro_release &kp LCTRL>
+                , <&macro_press &kp LCTRL>, <&macro_tap &kp C>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp ENTER>
+                , <&macro_press &kp LALT>, <&macro_tap &kp TAB>, <&macro_release &kp LALT>
+                , <&macro_press &kp LCTRL>, <&macro_tap &kp V>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp ENTER>
+                , <&macro_press &kp LALT>, <&macro_tap &kp TAB>, <&macro_release &kp LALT>
             ;
         };
 
@@ -2250,35 +2249,34 @@
             bindings
                 // --- 1回目の実行 ---
                 = <&kp F2>
-                , <&macro_press &kp LCTRL>, <&kp A>, <&macro_release &kp LCTRL>
-                , <&macro_press &kp LCTRL>, <&kp C>, <&macro_release &kp LCTRL>
-                , <&kp ENTER>
-                , <&macro_press &kp LALT>, <&kp TAB>, <&macro_release &kp LALT>
-                , <&macro_press &kp LCTRL>, <&kp V>, <&macro_release &kp LCTRL>
-                , <&kp ENTER>
-                , <&macro_press &kp LALT>, <&kp TAB>, <&macro_release &kp LALT>
-
+                , <&macro_press &kp LCTRL>, <&macro_tap &kp A>, <&macro_release &kp LCTRL>
+                , <&macro_press &kp LCTRL>, <&macro_tap &kp C>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp ENTER>
+                , <&macro_press &kp LALT>, <&macro_tap &kp TAB>, <&macro_release &kp LALT>
+                , <&macro_press &kp LCTRL>, <&macro_tap &kp V>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp ENTER>
+                , <&macro_press &kp LALT>, <&macro_tap &kp TAB>, <&macro_release &kp LALT>
                 // --- 2回目の実行 ---
-                , <&kp F2>
-                , <&macro_press &kp LCTRL>, <&kp A>, <&macro_release &kp LCTRL>
-                , <&macro_press &kp LCTRL>, <&kp C>, <&macro_release &kp LCTRL>
-                , <&kp ENTER>
-                , <&macro_press &kp LALT>, <&kp TAB>, <&macro_release &kp LALT>
-                , <&macro_press &kp LCTRL>, <&kp V>, <&macro_release &kp LCTRL>
-                , <&kp ENTER>
-                , <&macro_press &kp LALT>, <&kp TAB>, <&macro_release &kp LALT>
-        // --- 3回目の実行 ---
-                , <&kp F2>
-                , <&macro_press &kp LCTRL>, <&kp A>, <&macro_release &kp LCTRL>
-                , <&macro_press &kp LCTRL>, <&kp C>, <&macro_release &kp LCTRL>
-                , <&kp ENTER>
-                , <&macro_press &kp LALT>, <&kp TAB>, <&macro_release &kp LALT>
-                , <&macro_press &kp LCTRL>, <&kp V>, <&macro_release &kp LCTRL>
-                , <&kp ENTER>
-                , <&macro_press &kp LALT>, <&kp TAB>, <&macro_release &kp LALT>
-
+                = <&kp F2>
+                , <&macro_press &kp LCTRL>, <&macro_tap &kp A>, <&macro_release &kp LCTRL>
+                , <&macro_press &kp LCTRL>, <&macro_tap &kp C>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp ENTER>
+                , <&macro_press &kp LALT>, <&macro_tap &kp TAB>, <&macro_release &kp LALT>
+                , <&macro_press &kp LCTRL>, <&macro_tap &kp V>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp ENTER>
+                , <&macro_press &kp LALT>, <&macro_tap &kp TAB>, <&macro_release &kp LALT>
+		        // --- 3回目の実行 ---
+                = <&kp F2>
+                , <&macro_press &kp LCTRL>, <&macro_tap &kp A>, <&macro_release &kp LCTRL>
+                , <&macro_press &kp LCTRL>, <&macro_tap &kp C>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp ENTER>
+                , <&macro_press &kp LALT>, <&macro_tap &kp TAB>, <&macro_release &kp LALT>
+                , <&macro_press &kp LCTRL>, <&macro_tap &kp V>, <&macro_release &kp LCTRL>
+                , <&macro_tap &kp ENTER>
+                , <&macro_press &kp LALT>, <&macro_tap &kp TAB>, <&macro_release &kp LALT>
             ;
         };
+        
         ng_on: ng_on {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
