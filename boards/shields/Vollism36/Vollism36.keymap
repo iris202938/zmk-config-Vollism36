@@ -2200,7 +2200,7 @@
         e_e_1: e_e_1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <80>;
+            wait-ms = <100>;
             tap-ms = <40>;
             bindings
                 // --- 0回目の実行 ---
@@ -2274,7 +2274,7 @@
         e_e_2: e_e_2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <80>;
+            wait-ms = <100>;
             tap-ms = <40>;
             bindings
                 // --- 0回目の実行 ---
@@ -2381,7 +2381,7 @@
         e_e_3: e_e_3 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <80>;
+            wait-ms = <100>;
             tap-ms = <40>;
             bindings
                 // --- 0回目の実行 ---
@@ -2521,7 +2521,7 @@
         e_e_4: e_e_4 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <80>;
+            wait-ms = <100>;
             tap-ms = <40>;
             bindings
                 // --- 0回目の実行 ---
