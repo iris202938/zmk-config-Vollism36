@@ -2200,7 +2200,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <100>;
-            tap-ms = <40>;
+            tap-ms = <50>;
             bindings
                 // --- 1回目の実行 ---
                 = <&macro_tap &kp F2>
@@ -2241,7 +2241,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <100>;
-            tap-ms = <40>;
+            tap-ms = <50>;
             bindings
                 // --- 1回目の実行 ---
                 = <&macro_tap &kp F2>
@@ -2314,7 +2314,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <100>;
-            tap-ms = <40>;
+            tap-ms = <50>;
             bindings
                 // --- 1回目の実行 ---
                 = <&macro_tap &kp F2>
