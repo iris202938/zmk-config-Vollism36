@@ -451,7 +451,7 @@
         td_A: tap_dance_A {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <230>;
             // 1-Tap: 領域移動 (A), 2-Taps: 回転 (Ctrl+A+a), 3-Taps: 拡大・縮小 (Ctrl+D+a), 4-Taps: 未設定 (Ctrl+F+a)
             bindings = <&kp A>, <&ctrl_a_a>, <&ctrl_d_a>, <&ctrl_f_a>;
         };
@@ -460,7 +460,7 @@
         td_B: tap_dance_B {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <230>;
             // 1-Tap: 長方形(２頂点) (B), 2-Taps: 長方形(サイズ) (Ctrl+A+b), 3-Taps: 面取り (Ctrl+D+b), 4-Taps: 正方形(一辺) (Ctrl+F+b)
             bindings = <&kp B>, <&ctrl_a_b>, <&ctrl_d_b>, <&ctrl_f_b>; 
         };
@@ -469,7 +469,7 @@
         td_C: tap_dance_C {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <230>;
             // 1-Tap: 複写 (C), 2-Taps: コピー (Ctrl+A+c), 3-Taps: 円弧(中心) (Ctrl+D+c), 4-Taps: 銘板表編集 (Ctrl+F+c)
             bindings = <&kp C>, <&ctrl_a_c>, <&ctrl_d_c>, <&ctrl_f_c>; 
         };
@@ -478,7 +478,7 @@
         td_D: tap_dance_D {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <230>;
             // 1-Tap: 削除 (D), 2-Taps: 補助線削除 (Ctrl+A+d), 3-Taps: 補助線全削除 (Ctrl+D+d), 4-Taps: 銘板表 (Ctrl+F+d)
             bindings = <&kp D>, <&ctrl_a_d>, <&ctrl_d_d>, <&ctrl_f_d>; 
         };
@@ -487,7 +487,7 @@
         td_E: tap_dance_E {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <230>;
             // 1-Tap: 文字修正 (E), 2-Taps: 文字種別変更 (Ctrl+A+e), 3-Taps: 文章修正 (Ctrl+D+e), 4-Taps: 閉じる (Ctrl+F+e)
             bindings = <&kp E>, <&ctrl_a_e>, <&ctrl_d_e>, <&ctrl_f_e>; 
         };
@@ -496,7 +496,7 @@
         td_F: tap_dance_F {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <230>;
             // 1-Tap: 結線 (F), 2-Taps: 多相結線 (Ctrl+A+f), 3-Taps: ツイスト線 (Ctrl+D+f), 4-Taps: 未設定 (Ctrl+F+f)
             bindings = <&kp F>, <&ctrl_a_f>, <&ctrl_d_f>, <&ctrl_f_f>; 
         };
@@ -505,7 +505,7 @@
         td_G: tap_dance_G {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <230>;
             // 1-Tap: 図形グループ化 (G), 2-Taps: 図形グループ化解除 (Ctrl+A+g), 3-Taps: 図形配列 (Ctrl+D+g), 4-Taps: 部品表編集 (Ctrl+F+g)
             bindings = <&kp G>, <&ctrl_a_g>, <&ctrl_d_g>, <&ctrl_f_g>; 
         };
@@ -514,7 +514,7 @@
         td_H: tap_dance_H {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <230>;
             // 1-Tap: シンボル文字入力 (H), 2-Taps: 文字列置換 (Ctrl+A+h), 3-Taps: 文字列検索 (Ctrl+D+h), 4-Taps: 集計表 (Ctrl+F+h)
             bindings = <&kp H>, <&ctrl_a_h>, <&ctrl_d_h>, <&ctrl_f_h>; 
         };
@@ -523,7 +523,7 @@
         td_I: tap_dance_I {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <230>;
             // 1-Tap: ２点間寸法線 (I), 2-Taps: 連続寸法線 (Ctrl+A+i), 3-Taps: 寸法線グループ化解除 (Ctrl+D+i), 4-Taps: 上揃え (Ctrl+F+i)
             bindings = <&kp I>, <&ctrl_a_i>, <&ctrl_d_i>, <&ctrl_f_i>; 
         };
@@ -532,7 +532,7 @@
         td_J: tap_dance_J {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <230>;
             // 1-Tap: 端点再設定 (J), 2-Taps: 図面管理情報 (Ctrl+A+j), 3-Taps: ページ管理情報 (Ctrl+D+j), 4-Taps: 左揃え (Ctrl+F+j)
             bindings = <&kp J>, <&ctrl_a_j>, <&ctrl_d_j>, <&ctrl_f_j>; 
         };
@@ -541,7 +541,7 @@
         td_K: tap_dance_K {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <230>;
             // 1-Tap: カウントアップ (K), 2-Taps: コメント (Ctrl+A+k), 3-Taps: 目次作成 (Ctrl+D+k), 4-Taps: 下揃え (Ctrl+F+k)
             bindings = <&kp K>, <&ctrl_a_k>, <&ctrl_d_k>, <&ctrl_f_k>; 
         };
@@ -550,7 +550,7 @@
         td_L: tap_dance_L {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <230>;
             // 1-Tap: 直線(２点間) (L), 2-Taps: 直線(中心線) (Ctrl+A+l), 3-Taps: 平行補助線入力 (Ctrl+D+l), 4-Taps: 右揃え (Ctrl+F+l)
             bindings = <&kp L>, <&ctrl_a_l>, <&ctrl_d_l>, <&ctrl_f_l>; 
         };
@@ -559,7 +559,7 @@
         td_M: tap_dance_M {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <230>;
             // 1-Tap: 移動 (M), 2-Taps: 上下中央間隔揃え (Ctrl+A+m), 3-Taps: 左右中央間隔揃え (Ctrl+D+m), 4-Taps: 従属文字位置変更 (Ctrl+F+m)
             bindings = <&kp M>, <&ctrl_a_m>, <&ctrl_d_m>, <&ctrl_f_m>; 
         };
@@ -568,7 +568,7 @@
         td_N: tap_dance_N {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <230>;
             // 1-Tap: 線番 (N), 2-Taps: 自動線番範囲選択 (Ctrl+A+n), 3-Taps: 三相線番 (Ctrl+D+n), 4-Taps: 未設定 (Ctrl+F+n)
             bindings = <&kp N>, <&ctrl_a_n>, <&ctrl_d_n>, <&ctrl_f_n>; 
         };
@@ -577,7 +577,7 @@
         td_O: tap_dance_O {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <230>;
             // 1-Tap: ページ切替 (O), 2-Taps: 図面要素分解 (Ctrl+A+o), 3-Taps: 図面要素分割 (Ctrl+D+o), 4-Taps: 上下中央揃え (Ctrl+F+o)
             bindings = <&kp O>, <&ctrl_a_o>, <&ctrl_d_o>, <&ctrl_f_o>; 
         };
@@ -586,7 +586,7 @@
         td_P: tap_dance_P {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <230>;
             // 1-Tap: 全ページ情報 (P), 2-Taps: ページ編集 (Ctrl+A+p), 3-Taps: 印刷情報 (Ctrl+D+p), 4-Taps: 印刷 (Ctrl+F+p)
             bindings = <&kp P>, <&ctrl_a_p>, <&ctrl_d_p>, <&ctrl_f_p>; 
         };
@@ -595,7 +595,7 @@
         td_Q: tap_dance_Q {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <230>;
             // 1-Tap: 水平垂直補助線入力 (Q), 2-Taps: 円(中心) (Ctrl+A+q), 3-Taps: 雲形 (Ctrl+D+q), 4-Taps: 未設定 (Ctrl+F+q)
             bindings = <&kp Q>, <&ctrl_a_q>, <&ctrl_d_q>, <&ctrl_f_q>; 
         };
@@ -604,7 +604,7 @@
         td_R: tap_dance_R {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <230>;
             // 1-Tap: リファレンス編集 (R), 2-Taps: R枠変更 (Ctrl+A+r), 3-Taps: 接続点 (Ctrl+D+r), 4-Taps: 未設定 (Ctrl+F+r)
             bindings = <&kp R>, <&ctrl_a_r>, <&ctrl_d_r>, <&ctrl_f_r>; 
         };
@@ -613,7 +613,7 @@
         td_S: tap_dance_S {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <230>;
             // 1-Tap: シンボル(ファイル) (S), 2-Taps: シンボル置換 (Ctrl+A+s), 3-Taps: DXF/DWGファイル入力 (Ctrl+D+s), 4-Taps: 上書き保存 (Ctrl+F+s)
             bindings = <&kp S>, <&ctrl_a_s>, <&ctrl_d_s>, <&ctrl_f_s>; 
         };
@@ -622,7 +622,7 @@
         td_T: tap_dance_T {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <230>;
             // 1-Tap: 文字 (T), 2-Taps: 文章 (Ctrl+A+t), 3-Taps: 製品情報 (Ctrl+D+t), 4-Taps: 未設定 (Ctrl+F+t)
             bindings = <&kp T>, <&ctrl_a_t>, <&ctrl_d_t>, <&ctrl_f_t>; 
         };
@@ -631,7 +631,7 @@
         td_U: tap_dance_U {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <230>;
             // 1-Tap: 連続寸法線追加 (U), 2-Taps: 連続寸法線削除 (Ctrl+A+u), 3-Taps: 寸法線グループ化 (Ctrl+D+u), 4-Taps: 左右中央揃え (Ctrl+F+u)
             bindings = <&kp U>, <&ctrl_a_u>, <&ctrl_d_u>, <&ctrl_f_u>; 
         };
@@ -640,7 +640,7 @@
         td_V: tap_dance_V {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <230>;
             // 1-Tap: シンボル(回路) (V), 2-Taps: 貼り付け (Ctrl+A+v), 3-Taps: 盤枠線(矩形) (Ctrl+D+v), 4-Taps: 盤枠製品番号 (Ctrl+F+v)
             bindings = <&kp V>, <&ctrl_a_v>, <&ctrl_d_v>, <&ctrl_f_v>; 
         };
@@ -649,7 +649,7 @@
         td_W: tap_dance_W {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <230>;
             // 1-Tap: 図形情報表示 (W), 2-Taps: 渡りページ編集 (Ctrl+A+w), 3-Taps: 一時補助線全削除 (Ctrl+D+w), 4-Taps: 未設定 (Ctrl+F+w)
             bindings = <&kp W>, <&ctrl_a_w>, <&ctrl_d_w>, <&ctrl_f_w>; 
         };
@@ -658,7 +658,7 @@
         td_X: tap_dance_X {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <230>;
             // 1-Tap: 交点間削除 (X), 2-Taps: 範囲切断 (Ctrl+A+x), 3-Taps: 長円 (Ctrl+D+x), 4-Taps: 未設定 (Ctrl+F+x)
             bindings = <&kp X>, <&ctrl_a_x>, <&ctrl_d_x>, <&ctrl_f_x>; 
         };
@@ -667,7 +667,7 @@
         td_Y: tap_dance_Y {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <230>;
             // 1-Tap: レイヤ変更 (Y), 2-Taps: シンボルレイヤ設定変更 (Ctrl+A+y), 3-Taps: 引出寸法線 (Ctrl+D+y), 4-Taps: 未設定 (Ctrl+F+y)
             bindings = <&kp Y>, <&ctrl_a_y>, <&ctrl_d_y>, <&ctrl_f_y>; 
         };
@@ -676,7 +676,7 @@
         td_Z: tap_dance_Z {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <230>;
             // 1-Tap: 属性変更 (Z), 2-Taps: フォーマット情報 (Ctrl+A+z), 3-Taps: 図面種別情報 (Ctrl+D+z), 4-Taps: 未設定 (Ctrl+F+z)
             bindings = <&kp Z>, <&ctrl_a_z>, <&ctrl_d_z>, <&ctrl_f_z>; 
         };
@@ -685,7 +685,7 @@
         td_SEMI: tap_dance_SEMI {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <230>;
             // 1-Tap: 通常キー, 2-Taps: 0.5mm , 3-Taps: 0.25mm
             bindings = <&kp SEMICOLON>, <&ctrl_alt_l>, <&ctrl_alt_semi>; 
         };
@@ -694,7 +694,7 @@
         td_COMMA: tap_dance_COMMA {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <230>;
             // 1-Tap: 通常キー, 2-Taps: 銘板表編集 (Ctrl+F+c), 3-Taps:  銘板表 (Ctrl+F+d)
             bindings = <&kp COMMA>, <&ctrl_f_c>, <&ctrl_f_d>;
         };
@@ -703,7 +703,7 @@
         td_DOT: tap_dance_DOT {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <230>;
             // 1-Tap: 通常キー, 2-Taps: 部品表編集 (Ctrl+F+g), 3-Taps:  集計表 (Ctrl+F+h)
             bindings = <&kp DOT>, <&ctrl_f_g>, <&ctrl_f_h>;
         };
@@ -712,7 +712,7 @@
         td_SLASH: tap_dance_SLASH {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <230>;
             // 1-Tap: 通常キー, 2-Taps: 1G , 3-Taps: 1/4G
             bindings = <&kp SLASH>, <&ctrl_alt_j>, <&ctrl_alt_k>; 
         };
