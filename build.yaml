@@ -19,9 +19,9 @@
 #
 ---
 include:
-  - board: seeed_xiao_ble
+  - board: seeeduino_xiao_ble
     shield: Vollism36_L rgbled_adapter
-  - board: seeed_xiao_ble
+  - board: seeeduino_xiao_ble
     shield: Vollism36_R rgbled_adapter
-  - board: seeed_xiao_ble
+  - board: seeeduino_xiao_ble
     shield: settings_reset

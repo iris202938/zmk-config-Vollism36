@@ -19,14 +19,6 @@
 #define NUM 8
 #define BLE 9
 
-// &vbatt {
-//     compatible = "zmk,battery-voltage-divider";
-//     io-channels = <&adc 7>;
-//     power-gpios = <&gpio0 14 (GPIO_OPEN_DRAIN | GPIO_ACTIVE_LOW)>;
-//     output-ohms = <503000>;
-//     full-ohms = <(1000000 + 503000)>;
-// };
-
 &kscan0 {
         col-gpios
             = <&xiao_d 10 GPIO_ACTIVE_HIGH>
