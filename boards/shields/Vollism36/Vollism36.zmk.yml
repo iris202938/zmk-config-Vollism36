@@ -3,7 +3,7 @@ id: Vollism36
 name: Vollism36
 type: shield
 url: https://github.com/Reinmuth66/zmk-config-Vollism36
-requires: [seeeduino_xiao_ble]
+requires: [seeed_xiao_ble]
 features:
   - keys
 siblings:
