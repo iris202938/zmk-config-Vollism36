@@ -13,13 +13,14 @@
 #define QWE 0
 #define NGN 1
 #define WIN 2
-#define CAD 3
-#define LWR 4
-#define RSE 5
-#define ADJ 6
-#define MOV 7
-#define NUM 8
-#define BLE 9
+#define MOU 3
+#define CAD 4
+#define LWR 5
+#define RSE 6
+#define ADJ 7
+#define MOV 8
+#define NUM 9
+#define BLE 10
 
 &mt {
     flavor = "hold-preferred";
@@ -444,9 +445,14 @@
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&lt NUM INT5>, <&to_NUM_i5>;
-        
         };
-        
+        td_lt_mou_i5    : tap_dance_layer_tap_mou_i5 {  // タップでINT5、ホールドでMOUレイヤ、ダブルタップでMOUレイヤ保持
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&lt MOU INT5>, <&to_MOU_i5>;
+        };
+
         // --- Tap Dance A ---
         td_A: tap_dance_A {
             compatible = "zmk,behavior-tap-dance";
@@ -2743,7 +2749,7 @@
             &mt LSHFT Q     &kp W           &kp E           &kp R           &kp T                                           &kp Y           &kp U           &kp I           &kp O           &mt RSHFT P
             &mt LCTRL A     &mt LALT S      &mt LSHFT D     &mt LGUI F                                      &kp G           &kp H           &mt RGUI J      &mt RSHFT K     &mt RALT L      &mt RCTRL SEMICOLON
             &mt LGUI Z      &kp X           &kp C           &kp V                                           &kp B           &kp N           &kp M           &kp COMMA       &kp DOT         &mt RALT SLASH
-                                                            &lt NUM INT5    &mt LSHFT SPACE &mo LWR         &lt RSE ENTER   &kp INT4        &td_lt_cad_i2
+                                                            &td_lt_mou_i5   &mt LSHFT SPACE &mo LWR         &lt RSE ENTER   &kp INT4        &td_lt_cad_i2
 
             >;
         };
@@ -2767,6 +2773,16 @@
             &kp A           &kp S           &kp D           &kp F                                           &kp G           &kp H           &kp J           &kp K           &kp L           &kp SEMICOLON
             &kp Z           &kp X           &kp C           &kp V                                           &kp B           &kp N           &kp M           &kp COMMA       &kp DOT         &kp SLASH
                                                             &lt NUM INT5    &kp SPACE       &lt LWR TAB     &lt RSE ENTER   &kp INT4        &td_lt_mov_i2
+            >;
+        };
+
+        MOU {
+            bindings = <
+        // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
+            &td_Q           &td_W           &td_E           &mt LC(R)       &td_T                                           &td_Y           &td_U           &td_I           &td_O           &td_P
+            &td_A           &td_S           &td_D           &mkp MB1                                        &td_G           &td_H           &td_J           &td_K           &td_L           &td_SEMI
+            &td_Z           &td_X           &td_C           &td_V                                           &td_B           &td_N           &td_M           &td_COMMA       &td_DOT         &td_SLASH
+                                                            &lt NUM INT5    &mkp MB3        &mkp MB2        &lt RSE ENTER   &kp INT4        &to_QWE_i5
             >;
         };
 

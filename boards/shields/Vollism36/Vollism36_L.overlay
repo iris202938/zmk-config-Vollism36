@@ -11,13 +11,14 @@
 #define QWE 0
 #define NGN 1
 #define WIN 2
-#define CAD 3
-#define LWR 4
-#define RSE 5
-#define ADJ 6
-#define MOV 7
-#define NUM 8
-#define BLE 9
+#define MOU 3
+#define CAD 4
+#define LWR 5
+#define RSE 6
+#define ADJ 7
+#define MOV 8
+#define NUM 9
+#define BLE 10
 
 &kscan0 {
         col-gpios
