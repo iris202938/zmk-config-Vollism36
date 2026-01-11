@@ -446,7 +446,7 @@
             tapping-term-ms = <200>;
             bindings = <&lt NUM INT5>, <&to_NUM_i5>;
         };
-        td_lt_mou_i5    : tap_dance_layer_tap_mou_i5 {  // タップでINT5、ホールドでMOUレイヤ、ダブルタップでMOUレイヤ保持
+        td_lt_mou_i5: tap_dance_layer_tap_mou_i5 {  // タップでINT5、ホールドでMOUレイヤ、ダブルタップでMOUレイヤ保持
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
