@@ -450,7 +450,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&lt MOU INT5>, <&to_MOU_i5>;
+            bindings = <&lt NUM INT5>, <&to_MOU_i5>;
         };
 
         // --- Tap Dance A ---
