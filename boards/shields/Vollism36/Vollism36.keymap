@@ -974,6 +974,12 @@
             bindings = <&to NUM>, <&kp INT5>;
         };
 
+        to_MOU_i5: to_MOU_INT5{
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to MOU>, <&kp INT5>;
+        };
+
         int5_g: int5_g { // 端点再設定(AHK)
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
