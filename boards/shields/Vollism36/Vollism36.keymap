@@ -1112,10 +1112,10 @@
             #binding-cells = <0>;
             bindings = <&to QWE &bt BT_SEL 4 &to QWE>;
         };
-        usb_l0: usb_l0 { // USB接続を選択し、レイヤーCADを有効化
+        usb_l0: usb_l0 { // USB接続を選択し、レイヤーMOUを有効化
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to QWE &out OUT_USB &to CAD>;
+            bindings = <&to QWE &out OUT_USB &to MOU>;
         };
         usb_l2: usb_l2 { // USB接続を選択し、レイヤー2を有効化
             compatible = "zmk,behavior-macro";
