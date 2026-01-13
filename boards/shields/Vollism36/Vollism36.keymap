@@ -310,6 +310,12 @@
             layers = <QWE CAD>;
             timeout-ms = <80>;
         };
+        mb3_mou {
+            bindings = <&mkp MB3>;
+            key-positions = <13 32>;
+            layers = <MOU>;
+            timeout-ms = <80>;
+        };
         int5_g_c {
             bindings = <&int5_g>;
             key-positions = <19 29>;
