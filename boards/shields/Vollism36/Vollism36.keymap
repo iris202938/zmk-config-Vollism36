@@ -310,6 +310,24 @@
             layers = <QWE CAD>;
             timeout-ms = <80>;
         };
+        mb1_l_cad {
+            bindings = <&mkp MB1>;
+            key-positions = <13 22>;
+            layers = <QWE CAD>;
+            timeout-ms = <80>;
+        };
+        mb2_l_cad {
+            bindings = <&mkp MB2>;
+            key-positions = <13 32>;
+            layers = <QWE CAD>;
+            timeout-ms = <80>;
+        };
+        mb3_l_cad {
+            bindings = <&mkp MB3>;
+            key-positions = <22 23>;
+            layers = <QWE CAD>;
+            timeout-ms = <80>;
+        };
         mb3_mou {
             bindings = <&mkp MB3>;
             key-positions = <13 32>;
