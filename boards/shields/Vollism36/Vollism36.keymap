@@ -2870,9 +2870,9 @@
         NUM {
             bindings = <
         // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
-            &kp PG_UP       &kp HOME        &kp UP          &kp END         &lt BLE CARET                                   &kp KP_SLASH    &kp KP_N7       &kp KP_N8       &kp KP_N9       &kp KP_N0
+            &kp PG_UP       &kp HOME        &kp UP          &kp END         &lt BLE CARET                                   &kp KP_SLASH    &kp KP_N7       &kp KP_N8       &kp KP_N9       &kp KP_MULTIPLY
             &kp PG_DN       &kp LEFT        &kp DOWN        &kp RIGHT                                       &lt BLE DEL     &kp BSPC        &kp KP_N4       &kp KP_N5       &kp KP_N6       &kp KP_MINUS
-            &alt_left	    &alt_down       &alt_up         &alt_right                                      &kp EQUAL       &kp KP_MULTIPLY &kp KP_N1       &kp KP_N2       &kp KP_N3       &kp KP_PLUS
+            &alt_left	    &alt_down       &alt_up         &alt_right                                      &kp EQUAL       &kp KP_N0       &kp KP_N1       &kp KP_N2       &kp KP_N3       &kp KP_PLUS
                                                             &trans          &pr_pg	        &nx_pg          &kp KP_ENTER    &kp UNDER       &kp SPACE
             >;
         };
