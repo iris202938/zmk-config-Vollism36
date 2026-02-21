@@ -72,6 +72,18 @@
             bindings = <&ng_off>;
             layers = <QWE NGN>; // デフォルトレイヤーが0、薙刀式レイヤーが1の前提
         };
+        combo_win {
+            timeout-ms = <200>;
+            key-positions = <34 35>;
+            bindings = <&to_WIN_INT2>;
+            layers = <CAD>;
+        };
+        combo_cad {
+            timeout-ms = <200>;
+            key-positions = <30 31>;
+            bindings = <&to_CAD_INT5>;
+            layers = <WIN>;
+        };
         adj {
             bindings = <&mo ADJ>;
             key-positions = <32 33>;
@@ -980,6 +992,12 @@
             bindings = <&to QWE>, <&kp INT5>;
         };
 
+        to_WIN_i2: to_WIN_INT5{
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to WIN>, <&kp INT2>;
+        };
+
         to_WIN_i5: to_WIN_INT5{
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -996,6 +1014,12 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&to CAD>, <&kp INT2>;
+        };
+        
+        to_CAD_i5: to_CAD_INT5{
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to CAD>, <&kp INT5>;
         };
 
         to_NUM_i5: to_NUM_INT5{
