@@ -992,7 +992,7 @@
             bindings = <&to QWE>, <&kp INT5>;
         };
 
-        to_WIN_i2: to_WIN_INT5{
+        to_WIN_i2: to_WIN_INT2{
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&to WIN>, <&kp INT2>;
