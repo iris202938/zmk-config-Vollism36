@@ -468,7 +468,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&lt CAD INT5>, <&to_NUM_i5>;
+            bindings = <&lt NUM INT5>, <&to_CAD_i5>;
         };
 		    td_lt_num_i5: tap_dance_layer_tap_num_i5 {  // タップでINT5、ホールドでNUMレイヤ、ダブルタップでNUMレイヤ保持
             compatible = "zmk,behavior-tap-dance";
@@ -996,6 +996,12 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&to CAD>, <&kp INT2>;
+        };
+
+        to_CAD_i5: to_CAD_INT5{
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to CAD>, <&kp INT5>;
         };
 
         to_NUM_i5: to_NUM_INT5{
@@ -2808,7 +2814,7 @@
             &kp Q           &kp W           &kp E           &kp R           &kp T                                           &kp Y           &kp U           &kp I           &kp O           &kp P
             &kp A           &kp S           &kp D           &kp F                                           &kp G           &kp H           &kp J           &kp K           &kp L           &kp SEMICOLON
             &kp Z           &kp X           &kp C           &kp V                                           &kp B           &kp N           &kp M           &kp COMMA       &kp DOT         &kp SLASH
-                                                            &lt NUM INT5    &kp SPACE       &lt LWR TAB     &lt RSE ENTER   &kp INT4        &td_lt_cad_i2
+                                                            &td_lt_cad_i5   &kp SPACE       &lt LWR TAB     &lt RSE ENTER   &kp INT4        &td_lt_cad_i2
             >;
         };
 
