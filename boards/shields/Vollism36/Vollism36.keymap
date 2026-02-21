@@ -75,13 +75,13 @@
         combo_win {
             timeout-ms = <200>;
             key-positions = <34 35>;
-            bindings = <&to_WIN_INT2>;
+            bindings = <&to_win_i2>;
             layers = <CAD>;
         };
         combo_cad {
             timeout-ms = <200>;
             key-positions = <30 31>;
-            bindings = <&to_CAD_INT5>;
+            bindings = <&to_cad_i5>;
             layers = <WIN>;
         };
         adj {
