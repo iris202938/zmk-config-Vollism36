@@ -304,6 +304,12 @@
             layers = <MOU CAD>;
             timeout-ms = <80>;
         };
+        combo_exl_fill { // Excelのフィルター
+            timeout-ms = <80>;
+            key-positions = <2 7 11>; // E,I,Sのキー位置に書き換えてください
+            layers = <RSEW>;
+            bindings = <&exl_fill>;
+        };
         mb1_cad {
             bindings = <&mkp MB1>;
             key-positions = <26 27>;
@@ -1045,6 +1051,16 @@
                 , <&macro_release &kp INT5>
                 ;
         };	
+        exl_fill: excel_fill_menu { // Excelのフィルター
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <30>;
+            tap-ms = <30>;
+            bindings
+                = <&macro_tap &kp LALT>
+                , <&macro_tap &kp E &kp I &kp S>;
+            // ここで止まるので、設定を確認して手動でEnter
+        };
 
         alt_int4: alt_int4 { // Alt+変換 選択位置移動(複写)(AHK)
             compatible = "zmk,behavior-macro";
