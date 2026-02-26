@@ -458,12 +458,20 @@
         //     toggle-mode = "off";
         // };
         
-        lt_num_cad_i5: lt_num_cad_i5 {
+        lt_num_cad_i5: lt_num_cad_i5 {  // タップでINT5/CADレイヤ、ホールドでNUMレイヤ
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
-            bindings = <&mo>, <&to_CAD_i5>; 
+            bindings = <&mo NUM>, <&to_CAD_i5>; 
+        };
+
+        lt_mov_win_i4: lt_mov_win_i4 {  // タップでINT4/WINレイヤ、ホールドでMOVレイヤ
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&mo MOV>, <&to_WIN_i4>; 
         };
     
         td_lt_mov_l1: tap_dance_layer_tap_mov_l1 {  // タップでLANG1、ホールドでMOVレイヤ、ダブルタップでMOVレイヤ保持
