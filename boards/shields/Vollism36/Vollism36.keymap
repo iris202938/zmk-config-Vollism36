@@ -463,7 +463,7 @@
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
-            bindings = <&mo>, <&macro_cad_i5>; 
+            bindings = <&mo>, <&to_CAD_i5>; 
         };
     
         td_lt_mov_l1: tap_dance_layer_tap_mov_l1 {  // タップでLANG1、ホールドでMOVレイヤ、ダブルタップでMOVレイヤ保持
