@@ -457,6 +457,14 @@
         //     display-name = "Toggle Layer Off";
         //     toggle-mode = "off";
         // };
+        
+        lt_num_cad_i5: lt_num_cad_i5 {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&mo>, <&macro_cad_i5>; 
+        };
     
         td_lt_mov_l1: tap_dance_layer_tap_mov_l1 {  // タップでLANG1、ホールドでMOVレイヤ、ダブルタップでMOVレイヤ保持
             compatible = "zmk,behavior-tap-dance";
@@ -1010,7 +1018,7 @@
             bindings = <&to WIN>, <&kp INT4>;
         };
 
-        to_WIN_i5: to_WIN_INT5 {
+        to_WIN_i5: to_WIN_i5 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&to WIN>, <&kp INT5>;
@@ -2372,7 +2380,7 @@
             &kp Q           &kp W           &kp E           &kp R           &kp T                                           &kp Y           &kp U           &kp I           &kp O           &kp P
             &kp A           &kp S           &kp D           &kp F                                           &kp G           &kp H           &kp J           &kp K           &kp L           &kp SEMICOLON
             &kp Z           &kp X           &kp C           &kp V                                           &kp B           &kp N           &kp M           &kp COMMA       &kp DOT         &kp SLASH
-                                                            &lt NUM INT5    &kp SPACE       &lt LWR TAB     &lt RSE ENTER   &kp INT4        &td_lt_cad_i2
+                                                            &lt_num_cad_i5  &kp SPACE       &lt LWR TAB     &lt RSE ENTER   &kp INT4        &td_lt_cad_i2
             >;
         };
 
