@@ -307,7 +307,7 @@
         combo_exl_fill { // Excelのフィルター
             timeout-ms = <80>;
             key-positions = <2 7 11>; // E,I,Sのキー位置に書き換えてください
-            layers = <RSEW>;
+            layers = <RSE>;
             bindings = <&exl_fill>;
         };
         mb1_cad {
