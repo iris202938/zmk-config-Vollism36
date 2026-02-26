@@ -992,49 +992,67 @@
         // 	bindings = <&to QWE>, <&kp LANG2>;
         // };
 
-        to_QWE_i5: to_QWE_INT5{
+        to_QWE_i5: to_QWE_INT5 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&to QWE>, <&kp INT5>;
         };
 
-        to_WIN_i2: to_WIN_INT2{
+        to_WIN_i2: to_WIN_INT2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&to WIN>, <&kp INT2>;
         };
 
-        to_WIN_i5: to_WIN_INT5{
+        to_WIN_i4: to_WIN_INT4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to WIN>, <&kp INT4>;
+        };
+
+        to_WIN_i5: to_WIN_INT5 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&to WIN>, <&kp INT5>;
         };
 
-        to_MOV_i2: to_MOV_INT2{
+        to_WIN_l1: to_WIN_l1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to WIN>, <&kp LANG1>;
+        };
+
+        to_MOV_i2: to_MOV_INT2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&to MOV>, <&kp INT2>;
         };
 
-        to_CAD_i2: to_CAD_INT2{
+        to_CAD_i2: to_CAD_INT2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&to CAD>, <&kp INT2>;
         };
         
-        to_CAD_i5: to_CAD_INT5{
+        to_CAD_i5: to_CAD_i5 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&to CAD>, <&kp INT5>;
         };
 
-        to_NUM_i5: to_NUM_INT5{
+        to_CAD_l2: to_CAD_l2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to CAD>, <&kp LANG2>;
+        };
+
+        to_NUM_i5: to_NUM_i5 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&to NUM>, <&kp INT5>;
         };
 
-        to_MOU_i5: to_MOU_INT5{
+        to_MOU_i5: to_MOU_i5 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&to MOU>, <&kp INT5>;
@@ -2279,500 +2297,6 @@
                 ;
         };
         
-        // e_e_1: e_e_1 {
-        //     compatible = "zmk,behavior-macro";
-        //     #binding-cells = <0>;
-        //     wait-ms = <100>;
-        //     tap-ms = <50>;
-        //     bindings
-        //         // --- 0回目の実行 ---
-        //         = <&macro_tap &kp F2>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_press &kp LCTRL>
-        //         , <&macro_tap &kp A>
-        //         , <&macro_release &kp LCTRL>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_press &kp LCTRL>
-        //         , <&macro_tap &kp C>
-        //         , <&macro_release &kp LCTRL>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_tap &kp ENTER>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_press &kp LALT>
-        //         // , <&macro_wait_time 80>
-        //         , <&macro_tap &kp TAB>
-        //         // , <&macro_wait_time 80>
-        //         , <&macro_release &kp LALT>
-        //         // , <&macro_wait_time 80>
-        //         , <&macro_press &kp LCTRL>
-        //         , <&macro_tap &kp V>
-        //         , <&macro_release &kp LCTRL>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_tap &kp ENTER>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_tap &kp ESC>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_press &kp LALT>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_tap &kp TAB>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_release &kp LALT>
-        //         , <&macro_wait_time 120>
-        //         // --- 1回目の実行 ---
-        //         , <&macro_tap &kp F2>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_press &kp LCTRL>
-        //         , <&macro_tap &kp A>
-        //         , <&macro_release &kp LCTRL>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_press &kp LCTRL>
-        //         , <&macro_tap &kp C>
-        //         , <&macro_release &kp LCTRL>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_tap &kp ENTER>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_press &kp LALT>
-        //         // , <&macro_wait_time 80>
-        //         , <&macro_tap &kp TAB>
-        //         // , <&macro_wait_time 80>
-        //         , <&macro_release &kp LALT>
-        //         // , <&macro_wait_time 80>
-        //         , <&macro_press &kp LCTRL>
-        //         , <&macro_tap &kp V>
-        //         , <&macro_release &kp LCTRL>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_tap &kp ENTER>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_tap &kp ESC>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_press &kp LALT>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_tap &kp TAB>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_release &kp LALT>
-        //     ;
-        // };
-
-        // e_e_2: e_e_2 {
-        //     compatible = "zmk,behavior-macro";
-        //     #binding-cells = <0>;
-        //     wait-ms = <100>;
-        //     tap-ms = <50>;
-        //     bindings
-        //         // --- 0回目の実行 ---
-        //         = <&macro_tap &kp F2>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_press &kp LCTRL>
-        //         , <&macro_tap &kp A>
-        //         , <&macro_release &kp LCTRL>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_press &kp LCTRL>
-        //         , <&macro_tap &kp C>
-        //         , <&macro_release &kp LCTRL>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_tap &kp ENTER>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_press &kp LALT>
-        //         // , <&macro_wait_time 80>
-        //         , <&macro_tap &kp TAB>
-        //         // , <&macro_wait_time 80>
-        //         , <&macro_release &kp LALT>
-        //         // , <&macro_wait_time 80>
-        //         , <&macro_press &kp LCTRL>
-        //         , <&macro_tap &kp V>
-        //         , <&macro_release &kp LCTRL>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_tap &kp ENTER>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_tap &kp ESC>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_press &kp LALT>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_tap &kp TAB>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_release &kp LALT>
-        //         , <&macro_wait_time 120>
-        //         // --- 1回目の実行 ---
-        //         , <&macro_tap &kp F2>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_press &kp LCTRL>
-        //         , <&macro_tap &kp A>
-        //         , <&macro_release &kp LCTRL>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_press &kp LCTRL>
-        //         , <&macro_tap &kp C>
-        //         , <&macro_release &kp LCTRL>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_tap &kp ENTER>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_press &kp LALT>
-        //         // , <&macro_wait_time 80>
-        //         , <&macro_tap &kp TAB>
-        //         // , <&macro_wait_time 80>
-        //         , <&macro_release &kp LALT>
-        //         // , <&macro_wait_time 80>
-        //         , <&macro_press &kp LCTRL>
-        //         , <&macro_tap &kp V>
-        //         , <&macro_release &kp LCTRL>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_tap &kp ENTER>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_tap &kp ESC>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_press &kp LALT>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_tap &kp TAB>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_release &kp LALT>
-        //         , <&macro_wait_time 120>
-        //         // --- 2回目の実行 ---
-        //         , <&macro_tap &kp F2>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_press &kp LCTRL>
-        //         , <&macro_tap &kp A>
-        //         , <&macro_release &kp LCTRL>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_press &kp LCTRL>
-        //         , <&macro_tap &kp C>
-        //         , <&macro_release &kp LCTRL>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_tap &kp ENTER>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_press &kp LALT>
-        //         // , <&macro_wait_time 80>
-        //         , <&macro_tap &kp TAB>
-        //         // , <&macro_wait_time 80>
-        //         , <&macro_release &kp LALT>
-        //         // , <&macro_wait_time 80>
-        //         , <&macro_press &kp LCTRL>
-        //         , <&macro_tap &kp V>
-        //         , <&macro_release &kp LCTRL>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_tap &kp ENTER>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_tap &kp ESC>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_press &kp LALT>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_tap &kp TAB>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_release &kp LALT>
-        //     ;
-        // };
-
-        // e_e_3: e_e_3 {
-        //     compatible = "zmk,behavior-macro";
-        //     #binding-cells = <0>;
-        //     wait-ms = <100>;
-        //     tap-ms = <50>;
-        //     bindings
-        //         // --- 0回目の実行 ---
-        //         = <&macro_tap &kp F2>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_press &kp LCTRL>
-        //         , <&macro_tap &kp A>
-        //         , <&macro_release &kp LCTRL>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_press &kp LCTRL>
-        //         , <&macro_tap &kp C>
-        //         , <&macro_release &kp LCTRL>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_tap &kp ENTER>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_press &kp LALT>
-        //         // , <&macro_wait_time 80>
-        //         , <&macro_tap &kp TAB>
-        //         // , <&macro_wait_time 80>
-        //         , <&macro_release &kp LALT>
-        //         // , <&macro_wait_time 80>
-        //         , <&macro_press &kp LCTRL>
-        //         , <&macro_tap &kp V>
-        //         , <&macro_release &kp LCTRL>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_tap &kp ENTER>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_tap &kp ESC>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_press &kp LALT>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_tap &kp TAB>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_release &kp LALT>
-        //         , <&macro_wait_time 120>
-        //         // --- 1回目の実行 ---
-        //         , <&macro_tap &kp F2>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_press &kp LCTRL>
-        //         , <&macro_tap &kp A>
-        //         , <&macro_release &kp LCTRL>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_press &kp LCTRL>
-        //         , <&macro_tap &kp C>
-        //         , <&macro_release &kp LCTRL>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_tap &kp ENTER>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_press &kp LALT>
-        //         // , <&macro_wait_time 80>
-        //         , <&macro_tap &kp TAB>
-        //         // , <&macro_wait_time 80>
-        //         , <&macro_release &kp LALT>
-        //         // , <&macro_wait_time 80>
-        //         , <&macro_press &kp LCTRL>
-        //         , <&macro_tap &kp V>
-        //         , <&macro_release &kp LCTRL>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_tap &kp ENTER>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_tap &kp ESC>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_press &kp LALT>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_tap &kp TAB>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_release &kp LALT>
-        //         , <&macro_wait_time 120>
-        //         // --- 2回目の実行 ---
-        //         , <&macro_tap &kp F2>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_press &kp LCTRL>
-        //         , <&macro_tap &kp A>
-        //         , <&macro_release &kp LCTRL>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_press &kp LCTRL>
-        //         , <&macro_tap &kp C>
-        //         , <&macro_release &kp LCTRL>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_tap &kp ENTER>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_press &kp LALT>
-        //         // , <&macro_wait_time 80>
-        //         , <&macro_tap &kp TAB>
-        //         // , <&macro_wait_time 80>
-        //         , <&macro_release &kp LALT>
-        //         // , <&macro_wait_time 80>
-        //         , <&macro_press &kp LCTRL>
-        //         , <&macro_tap &kp V>
-        //         , <&macro_release &kp LCTRL>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_tap &kp ENTER>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_tap &kp ESC>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_press &kp LALT>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_tap &kp TAB>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_release &kp LALT>
-        //         , <&macro_wait_time 120>
-        //         // --- 3回目の実行 ---
-        //         , <&macro_tap &kp F2>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_press &kp LCTRL>
-        //         , <&macro_tap &kp A>
-        //         , <&macro_release &kp LCTRL>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_press &kp LCTRL>
-        //         , <&macro_tap &kp C>
-        //         , <&macro_release &kp LCTRL>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_tap &kp ENTER>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_press &kp LALT>
-        //         // , <&macro_wait_time 80>
-        //         , <&macro_tap &kp TAB>
-        //         // , <&macro_wait_time 80>
-        //         , <&macro_release &kp LALT>
-        //         // , <&macro_wait_time 80>
-        //         , <&macro_press &kp LCTRL>
-        //         , <&macro_tap &kp V>
-        //         , <&macro_release &kp LCTRL>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_tap &kp ENTER>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_tap &kp ESC>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_press &kp LALT>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_tap &kp TAB>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_release &kp LALT>
-        //     ;
-        // };
-
-        // e_e_4: e_e_4 {
-        //     compatible = "zmk,behavior-macro";
-        //     #binding-cells = <0>;
-        //     wait-ms = <100>;
-        //     tap-ms = <50>;
-        //     bindings
-        //         // --- 0回目の実行 ---
-        //         = <&macro_tap &kp F2>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_press &kp LCTRL>
-        //         , <&macro_tap &kp A>
-        //         , <&macro_release &kp LCTRL>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_press &kp LCTRL>
-        //         , <&macro_tap &kp C>
-        //         , <&macro_release &kp LCTRL>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_tap &kp ENTER>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_press &kp LALT>
-        //         // , <&macro_wait_time 80>
-        //         , <&macro_tap &kp TAB>
-        //         // , <&macro_wait_time 80>
-        //         , <&macro_release &kp LALT>
-        //         // , <&macro_wait_time 80>
-        //         , <&macro_press &kp LCTRL>
-        //         , <&macro_tap &kp V>
-        //         , <&macro_release &kp LCTRL>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_tap &kp ENTER>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_tap &kp ESC>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_press &kp LALT>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_tap &kp TAB>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_release &kp LALT>
-        //         , <&macro_wait_time 120>
-        //         // --- 1回目の実行 ---
-        //         , <&macro_tap &kp F2>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_press &kp LCTRL>
-        //         , <&macro_tap &kp A>
-        //         , <&macro_release &kp LCTRL>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_press &kp LCTRL>
-        //         , <&macro_tap &kp C>
-        //         , <&macro_release &kp LCTRL>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_tap &kp ENTER>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_press &kp LALT>
-        //         // , <&macro_wait_time 80>
-        //         , <&macro_tap &kp TAB>
-        //         // , <&macro_wait_time 80>
-        //         , <&macro_release &kp LALT>
-        //         // , <&macro_wait_time 80>
-        //         , <&macro_press &kp LCTRL>
-        //         , <&macro_tap &kp V>
-        //         , <&macro_release &kp LCTRL>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_tap &kp ENTER>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_tap &kp ESC>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_press &kp LALT>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_tap &kp TAB>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_release &kp LALT>
-        //         , <&macro_wait_time 120>
-        //         // --- 2回目の実行 ---
-        //         , <&macro_tap &kp F2>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_press &kp LCTRL>
-        //         , <&macro_tap &kp A>
-        //         , <&macro_release &kp LCTRL>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_press &kp LCTRL>
-        //         , <&macro_tap &kp C>
-        //         , <&macro_release &kp LCTRL>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_tap &kp ENTER>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_press &kp LALT>
-        //         // , <&macro_wait_time 80>
-        //         , <&macro_tap &kp TAB>
-        //         // , <&macro_wait_time 80>
-        //         , <&macro_release &kp LALT>
-        //         // , <&macro_wait_time 80>
-        //         , <&macro_press &kp LCTRL>
-        //         , <&macro_tap &kp V>
-        //         , <&macro_release &kp LCTRL>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_tap &kp ENTER>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_tap &kp ESC>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_press &kp LALT>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_tap &kp TAB>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_release &kp LALT>
-        //         , <&macro_wait_time 120>
-        //         // --- 3回目の実行 ---
-        //         , <&macro_tap &kp F2>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_press &kp LCTRL>
-        //         , <&macro_tap &kp A>
-        //         , <&macro_release &kp LCTRL>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_press &kp LCTRL>
-        //         , <&macro_tap &kp C>
-        //         , <&macro_release &kp LCTRL>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_tap &kp ENTER>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_press &kp LALT>
-        //         // , <&macro_wait_time 80>
-        //         , <&macro_tap &kp TAB>
-        //         // , <&macro_wait_time 80>
-        //         , <&macro_release &kp LALT>
-        //         // , <&macro_wait_time 80>
-        //         , <&macro_press &kp LCTRL>
-        //         , <&macro_tap &kp V>
-        //         , <&macro_release &kp LCTRL>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_tap &kp ENTER>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_tap &kp ESC>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_press &kp LALT>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_tap &kp TAB>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_release &kp LALT>
-        //         , <&macro_wait_time 120>
-        //         // --- 4回目の実行 ---
-        //         , <&macro_tap &kp F2>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_press &kp LCTRL>
-        //         , <&macro_tap &kp A>
-        //         , <&macro_release &kp LCTRL>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_press &kp LCTRL>
-        //         , <&macro_tap &kp C>
-        //         , <&macro_release &kp LCTRL>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_tap &kp ENTER>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_press &kp LALT>
-        //         // , <&macro_wait_time 80>
-        //         , <&macro_tap &kp TAB>
-        //         // , <&macro_wait_time 80>
-        //         , <&macro_release &kp LALT>
-        //         // , <&macro_wait_time 80>
-        //         , <&macro_press &kp LCTRL>
-        //         , <&macro_tap &kp V>
-        //         , <&macro_release &kp LCTRL>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_tap &kp ENTER>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_tap &kp ESC>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_press &kp LALT>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_tap &kp TAB>
-        //         // , <&macro_wait_time 40>
-        //         , <&macro_release &kp LALT>
-        //     ;
-        // };
-
         ng_on: ng_on {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
