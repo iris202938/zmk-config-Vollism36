@@ -72,18 +72,20 @@
             bindings = <&ng_off>;
             layers = <QWE NGN>; // デフォルトレイヤーが0、薙刀式レイヤーが1の前提
         };
-        combo_win {
-            timeout-ms = <200>;
-            key-positions = <34 35>;
-            bindings = <&to_WIN_i2>;
-            layers = <CAD>;
-        };
-        combo_cad {
-            timeout-ms = <200>;
-            key-positions = <30 31>;
-            bindings = <&to_CAD_i5>;
-            layers = <WIN>;
-        };
+
+        // combo_win {
+        //     timeout-ms = <200>;
+        //     key-positions = <34 35>;
+        //     bindings = <&to_WIN_i2>;
+        //     layers = <CAD>;
+        // };
+        // combo_cad {
+        //     timeout-ms = <200>;
+        //     key-positions = <30 31>;
+        //     bindings = <&to_CAD_i5>;
+        //     layers = <WIN>;
+        // };
+
         adj {
             bindings = <&mo ADJ>;
             key-positions = <32 33>;
@@ -463,7 +465,7 @@
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
-            bindings = <&mo NUM>, <&to_CAD_i5>; 
+            bindings = <&mo NUM &to_CAD_i5>; 
         };
 
         lt_mov_win_i4: lt_mov_win_i4 {  // タップでINT4/WINレイヤ、ホールドでMOVレイヤ
@@ -471,7 +473,7 @@
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
-            bindings = <&mo MOV>, <&to_WIN_i4>; 
+            bindings = <&mo MOV &to_WIN_i4>; 
         };
     
         td_lt_mov_l1: tap_dance_layer_tap_mov_l1 {  // タップでLANG1、ホールドでMOVレイヤ、ダブルタップでMOVレイヤ保持
