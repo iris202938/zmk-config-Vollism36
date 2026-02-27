@@ -460,21 +460,21 @@
         //     toggle-mode = "off";
         // };
         
-        lt_num_cad_i5: lt_num_cad_i5 {  // タップでINT5/CADレイヤ、ホールドでNUMレイヤ
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-            bindings = <&mo NUM &to_CAD_i5>; 
-        };
+        // lt_num_cad_i5: lt_num_cad_i5 {  // タップでINT5/CADレイヤ、ホールドでNUMレイヤ
+        //     compatible = "zmk,behavior-hold-tap";
+        //     #binding-cells = <2>;
+        //     flavor = "tap-preferred";
+        //     tapping-term-ms = <200>;
+        //     bindings = <&mo NUM &to_CAD_i5>; 
+        // };
 
-        lt_mov_win_i4: lt_mov_win_i4 {  // タップでINT4/WINレイヤ、ホールドでMOVレイヤ
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-            bindings = <&mo MOV &to_WIN_i4>; 
-        };
+        // lt_mov_win_i4: lt_mov_win_i4 {  // タップでINT4/WINレイヤ、ホールドでMOVレイヤ
+        //     compatible = "zmk,behavior-hold-tap";
+        //     #binding-cells = <2>;
+        //     flavor = "tap-preferred";
+        //     tapping-term-ms = <200>;
+        //     bindings = <&mo MOV &to_WIN_i4>; 
+        // };
     
         td_lt_mov_l1: tap_dance_layer_tap_mov_l1 {  // タップでLANG1、ホールドでMOVレイヤ、ダブルタップでMOVレイヤ保持
             compatible = "zmk,behavior-tap-dance";
@@ -500,13 +500,13 @@
             tapping-term-ms = <200>;
             bindings = <&lt MOV INT2>, <&to_CAD_i2>;
         };
-        td_lt_cad_i5: tap_dance_layer_tap_cad_i5 {  // タップでINT5/CADレイヤ、ホールドでNUMレイヤ、ダブルタップでNUMレイヤ保持
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&lt CAD INT5>, <&to_NUM_i5>;
-        };
-		    td_lt_num_i5: tap_dance_layer_tap_num_i5 {  // タップでINT5、ホールドでNUMレイヤ、ダブルタップでNUMレイヤ保持
+        // td_lt_cad_i5: tap_dance_layer_tap_cad_i5 {  // タップでINT5/CADレイヤ、ホールドでNUMレイヤ、ダブルタップでNUMレイヤ保持
+        //     compatible = "zmk,behavior-tap-dance";
+        //     #binding-cells = <0>;
+        //     tapping-term-ms = <200>;
+        //     bindings = <&lt CAD INT5>, <&to_NUM_i5>;
+        // };
+		td_lt_num_i5: tap_dance_layer_tap_num_i5 {  // タップでINT5、ホールドでNUMレイヤ、ダブルタップでNUMレイヤ保持
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
@@ -2390,7 +2390,7 @@
             &kp Q           &kp W           &kp E           &kp R           &kp T                                           &kp Y           &kp U           &kp I           &kp O           &kp P
             &kp A           &kp S           &kp D           &kp F                                           &kp G           &kp H           &kp J           &kp K           &kp L           &kp SEMICOLON
             &kp Z           &kp X           &kp C           &kp V                                           &kp B           &kp N           &kp M           &kp COMMA       &kp DOT         &kp SLASH
-                                                            &lt_num_cad_i5  &kp SPACE       &lt LWR TAB     &lt RSE ENTER   &kp INT4        &td_lt_cad_i2
+                                                            &lt NUM INT5    &kp SPACE       &lt LWR TAB     &lt RSE ENTER   &kp INT4        &td_lt_mov_i2
             >;
         };
 
