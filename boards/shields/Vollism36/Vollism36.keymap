@@ -73,18 +73,18 @@
             layers = <QWE NGN>; // デフォルトレイヤーが0、薙刀式レイヤーが1の前提
         };
 
-        // combo_win {
-        //     timeout-ms = <200>;
-        //     key-positions = <34 35>;
-        //     bindings = <&to_WIN_i2>;
-        //     layers = <CAD>;
-        // };
-        // combo_cad {
-        //     timeout-ms = <200>;
-        //     key-positions = <30 31>;
-        //     bindings = <&to_CAD_i5>;
-        //     layers = <WIN>;
-        // };
+        combo_win {
+            timeout-ms = <200>;
+            key-positions = <34 35>;
+            bindings = <&to_WIN_i2>;
+            layers = <CAD>;
+        };
+        combo_cad {
+            timeout-ms = <200>;
+            key-positions = <30 31>;
+            bindings = <&to_CAD_i5>;
+            layers = <WIN>;
+        };
 
         adj {
             bindings = <&mo ADJ>;
