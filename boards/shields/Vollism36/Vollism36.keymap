@@ -2330,6 +2330,17 @@
                 ;
         };
 
+		// ハイコントラスト切り替え (Win: Shift + Alt + PrintScreen)
+        m_hi_con: m_hi_con {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            tap-ms = <30>;
+            wait-ms = <30>;
+            bindings
+                = <&macro_press &kp LSHFT &kp LALT>
+                , <&macro_tap &kp PRINTSCREEN>
+                , <&macro_release &kp LSHFT &kp LALT>;
+        };
         // m_alt_tab: m_alt_tab {
         // 	label = "ALT_TAB_HOLD";
         // 	compatible = "zmk,behavior-macro";
@@ -2468,7 +2479,7 @@
         BLE {
             bindings = <
         // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
-            &sys_reset      &bootloader     &bt BT_DISC 2   &bt BT_DISC 3   &bt BT_CLR_ALL                                  &bt BT_CLR_ALL  &bt BT_DISC 4   &bt BT_DISC 5   &bootloader     &sys_reset
+            &sys_reset      &bootloader     &bt BT_DISC 2   &bt BT_DISC 3   &bt BT_CLR_ALL                                  &bt BT_CLR_ALL  &m_hi_con   	&bt BT_DISC 5   &bootloader     &sys_reset
             &kp LC(LG(T))   &kp LC(LG(C))   &kp LC(LG(P))   &kp LC(LG(G))                                   &trans          &trans          &kp LC(LG(E))   &kp LC(LG(A))   &kp LC(LG(L))   &kp LC(LG(X))
             &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3                                    &bootloader     &bootloader     &bt4_l2         &bt BT_SEL 5    &bt BT_SEL 6    &bt BT_SEL 7
                                                             &trans          &kp LS(LG(F23)) &bt BT_CLR      &bt BT_CLR      &kp LA(LG(G))   &trans
