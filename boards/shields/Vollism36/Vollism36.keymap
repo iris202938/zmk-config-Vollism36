@@ -309,9 +309,15 @@
         combo_exl_fill { // Excelのフィルター
             timeout-ms = <80>;
             key-positions = <2 7 11>; // E,I,Sのキー位置に書き換えてください
-            layers = <RSE>;
+            layers = <RSE CAD>;
             bindings = <&exl_fill>;
         };
+		combo_m_xl_rename { // Excelのシート名変更マクロ
+			timeout-ms = <80>;
+        	key-positions = <15 8 3>; // H,O,Rのキー位置に書き換えてください
+			layers = <RSE CAD>;
+        	bindings = <&m_xl_rename>;
+    	};
         mb1_cad {
             bindings = <&mkp MB1>;
             key-positions = <26 27>;
@@ -2341,6 +2347,20 @@
                 , <&macro_tap &kp PRINTSCREEN>
                 , <&macro_release &kp LSHFT &kp LALT>;
         };
+
+		// Excel: シート名変更マクロ
+        m_xl_rename: m_xl_rename {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            tap-ms = <30>;
+            wait-ms = <30>;
+            bindings
+                = <&macro_tap &kp LALT>      // リボンをアクティブ化
+                , <&macro_tap &kp H>         // ホームタブ
+                , <&macro_tap &kp O>         // 書式(Format)
+                , <&macro_tap &kp R>;        // シート名の変更(Rename)
+        };
+
         // m_alt_tab: m_alt_tab {
         // 	label = "ALT_TAB_HOLD";
         // 	compatible = "zmk,behavior-macro";
