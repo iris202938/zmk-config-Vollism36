@@ -13,7 +13,7 @@
 #define QWE 0
 #define NGN 1
 #define WIN 2
-#define MOU 3
+// #define MOU 3
 #define CAD 4
 #define LWR 5
 #define RSE 6
@@ -95,91 +95,91 @@
         esc_l {
             bindings = <&kp ESC>;
             key-positions = <0 10>;
-            layers = <QWE NGN MOV MOU CAD>;
+            layers = <QWE NGN MOV CAD>;
             timeout-ms = <80>;
         };
 
         esc_r {
             bindings = <&kp ESC>;
             key-positions = <9 19>;
-            layers = <QWE MOU CAD>;
+            layers = <QWE CAD>;
             timeout-ms = <80>;
         };
 
         tab {
             bindings = <&kp TAB>;
             key-positions = <1 3>;
-            layers = <QWE MOV MOU CAD>;
+            layers = <QWE MOV CAD>;
             timeout-ms = <80>;
         };
 
         wind_l {
             bindings = <&win_left>;
             key-positions = <11 12>;
-            layers = <LWR MOU CAD>;
+            layers = <LWR CAD>;
             timeout-ms = <80>;
         };
 
         wind_r {
             bindings = <&win_right>;
             key-positions = <12 13>;
-            layers = <LWR MOU CAD>;
+            layers = <LWR CAD>;
             timeout-ms = <80>;
         };
 
         shift_l {
             bindings = <&kp LSHFT>;
             key-positions = <0 1>;
-            layers = <QWE MOU CAD>;
+            layers = <QWE CAD>;
             timeout-ms = <80>;
         };
 
         shift_r {
             bindings = <&kp RSHFT>;
             key-positions = <8 9>;
-            layers = <QWE MOU CAD>;
+            layers = <QWE CAD>;
             timeout-ms = <80>;
         };
 
         combo_TSHIFT {
             bindings = <&kp RSHIFT>;
             key-positions = <30 35>;
-            layers = <QWE MOU CAD>;
+            layers = <QWE CAD>;
             timeout-ms = <80>;
         };
 
         combo_CAPSWORD {
             timeout-ms = <80>;
             key-positions = <20 29>;
-            layers = <QWE MOU CAD>;
+            layers = <QWE CAD>;
             bindings = <&caps_word>;
         };
 
         combo_RALT {
             bindings = <&kp RALT>;
             key-positions = <28 29>;
-            layers = <QWE MOU CAD>;
+            layers = <QWE CAD>;
             timeout-ms = <80>;
         };
 
         ctrl_l {
             bindings = <&kp LCTRL>;
             key-positions = <10 11>;
-            layers = <QWE MOU CAD LWR RSE>;
+            layers = <QWE CAD LWR RSE>;
             timeout-ms = <80>;
         };
 
         ctrl_r {
             bindings = <&kp RCTRL>;
             key-positions = <18 19>;
-            layers = <QWE MOU CAD LWR RSE>;
+            layers = <QWE CAD LWR RSE>;
             timeout-ms = <80>;
         };
 
         gui_l {
             bindings = <&kp LGUI>;
             key-positions = <20 21>;
-            layers = <QWE MOU CAD LWR RSE>;
+            layers = <QWE CAD LWR RSE>;
             timeout-ms = <80>;
         };
 
@@ -193,7 +193,7 @@
         alt_slash {
             bindings = <&file_f>;
             key-positions = <18 29>;
-            layers = <QWE MOU CAD>;
+            layers = <QWE CAD>;
             timeout-ms = <80>;
         };
 
@@ -275,35 +275,35 @@
         file_f {
             bindings = <&file_f>;
             key-positions = <1 2>;
-            layers = <MOU CAD>;
+            layers = <CAD>;
             timeout-ms = <80>;
         };
 
         file_r {
             bindings = <&file_r>;
             key-positions = <2 3>;
-            layers = <MOU CAD>;
+            layers = <CAD>;
             timeout-ms = <80>;
         };
 
         pr_pg {
             bindings = <&pr_pg>;
             key-positions = <21 22>;
-            layers = <MOU CAD>;
+            layers = <CAD>;
             timeout-ms = <80>;
         };
 
         nx_pg {
             bindings = <&nx_pg>;
             key-positions = <22 23>;
-            layers = <MOU CAD>;
+            layers = <CAD>;
             timeout-ms = <80>;
         };
 
         j_ahk {
             bindings = <&int5_g>;
             key-positions = <16 26>;
-            layers = <MOU CAD>;
+            layers = <CAD>;
             timeout-ms = <80>;
         };
         combo_exl_fill { // Excelのフィルター
@@ -354,12 +354,12 @@
             layers = <QWE CAD>;
             timeout-ms = <80>;
         };
-        mb3_mou {
-            bindings = <&mkp MB3>;
-            key-positions = <13 32>;
-            layers = <MOU>;
-            timeout-ms = <80>;
-        };
+        // mb3_mou {
+        //     bindings = <&mkp MB3>;
+        //     key-positions = <13 32>;
+        //     layers = <MOU>;
+        //     timeout-ms = <80>;
+        // };
         int5_g_c {
             bindings = <&int5_g>;
             key-positions = <19 29>;
@@ -375,61 +375,61 @@
         tab_1 {
             bindings = <&tab_1>;
             key-positions = <1 3 26>;
-            layers = <QWE MOU CAD NUM>;
+            layers = <QWE CAD NUM>;
             timeout-ms = <80>;
         };
         tab_2 {
             bindings = <&tab_2>;
             key-positions = <1 3 27>;
-            layers = <QWE MOU CAD NUM>;
+            layers = <QWE CAD NUM>;
             timeout-ms = <80>;
         };
         tab_3 {
             bindings = <&tab_3>;
             key-positions = <1 3 28>;
-            layers = <QWE MOU CAD NUM>;
+            layers = <QWE CAD NUM>;
             timeout-ms = <80>;
         };
         tab_4 {
             bindings = <&tab_4>;
             key-positions = <1 3 16>;
-            layers = <QWE MOU CAD NUM>;
+            layers = <QWE CAD NUM>;
             timeout-ms = <80>;
         };
         tab_5 {
             bindings = <&tab_5>;
             key-positions = <1 3 17>;
-            layers = <QWE MOU CAD NUM>;
+            layers = <QWE CAD NUM>;
             timeout-ms = <80>;
         };
         tab_6 {
             bindings = <&tab_6>;
             key-positions = <1 3 18>;
-            layers = <QWE MOU CAD NUM>;
+            layers = <QWE CAD NUM>;
             timeout-ms = <80>;
         };
         tab_7 {
             bindings = <&tab_7>;
             key-positions = <1 3 6>;
-            layers = <QWE MOU CAD NUM>;
+            layers = <QWE CAD NUM>;
             timeout-ms = <80>;
         };
         tab_8 {
             bindings = <&tab_8>;
             key-positions = <1 3 7>;
-            layers = <QWE MOU CAD NUM>;
+            layers = <QWE CAD NUM>;
             timeout-ms = <80>;
         };
         tab_9 {
             bindings = <&tab_9>;
             key-positions = <1 3 8>;
-            layers = <QWE MOU CAD NUM>;
+            layers = <QWE CAD NUM>;
             timeout-ms = <80>;
         };
         tab_0 {
             bindings = <&tab_0>;
             key-positions = <1 3 9>;
-            layers = <QWE MOU CAD NUM>;
+            layers = <QWE CAD NUM>;
             timeout-ms = <80>;
         };
         // exl_ecd_paste {
@@ -518,12 +518,12 @@
             tapping-term-ms = <200>;
             bindings = <&lt NUM INT5>, <&to_NUM_i5>;
         };
-        td_lt_mou_i5: tap_dance_layer_tap_mou_i5 {  // タップでINT5、ホールドでMOUレイヤ、ダブルタップでMOUレイヤ保持
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&lt NUM INT5>, <&to_MOU_i5>;
-        };
+        // td_lt_mou_i5: tap_dance_layer_tap_mou_i5 {  // タップでINT5、ホールドでMOUレイヤ、ダブルタップでMOUレイヤ保持
+        //     compatible = "zmk,behavior-tap-dance";
+        //     #binding-cells = <0>;
+        //     tapping-term-ms = <200>;
+        //     bindings = <&lt NUM INT5>, <&to_MOU_i5>;
+        // };
 
         // --- Tap Dance A ---
         td_A: tap_dance_A {
@@ -1076,11 +1076,11 @@
             bindings = <&to NUM>, <&kp INT5>;
         };
 
-        to_MOU_i5: to_MOU_i5 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&to MOU>, <&kp INT5>;
-        };
+        // to_MOU_i5: to_MOU_i5 {
+        //     compatible = "zmk,behavior-macro";
+        //     #binding-cells = <0>;
+        //     bindings = <&to MOU>, <&kp INT5>;
+        // };
 
         int5_g: int5_g { // 端点再設定(AHK)
             compatible = "zmk,behavior-macro";
@@ -2425,15 +2425,15 @@
             >;
         };
 
-        MOU {
-            bindings = <
-        // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
-            &td_Q           &td_W           &td_E           &td_R           &td_T                                           &td_Y           &td_U           &td_I           &td_O           &td_P
-            &td_A           &td_S           &td_D           &mkp MB1                                        &td_G           &td_H           &td_J           &td_K           &td_L           &td_SEMI
-            &td_Z           &td_X           &td_C           &td_V                                           &td_B           &td_N           &td_M           &td_COMMA       &td_DOT         &td_SLASH
-                                                            &lt NUM INT5    &mkp MB3        &mkp MB2        &lt RSE ENTER   &kp INT4        &to_QWE_i5
-            >;
-        };
+        // MOU {
+        //     bindings = <
+        // // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
+        //     &td_Q           &td_W           &td_E           &td_R           &td_T                                           &td_Y           &td_U           &td_I           &td_O           &td_P
+        //     &td_A           &td_S           &td_D           &mkp MB1                                        &td_G           &td_H           &td_J           &td_K           &td_L           &td_SEMI
+        //     &td_Z           &td_X           &td_C           &td_V                                           &td_B           &td_N           &td_M           &td_COMMA       &td_DOT         &td_SLASH
+        //                                                     &lt NUM INT5    &mkp MB3        &mkp MB2        &lt RSE ENTER   &kp INT4        &to_QWE_i5
+        //     >;
+        // };
 
         CAD {
             bindings = <

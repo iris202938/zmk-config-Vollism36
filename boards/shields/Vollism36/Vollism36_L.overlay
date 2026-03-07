@@ -11,7 +11,7 @@
 #define QWE 0
 #define NGN 1
 #define WIN 2
-#define MOU 3
+// #define MOU 3
 #define CAD 4
 #define LWR 5
 #define RSE 6
