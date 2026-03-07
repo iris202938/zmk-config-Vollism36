@@ -40,12 +40,27 @@
                                  , <&zip_xy_to_scroll_mapper>;
         };
 
+        /* 【追加】RSEレイヤー: 方向キー変換 */
+        arrows {
+            layers = <RSE>;
+            input-processors = <&xy_to_keys>;
+        };
     };
+
     input_processors {
         sensor_rotation: sensor_rotation {
             compatible = "zmk,input-processor-sensor-rotation";
             #input-processor-cells = <0>;
             rotation-angle = <345>;
+        };
+
+        xy_to_keys: xy_to_keys {
+            compatible = "zmk,input-processor-keybind";
+            #input-processor-cells = <0>;
+            /* 順番: 右, 左, 上, 下 */
+            bindings = <&kp RIGHT>, <&kp LEFT>, <&kp UP>, <&kp DOWN>;
+            /* どの程度の距離で1回キーを押すか（要調整） */
+            threshold = <1200>; 
         };
     };
 };
