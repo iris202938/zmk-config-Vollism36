@@ -40,9 +40,9 @@
                                  , <&zip_xy_to_scroll_mapper>;
         };
 
-        /* 【追加】RSEレイヤー: 方向キー変換 */
+        /* 【追加】WINレイヤー: 方向キー変換 */
         arrows {
-            layers = <RSE>;
+            layers = <WIN>;
             input-processors = <&xy_to_keys>;
         };
     };
