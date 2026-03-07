@@ -2398,7 +2398,7 @@
             &mt LSHFT Q     &kp W           &kp E           &kp R           &kp T                                           &kp Y           &kp U           &kp I           &kp O           &mt RSHFT P
             &mt LCTRL A     &mt LALT S      &mt LSHFT D     &mt LGUI F                                      &kp G           &kp H           &mt RGUI J      &mt RSHFT K     &mt RALT L      &mt RCTRL SEMICOLON
             &mt LGUI Z      &kp X           &kp C           &kp V                                           &kp B           &kp N           &kp M           &kp COMMA       &kp DOT         &mt RALT SLASH
-                                                            &td_lt_mou_i5   &mt LSHFT SPACE &mo LWR         &lt RSE ENTER   &kp INT4        &td_lt_cad_i2
+                                                            &td_lt_num_i5   &mt LSHFT SPACE &mo LWR         &lt RSE ENTER   &kp INT4        &td_lt_cad_i2
 
             >;
         };
