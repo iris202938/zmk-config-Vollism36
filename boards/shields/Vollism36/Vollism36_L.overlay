@@ -33,24 +33,13 @@
         compatible = "zmk,input-listener";
         device = <&trackball>;
         input-processors = <&sensor_rotation>;
-        // automouse {
-        //         layers = <WIN>;
-        //         input-processors = <&zip_temp_layer MOV 100>; // Move layer for 600ms after activity
-        //         process-next;
-        // };
         scroll {
                 layers = <RSE>;
                 input-processors = <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>
                                  , <&zip_xy_scaler 1 30>
                                  , <&zip_xy_to_scroll_mapper>;
         };
-        // // 👈 【追加】NUMレイヤーでの方向キー変換を明示的に定義
-        // arrows_mapper {
-        //         layers = <NUM>;
-        //         input-processors = <&zip_xy_to_arrow_mapper>; // トラックボールの動きを方向キーに変換
-        //     // zip_xy_to_arrow_mapper のパラメーターを調整したい場合は以下のように記述
-        //     // input-processors = <&zip_xy_to_arrow_mapper 10>; // 10は感度/閾値 (任意)
-        // };
+
     };
     input_processors {
         sensor_rotation: sensor_rotation {
@@ -60,16 +49,6 @@
         };
     };
 };
-
-// / {
-//     input_processors {
-//         sensor_rotation: sensor_rotation {
-//             compatible = "zmk,input-processor-sensor-rotation";
-//             #input-processor-cells = <0>;
-//             rotation-angle = <340>;
-//         };
-//     };
-// };
 
 &pinctrl {
     spi0_default: spi0_default {
@@ -109,17 +88,5 @@
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
-        // arrows {
-        //         layers = <NUM>;
-        //         bindings =
-        //             <&kp RIGHT_ARROW>,
-        //             <&kp LEFT_ARROW>,
-        //             <&kp UP_ARROW>,
-        //             <&kp DOWN_ARROW>;
-
-        //         tick = <10>;
-        //         wait-ms = <0>;
-        //         tap-ms = <10>;
-        // };
     };
 };
