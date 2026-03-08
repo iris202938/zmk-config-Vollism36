@@ -829,52 +829,24 @@
                 , <&macro_release &mo QWE>
                 ;
         };
-        // mkp_aml: mkp_automosuelayer {
-        //     compatible = "zmk,behavior-macro-one-param";
-        //     #binding-cells = <1>;
-        //     bindings
-        //         = <&macro_param_1to1>
-        //         , <&macro_press &mkp MACRO_PLACEHOLDER>
-        //         , <&macro_pause_for_release>
-        //         , <&macro_param_1to1>
-        //         , <&macro_release &mkp MACRO_PLACEHOLDER>
-        //         , <&macro_tap &sl MOV>
-        //         ;
-        // };
-        // kp_aml: kp_automosuelayer {
-        //     compatible = "zmk,behavior-macro-one-param";
-        //     #binding-cells = <1>;
-        //     bindings
-        //         = <&macro_param_1to1>
-        //         , <&macro_press &kp MACRO_PLACEHOLDER>
-        //         , <&macro_pause_for_release>
-        //         , <&macro_param_1to1>
-        //         , <&macro_release &kp MACRO_PLACEHOLDER>
-        //         , <&macro_tap &sl MOV>
-        //         ;
-        // };
+
         file_f: file_f { // ファイルの切り替え正
             compatible = "zmk,behavior-macro";
             wait-ms = <40>;
             tap-ms = <40>;
             #binding-cells = <0>;
             bindings
-                // = <&macro_press &kp LCTRL &kp F6> // マクロキー押下時にLCTRLとF6を同時に押す
-                // , <&macro_release &kp LCTRL &kp F6> // マクロキー解放時にLCTRLとF6を同時に離す
                 = <&macro_press &kp LCTRL>
                 , <&macro_tap &kp F6>
                 , <&macro_release &kp LCTRL>
                 ;
         };
-
         file_r: file_r { // ファイルの切り替え逆
             compatible = "zmk,behavior-macro";
             wait-ms = <40>;
             tap-ms = <40>;
             #binding-cells = <0>;
             bindings
-                // = <&macro_press &kp LSHFT &kp LCTRL &kp F6> // マクロキー押下時にLSHFTとLCTRLとF6を同時に押す
-                // , <&macro_release &kp LSHFT &kp LCTRL &kp F6> // マクロキー解放時にLSHFTとLCTRLとF6を同時に離す
                 = <&macro_press &kp LSHFT>
                 , <&macro_press &kp LCTRL>
                 , <&macro_tap &kp F6>
@@ -882,85 +854,67 @@
                 , <&macro_release &kp LSHFT>
                 ;
         };
-
         pr_pg: pr_pg { // 前ページ切り替え
             compatible = "zmk,behavior-macro";
             wait-ms = <40>;
             tap-ms = <40>;
             #binding-cells = <0>;
             bindings
-                // = <&macro_press &kp LSHFT &kp F5> // マクロキー押下時にLSHFTとF5を同時に押す
-                // , <&macro_release &kp LSHFT &kp F5> // マクロキー解放時にLSHFTとF5を同時に離す
                 = <&macro_press &kp LSHFT>
                 , <&macro_tap &kp F5>
                 , <&macro_release &kp LSHFT>
                 ;
         };
-
         nx_pg: nx_pg { // 次ページ切り替え
             compatible = "zmk,behavior-macro";
             wait-ms = <40>;
             tap-ms = <40>;
             #binding-cells = <0>;
             bindings
-                // = <&macro_press &kp LSHFT &kp F6> // マクロキー押下時にLSHFTとF6を同時に押す
-                // , <&macro_release &kp LSHFT &kp F6> // マクロキー解放時にLSHFTとF6を同時に離す
                 = <&macro_press &kp LSHFT>
                 , <&macro_tap &kp F6>
                 , <&macro_release &kp LSHFT>
                 ;
         };
-
         alt_right: alt_right { // フォルダ移動進む
             compatible = "zmk,behavior-macro";
             wait-ms = <40>;
             tap-ms = <40>;
             #binding-cells = <0>;
             bindings
-                // = <&macro_press &kp LALT &kp RIGHT>
-                // , <&macro_release &kp LALT &kp RIGHT>
                 = <&macro_press &kp LALT>
                 , <&macro_tap &kp RIGHT>
                 , <&macro_release &kp LALT>
                 ;
         };
-
         alt_left: alt_left { // フォルダ移動戻る
             compatible = "zmk,behavior-macro";
             wait-ms = <40>;
             tap-ms = <40>;
             #binding-cells = <0>;
             bindings
-                // = <&macro_press &kp LALT &kp LEFT>
-                // , <&macro_release &kp LALT &kp LEFT>
                 = <&macro_press &kp LALT>
                 , <&macro_tap &kp LEFT>
                 , <&macro_release &kp LALT>
                 ;
         };
-
         alt_up: alt_up { // フォルダ移動上
             compatible = "zmk,behavior-macro";
             wait-ms = <40>;
             tap-ms = <40>;
             #binding-cells = <0>;
             bindings
-                // = <&macro_press &kp LALT &kp  UP>
-                // , <&macro_release &kp LALT &kp UP>
                 = <&macro_press &kp LALT>
                 , <&macro_tap &kp UP>
                 , <&macro_release &kp LALT>
                 ;
         };
-
         alt_down: alt_down { // フォルダ移動下
             compatible = "zmk,behavior-macro";
             wait-ms = <40>;
             tap-ms = <40>;
             #binding-cells = <0>;
             bindings
-                // = <&macro_press &kp LALT &kp DOWN>
-                // , <&macro_release &kp LALT &kp DOWN>
                 = <&macro_press &kp LALT>
                 , <&macro_tap &kp DOWN>
                 , <&macro_release &kp LALT>
@@ -997,7 +951,6 @@
                 , <&macro_release &kp LALT>
                 ;
         };
-
         tilde_uc: tilde_uc {
             compatible = "zmk,behavior-macro";
             wait-ms = <40>;
@@ -1015,67 +968,56 @@
         // 	#binding-cells = <0>;
         // 	bindings = <&to QWE>, <&kp LANG2>;
         // };
-
         to_QWE_i5: to_QWE_INT5 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&to QWE>, <&kp INT5>;
         };
-
         to_WIN_i2: to_WIN_INT2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&to WIN>, <&kp INT2>;
         };
-
         to_WIN_i4: to_WIN_INT4 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&to WIN>, <&kp INT4>;
         };
-
         to_WIN_i5: to_WIN_i5 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&to WIN>, <&kp INT5>;
         };
-
         to_WIN_l1: to_WIN_l1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&to WIN>, <&kp LANG1>;
         };
-
         to_MOV_i2: to_MOV_INT2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&to MOV>, <&kp INT2>;
         };
-
         to_CAD_i2: to_CAD_INT2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&to CAD>, <&kp INT2>;
         };
-        
         to_CAD_i5: to_CAD_i5 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&to CAD>, <&kp INT5>;
         };
-
         to_CAD_l2: to_CAD_l2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&to CAD>, <&kp LANG2>;
         };
-
         to_NUM_i5: to_NUM_i5 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&to NUM>, <&kp INT5>;
         };
-
         // to_MOU_i5: to_MOU_i5 {
         //     compatible = "zmk,behavior-macro";
         //     #binding-cells = <0>;
@@ -1103,7 +1045,6 @@
                 , <&macro_tap &kp E &kp I &kp S>;
             // ここで止まるので、設定を確認して手動でEnter
         };
-
         alt_int4: alt_int4 { // Alt+変換 選択位置移動(複写)(AHK)
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -1113,7 +1054,6 @@
                 , <&macro_release &kp RALT>
                 ;
         };	
-
         alt_int5: alt_int5 { // Alt+無変換 選択位置移動(移動)(AHK)
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -1123,17 +1063,6 @@
                 , <&macro_release &kp RALT>
                 ;
         };
-
-        // alt_slash: alt_slash { // ファイル切替 Alt+/ (AHK)
-        //     compatible = "zmk,behavior-macro";
-        //     #binding-cells = <0>;
-        //     bindings
-        //         = <&macro_press   &kp RALT>
-        //         , <&macro_tap     &kp SLASH>
-        //         , <&macro_release &kp RALT>
-        //         ;
-        // };
-
         win_right: win_right { // デスクトップ移動進む
             compatible = "zmk,behavior-macro";
             wait-ms = <40>;
@@ -1149,7 +1078,6 @@
                 , <&macro_release &kp LGUI>
                 ;
         };
-
         win_left: win_left { // デスクトップ移動戻る
             compatible = "zmk,behavior-macro";
             wait-ms = <40>;
@@ -2335,7 +2263,6 @@
                 = <&macro_tap &kp LANGUAGE_2 &kp INTERNATIONAL_5 &to 0>
                 ;
         };
-
 		// ハイコントラスト切り替え (Win: Shift + Alt + PrintScreen)
         m_hi_con: m_hi_con {
             compatible = "zmk,behavior-macro";
@@ -2347,7 +2274,6 @@
                 , <&macro_tap &kp PRINTSCREEN>
                 , <&macro_release &kp LSHFT &kp LALT>;
         };
-
 		// Excel: シート名変更マクロ
         m_xl_rename: m_xl_rename {
             compatible = "zmk,behavior-macro";
@@ -2360,33 +2286,6 @@
                 , <&macro_tap &kp O>         // 書式(Format)
                 , <&macro_tap &kp R>;        // シート名の変更(Rename)
         };
-
-        // m_alt_tab: m_alt_tab {
-        // 	label = "ALT_TAB_HOLD";
-        // 	compatible = "zmk,behavior-macro";
-        //     #binding-cells = <0>;
-        //     bindings
-        //         = <&macro_press &kp LALT>
-        //         , <&macro_tap &kp TAB>
-        //         , <&macro_wait_time 1000>
-        //         , <&macro_release &kp LALT>
-        //         ;
-        // };
-
-        // m_alt_s_tab: m_alt_s_tab {
-        //     label = "ALT_SHFT_TAB_HOLD";
-        //     compatible = "zmk,behavior-macro";
-        //     #binding-cells = <0>;
-        //     bindings
-        //         = <&macro_press &kp LALT>
-        //         , <&macro_press &kp LSHFT>
-        //         , <&macro_tap &kp TAB>
-        //         , <&macro_wait_time 50>
-        //         , <&macro_release &kp LSHFT>
-        //         , <&macro_wait_time 1000>
-        //         , <&macro_release &kp LALT>
-        //         ;
-        // };
     };
 
     keymap {
