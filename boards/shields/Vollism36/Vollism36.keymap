@@ -504,7 +504,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&lt MOV INT2>, <&to_CAD_i2>;
+            bindings = <&lt CAD INT2>, <&to_CAD_i2>;
         };
         // td_lt_cad_i5: tap_dance_layer_tap_cad_i5 {  // タップでINT5/CADレイヤ、ホールドでNUMレイヤ、ダブルタップでNUMレイヤ保持
         //     compatible = "zmk,behavior-tap-dance";
