@@ -873,11 +873,6 @@
                 ;
         };
 
-        // to_QWE_l2: to_QWE_LANG2{
-        // 	compatible = "zmk,behavior-macro";
-        // 	#binding-cells = <0>;
-        // 	bindings = <&to QWE>, <&kp LANG2>;
-        // };
         to_QWE_i5: to_QWE_INT5 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -976,9 +971,7 @@
             bindings
                 = <&macro_press &kp LGUI>
                 , <&macro_press &kp LCTRL>
-                // , <&macro_wait_time 40>
                 , <&macro_tap &kp RIGHT>
-                // , <&macro_wait_time 40>
                 , <&macro_release &kp LCTRL>
                 , <&macro_release &kp LGUI>
                 ;
@@ -991,9 +984,7 @@
             bindings
                 = <&macro_press &kp LGUI>
                 , <&macro_press &kp LCTRL>
-                // , <&macro_wait_time 40>
                 , <&macro_tap &kp LEFT>
-                // , <&macro_wait_time 40>
                 , <&macro_release &kp LCTRL>
                 , <&macro_release &kp LGUI>
                 ;
