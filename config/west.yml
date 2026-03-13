@@ -15,7 +15,7 @@ manifest:
       remote: Reinmuth66
       revision: main
     - name: zmk-rgbled-widget  # <-- led
-      remote: caksoylar
+      remote: Reinmuth66
       revision: main
   self:
     path: config
