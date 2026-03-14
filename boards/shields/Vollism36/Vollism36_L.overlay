@@ -10,8 +10,10 @@
 
 #define QWE 0
 #define NGN 1
-#define WIN 2
-#define CAD 3
+#define CAD 2
+#define WIN 3
+// #define WIN 2
+// #define CAD 3
 #define LWR 4
 #define RSE 5
 #define ADJ 6
