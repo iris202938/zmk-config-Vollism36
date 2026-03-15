@@ -4,18 +4,43 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: Reinmuth66
       url-base: https://github.com/Reinmuth66
+    # - name: badjeff
+      # url-base: https://github.com/badjeff
+    - name: zettaface
+      url-base: https://github.com/zettaface
     - name: caksoylar  # <-- led
       url-base: https://github.com/caksoylar
+    - name: hsgw
+      url-base: https://github.com/hsgw
+    - name: eswai # ここを追加
+      url-base: https://github.com/eswai
   projects:
     - name: zmk
       remote: zmkfirmware
+      # revision: main
       revision: v0.3
       import: app/west.yml
     - name: zmk-pmw3610-driver  # <-- トラボドライバ
       remote: Reinmuth66
+      # remote: badjeff
       revision: main
+    - name: zmk-input-processor-keybind
+      remote: zettaface
+      revision: main
+    # - name: zmk-input-transform-processors
+    #   remote: zmkfirmware
+    #   revision: main
     - name: zmk-rgbled-widget  # <-- led
+      # remote: caksoylar
       remote: Reinmuth66
+      revision: main
+      # https://github.com/hsgw/zmk-feature-sensor_rotation
+    - name: zmk-feature-sensor_rotation
+      remote: hsgw
+      revision: main
+      path: modules/zmk-feature-sensor_rotation
+    - name: zmk-naginata # ここを追加
+      remote: eswai
       revision: main
   self:
     path: config
