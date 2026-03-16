@@ -1047,16 +1047,16 @@
         };
         // タップ時の動作: 指定レイヤーへ移動し、LANG1を送信
         // LANG1用のマクロ
-        t_lang1: t_lang1 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&to NIC &kp LANG1>; // レイヤー2（NIC）に戻る
-        };
-        t_lang2: t_lang2 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&to QWE &kp LANG2>; // レイヤー0（QWE）に戻る
-        };
+        // t_lang1: t_lang1 {
+        //     compatible = "zmk,behavior-macro";
+        //     #binding-cells = <0>;
+        //     bindings = <&to NIC &kp LANG1>; // レイヤー2（NIC）に戻る
+        // };
+        // t_lang2: t_lang2 {
+        //     compatible = "zmk,behavior-macro";
+        //     #binding-cells = <0>;
+        //     bindings = <&to QWE &kp LANG2>; // レイヤー0（QWE）に戻る
+        // };
         t_int4: t_int4 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
