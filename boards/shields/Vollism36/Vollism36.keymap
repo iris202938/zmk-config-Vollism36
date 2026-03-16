@@ -403,7 +403,39 @@
         // };
     };
 
-    behaviors {    
+    behaviors {
+        // LANG1用のHold-Tap: ホールドで指定Layer, タップでマクロ(t_lang1)
+        ht_lg1: ht_lg1 {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&mo>, <&t_lang1>;
+        };
+        // LANG2用のHold-Tap: ホールドで指定Layer, タップでマクロ(t_lang2)
+        ht_lg2: ht_lg2 {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&mo>, <&t_lang2>;
+        };
+        // INT4用のHold-Tap: ホールドで指定Layer, タップでマクロ(t_int4)
+        ht_it4: ht_it4 {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&mo>, <&t_int4>;
+        };
+        // INT5用のHold-Tap: ホールドで指定Layer, タップでマクロ(t_int5)
+        ht_it5: ht_it5 {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&mo>, <&t_int5>;
+        };
         td_lt_mov_l1: tap_dance_layer_tap_mov_l1 {  // タップでLANG1、ホールドでMOVレイヤ、ダブルタップでMOVレイヤ保持
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
@@ -1012,6 +1044,48 @@
             label = "macro_LANG2";
             #binding-cells = <0>;
             bindings = <&kp LANG2>, <&to QWE>;
+        };
+        // タップ時の動作: 指定レイヤーへ移動し、LANG1を送信
+        // LANG1用のマクロ
+        t_lang1: t_lang1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to NIC &kp LANG1>; // レイヤー2（NIC）に戻る
+        };
+        t_lang2: t_lang2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to QWE &kp LANG2>; // レイヤー0（QWE）に戻る
+        };
+        // t_int4: t_int4 {
+        //     compatible = "zmk,behavior-macro";
+        //     #binding-cells = <0>;
+        //     bindings = <&to NICL &kp INT4>; // レイヤー5（NICL）に戻る
+        // };
+        // t_int5: t_int5 {
+        //     compatible = "zmk,behavior-macro";
+        //     #binding-cells = <0>;
+        //     wait-ms = <10>; // 全体の基本遅延
+        //     tap-ms = <10>;
+        //     bindings 
+        //         = <&to LIN>
+        //         , <&macro_wait_time 30> // ここで30ミリ秒待機
+        //         , <&kp  INT5>; // レイヤー3（LIN）に戻る
+        // };
+        t_int4: t_int4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to WIN &kp INT4>; // レイヤー（WIN）に戻る
+        };
+        t_int5: t_int5 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>; // 全体の基本遅延
+            tap-ms = <10>;
+            bindings 
+                = <&to CAD>
+                , <&macro_wait_time 30> // ここで30ミリ秒待機
+                , <&kp  INT5>;
         };
         bt0_l0: bt0_l0 { // Bluetoothプロファイル0を選択し、レイヤーQWEを有効化
             compatible = "zmk,behavior-macro";
@@ -2203,7 +2277,7 @@
             &td_Q           &td_W           &td_E           &td_R           &td_T                                           &td_Y           &td_U           &td_I           &td_O           &td_P
             &td_A           &td_S           &td_D           &td_F                                           &td_G           &td_H           &td_J           &td_K           &td_L           &td_SEMI
             &td_Z           &td_X           &td_C           &td_V                                           &td_B           &td_N           &td_M           &td_COMMA       &td_DOT         &td_SLASH
-                                                            &lt NUM INT5    &mt LSHFT MB3   &lt LWR MB2     &lt RSE ENTER   &mt RCTRL TAB   &td_lt_mov_i2
+                                                            &lt NUM INT5    &mt LSHFT MB3   &lt LWR MB2     &lt RSE ENTER   &mt RCTRL TAB   &ht_it4 MOV 0
             >;
         };
 
@@ -2213,7 +2287,7 @@
             &kp Q           &kp W           &kp E           &kp R           &kp T                                           &kp Y           &kp U           &kp I           &kp O           &kp P
             &kp A           &kp S           &kp D           &kp F                                           &kp G           &kp H           &kp J           &kp K           &kp L           &kp SEMICOLON
             &kp Z           &kp X           &kp C           &kp V                                           &kp B           &kp N           &kp M           &kp COMMA       &kp DOT         &kp SLASH
-                                                            &lt NUM INT5    &kp SPACE       &lt LWR TAB     &lt RSE ENTER   &kp INT4        &td_lt_mov_i2
+                                                            &ht_it5 NUM 0   &kp SPACE       &lt LWR TAB     &lt RSE ENTER   &kp INT4        &td_lt_mov_i2
             >;
         };
 
