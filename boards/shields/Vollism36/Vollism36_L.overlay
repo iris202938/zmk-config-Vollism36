@@ -12,8 +12,6 @@
 #define NGN 1
 #define CAD 2
 #define WIN 3
-// #define WIN 2
-// #define CAD 3
 #define LWR 4
 #define RSE 5
 #define ADJ 6
@@ -34,9 +32,10 @@
         compatible = "zmk,input-listener";
         device = <&trackball>;
 
-        /* 1. まずXY軸を反転（180度回転）させ、2. その後 sensor_rotation で微調整する */
-        input-processors = <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>
-                         , <&sensor_rotation>;
+        input-processors = <&sensor_rotation>;
+        // /* 1. まずXY軸を反転（180度回転）させ、2. その後 sensor_rotation で微調整する */
+        // input-processors = <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>
+        //                  , <&sensor_rotation>;
         scroll {
                 layers = <RSE>;
                 input-processors = <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>
@@ -73,16 +72,16 @@
     spi0_default: spi0_default {
         group1 {
             psels = <NRF_PSEL(SPIM_SCK, 0, 5)>,
-                <NRF_PSEL(SPIM_MOSI, 0, 4)>,
-                <NRF_PSEL(SPIM_MISO, 0, 4)>;
+                    <NRF_PSEL(SPIM_MOSI, 0, 4)>,
+                    <NRF_PSEL(SPIM_MISO, 0, 4)>;
         };
     };
 
     spi0_sleep: spi0_sleep {
         group1 {
             psels = <NRF_PSEL(SPIM_SCK, 0, 5)>,
-                <NRF_PSEL(SPIM_MOSI, 0, 4)>,
-                <NRF_PSEL(SPIM_MISO, 0, 4)>;
+                    <NRF_PSEL(SPIM_MOSI, 0, 4)>,
+                    <NRF_PSEL(SPIM_MISO, 0, 4)>;
             low-power-enable;
         };
     };
