@@ -404,22 +404,22 @@
     };
 
     behaviors {
-        // LANG1用のHold-Tap: ホールドで指定Layer, タップでマクロ(t_lang1)
-        ht_lg1: ht_lg1 {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <200>;
-            bindings = <&mo>, <&t_lang1>;
-        };
-        // LANG2用のHold-Tap: ホールドで指定Layer, タップでマクロ(t_lang2)
-        ht_lg2: ht_lg2 {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <200>;
-            bindings = <&mo>, <&t_lang2>;
-        };
+        // // LANG1用のHold-Tap: ホールドで指定Layer, タップでマクロ(t_lang1)
+        // ht_lg1: ht_lg1 {
+        //     compatible = "zmk,behavior-hold-tap";
+        //     #binding-cells = <2>;
+        //     flavor = "hold-preferred";
+        //     tapping-term-ms = <200>;
+        //     bindings = <&mo>, <&t_lang1>;
+        // };
+        // // LANG2用のHold-Tap: ホールドで指定Layer, タップでマクロ(t_lang2)
+        // ht_lg2: ht_lg2 {
+        //     compatible = "zmk,behavior-hold-tap";
+        //     #binding-cells = <2>;
+        //     flavor = "hold-preferred";
+        //     tapping-term-ms = <200>;
+        //     bindings = <&mo>, <&t_lang2>;
+        // };
         // INT4用のHold-Tap: ホールドで指定Layer, タップでマクロ(t_int4)
         ht_it4: ht_it4 {
             compatible = "zmk,behavior-hold-tap";
