@@ -32,40 +32,39 @@
         compatible = "zmk,input-listener";
         device = <&trackball>;
 
-        input-processors = <&sensor_rotation>;
-        // /* 1. まずXY軸を反転（180度回転）させ、2. その後 sensor_rotation で微調整する */
-        // input-processors = <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>
-        //                  , <&sensor_rotation>;
+        // 【重要】ここの global な input-processors を削除またはコメントアウトします
+        // input-processors = <&sensor_rotation>;
+
+        /* スクロールモード (RSEレイヤー) */
         scroll {
-                layers = <RSE>;
-                input-processors = <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>
-                                 , <&zip_xy_scaler 1 30>
-                                 , <&zip_xy_to_scroll_mapper>;
+            layers = <RSE>;
+            input-processors = <&sensor_rotation>, // 回転補正を最初に入れる
+                               <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>,
+                               <&zip_xy_scaler 1 30>,
+                               <&zip_xy_to_scroll_mapper>;
         };
 
-        /* 【追加】WINレイヤー: 方向キー変換 */
+        /* 方向キーモード (WINまたはNUMレイヤー) */
+        /* ソースでは WIN になっていたので WIN に合わせていますが、NUMなら <NUM> に変更してください */
         arrows {
-            layers = <WIN>;
-            input-processors = <&xy_to_keys>;
+            layers = <WIN>; 
+            input-processors = <&sensor_rotation>, // 回転補正
+                               <&xy_to_keys>;      // 方向キー変換
         };
+
+        /* 通常のマウス移動 (それ以外のレイヤー) */
+        /* ここにないレイヤーでは、デフォルトの sensor_rotation だけが適用されます */
+        default_mmv {
+            input-processors = <&sensor_rotation>;
+        }
     };
-
-    input_processors {
-        sensor_rotation: sensor_rotation {
-            compatible = "zmk,input-processor-sensor-rotation";
-            #input-processor-cells = <0>;
-            rotation-angle = <345>;
-        };
-
         xy_to_keys: xy_to_keys {
             compatible = "zmk,input-processor-keybind";
             #input-processor-cells = <0>;
-            /* 順番: 右, 左, 上, 下 */
             bindings = <&kp RIGHT>, <&kp LEFT>, <&kp UP>, <&kp DOWN>;
-            /* どの程度の距離で1回キーを押すか（要調整） */
-            threshold = <1200>; 
+            /* 一旦、確実に反応するまで下げてテストします */
+            threshold = <100>; 
         };
-    };
 };
 
 &pinctrl {
