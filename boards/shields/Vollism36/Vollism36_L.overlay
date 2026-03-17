@@ -55,14 +55,21 @@
             input-processors = <&sensor_rotation>;
         };
     };
+
+    input_processors {
+        sensor_rotation: sensor_rotation {
+            compatible = "zmk,input-processor-sensor-rotation";
+            #input-processor-cells = <0>;
+            rotation-angle = <345>; // ここでお好みの角度を指定
+        };
+
         xy_to_keys: xy_to_keys {
             compatible = "zmk,input-processor-keybind";
             #input-processor-cells = <0>;
             bindings = <&kp RIGHT>, <&kp LEFT>, <&kp UP>, <&kp DOWN>;
-            /* 一旦、確実に反応するまで下げてテストします */
             threshold = <100>; 
         };
-};
+    };
 
 &pinctrl {
     spi0_default: spi0_default {
