@@ -33,7 +33,10 @@
     trackball_listener {
         compatible = "zmk,input-listener";
         device = <&trackball>;
-        input-processors = <&sensor_rotation>;
+
+        /* 1. まずXY軸を反転（180度回転）させ、2. その後 sensor_rotation で微調整する */
+        input-processors = <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>
+                         , <&sensor_rotation>;
         scroll {
                 layers = <RSE>;
                 input-processors = <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>
