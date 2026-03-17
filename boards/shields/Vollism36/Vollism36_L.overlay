@@ -70,7 +70,7 @@
             threshold = <100>; 
         };
     }; /* ここで input_processors を閉じます */
-}; /* ここでルート（ / ）を閉じます。ここが74行目付近のはずです */
+}; /* ここでルート（ / ）を閉じます。 */
 
 &pinctrl {
     spi0_default: spi0_default {
