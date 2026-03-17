@@ -56,7 +56,7 @@
         /* ここにないレイヤーでは、デフォルトの sensor_rotation だけが適用されます */
         default_mmv {
             input-processors = <&sensor_rotation>;
-        }
+        };
     };
         xy_to_keys: xy_to_keys {
             compatible = "zmk,input-processor-keybind";
