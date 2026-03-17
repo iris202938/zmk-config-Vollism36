@@ -39,20 +39,22 @@
                                <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>,
                                <&zip_xy_scaler 1 30>,
                                <&zip_xy_to_scroll_mapper>;
-        }; // ← ここに ; が必要です
+        };
 
-        /* 方向キーモード (WINまたはNUMレイヤー) */
+        /* 方向キーモード (WINレイヤー) */
         arrows {
-            layers = <WIN>; // NUM 8 に切り替えているならここを <8> または <NUM> に
+            layers = <WIN>; 
             input-processors = <&sensor_rotation>,
                                <&xy_to_keys>;
-        }; // ← ここに ; が必要です
+        };
 
-        /* 通常のマウス移動 (それ以外のレイヤー) */
+        /* 通常のマウス移動 (それ以外のレイヤーすべて) */
         default_mmv {
+            /* ここに通常操作したいレイヤーをすべて記述します */
+            layers = <QWE NGN CAD LWR ADJ MOV NUM BLE>; 
             input-processors = <&sensor_rotation>;
-        }; // ← ここに ; が必要です
-    }; // ここも ; が必要です
+        };
+    };
         xy_to_keys: xy_to_keys {
             compatible = "zmk,input-processor-keybind";
             #input-processor-cells = <0>;
