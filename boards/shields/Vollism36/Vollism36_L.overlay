@@ -28,11 +28,19 @@
             ;
 };
 / {
-    trackball_listener {
+    /* 既存のリスナーを一旦無効化するか、完全に上書きします */
+    trackball_listener: trackball_listener {
         compatible = "zmk,input-listener";
         device = <&trackball>;
+        status = "okay"; // 明示的に有効化
 
-        /* 1. 【最優先】スクロール（RSEレイヤー） */
+        /* 【1】方向キー（WINレイヤー）: 最優先 */
+        arrows {
+            layers = <WIN>; 
+            input-processors = <&sensor_rotation>, <&xy_to_keys>;
+        };
+
+        /* 【2】スクロール（RSEレイヤー） */
         scroll {
             layers = <RSE>;
             input-processors = <&sensor_rotation>,
@@ -41,36 +49,48 @@
                                <&zip_xy_to_scroll_mapper>;
         };
 
-        /* 2. 【次に優先】方向キー（WINレイヤー） */
-        arrows {
-            layers = <WIN>; 
-            input-processors = <&sensor_rotation>,
-                               <&xy_to_keys>;
+        /* 【3】90度回転ベースレイヤー */
+        rot90 {
+            layers = <ROT90>; // 90度用のベースレイヤー
+            input-processors = <&sensor_rotation>, <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_Y_INVERT)>;
         };
 
-        /* 3. 【その他すべて】通常のマウス移動 */
-        /* ここから WIN と RSE を完全に除外します */
-        // default_mmv {
-        //     layers = <QWE NGN CAD LWR ADJ MOV NUM BLE>; 
-        //     input-processors = <&sensor_rotation>;
-        // };
+        /* 【4】デフォルト（0度）: どの条件にも当てはまらない時 */
+        /* 指定レイヤーを「これ以外」にするのではなく、基本レイヤーのみを指定します */
+        default_mmv {
+            layers = <QWE NGN CAD>; 
+            input-processors = <&sensor_rotation>;
+        };
     };
 
     /* ここが「input_processors」という箱です */
     input_processors {
+        /* 基本の345度補正 */
         sensor_rotation: sensor_rotation {
             compatible = "zmk,input-processor-sensor-rotation";
             #input-processor-cells = <0>;
             rotation-angle = <345>;
         };
 
+        /* 各回転用のトランスフォーム（sensor_rotationの後に連結して使う） */
+        rot_90_tf: rot_90_tf {
+            compatible = "zmk,input-processor-transform";
+            #input-processor-cells = <0>;
+            type = <INPUT_EV_REL>;
+            x-codes = <INPUT_REL_X>, <INPUT_REL_Y>;
+            y-codes = <INPUT_REL_Y>, <INPUT_REL_X>;
+            /* 90度: XとYを入れ替えてYを反転 */
+            map = <INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_Y_INVERT>;
+        };
+
+        /* 方向キー変換 */
         xy_to_keys: xy_to_keys {
             compatible = "zmk,input-processor-keybind";
             #input-processor-cells = <0>;
             bindings = <&kp RIGHT>, <&kp LEFT>, <&kp UP>, <&kp DOWN>;
             threshold = <100>; 
         };
-    }; /* ここで input_processors を閉じます */
+    };
 }; /* ここでルート（ / ）を閉じます。 */
 
 &pinctrl {
