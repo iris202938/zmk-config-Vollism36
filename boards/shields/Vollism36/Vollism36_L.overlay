@@ -32,7 +32,13 @@
         compatible = "zmk,input-listener";
         device = <&trackball>;
 
-        /* スクロールモード (RSEレイヤー) */
+        /* 1. まず「デフォルト」を定義（ここには特殊レイヤーを入れない） */
+        default_mmv {
+            layers = <QWE NGN CAD LWR ADJ MOV NUM BLE>; 
+            input-processors = <&sensor_rotation>;
+        };
+
+        /* 2. スクロール（RSE）を下に書いて上書き */
         scroll {
             layers = <RSE>;
             input-processors = <&sensor_rotation>,
@@ -41,17 +47,11 @@
                                <&zip_xy_to_scroll_mapper>;
         };
 
-        /* 方向キーモード (WINレイヤー) */
+        /* 3. 方向キー（WIN）をさらに下に書いて最優先にする */
         arrows {
             layers = <WIN>; 
             input-processors = <&sensor_rotation>,
                                <&xy_to_keys>;
-        };
-
-        /* 通常のマウス移動 (それ以外のレイヤーすべて) */
-        default_mmv {
-            layers = <QWE NGN CAD LWR ADJ MOV NUM BLE>; 
-            input-processors = <&sensor_rotation>;
         };
     };
 
