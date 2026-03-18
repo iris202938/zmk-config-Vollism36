@@ -50,10 +50,10 @@
 
         /* 3. 【その他すべて】通常のマウス移動 */
         /* ここから WIN と RSE を完全に除外します */
-        default_mmv {
-            layers = <QWE NGN CAD LWR ADJ MOV NUM BLE>; 
-            input-processors = <&sensor_rotation>;
-        };
+        // default_mmv {
+        //     layers = <QWE NGN CAD LWR ADJ MOV NUM BLE>; 
+        //     input-processors = <&sensor_rotation>;
+        // };
     };
 
     /* ここが「input_processors」という箱です */
