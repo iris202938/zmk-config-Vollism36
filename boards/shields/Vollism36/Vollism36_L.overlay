@@ -51,7 +51,7 @@
 
         /* 【3】90度回転ベースレイヤー */
         rot90 {
-            layers = <ROT90>; // 90度用のベースレイヤー
+            layers = <WIN>; // 90度用のベースレイヤー
             input-processors = <&sensor_rotation>, <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_Y_INVERT)>;
         };
 
