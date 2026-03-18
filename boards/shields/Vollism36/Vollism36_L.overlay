@@ -28,6 +28,7 @@
             ;
 };
 / {
+    / {
     /* 方向キー変換プロセッサの定義 */
     input_processors {
         sensor_rotation: sensor_rotation {
@@ -39,10 +40,13 @@
         xy_to_keys: xy_to_keys {
             compatible = "zmk,input-processor-keybind";
             #input-processor-cells = <0>;
-            /* 順序: 右, 左, 上, 下 */
-            bindings = <&kp RIGHT>, <&kp LEFT>, <&kp UP>, <&kp DOWN>;
-            /* 反応のしきい値。小さいほど敏感に反応します */
-            threshold = <100>; 
+            /* 順序: 右, 左, 下, 上 (Source 22の標準的な順序に合わせるのが推奨されます) */
+            bindings = <&kp RIGHT>, <&kp LEFT>, <&kp DOWN>, <&kp UP>;
+            
+            /* モードと感度の設定 */
+            mode = <1>;           /* 4方向（上下左右）モードに固定 [1] */
+            tick = <60>;          /* 入力感度：数値が大きいほど感度が低くなります [1, 2] */
+            track_remainders;     /* 小さな移動量を切り捨てずに保持する [1, 2] */
         };
     };
 
@@ -50,13 +54,14 @@
         compatible = "zmk,input-listener";
         device = <&trackball>;
 
-        /* 1. WINレイヤー：方向キー（最優先） */
+        /* 1. WINレイヤー：方向キー */
         arrows {
             layers = <WIN>; 
-            input-processors = <&sensor_rotation>, <&xy_to_keys>;
+            /* &zip_xy_scaler 0 1 を追加してマウスカーソルの移動を無効化します [3] */
+            input-processors = <&sensor_rotation>, <&zip_xy_scaler 0 1>, <&xy_to_keys>;
         };
 
-        /* 2. RSEレイヤー：スクロール */
+        /* 2. RSEレイヤー：スクロール (現状通り) */
         scroll {
             layers = <RSE>;
             input-processors = <&sensor_rotation>,
@@ -66,7 +71,6 @@
         };
 
         /* 3. それ以外のレイヤー：通常のマウス移動 */
-        /* ここから WIN と RSE を除外することで、判定の重複を防ぎます */
         default_mmv {
             layers = <QWE NGN CAD LWR ADJ MOV NUM BLE>; 
             input-processors = <&sensor_rotation>;
