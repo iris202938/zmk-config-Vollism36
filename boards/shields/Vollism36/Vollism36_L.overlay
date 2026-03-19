@@ -28,7 +28,6 @@
             ;
 };
 / {
-    / {
     /* 方向キー変換プロセッサの定義 */
     input_processors {
         sensor_rotation: sensor_rotation {
