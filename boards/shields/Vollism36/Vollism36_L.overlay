@@ -29,22 +29,28 @@
 };
 / {
     input_processors {
+        /* 既存のプロセッサ */
         sensor_rotation: sensor_rotation {
             compatible = "zmk,input-processor-sensor-rotation";
             #input-processor-cells = <0>;
             rotation-angle = <345>;
         };
 
-        /* 設定を極限までシンプルにしました */
+        /* 【追加】マウス移動を無効化（0倍にする）するプロセッサ */
+        mmv_mute: mmv_mute {
+            compatible = "zmk,input-processor-scaler";
+            #input-processor-cells = <2>;
+            type = <INPUT_EV_REL>;
+            codes = <INPUT_REL_X>, <INPUT_REL_Y>;
+            track_remainders;
+        };
+
         xy_to_keys: xy_to_keys {
             compatible = "zmk,input-processor-keybind";
             #input-processor-cells = <0>;
-            /* 順序: 右, 左, 下, 上 */
             bindings = <&kp RIGHT>, <&kp LEFT>, <&kp DOWN>, <&kp UP>;
-            
-            /* 安全な値に設定 */
-            threshold = <20>;  /* 5や10より少し余裕を持たせます */
-            mode = <1>;        /* 1:タップモード */
+            threshold = <15>; // 10〜20の間でお好みで調整
+            mode = <1>;
         };
     };
 
@@ -52,24 +58,36 @@
         compatible = "zmk,input-listener";
         device = <&trackball>;
 
-        /* 1. WINレイヤー（方向キー） */
+        /* 1. WINレイヤー：方向キー ＋ マウス移動を0倍に */
         layer_win {
             layers = <WIN>; 
-            input-processors = <&sensor_rotation>, <&xy_to_keys>;
+            input-processors = 
+                <&mmv_mute 0 1>,     /* ここでマウス移動を「0/1倍」にして殺す */
+                <&sensor_rotation>, 
+                <&xy_to_keys>;
         };
 
-        /* 2. RSEレイヤー（スクロール） */
+        /* 2. RSEレイヤー：スクロール */
         layer_rse {
             layers = <RSE>;
-            input-processors = <&sensor_rotation>,
-                               <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>,
-                               <&zip_xy_scaler 1 30>,
-                               <&zip_xy_to_scroll_mapper>;
+            input-processors = 
+                <&mmv_mute 0 1>,     /* スクロール中もマウスが動くならここにも追加 */
+                <&sensor_rotation>,
+                <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>,
+                <&zip_xy_scaler 1 30>,
+                <&zip_xy_to_scroll_mapper>;
         };
 
-        /* 【修正箇所】デフォルト（マウス）を適用するレイヤーを明記 */
+        /* 3. ADJレイヤー：もし意図しないなら、ここで明示的に通常マウスに戻すか、
+              あるいはWINと同じ設定（方向キー）を明記します */
+        /* layer_adj {
+            layers = <ADJ>;
+            input-processors = <&sensor_rotation>;
+        }; */
+
+        /* 4. デフォルト：マウス移動 */
         layer_default {
-            layers = <QWE NGN CAD LWR ADJ MOV NUM BLE>; 
+            layers = <QWE NGN CAD LWR MOV NUM BLE>; 
             input-processors = <&sensor_rotation>;
         };
     };
