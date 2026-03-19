@@ -36,7 +36,7 @@
             rotation-angle = <345>;
         };
 
-        /* マウス移動をゼロにするプロセッサ（track_remaindersを削除） */
+        /* マウス移動をゼロにするプロセッサ */
         mmv_mute: mmv_mute {
             compatible = "zmk,input-processor-scaler";
             #input-processor-cells = <2>;
@@ -57,34 +57,33 @@
         compatible = "zmk,input-listener";
         device = <&trackball>;
 
-        /* 1. WINレイヤー：方向キーのみ（マウスは0倍） */
+        /* 1. WINレイヤー：方向キー変換を「先」に行い、マウス移動を「後」で殺す */
         layer_win {
             layers = <WIN>; 
             input-processors = 
-                <&mmv_mute 0 1>, 
                 <&sensor_rotation>, 
-                <&xy_to_keys>;
+                <&xy_to_keys>,     /* 先にキー判定 */
+                <&mmv_mute 0 1>;   /* その後にマウス移動をゼロにする */
         };
 
-        /* 2. RSEレイヤー：スクロール */
+        /* 2. RSEレイヤー：スクロール変換を「先」に行い、マウス移動を「後」で殺す */
         layer_rse {
             layers = <RSE>;
             input-processors = 
-                <&mmv_mute 0 1>,
                 <&sensor_rotation>,
                 <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>,
                 <&zip_xy_scaler 1 30>,
-                <&zip_xy_to_scroll_mapper>;
+                <&zip_xy_to_scroll_mapper>, /* 先にスクロール判定 */
+                <&mmv_mute 0 1>;            /* その後にマウス移動をゼロにする */
         };
 
-        /* 3. ADJレイヤー：通常のマウス移動として明示 */
-        /* これによりWIN設定がADJに流れ込むのを防ぎます */
+        /* 3. ADJレイヤー：方向キーをさせないために明示的に定義 */
         layer_adj {
             layers = <ADJ>;
-            input-processors = <&sensor_rotation>;
+            input-processors = <&sensor_rotation>; /* 方向キープロセッサを入れない */
         };
 
-        /* 4. その他デフォルト：マウス移動 */
+        /* 4. その他デフォルト：通常のマウス移動 */
         layer_default {
             layers = <QWE NGN CAD LWR MOV NUM BLE>; 
             input-processors = <&sensor_rotation>;
