@@ -36,13 +36,12 @@
             rotation-angle = <345>;
         };
 
-        /* 【追加】マウス移動をゼロにする（ミュートする）設定 */
+        /* 移動量を0倍（無効）にするプロセッサ */
         mmv_mute: mmv_mute {
             compatible = "zmk,input-processor-scaler";
             #input-processor-cells = <2>;
             type = <INPUT_EV_REL>;
             codes = <INPUT_REL_X>, <INPUT_REL_Y>;
-            /* 注意: ここに track_remainders; は入れない（エラーの原因になるため） */
         };
 
         xy_to_keys: xy_to_keys {
@@ -54,40 +53,43 @@
         };
     };
 
+    /* 通常のリスナー設定 */
     trackball_listener_local {
         compatible = "zmk,input-listener";
         device = <&trackball>;
 
-        /* WINレイヤー：方向キー変換の「後」で、移動量を0にする */
+        /* 1. WINレイヤー：方向キー変換のみ */
         layer_win {
             layers = <WIN>; 
-            input-processors = 
-                <&sensor_rotation>, 
-                <&xy_to_keys>,      /* 1. まず方向キーが必要か判定 */
-                <&mmv_mute 0 1>;    /* 2. その後、マウスとしての移動量を0倍（無効）にする */
+            input-processors = <&sensor_rotation>, <&xy_to_keys>;
         };
 
-        /* RSEレイヤー：スクロール変換の「後」で、移動量を0にする */
+        /* 2. RSEレイヤー：スクロール変換のみ */
         layer_rse {
             layers = <RSE>;
             input-processors = 
                 <&sensor_rotation>,
                 <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>,
                 <&zip_xy_scaler 1 30>,
-                <&zip_xy_to_scroll_mapper>, /* 1. スクロールを発生させる */
-                <&mmv_mute 0 1>;            /* 2. マウスカーソルの動きを殺す */
+                <&zip_xy_to_scroll_mapper>;
         };
 
-        /* ADJレイヤー：WINの設定が漏れないように明示的に「通常マウス」として定義 */
-        layer_adj {
-            layers = <ADJ>;
-            input-processors = <&sensor_rotation>;
-        };
-
-        /* デフォルト：通常のマウス移動 */
+        /* 3. その他：通常マウス */
         layer_default {
-            layers = <QWE NGN CAD LWR MOV NUM BLE>; 
+            layers = <QWE NGN CAD LWR ADJ MOV NUM BLE>; 
             input-processors = <&sensor_rotation>;
+        };
+    };
+
+    /* 【重要】マウス移動信号を「殺す」ための専用リスナー */
+    trackball_mute_listener {
+        compatible = "zmk,input-listener";
+        device = <&trackball>;
+
+        /* WINとRSEの時だけ、移動量を0倍にしてOSへの報告を遮断する */
+        mute_layers {
+            layers = <WIN RSE>;
+            input-processors = <&mmv_mute 0 1>; 
         };
     };
 };
