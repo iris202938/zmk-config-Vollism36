@@ -30,66 +30,61 @@
 
 / {
     input_processors {
+        /* 1. 基本の回転補正 (345度) */
         sensor_rotation: sensor_rotation {
             compatible = "zmk,input-processor-sensor-rotation";
             #input-processor-cells = <0>;
             rotation-angle = <345>;
         };
 
-        /* 移動量を0倍（無効）にするプロセッサ */
-        mmv_mute: mmv_mute {
-            compatible = "zmk,input-processor-scaler";
-            #input-processor-cells = <2>;
+        /* 2. Y軸（上下）の反転処理 */
+        y_invert: y_invert {
+            compatible = "zmk,input-processor-transform";
+            #input-processor-cells = <0>;
             type = <INPUT_EV_REL>;
-            codes = <INPUT_REL_X>, <INPUT_REL_Y>;
+            data = <INPUT_TRANSFORM_Y_INVERT>;
         };
 
+        /* 3. 方向キー変換 */
         xy_to_keys: xy_to_keys {
             compatible = "zmk,input-processor-keybind";
             #input-processor-cells = <0>;
-            bindings = <&kp RIGHT>, <&kp LEFT>, <&kp DOWN>, <&kp UP>;
+            /* 順序: 右, 左, 下, 上 (上下逆転対策で入れ替えています) */
+            bindings = <&kp RIGHT>, <&kp LEFT>, <&kp UP>, <&kp DOWN>;
             threshold = <15>;
             mode = <1>;
         };
     };
 
-    /* 通常のリスナー設定 */
     trackball_listener_local {
         compatible = "zmk,input-listener";
         device = <&trackball>;
 
-        /* 1. WINレイヤー：方向キー変換のみ */
+        /* --- WINレイヤー：方向キー専用 --- */
         layer_win {
             layers = <WIN>; 
-            input-processors = <&sensor_rotation>, <&xy_to_keys>;
+            input-processors = 
+                <&sensor_rotation>, 
+                <&y_invert>,        /* ここで上下を正しく直します */
+                <&xy_to_keys>,      /* 方向キーを入力 */
+                <&zip_xy_scaler 0 1>; /* マウス移動を強制的に「0倍」にして殺す */
         };
 
-        /* 2. RSEレイヤー：スクロール変換のみ */
+        /* --- RSEレイヤー：スクロール専用 --- */
         layer_rse {
             layers = <RSE>;
             input-processors = 
                 <&sensor_rotation>,
                 <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>,
                 <&zip_xy_scaler 1 30>,
-                <&zip_xy_to_scroll_mapper>;
+                <&zip_xy_to_scroll_mapper>,
+                <&zip_xy_scaler 0 1>; /* スクロール中もマウスを殺す */
         };
 
-        /* 3. その他：通常マウス */
+        /* --- その他レイヤー：通常マウス --- */
         layer_default {
             layers = <QWE NGN CAD LWR ADJ MOV NUM BLE>; 
             input-processors = <&sensor_rotation>;
-        };
-    };
-
-    /* 【重要】マウス移動信号を「殺す」ための専用リスナー */
-    trackball_mute_listener {
-        compatible = "zmk,input-listener";
-        device = <&trackball>;
-
-        /* WINとRSEの時だけ、移動量を0倍にしてOSへの報告を遮断する */
-        mute_layers {
-            layers = <WIN RSE>;
-            input-processors = <&mmv_mute 0 1>; 
         };
     };
 };
