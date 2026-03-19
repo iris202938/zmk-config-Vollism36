@@ -67,8 +67,9 @@
                                <&zip_xy_to_scroll_mapper>;
         };
 
-        /* 3. デフォルト（マウス） */
+        /* 【修正箇所】デフォルト（マウス）を適用するレイヤーを明記 */
         layer_default {
+            layers = <QWE NGN CAD LWR ADJ MOV NUM BLE>; 
             input-processors = <&sensor_rotation>;
         };
     };
