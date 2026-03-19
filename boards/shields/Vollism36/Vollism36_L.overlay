@@ -36,11 +36,10 @@
             rotation-angle = <345>;
         };
 
-        /* 方向キー変換 */
         xy_to_keys: xy_to_keys {
             compatible = "zmk,input-processor-keybind";
             #input-processor-cells = <0>;
-            /* 逆転対策で UP と DOWN を入れ替え済み */
+            /* 上下逆転を考慮して UP と DOWN は調整してください */
             bindings = <&kp RIGHT>, <&kp LEFT>, <&kp UP>, <&kp DOWN>;
             threshold = <15>;
             mode = <1>;
@@ -51,19 +50,23 @@
         compatible = "zmk,input-listener";
         device = <&trackball>;
 
-        /* 1. WINレイヤー：方向キー専用 */
+        /* --- WINレイヤー：1段目（方向キー入力） --- */
         layer_win {
             layers = <WIN>; 
             input-processors = 
                 <&sensor_rotation>, 
-                /* インラインでY軸反転を適用し、エラーを回避します */
-                <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>,
-                <&xy_to_keys>,
-                /* マウス移動を確実に殺す(0倍) */
-                <&zip_xy_scaler 0 1>; 
+                <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>, /* 逆転対策 */
+                <&xy_to_keys>;
+            process-next; /* ← 【超重要】次のブロックへ処理を渡す */
         };
 
-        /* 2. RSEレイヤー：スクロール専用 */
+        /* --- WINレイヤー：2段目（マウス移動の無効化） --- */
+        layer_win_prevent {
+            layers = <WIN>;
+            input-processors = <&zip_xy_scaler 0 1>;
+        };
+
+        /* --- RSEレイヤー：成功しているため1ブロックで維持 --- */
         layer_rse {
             layers = <RSE>;
             input-processors = 
@@ -71,17 +74,17 @@
                 <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>,
                 <&zip_xy_scaler 1 30>,
                 <&zip_xy_to_scroll_mapper>,
-                /* スクロール中もマウスを殺す(0倍) */
                 <&zip_xy_scaler 0 1>; 
         };
 
-        /* 3. その他レイヤー：通常マウス */
+        /* --- その他レイヤー：通常マウス --- */
         layer_default {
             layers = <QWE NGN CAD LWR ADJ MOV NUM BLE>; 
             input-processors = <&sensor_rotation>;
         };
     };
 };
+
 &pinctrl {
     spi0_default: spi0_default {
         group1 {
