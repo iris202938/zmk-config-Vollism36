@@ -27,29 +27,28 @@
             , <&xiao_d 7 GPIO_ACTIVE_HIGH>
             ;
 };
+
 / {
     input_processors {
-        /* 既存のプロセッサ */
         sensor_rotation: sensor_rotation {
             compatible = "zmk,input-processor-sensor-rotation";
             #input-processor-cells = <0>;
             rotation-angle = <345>;
         };
 
-        /* 【追加】マウス移動を無効化（0倍にする）するプロセッサ */
+        /* マウス移動をゼロにするプロセッサ（track_remaindersを削除） */
         mmv_mute: mmv_mute {
             compatible = "zmk,input-processor-scaler";
             #input-processor-cells = <2>;
             type = <INPUT_EV_REL>;
             codes = <INPUT_REL_X>, <INPUT_REL_Y>;
-            track_remainders;
         };
 
         xy_to_keys: xy_to_keys {
             compatible = "zmk,input-processor-keybind";
             #input-processor-cells = <0>;
             bindings = <&kp RIGHT>, <&kp LEFT>, <&kp DOWN>, <&kp UP>;
-            threshold = <15>; // 10〜20の間でお好みで調整
+            threshold = <15>;
             mode = <1>;
         };
     };
@@ -58,11 +57,11 @@
         compatible = "zmk,input-listener";
         device = <&trackball>;
 
-        /* 1. WINレイヤー：方向キー ＋ マウス移動を0倍に */
+        /* 1. WINレイヤー：方向キーのみ（マウスは0倍） */
         layer_win {
             layers = <WIN>; 
             input-processors = 
-                <&mmv_mute 0 1>,     /* ここでマウス移動を「0/1倍」にして殺す */
+                <&mmv_mute 0 1>, 
                 <&sensor_rotation>, 
                 <&xy_to_keys>;
         };
@@ -71,21 +70,21 @@
         layer_rse {
             layers = <RSE>;
             input-processors = 
-                <&mmv_mute 0 1>,     /* スクロール中もマウスが動くならここにも追加 */
+                <&mmv_mute 0 1>,
                 <&sensor_rotation>,
                 <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>,
                 <&zip_xy_scaler 1 30>,
                 <&zip_xy_to_scroll_mapper>;
         };
 
-        /* 3. ADJレイヤー：もし意図しないなら、ここで明示的に通常マウスに戻すか、
-              あるいはWINと同じ設定（方向キー）を明記します */
-        /* layer_adj {
+        /* 3. ADJレイヤー：通常のマウス移動として明示 */
+        /* これによりWIN設定がADJに流れ込むのを防ぎます */
+        layer_adj {
             layers = <ADJ>;
             input-processors = <&sensor_rotation>;
-        }; */
+        };
 
-        /* 4. デフォルト：マウス移動 */
+        /* 4. その他デフォルト：マウス移動 */
         layer_default {
             layers = <QWE NGN CAD LWR MOV NUM BLE>; 
             input-processors = <&sensor_rotation>;
