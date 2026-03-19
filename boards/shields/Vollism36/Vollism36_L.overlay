@@ -35,21 +35,41 @@
             rotation-angle = <345>;
         };
 
-        /* 名前をドキュメントの例に合わせ、内部パラメータを追加します */
+        /* 設定を極限までシンプルにしました */
         xy_to_keys: xy_to_keys {
             compatible = "zmk,input-processor-keybind";
             #input-processor-cells = <0>;
-            
-            /* 移動量の余りを保持する設定（これを入れないと反応が鈍くなります） */
-            track_remainders;
-            
-            /* 方向の定義順序を再確認（右、左、下、上 の順が一般的です） */
+            /* 順序: 右, 左, 下, 上 */
             bindings = <&kp RIGHT>, <&kp LEFT>, <&kp DOWN>, <&kp UP>;
+            
+            /* 安全な値に設定 */
+            threshold = <20>;  /* 5や10より少し余裕を持たせます */
+            mode = <1>;        /* 1:タップモード */
+        };
+    };
 
-            /* 反応速度と感度の設定 */
-            tick = <40>;          /* 実行サイクル（ms） */
-            tap-ms = <10>;        /* キーの押下時間 */
-            threshold = <5>;      /* しきい値をさらに下げて極限まで敏感にします */
+    trackball_listener_local {
+        compatible = "zmk,input-listener";
+        device = <&trackball>;
+
+        /* 1. WINレイヤー（方向キー） */
+        layer_win {
+            layers = <WIN>; 
+            input-processors = <&sensor_rotation>, <&xy_to_keys>;
+        };
+
+        /* 2. RSEレイヤー（スクロール） */
+        layer_rse {
+            layers = <RSE>;
+            input-processors = <&sensor_rotation>,
+                               <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>,
+                               <&zip_xy_scaler 1 30>,
+                               <&zip_xy_to_scroll_mapper>;
+        };
+
+        /* 3. デフォルト（マウス） */
+        layer_default {
+            input-processors = <&sensor_rotation>;
         };
     };
 };
