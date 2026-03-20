@@ -40,7 +40,7 @@
             compatible = "zmk,input-processor-keybind";
             #input-processor-cells = <0>;
             bindings = <&kp RIGHT>, <&kp LEFT>, <&kp UP>, <&kp DOWN>;
-            threshold = <5>;
+            threshold = <3>;
             mode = <1>;
         };
     };
