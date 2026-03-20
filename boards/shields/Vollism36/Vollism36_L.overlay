@@ -39,9 +39,8 @@
         xy_to_keys: xy_to_keys {
             compatible = "zmk,input-processor-keybind";
             #input-processor-cells = <0>;
-            /* 上下逆転を考慮して UP と DOWN は調整してください */
-            bindings = <&kp RIGHT>, <&kp LEFT>, <&kp UP>, <&kp DOWN>;
-            threshold = <15>;
+            bindings = <&kp RIGHT>, <&kp LEFT>, <&kp DOWN>, <&kp UP>;
+            threshold = <5>;
             mode = <1>;
         };
     };
