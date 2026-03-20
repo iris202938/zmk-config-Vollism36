@@ -55,6 +55,9 @@
             input-processors = 
                 <&sensor_rotation>, 
                 // <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>, /* 逆転対策 */
+                /* 【追加】X軸だけを1.5倍（150/100）に増幅して左右の鈍さを解消 */
+                /* 第一引数がX倍率(150)、第二引数がY倍率(100)、第三引数が共通の分母(100) */
+                <&zip_xy_scaler 150 100 100>,
                 <&xy_to_keys>;
             process-next; /* ← 【超重要】次のブロックへ処理を渡す */
         };
