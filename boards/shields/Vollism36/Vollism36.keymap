@@ -70,19 +70,6 @@
             bindings = <&ng_off>;
             layers = <QWE NGN>; // デフォルトレイヤーが0、薙刀式レイヤーが1の前提
         };
-
-        combo_win {
-            timeout-ms = <200>;
-            key-positions = <33 35>;
-            bindings = <&to_WIN_l1>;
-            layers = <CAD>;
-        };
-        combo_cad {
-            timeout-ms = <200>;
-            key-positions = <30 32>;
-            bindings = <&to_CAD_l2>;
-            layers = <WIN>;
-        };
         adj {
             bindings = <&mo ADJ>;
             key-positions = <32 33>;
@@ -2262,7 +2249,7 @@
             &td_Q           &td_W           &td_E           &td_R           &td_T                                           &td_Y           &td_U           &td_I           &td_O           &td_P
             &td_A           &td_S           &td_D           &td_F                                           &td_G           &td_H           &td_J           &td_K           &td_L           &td_SEMI
             &td_Z           &td_X           &td_C           &td_V                                           &td_B           &td_N           &td_M           &td_COMMA       &td_DOT         &td_SLASH
-                                                            &lt NUM INT5    &mt LSHFT MB3   &lt LWR MB2   	&lt RSE ENTER   &mt RCTRL TAB   &ht_it4 MOV 0
+                                                            &td_lt_num_i5   &mt LSHFT SPACE &lt LWR TAB   	&lt RSE ENTER   &mt RCTRL TAB   &ht_it4 MOV 0
             >;
         };
 
