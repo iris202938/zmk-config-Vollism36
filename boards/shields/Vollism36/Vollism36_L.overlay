@@ -27,29 +27,8 @@
             , <&xiao_d 7 GPIO_ACTIVE_HIGH>
             ;
 };
+
 / {
-    trackball_listener {
-        compatible = "zmk,input-listener";
-        device = <&trackball>;
-
-        input-processors = <&sensor_rotation>;
-        // /* 1. まずXY軸を反転（180度回転）させ、2. その後 sensor_rotation で微調整する */
-        // input-processors = <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>
-        //                  , <&sensor_rotation>;
-        scroll {
-                layers = <RSE>;
-                input-processors = <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>
-                                 , <&zip_xy_scaler 1 30>
-                                 , <&zip_xy_to_scroll_mapper>;
-        };
-
-        /* 【追加】WINレイヤー: 方向キー変換 */
-        arrows {
-            layers = <WIN>;
-            input-processors = <&xy_to_keys>;
-        };
-    };
-
     input_processors {
         sensor_rotation: sensor_rotation {
             compatible = "zmk,input-processor-sensor-rotation";
@@ -60,10 +39,51 @@
         xy_to_keys: xy_to_keys {
             compatible = "zmk,input-processor-keybind";
             #input-processor-cells = <0>;
-            /* 順番: 右, 左, 上, 下 */
             bindings = <&kp RIGHT>, <&kp LEFT>, <&kp UP>, <&kp DOWN>;
-            /* どの程度の距離で1回キーを押すか（要調整） */
-            threshold = <1200>; 
+            threshold = <3>; // 方向キーが勝手に入る場合はしきい値を少し上げる
+            mode = <1>;
+            tick = <50>; // ティック間隔
+			wait-ms = <0>; // 待機時間
+			tap-ms = <50>; // タップ時間
+        };
+    };
+
+    trackball_listener_local {
+        compatible = "zmk,input-listener";
+        device = <&trackball>;
+
+        /* --- WINレイヤー：1段目（方向キー入力） --- */
+        layer_win {
+            layers = <WIN>; 
+            input-processors = 
+                <&sensor_rotation>, 
+                // <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>, /* 逆転対策 */
+                <&zip_xy_scaler 200 100>, // 速度を200/100に設定 (乗数200, 除数100)
+                <&xy_to_keys>;
+            process-next; /* ← 【超重要】次のブロックへ処理を渡す */
+        };
+
+        /* --- WINレイヤー：2段目（マウス移動の無効化） --- */
+        layer_win_prevent {
+            layers = <WIN>;
+            input-processors = <&zip_xy_scaler 0 1>;
+        };
+
+        /* --- RSEレイヤー：成功しているため1ブロックで維持 --- */
+        layer_rse {
+            layers = <RSE>;
+            input-processors = 
+                <&sensor_rotation>,
+                <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>,
+                <&zip_xy_scaler 1 30>,
+                <&zip_xy_to_scroll_mapper>,
+                <&zip_xy_scaler 0 1>; 
+        };
+
+        /* --- その他レイヤー：通常マウス --- */
+        layer_default {
+            layers = <QWE NGN CAD LWR ADJ MOV NUM BLE>; 
+            input-processors = <&sensor_rotation>;
         };
     };
 };
