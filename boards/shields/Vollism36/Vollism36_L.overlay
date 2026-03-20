@@ -39,7 +39,7 @@
         xy_to_keys: xy_to_keys {
             compatible = "zmk,input-processor-keybind";
             #input-processor-cells = <0>;
-            bindings = <&kp RIGHT>, <&kp LEFT>, <&kp DOWN>, <&kp UP>;
+            bindings = <&kp RIGHT>, <&kp LEFT>, <&kp UP>, <&kp DOWN>;
             threshold = <5>;
             mode = <1>;
         };
@@ -54,7 +54,7 @@
             layers = <WIN>; 
             input-processors = 
                 <&sensor_rotation>, 
-                <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>, /* 逆転対策 */
+                // <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>, /* 逆転対策 */
                 <&xy_to_keys>;
             process-next; /* ← 【超重要】次のブロックへ処理を渡す */
         };
