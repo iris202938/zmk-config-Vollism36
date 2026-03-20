@@ -40,7 +40,7 @@
             compatible = "zmk,input-processor-keybind";
             #input-processor-cells = <0>;
             bindings = <&kp RIGHT>, <&kp LEFT>, <&kp UP>, <&kp DOWN>;
-            threshold = <3>;
+            threshold = <3>; // 方向キーが勝手に入る場合はしきい値を少し上げる
             mode = <1>;
         };
     };
