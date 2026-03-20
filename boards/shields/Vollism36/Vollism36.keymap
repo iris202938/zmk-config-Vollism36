@@ -121,7 +121,7 @@
         combo_TSHIFT {
             bindings = <&kp RSHIFT>;
             key-positions = <30 35>;
-            layers = <QWE CAD>;
+            layers = <QWE CAD WIN>;
             timeout-ms = <80>;
         };
         combo_CAPSWORD {
@@ -178,24 +178,24 @@
             layers = <QWE CAD>;
             timeout-ms = <80>;
         };
-        alt_enter {
-            bindings = <&kp LA(ENTER)>;
-            key-positions = <33 35>;
-            layers = <WIN>;
-            timeout-ms = <80>;
-        };
-        gui_enter {
-            bindings = <&kp LG(ENTER)>;
-            key-positions = <30 33>;
-            layers = <WIN>;
-            timeout-ms = <80>;
-        };
-        gui_backspace {
-            bindings = <&kp LG(BACKSPACE)>;
-            key-positions = <30 32>;
-            layers = <WIN>;
-            timeout-ms = <80>;
-        };
+        // alt_enter {
+        //     bindings = <&kp LA(ENTER)>;
+        //     key-positions = <33 35>;
+        //     layers = <WIN>;
+        //     timeout-ms = <80>;
+        // };
+        // gui_enter {
+        //     bindings = <&kp LG(ENTER)>;
+        //     key-positions = <30 33>;
+        //     layers = <WIN>;
+        //     timeout-ms = <80>;
+        // };
+        // gui_backspace {
+        //     bindings = <&kp LG(BACKSPACE)>;
+        //     key-positions = <30 32>;
+        //     layers = <WIN>;
+        //     timeout-ms = <80>;
+        // };
         CTRL_PG_DN {
             bindings = <&kp LC(PG_DN)>;
             key-positions = <0 1>;
