@@ -55,8 +55,7 @@
             input-processors = 
                 <&sensor_rotation>, 
                 // <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>, /* 逆転対策 */
-                /* 引数が2つのタイプの場合（例：1.5倍にする） */
-                <&zip_xy_scaler 3 2>, /* 3/2 = 1.5倍 */
+                <&zip_xy_scaler 200 100>, // 速度を200/100に設定 (乗数200, 除数100)
                 <&xy_to_keys>;
             process-next; /* ← 【超重要】次のブロックへ処理を渡す */
         };
