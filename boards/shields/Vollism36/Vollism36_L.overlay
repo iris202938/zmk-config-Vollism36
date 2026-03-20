@@ -42,6 +42,9 @@
             bindings = <&kp RIGHT>, <&kp LEFT>, <&kp UP>, <&kp DOWN>;
             threshold = <3>; // 方向キーが勝手に入る場合はしきい値を少し上げる
             mode = <1>;
+            tick = <50>; // ティック間隔
+			wait-ms = <0>; // 待機時間
+			tap-ms = <50>; // タップ時間
         };
     };
 
