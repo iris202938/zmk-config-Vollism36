@@ -62,7 +62,6 @@
                 <&xy_to_keys>;
             process-next; /* ← 【超重要】次のブロックへ処理を渡す */
         };
-
         /* --- WINレイヤー：2段目（マウス移動の無効化） --- */
         layer_win_prevent {
             layers = <WIN>;
