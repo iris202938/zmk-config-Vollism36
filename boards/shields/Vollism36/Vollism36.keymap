@@ -1081,40 +1081,60 @@
             #binding-cells = <0>;
             bindings = <&to QWE &bt BT_SEL 1 &to QWE>;
         };
-        bt1_l4: bt1_l4 { // Bluetoothプロファイル1を選択し、レイヤーWINを有効化
+        bt1_l2: bt1_l2 { // Bluetoothプロファイル1を選択し、レイヤーCADを有効化
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to QWE &bt BT_SEL 1 &to CAD>;
+        };
+        bt1_l3: bt1_l3 { // Bluetoothプロファイル1を選択し、レイヤーWINを有効化
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&to QWE &bt BT_SEL 1 &to WIN>;
         };
-        bt2_l4: bt2_l4 { // Bluetoothプロファイル2を選択し、レイヤーWINを有効化
+        bt2_l2: bt2_l2 { // Bluetoothプロファイル2を選択し、レイヤーCADを有効化
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to QWE &bt BT_SEL 2 &to CAD>;
+        };
+        bt2_l3: bt2_l3 { // Bluetoothプロファイル2を選択し、レイヤーWINを有効化
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&to QWE &bt BT_SEL 2 &to WIN>;
         };
-        bt3_l4: bt3_l4 { // Bluetoothプロファイル3を選択し、レイヤーCADを有効化
+        bt3_l2: bt3_l2 { // Bluetoothプロファイル3を選択し、レイヤーCADを有効化
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&to QWE &bt BT_SEL 3 &to CAD>;
         };
-        bt4_l2: bt4_l2 { // Bluetoothプロファイル4を選択し、レイヤーQWEを有効化
+        bt3_l3: bt3_l3 { // Bluetoothプロファイル3を選択し、レイヤーWINを有効化
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to QWE &bt BT_SEL 3 &to WIN>;
+        };
+        bt4_l0: bt4_l0 { // Bluetoothプロファイル4を選択し、レイヤーQWEを有効化
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&to QWE &bt BT_SEL 4 &to QWE>;
         };
-        bt4_l3: bt4_l3 { // Bluetoothプロファイル4を選択し、レイヤー3を有効化
+        bt4_l2: bt4_l2 { // Bluetoothプロファイル4を選択し、レイヤーCADを有効化
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to QWE &bt BT_SEL 4 &to QWE>;
+            bindings = <&to QWE &bt BT_SEL 4 &to CAD>;
         };
-        usb_l0: usb_l0 { // USB接続を選択し、レイヤーCADを有効化
+        bt4_l3: bt4_l3 { // Bluetoothプロファイル4を選択し、レイヤーWINを有効化
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to QWE &out OUT_USB &to CAD>;
+            bindings = <&to QWE &bt BT_SEL 4 &to WIN>;
         };
-        usb_l2: usb_l2 { // USB接続を選択し、レイヤー2を有効化
+        usb_l0: usb_l0 { // USB接続を選択し、レイヤーQWEを有効化
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&to QWE &out OUT_USB &to QWE>;
+        };
+        usb_l2: usb_l2 { // USB接続を選択し、レイヤーCADを有効化
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to QWE &out OUT_USB &to CAD>;
         };  
 
         // =========================================================================
@@ -2299,8 +2319,8 @@
             bindings = <
         // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
             &mt LSHFT F11   &kp F12         &kp C_MUTE      &kp C_VOL_DN    &kp C_VOL_UP                                    &kp CAPS        &kp PSCRN       &kp SLCK        &kp PAUSE_BREAK &kp LS(UP)
-            &out OUT_BLE    &usb_l0         &bt3_l4         &kp LS(RIGHT)                                   &kp G           &kp INT5        &file_r         &pr_pg          &nx_pg          &file_f
-            &bt0_l0         &bt1_l0         &bt2_l4         &kp K_APP                                       &kp LS(LEFT)    &kp LS(DOWN)    &kp LS(HOME) &kp LS(LC(LEFT)) &kp LS(LC(RIGHT)) &kp LS(END)
+            &out OUT_BLE    &usb_l0         &bt3_l2         &kp LS(RIGHT)                                   &kp G           &kp INT5        &file_r         &pr_pg          &nx_pg          &file_f
+            &bt0_l0         &bt1_l3         &bt2_l3         &kp K_APP                                       &kp LS(LEFT)    &kp LS(DOWN)    &kp LS(HOME) &kp LS(LC(LEFT)) &kp LS(LC(RIGHT)) &kp LS(END)
                                                             &to QWE         &grave_uc       &trans          &trans          &tilde_uc	    &to CAD
             >;
 
