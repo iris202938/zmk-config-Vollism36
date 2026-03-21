@@ -1071,67 +1071,67 @@
                 , <&macro_wait_time 30> // ここで30ミリ秒待機
                 , <&kp  INT5>;
         };
-        bt0_l0: bt0_l0 { // Bluetoothプロファイル0を選択し、レイヤーQWEを有効化
+        bt0_lQWE: bt0_lQWE { // Bluetoothプロファイル0を選択し、レイヤーQWEを有効化
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&to QWE &bt BT_SEL 0 &to QWE>;
         };
-        bt1_l0: bt1_l0 { // Bluetoothプロファイル1を選択し、レイヤーQWEを有効化
+        bt1_lQWE: bt1_lQWE { // Bluetoothプロファイル1を選択し、レイヤーQWEを有効化
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&to QWE &bt BT_SEL 1 &to QWE>;
         };
-        bt1_l2: bt1_l2 { // Bluetoothプロファイル1を選択し、レイヤーCADを有効化
+        bt1_lCAD: bt1_lCAD { // Bluetoothプロファイル1を選択し、レイヤーCADを有効化
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&to QWE &bt BT_SEL 1 &to CAD>;
         };
-        bt1_l3: bt1_l3 { // Bluetoothプロファイル1を選択し、レイヤーWINを有効化
+        bt1_lWIN: bt1_lWIN { // Bluetoothプロファイル1を選択し、レイヤーWINを有効化
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&to QWE &bt BT_SEL 1 &to WIN>;
         };
-        bt2_l2: bt2_l2 { // Bluetoothプロファイル2を選択し、レイヤーCADを有効化
+        bt2_lCAD: bt2_lCAD { // Bluetoothプロファイル2を選択し、レイヤーCADを有効化
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&to QWE &bt BT_SEL 2 &to CAD>;
         };
-        bt2_l3: bt2_l3 { // Bluetoothプロファイル2を選択し、レイヤーWINを有効化
+        bt2_lWIN: bt2_lWIN { // Bluetoothプロファイル2を選択し、レイヤーWINを有効化
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&to QWE &bt BT_SEL 2 &to WIN>;
         };
-        bt3_l2: bt3_l2 { // Bluetoothプロファイル3を選択し、レイヤーCADを有効化
+        bt3_lCAD: bt3_lCAD { // Bluetoothプロファイル3を選択し、レイヤーCADを有効化
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&to QWE &bt BT_SEL 3 &to CAD>;
         };
-        bt3_l3: bt3_l3 { // Bluetoothプロファイル3を選択し、レイヤーWINを有効化
+        bt3_lWIN: bt3_lWIN { // Bluetoothプロファイル3を選択し、レイヤーWINを有効化
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&to QWE &bt BT_SEL 3 &to WIN>;
         };
-        bt4_l0: bt4_l0 { // Bluetoothプロファイル4を選択し、レイヤーQWEを有効化
+        bt4_lQWE: bt4_lQWE { // Bluetoothプロファイル4を選択し、レイヤーQWEを有効化
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&to QWE &bt BT_SEL 4 &to QWE>;
         };
-        bt4_l2: bt4_l2 { // Bluetoothプロファイル4を選択し、レイヤーCADを有効化
+        bt4_lCAD: bt4_lCAD { // Bluetoothプロファイル4を選択し、レイヤーCADを有効化
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&to QWE &bt BT_SEL 4 &to CAD>;
         };
-        bt4_l3: bt4_l3 { // Bluetoothプロファイル4を選択し、レイヤーWINを有効化
+        bt4_lWIN: bt4_lWIN { // Bluetoothプロファイル4を選択し、レイヤーWINを有効化
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&to QWE &bt BT_SEL 4 &to WIN>;
         };
-        usb_l0: usb_l0 { // USB接続を選択し、レイヤーQWEを有効化
+        usb_lQWE: usb_lQWE { // USB接続を選択し、レイヤーQWEを有効化
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&to QWE &out OUT_USB &to QWE>;
         };
-        usb_l2: usb_l2 { // USB接続を選択し、レイヤーCADを有効化
+        usb_lCAD: usb_lCAD { // USB接続を選択し、レイヤーCADを有効化
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&to QWE &out OUT_USB &to CAD>;
@@ -2319,8 +2319,8 @@
             bindings = <
         // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
             &mt LSHFT F11   &kp F12         &kp C_MUTE      &kp C_VOL_DN    &kp C_VOL_UP                                    &kp CAPS        &kp PSCRN       &kp SLCK        &kp PAUSE_BREAK &kp LS(UP)
-            &out OUT_BLE    &usb_l0         &bt3_l2         &kp LS(RIGHT)                                   &kp G           &kp INT5        &file_r         &pr_pg          &nx_pg          &file_f
-            &bt0_l0         &bt1_l3         &bt2_l3         &kp K_APP                                       &kp LS(LEFT)    &kp LS(DOWN)    &kp LS(HOME) &kp LS(LC(LEFT)) &kp LS(LC(RIGHT)) &kp LS(END)
+            &out OUT_BLE    &usb_lQWE       &bt3_lCAD       &kp LS(RIGHT)                                   &kp G           &kp INT5        &file_r         &pr_pg          &nx_pg          &file_f
+            &bt0_lQWE       &bt1_lWIN       &bt2_lWIN       &kp K_APP                                       &kp LS(LEFT)    &kp LS(DOWN)    &kp LS(HOME) &kp LS(LC(LEFT)) &kp LS(LC(RIGHT)) &kp LS(END)
                                                             &to QWE         &grave_uc       &trans          &trans          &tilde_uc	    &to CAD
             >;
 
@@ -2351,7 +2351,7 @@
         // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
             &sys_reset      &bootloader     &bt BT_DISC 2   &bt BT_DISC 3   &bt BT_CLR_ALL                                  &bt BT_CLR_ALL  &m_hi_con   	&bt BT_DISC 5   &bootloader     &sys_reset
             &kp LC(LG(T))   &kp LC(LG(C))   &kp LC(LG(P))   &kp LC(LG(G))                                   &trans          &trans          &kp LC(LG(E))   &kp LC(LG(A))   &kp LC(LG(L))   &kp LC(LG(X))
-            &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3                                    &bootloader     &bootloader     &bt4_l2         &bt BT_SEL 5    &bt BT_SEL 6    &bt BT_SEL 7
+            &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3                                    &bootloader     &bootloader     &bt4_lCAD       &bt BT_SEL 5    &bt BT_SEL 6    &bt BT_SEL 7
                                                             &trans          &kp LS(LG(F23)) &bt BT_CLR      &bt BT_CLR      &kp LA(LG(G))   &trans
             >;
         };
