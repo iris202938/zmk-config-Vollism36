@@ -70,12 +70,12 @@
             bindings = <&ng_off>;
             layers = <QWE NGN>; // デフォルトレイヤーが0、薙刀式レイヤーが1の前提
         };
-        adj {
-            bindings = <&mo ADJ>;
-            key-positions = <32 33>;
-            layers = <QWE NGN WIN CAD LWR RSE>;
-            timeout-ms = <80>;
-        };
+        // adj {
+        //     bindings = <&mo ADJ>;
+        //     key-positions = <32 33>;
+        //     layers = <QWE NGN WIN CAD LWR RSE>;
+        //     timeout-ms = <80>;
+        // };
         esc_l {
             bindings = <&kp ESC>;
             key-positions = <0 10>;
