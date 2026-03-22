@@ -220,6 +220,12 @@
             layers = <RSE>;
             timeout-ms = <80>;
         };
+        ctrl_v {
+            bindings = <&ctrl_v>;
+            key-positions = <26 27>;
+            layers = <RSE>;
+            timeout-ms = <80>;
+        };
         nlck {
             bindings = <&kp KP_NLCK>;
             key-positions = <8 9>;
@@ -879,7 +885,15 @@
                 , <&macro_release &kp LCTRL>
                 ;
         };
-
+        ctrl_v: ctrl_v { // 貼り付け
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp V>
+                , <&macro_release &kp LCTRL>
+                ;
+        };
 
         grave_uc: grave_uc {
             compatible = "zmk,behavior-macro";
