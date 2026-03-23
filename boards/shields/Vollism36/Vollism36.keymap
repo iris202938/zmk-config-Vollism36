@@ -328,10 +328,22 @@
             layers = <QWE CAD>;
             timeout-ms = <80>;
         };
-        int5_g_r {
-            bindings = <&int5_g>;
-            key-positions = <11 13>;
-            layers = <QWE CAD>;
+        // int5_g_r {
+        //     bindings = <&int5_g>;
+        //     key-positions = <11 13>;
+        //     layers = <QWE CAD>;
+        //     timeout-ms = <80>;
+        // };
+        combo_ss {
+            bindings = <&kp LS(LG(S))>;
+            key-positions = <0 11 20>;
+            layers = <CAD>;
+            timeout-ms = <80>;
+        };
+        combo_symbol_call { //AHK
+            bindings = <&kp LC(LA(S))>;
+            key-positions = <10 11 29>;
+            layers = <CAD>;
             timeout-ms = <80>;
         };
         tab_1 {
