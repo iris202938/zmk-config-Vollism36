@@ -358,6 +358,18 @@
             layers = <CAD>;
             timeout-ms = <80>;
         };
+        combo_alt_comma { // 複写左90度回転[AHK]
+            bindings = <&alt_comma>;
+            key-positions = <27 29>;
+            layers = <CAD>;
+            timeout-ms = <80>;
+        };
+        combo_alt_dot { // 複写右90度回転[AHK]
+            bindings = <&alt_dot>;
+            key-positions = <28 29>;
+            layers = <CAD>;
+            timeout-ms = <80>;
+        };
         tab_1 {
             bindings = <&tab_1>;
             key-positions = <1 3 26>;
@@ -2133,6 +2145,24 @@
             bindings
                 = <&macro_press &kp LALT>
                 , <&macro_tap &kp END>
+                , <&macro_release &kp LALT>
+                ;
+        };
+        alt_comma: alt_comma { // 複写左90度回転[AHK]
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp COMMA>
+                , <&macro_release &kp LALT>
+                ;
+        };
+        alt_dot: alt_dot { // 複写右90度回転[AHK]
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp DOT>
                 , <&macro_release &kp LALT>
                 ;
         };
