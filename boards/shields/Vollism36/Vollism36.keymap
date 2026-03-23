@@ -334,15 +334,27 @@
         //     layers = <QWE CAD>;
         //     timeout-ms = <80>;
         // };
-        combo_ss {
-            bindings = <&kp LS(LG(S))>;
+        combo_ss { // スクリーンショット
+            bindings = <&shift_win_s>;
             key-positions = <0 11 20>;
             layers = <CAD>;
             timeout-ms = <80>;
         };
-        combo_symbol_call { //AHK
-            bindings = <&kp LC(LA(S))>;
+        combo_symbol_call {  // シンボル一覧(AHK)
+            bindings = <&ctrl_alt_s>;
             key-positions = <10 11 29>;
+            layers = <CAD>;
+            timeout-ms = <80>;
+        };
+        combo_alt_home {   // 移動左90度回転[AHK]
+            bindings = <&alt_home>;
+            key-positions = <1 32 29>;
+            layers = <CAD>;
+            timeout-ms = <80>;
+        };
+        combo_alt_end {   // 移動右90度回転[AHK]
+            bindings = <&alt_end>;
+            key-positions = <3 32 29>;
             layers = <CAD>;
             timeout-ms = <80>;
         };
@@ -2084,6 +2096,17 @@
                 ;
         };
 
+        shift_win_s: shift_win_s { // スクリーンショット
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_press &kp LGUI>
+                , <&macro_tap &kp S>
+                , <&macro_release &kp LSHFT>
+                , <&macro_release &kp LGUI>
+                ;
+        };	
         ctrl_alt_s: ctrl_alt_s { // シンボル一覧(AHK)
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -2093,7 +2116,6 @@
                 , <&macro_tap &kp S>
                 , <&macro_release &kp LALT>
                 , <&macro_release &kp LCTRL>
-                // , <&to WIN> // ADJWのベースレイヤー（例としてWINレイヤー）に戻る※rsewレイヤロック強制解除用
                 ;
         };	
         alt_home: alt_home { // 移動左90度回転[AHK]
