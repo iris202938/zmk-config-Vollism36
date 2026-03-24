@@ -493,7 +493,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&lt MOV ESC>, <&to_MOV_ESC>;
+            bindings = <&lt MOV ESC>, <&to_MOV>;
         };
         td_lt_cad_i2: tap_dance_layer_tap_cad_i2 {  // タップでINT2、ホールドでCADレイヤ、ダブルタップでCADレイヤ保持
             compatible = "zmk,behavior-tap-dance";
