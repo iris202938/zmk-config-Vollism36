@@ -463,6 +463,14 @@
             tapping-term-ms = <200>;
             bindings = <&mo>, <&t_int4>;
         };
+        // INT4用のHold-Tap: ホールドで指定Layer, タップでマクロ(t_eint2)
+        ht_eit2: ht_eit2 {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&mo>, <&t_eint2>;
+        };
         // INT5用のHold-Tap: ホールドで指定Layer, タップでマクロ(t_int5)
         ht_it5: ht_it5 {
             compatible = "zmk,behavior-hold-tap";
@@ -1106,7 +1114,11 @@
         //     #binding-cells = <0>;
         //     bindings = <&to QWE &kp LANG2>; // レイヤー0（QWE）に戻る
         // };
-        t_int4: t_int4 {
+        t_eint2: t_eint2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp ESC &kp INT2>;
+        };t_int4: t_int4 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&to WIN &kp INT4>; // レイヤー（WIN）に戻る
@@ -2369,7 +2381,7 @@
             &kp Q           &kp W           &kp E           &kp R           &kp T                                           &kp Y           &kp U           &kp I           &kp O           &kp P
             &kp A           &kp S           &kp D           &kp F                                           &kp G           &kp H           &kp J           &kp K           &kp L           &kp SEMICOLON
             &kp Z           &kp X           &kp C           &kp V                                           &kp B           &kp N           &kp M           &kp COMMA       &kp DOT         &kp SLASH
-                                                            &ht_it5 NUM 0   &kp SPACE       &lt LWR TAB     &lt RSE ENTER   &kp INT4        &td_lt_mov_esc
+                                                            &ht_it5 NUM 0   &kp SPACE       &lt LWR TAB     &lt RSE ENTER   &kp INT4        &ht_esit2 MOV 0
             >;
         };
 
