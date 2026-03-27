@@ -31,9 +31,9 @@ manifest:
     #   remote: zmkfirmware
     #   revision: main
     - name: zmk-rgbled-widget  # <-- led
-      # remote: caksoylar
-      remote: Reinmuth66
-      revision: main
+      remote: caksoylar
+    # remote: Reinmuth66
+      revision: v0.3-branch
       # https://github.com/hsgw/zmk-feature-sensor_rotation
     - name: zmk-feature-sensor_rotation
       remote: hsgw
