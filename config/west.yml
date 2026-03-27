@@ -3,9 +3,9 @@ manifest:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
     # - name: Reinmuth66
-    #   url-base: https://github.com/Reinmuth66
+      # url-base: https://github.com/Reinmuth66
     - name: badjeff
-     url-base: https://github.com/badjeff
+      url-base: https://github.com/badjeff
     - name: zettaface
       url-base: https://github.com/zettaface
     - name: caksoylar  # <-- led
@@ -32,8 +32,9 @@ manifest:
     #   revision: main
     - name: zmk-rgbled-widget  # <-- led
       remote: caksoylar
-    # remote: Reinmuth66
-      revision: v0.3-branch
+      # remote: Reinmuth66
+      # revision: main
+      revision: v0.3
       # https://github.com/hsgw/zmk-feature-sensor_rotation
     - name: zmk-feature-sensor_rotation
       remote: hsgw
