@@ -21,7 +21,12 @@
 include:
   - board: seeeduino_xiao_ble
     shield: Vollism36_L rgbled_adapter
+    # 外部モジュールのパスを追加（セミコロン区切り）
+    cmake-args: -DZMK_EXTRA_MODULES="/tmp/zmk-config/zmk-pmw3610-driver;/tmp/zmk-config/zmk-rgbled-widget"
+
   - board: seeeduino_xiao_ble
     shield: Vollism36_R rgbled_adapter
+    cmake-args: -DZMK_EXTRA_MODULES="/tmp/zmk-config/zmk-pmw3610-driver;/tmp/zmk-config/zmk-rgbled-widget"
+
   - board: seeeduino_xiao_ble
     shield: settings_reset
