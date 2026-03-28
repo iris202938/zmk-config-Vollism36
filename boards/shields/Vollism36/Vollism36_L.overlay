@@ -132,7 +132,7 @@
 
     trackball: trackball@0 {
         status = "okay";
-        compatible = "pixart,pmw3610";
+        compatible = "pixart,pmw3610-alt";
         reg = <0>;
         evt-type = <INPUT_EV_REL>; // あるいは <INPUT_EV_ABS>
         spi-max-frequency = <2000000>;
