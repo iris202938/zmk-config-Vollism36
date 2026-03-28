@@ -21,12 +21,7 @@
 include:
   - board: seeeduino_xiao_ble
     shield: Vollism36_L rgbled_adapter
-    # 既存のパスとドライバのパスを一つの変数にまとめる
-    -DZMK_EXTRA_MODULES="${{ github.workspace }};/tmp/zmk-config/zmk-pmw3610-driver;/tmp/zmk-config/zmk-rgbled-widget"
-
   - board: seeeduino_xiao_ble
     shield: Vollism36_R rgbled_adapter
-    -DZMK_EXTRA_MODULES="${{ github.workspace }};/tmp/zmk-config/zmk-pmw3610-driver;/tmp/zmk-config/zmk-rgbled-widget"
-
   - board: seeeduino_xiao_ble
     shield: settings_reset
