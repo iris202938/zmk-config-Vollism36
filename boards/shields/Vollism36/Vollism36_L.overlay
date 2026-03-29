@@ -19,14 +19,14 @@
 #define NUM 8
 #define BLE 9
 
-/ {
-    /* 既存の定義（input_processorsなど）と同じ階層に追加 */
-    aliases {
-        led-red = &led0;   /* Xiao BLE の赤色LED */
-        led-green = &led1; /* Xiao BLE の緑色LED */
-        led-blue = &led2;  /* Xiao BLE の青色LED */
-    };
-};
+// / {
+//     /* 既存の定義（input_processorsなど）と同じ階層に追加 */
+//     aliases {
+//         led-red = &led0;   /* Xiao BLE の赤色LED */
+//         led-green = &led1; /* Xiao BLE の緑色LED */
+//         led-blue = &led2;  /* Xiao BLE の青色LED */
+//     };
+// };
 
 &kscan0 {
         col-gpios
