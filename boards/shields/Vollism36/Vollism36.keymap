@@ -41,13 +41,13 @@
 
 / {
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-        tri_layer {
-            if-layers = <LWR RSE>;
-            then-layer = <ADJ>;
-        };
-    };
+    // conditional_layers {
+    //     compatible = "zmk,conditional-layers";
+    //     tri_layer {
+    //         if-layers = <LWR RSE>;
+    //         then-layer = <ADJ>;
+    //     };
+    // };
 
     combos {    
         compatible = "zmk,combos";
@@ -70,12 +70,12 @@
             bindings = <&ng_off>;
             layers = <QWE NGN>; // デフォルトレイヤーが0、薙刀式レイヤーが1の前提
         };
-        // adj {
-        //     bindings = <&mo ADJ>;
-        //     key-positions = <32 33>;
-        //     layers = <QWE NGN WIN CAD LWR RSE>;
-        //     timeout-ms = <80>;
-        // };
+        adj {
+            bindings = <&mo ADJ>;
+            key-positions = <32 33>;
+            layers = <QWE NGN WIN CAD>;
+            timeout-ms = <70>;
+        };
         esc_l {
             bindings = <&kp ESC>;
             key-positions = <0 10>;
@@ -2391,7 +2391,7 @@
             &mt LSHFT PG_UP &kp HOME        &kp UP          &kp END         &mkp MB3                                        &kp DEL         &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT &msc SCRL_UP
             &mt LCTRL PG_DN &kp LEFT        &kp DOWN        &kp RIGHT   	                                &mkp MB1        &kp BSPC        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT &msc SCRL_DOWN
             &mt LGUI LC(V)  &mkp MB1        &mkp MB3        &mkp MB2		                                &mkp MB2        &mkp MB1        &kp ENTER       &kp LC(LEFT)    &kp LC(RIGHT)   &mt  RALT LG(V)
-                                                            &kp LSHFT       &kp LCTRL	    &trans          &trans          &kp LS(LC(V))   &kp RSHFT
+                                                            &kp LSHFT       &kp LCTRL	    &trans          &ht_it4 ADJ 0   &kp LS(LC(V))   &kp RSHFT
             >;
         };
 
@@ -2401,7 +2401,7 @@
             &mt LSHFT F1    &kp F2          &kp F3          &kp F4          &kp F5         		         		            &kp F6          &kp F7    	    &kp F8          &kp F9          &kp F10
             &mt LCTRL N1    &kp N2          &kp N3          &kp N4      		     		                &kp N5          &kp N6          &kp N7    	    &kp N8          &kp N9          &kp N0
             &mt LGUI INT1   &kp BSLH        &kp INT3        &kp SLASH   		     		                &kp ASTRK       &kp MINUS       &kp PLUS  	    &kp LBKT        &kp RBKT        &mt RALT LC(V)
-                                                            &kp LSHFT       &kp SPACE       &trans          &trans          &kp RCTRL	    &kp RSHFT
+                                                            &kp LSHFT       &kp SPACE       &ht_it5 ADJ 0   &trans          &kp RCTRL	    &kp RSHFT
             >;
         };
 
