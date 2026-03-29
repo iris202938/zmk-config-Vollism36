@@ -11,8 +11,10 @@ manifest:
       url-base: https://github.com/sayu-hub
     - name: zettaface
       url-base: https://github.com/zettaface
-    - name: caksoylar  # <-- led
-      url-base: https://github.com/caksoylar
+    # - name: caksoylar  # <-- led
+      # url-base: https://github.com/caksoylar
+    - name: iris202938  # <-- led
+      url-base: https://github.com/iris202938
     - name: hsgw
       url-base: https://github.com/hsgw
     - name: eswai # ここを追加
@@ -34,8 +36,10 @@ manifest:
     # - name: zmk-input-transform-processors
     #   remote: zmkfirmware
     #   revision: main
-    - name: zmk-rgbled-widget  # <-- led
-      remote: caksoylar
+    # - name: zmk-rgbled-widget  # <-- led
+      # remote: caksoylar
+      - name: zmk-rgbled-widget  # <-- led
+      remote: iris202938
       # remote: Reinmuth66
       revision: main
       # https://github.com/hsgw/zmk-feature-sensor_rotation

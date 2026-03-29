@@ -20,10 +20,10 @@
 ---
 include:
   - board: seeeduino_xiao_ble
-    # shield: Vollism36_L rgbled_adapter
-    shield: Vollism36_L
+    shield: Vollism36_L rgbled_adapter
+    # shield: Vollism36_L
   - board: seeeduino_xiao_ble
-    # shield: Vollism36_R rgbled_adapter
-    shield: Vollism36_R
+    shield: Vollism36_R rgbled_adapter
+    # shield: Vollism36_R
   - board: seeeduino_xiao_ble
     shield: settings_reset
