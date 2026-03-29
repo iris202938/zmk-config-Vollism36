@@ -1,11 +1,12 @@
+
 manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    # - name: Reinmuth66
-      # url-base: https://github.com/Reinmuth66
-    - name: badjeff
-      url-base: https://github.com/badjeff
+    - name: Reinmuth66
+      url-base: https://github.com/Reinmuth66
+    # - name: badjeff
+      # url-base: https://github.com/badjeff
     - name: zettaface
       url-base: https://github.com/zettaface
     - name: caksoylar  # <-- led
@@ -21,12 +22,9 @@ manifest:
       revision: v0.3
       import: app/west.yml
     - name: zmk-pmw3610-driver  # <-- トラボドライバ
-      # remote: Reinmuth66
-      remote: badjeff
-      # revision: v0.3
-      # revision: 40974f0732890538a088737f71587d60f946808a # 2024年初頭の安定版
-      revision: zmk-0.3  # <-- ここを zmk-0.3 に書き換える
-      path: modules/zmk-pmw3610-driver  # <-- これを追加
+      remote: Reinmuth66
+      # remote: badjeff
+      revision: main
     - name: zmk-input-processor-keybind
       remote: zettaface
       revision: main
@@ -34,10 +32,9 @@ manifest:
     #   remote: zmkfirmware
     #   revision: main
     - name: zmk-rgbled-widget  # <-- led
-      remote: caksoylar
-      # remote: Reinmuth66
-      # revision: main
-      revision: v0.3
+      # remote: caksoylar
+      remote: Reinmuth66
+      revision: main
       # https://github.com/hsgw/zmk-feature-sensor_rotation
     - name: zmk-feature-sensor_rotation
       remote: hsgw
