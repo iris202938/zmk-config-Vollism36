@@ -25,6 +25,9 @@
         led-red = &led0;   /* Xiao BLE の赤色LED */
         led-green = &led1; /* Xiao BLE の緑色LED */
         led-blue = &led2;  /* Xiao BLE の青色LED */
+        led-red = &blue_led;   /* ここを実際のLEDノードに合わせて書き換えます */
+        led-green = &blue_led; /* 一旦全て同じLEDを指定してもビルドは通ります */
+        led-blue = &blue_led;
     };
 };
 
