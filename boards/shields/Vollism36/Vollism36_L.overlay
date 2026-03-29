@@ -22,9 +22,9 @@
 / {
     /* 既存の定義（input_processorsなど）と同じ階層に追加 */
     aliases {
-        led-red = &status_led_red;   // &の後は、実際に定義されているLEDノードの名前
-        led-green = &status_led_green;
-        led-blue = &status_led_blue;
+        led-red = &led_0;
+        led-green = &led_1;
+        led-blue = &led_2;
     };
 };
 
