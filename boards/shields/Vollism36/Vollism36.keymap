@@ -318,7 +318,7 @@
         };
         mb3_l_cad {
             bindings = <&mkp MB3>;
-            key-positions = <13 23>;
+            key-positions = <22 32>;
             layers = <QWE CAD>;
             timeout-ms = <80>;
         };
