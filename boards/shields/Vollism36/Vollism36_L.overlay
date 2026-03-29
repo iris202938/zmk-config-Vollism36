@@ -22,9 +22,9 @@
 / {
     /* 既存の定義（input_processorsなど）と同じ階層に追加 */
     aliases {
-        led-red = &led_0;
-        led-green = &led_1;
-        led-blue = &led_2;
+        led-red = &led0;   /* Xiao BLE の赤色LED */
+        led-green = &led1; /* Xiao BLE の緑色LED */
+        led-blue = &led2;  /* Xiao BLE の青色LED */
     };
 };
 
