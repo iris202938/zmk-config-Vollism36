@@ -26,6 +26,7 @@ manifest:
       # revision: v0.3
       # revision: 40974f0732890538a088737f71587d60f946808a # 2024年初頭の安定版
       revision: zmk-0.3  # <-- ここを zmk-0.3 に書き換える
+      path: modules/zmk-pmw3610-driver  # <-- これを追加
     - name: zmk-input-processor-keybind
       remote: zettaface
       revision: main
