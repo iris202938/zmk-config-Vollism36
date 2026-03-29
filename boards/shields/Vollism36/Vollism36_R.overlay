@@ -13,3 +13,11 @@
             , <&gpio0 9 GPIO_ACTIVE_HIGH>
             ;
 };
+
+/ {
+    aliases {
+        led-red = &led0;   /* Xiao BLE 本体赤色LED */
+        led-green = &led1; /* Xiao BLE 本体緑色LED */
+        led-blue = &led2;  /* Xiao BLE 本体青色LED */
+    };
+};
