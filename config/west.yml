@@ -38,7 +38,7 @@ manifest:
     #   revision: main
     # - name: zmk-rgbled-widget  # <-- led
       # remote: caksoylar
-      - name: zmk-rgbled-widget  # <-- led
+    - name: zmk-rgbled-widget  # <-- led
       remote: iris202938
       # remote: Reinmuth66
       revision: main
