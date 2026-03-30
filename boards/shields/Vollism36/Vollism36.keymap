@@ -59,13 +59,13 @@
     // 20 21 22 23          24 25 26 27 28 29	
     //          30 31 32    33 34 35 
         combo_ng_on {
-            timeout-ms = <200>;
+            timeout-ms = <80>;
             key-positions = <15 16>; // H, Jのキー位置に書き換えてください
             bindings = <&ng_on>;
             layers = <QWE>; // デフォルトレイヤーが0の前提
         };
         combo_ng_off {
-            timeout-ms = <200>;
+            timeout-ms = <80>;
             key-positions = <13 14>; // F, Gのキー位置に書き換えてください
             bindings = <&ng_off>;
             layers = <QWE NGN>; // デフォルトレイヤーが0、薙刀式レイヤーが1の前提
@@ -444,7 +444,7 @@
         //     compatible = "zmk,behavior-hold-tap";
         //     #binding-cells = <2>;
         //     flavor = "hold-preferred";
-        //     tapping-term-ms = <200>;
+        //     tapping-term-ms = <150>;
         //     bindings = <&mo>, <&t_lang1>;
         // };
         // // LANG2用のHold-Tap: ホールドで指定Layer, タップでマクロ(t_lang2)
@@ -452,7 +452,7 @@
         //     compatible = "zmk,behavior-hold-tap";
         //     #binding-cells = <2>;
         //     flavor = "hold-preferred";
-        //     tapping-term-ms = <200>;
+        //     tapping-term-ms = <150>;
         //     bindings = <&mo>, <&t_lang2>;
         // };
         // INT4用のHold-Tap: ホールドで指定Layer, タップでマクロ(t_int4)
@@ -460,7 +460,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "hold-preferred";
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             bindings = <&mo>, <&t_int4>;
         };
         // INT4用のHold-Tap: ホールドで指定Layer, タップでマクロ(t_eint2)
@@ -468,7 +468,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "hold-preferred";
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             bindings = <&mo>, <&t_eint2>;
         };
         // INT5用のHold-Tap: ホールドで指定Layer, タップでマクロ(t_int5)
@@ -476,43 +476,43 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "hold-preferred";
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             bindings = <&mo>, <&t_int5>;
         };
         td_lt_mov_l1: tap_dance_layer_tap_mov_l1 {  // タップでLANG1、ホールドでMOVレイヤ、ダブルタップでMOVレイヤ保持
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             bindings = <&lt MOV LANG1>, <&to MOV>;
         };
         td_lt_num_l2: tap_dance_layer_tap_num_l2 {  // タップでLANG2、ホールドでNUMレイヤ、ダブルタップでNUMレイヤ保持
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             bindings = <&lt NUM LANG2>, <&to NUM>;
         };
         td_lt_mov_i2: tap_dance_layer_tap_mov_i2 {  // タップでINT2、ホールドでMOVレイヤ、ダブルタップでMOVレイヤ保持
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             bindings = <&lt MOV INT2>, <&to_MOV_i2>;
         };
         td_lt_mov_esc: tap_dance_layer_tap_mov_esc {  // タップでESC、ホールドでMOVレイヤ、ダブルタップでMOVレイヤ保持
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             bindings = <&lt MOV ESC>, <&to MOV>;
         };
         td_lt_cad_i2: tap_dance_layer_tap_cad_i2 {  // タップでINT2、ホールドでCADレイヤ、ダブルタップでCADレイヤ保持
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             bindings = <&lt CAD INT2>, <&to_CAD_i2>;
         };
 		td_lt_num_i5: tap_dance_layer_tap_num_i5 {  // タップでINT5、ホールドでNUMレイヤ、ダブルタップでNUMレイヤ保持
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             bindings = <&lt NUM INT5>, <&to_NUM_i5>;
         };
 
