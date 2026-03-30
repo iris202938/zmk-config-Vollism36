@@ -80,7 +80,7 @@
 
         /* --- WINレイヤー：1段目（方向キー入力） --- */
         layer_win {
-            layers = <WIN>; 
+            layers = <WIN CAD>; 
             input-processors = 
                 <&sensor_rotation>, 
                 // <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>, /* 逆転対策 */
@@ -90,7 +90,7 @@
         };
         /* --- WINレイヤー：2段目（マウス移動の無効化） --- */
         layer_win_prevent {
-            layers = <WIN>;
+            layers = <WIN CAD>;
             input-processors = <&zip_xy_scaler 0 1>;
         };
 
@@ -107,7 +107,7 @@
 
         /* --- その他レイヤー：通常マウス --- */
         layer_default {
-            layers = <QWE NGN CAD LWR ADJ MOV NUM BLE>; 
+            layers = <QWE NGN LWR ADJ MOV NUM BLE>; 
             input-processors = <&sensor_rotation>;
         };
     };
