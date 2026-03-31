@@ -62,40 +62,51 @@
         compatible = "zmk,input-listener";
         device = <&trackball>;
 
-        /* --- MOVレイヤー：1段目（方向キー入力） --- */
-        layer_mov {
+        /* ==========================================================
+        Layer 9: BLE (通常マウス)
+        ========================================================== */
+        l_ble {
+            layers = <BLE>;
+            input-processors = <&sensor_rotation>;
+        };
+
+        /* ==========================================================
+        Layer 8: NUM (通常マウス)
+        ========================================================== */
+        l_num {
+            layers = <NUM>;
+            input-processors = <&sensor_rotation>;
+        };
+
+        /* ==========================================================
+        Layer 7: MOV (方向キー変換)
+        ========================================================== */
+        l_mov {
             layers = <MOV>; 
             input-processors = 
                 <&sensor_rotation>, 
-                // <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>, /* 逆転対策 */
-                <&zip_xy_scaler 200 100>, // 速度を200/100に設定 (乗数200, 除数100)
+                <&zip_xy_scaler 200 100>, 
                 <&xy_to_keys>;
-            process-next; /* ← 【超重要】次のブロックへ処理を渡す */
+            process-next;
         };
-        /* --- MOVレイヤー：2段目（マウス移動の無効化） --- */
-        layer_mov_prevent {
+
+        l_mov_prevent {
             layers = <MOV>;
             input-processors = <&zip_xy_scaler 0 1>;
         };
 
-        /* --- WINレイヤー：1段目（方向キー入力） --- */
-        layer_win {
-            layers = <WIN>; 
-            input-processors = 
-                <&sensor_rotation>, 
-                // <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>, /* 逆転対策 */
-                <&zip_xy_scaler 200 100>, // 速度を200/100に設定 (乗数200, 除数100)
-                <&xy_to_keys>;
-            process-next; /* ← 【超重要】次のブロックへ処理を渡す */
-        };
-        /* --- WINレイヤー：2段目（マウス移動の無効化） --- */
-        layer_win_prevent {
-            layers = <WIN>;
-            input-processors = <&zip_xy_scaler 0 1>;
+        /* ==========================================================
+        Layer 6: ADJ (通常マウス)
+        ========================================================== */
+        l_adj {
+            layers = <ADJ>;
+            input-processors = <&sensor_rotation>;
         };
 
-        /* --- RSEレイヤー：成功しているため1ブロックで維持 --- */
-        layer_rse {
+        /* ==========================================================
+        Layer 5: RSE (スクロール)
+        ========================================================== */
+        l_rse {
             layers = <RSE>;
             input-processors = 
                 <&sensor_rotation>,
@@ -105,29 +116,53 @@
                 <&zip_xy_scaler 0 1>; 
         };
 
-        /* --- その他レイヤー：通常マウス --- */
-        layer_default {
-            layers = <QWE NGN CAD LWR ADJ MOV NUM BLE>; 
+        /* ==========================================================
+        Layer 4: LWR (通常マウス)
+        ========================================================== */
+        l_lwr {
+            layers = <LWR>;
             input-processors = <&sensor_rotation>;
         };
-    };
-};
 
-&pinctrl {
-    spi0_default: spi0_default {
-        group1 {
-            psels = <NRF_PSEL(SPIM_SCK, 0, 5)>,
-                    <NRF_PSEL(SPIM_MOSI, 0, 4)>,
-                    <NRF_PSEL(SPIM_MISO, 0, 4)>;
+        /* ==========================================================
+        Layer 3: WIN (方向キー変換)
+        ========================================================== */
+        l_win {
+            layers = <WIN>; 
+            input-processors = 
+                <&sensor_rotation>, 
+                <&zip_xy_scaler 200 100>, 
+                <&xy_to_keys>;
+            process-next;
         };
-    };
 
-    spi0_sleep: spi0_sleep {
-        group1 {
-            psels = <NRF_PSEL(SPIM_SCK, 0, 5)>,
-                    <NRF_PSEL(SPIM_MOSI, 0, 4)>,
-                    <NRF_PSEL(SPIM_MISO, 0, 4)>;
-            low-power-enable;
+        l_win_prevent {
+            layers = <WIN>;
+            input-processors = <&zip_xy_scaler 0 1>;
+        };
+
+        /* ==========================================================
+        Layer 2: CAD (通常マウス)
+        ========================================================== */
+        l_cad {
+            layers = <CAD>;
+            input-processors = <&sensor_rotation>;
+        };
+
+        /* ==========================================================
+        Layer 1: NGN (通常マウス)
+        ========================================================== */
+        l_ngn {
+            layers = <NGN>;
+            input-processors = <&sensor_rotation>;
+        };
+
+        /* ==========================================================
+        Layer 0: QWE (通常マウス)
+        ========================================================== */
+        l_qwe {
+            layers = <QWE>;
+            input-processors = <&sensor_rotation>;
         };
     };
 };
