@@ -334,12 +334,12 @@
         //     layers = <QWE CAD>;
         //     timeout-ms = <80>;
         // };
-        combo_ss { // スクリーンショット
-            bindings = <&shift_win_s>;
-            key-positions = <0 11 20>;
-            layers = <CAD>;
-            timeout-ms = <80>;
-        };
+        // combo_ss { // スクリーンショット
+        //     bindings = <&win_shift_s>;
+        //     key-positions = <0 11 20>;
+        //     layers = <CAD>;
+        //     timeout-ms = <80>;
+        // };
         combo_symbol_call {  // シンボル一覧(AHK)
             bindings = <&ctrl_alt_s>;
             key-positions = <10 11 29>;
