@@ -503,7 +503,7 @@
             tapping-term-ms = <160>;
             bindings = <&lt MOV ESC>, <&to MOV>;
         };
-        td_lt_cad_i2: tap_dance_layer_tap_cad_i2 {  // タップでINT2、ホールドでCADレイヤ、ダブルタップでCADレイヤ保持
+        td_lt_cad_i2: tap_dance_layer_tap_cad_i2 {  // タップでかな、ホールドでCADレイヤ、ダブルタップでCADレイヤ保持
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <160>;
@@ -512,7 +512,7 @@
 		td_lt_num_i5: tap_dance_layer_tap_num_i5 {  // タップでINT5、ホールドでNUMレイヤ、ダブルタップでNUMレイヤ保持
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <160>;
+            tapping-term-ms = <150>;
             bindings = <&lt NUM INT5>, <&to_NUM_i5>;
         };
 
@@ -2332,7 +2332,7 @@
             &mt LSHFT Q     &kp W           &kp E           &kp R           &kp T                                           &kp Y           &kp U           &kp I           &kp O           &mt RSHFT P
             &mt LCTRL A     &mt LALT S      &mt LSHFT D     &mt LGUI F                                      &kp G           &kp H           &mt RGUI J      &mt RSHFT K     &mt RALT L      &mt RCTRL SEMICOLON
             &mt LGUI Z      &kp X           &kp C           &kp V                                           &kp B           &kp N           &kp M           &kp COMMA       &kp DOT         &mt RALT SLASH
-                                                            &td_lt_num_i5   &mt LSHFT SPACE &lt LWR TAB     &lt RSE ENTER   &kp INT4        &td_lt_cad_i2
+                                                            &td_lt_num_i5   &mt LSHFT SPACE &lt LWR TAB     &lt RSE ENTER   &kp INT4        &lt MOV INT2
 
             >;
         };
