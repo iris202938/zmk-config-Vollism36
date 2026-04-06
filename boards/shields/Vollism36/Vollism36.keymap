@@ -4060,6 +4060,18 @@
             tapping-term-ms = <150>;
             bindings = <&lt NUM INT5>, <&to_NUM_i5>;
         };
+        td_lt_movw_i2: tap_dance_layer_tap_movw_i2 {  // タップでかな、ホールドでMOVWレイヤ、ダブルタップでMOVWレイヤ保持、無変換
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <170>;
+            bindings = <&lt MOVW INT2>, <&to_MOVW_i5>;
+        };
+        td_lt_num_i5: tap_dance_layer_tap_num_i5 {  // タップで無変換、ホールドでNUMレイヤ、ダブルタップでNUMレイヤ保持、無変換
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <150>;
+            bindings = <&lt NUM INT5>, <&to_NUM_i5>;
+        };
 
         // A-Z共通のHold-Tap定義
         all_ht: all_hold_tap {
