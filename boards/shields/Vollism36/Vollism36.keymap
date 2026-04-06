@@ -3951,22 +3951,22 @@
             tapping-term-ms = <150>;
             bindings = <&mo>, <&t_lang2>;
         };
-        // INT4用のHold-Tap: ホールドで指定Layer, タップでマクロ(t_int4)
-        ht_it4: ht_it4 {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <150>;
-            bindings = <&mo>, <&t_int4>;
-        };
-        // INT5用のHold-Tap: ホールドで指定Layer, タップでマクロ(t_int5)
-        ht_it5: ht_it5 {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <150>;
-            bindings = <&mo>, <&t_int5>;
-        };
+        // // INT4用のHold-Tap: ホールドで指定Layer, タップでマクロ(t_int4)
+        // ht_it4: ht_it4 {
+        //     compatible = "zmk,behavior-hold-tap";
+        //     #binding-cells = <2>;
+        //     flavor = "hold-preferred";
+        //     tapping-term-ms = <150>;
+        //     bindings = <&mo>, <&t_int4>;
+        // };
+        // // INT5用のHold-Tap: ホールドで指定Layer, タップでマクロ(t_int5)
+        // ht_it5: ht_it5 {
+        //     compatible = "zmk,behavior-hold-tap";
+        //     #binding-cells = <2>;
+        //     flavor = "hold-preferred";
+        //     tapping-term-ms = <150>;
+        //     bindings = <&mo>, <&t_int5>;
+        // };
         // INT4用のHold-Tap: ホールドで指定Layer, タップでマクロ(tW_int4)
         htW_it4: htW_it4 {
             compatible = "zmk,behavior-hold-tap";
