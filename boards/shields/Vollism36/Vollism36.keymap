@@ -4618,30 +4618,30 @@
                 , <&macro_release &kp LGUI>
                 ;
         };
-        macro_INT2: macro_INT2 {
-            compatible = "zmk,behavior-macro";
-            label = "macro_INT2";
-            #binding-cells = <0>;
-            bindings = <&kp INT2>, <&to WIN>;
-        };
-        macro_INT5: macro_INT5 {
-            compatible = "zmk,behavior-macro";
-            label = "macro_INT5";
-            #binding-cells = <0>;
-            bindings = <&kp INT5>, <&to QWE>;
-        };
-        macro_LANG1: macro_LANG1 {
-            compatible = "zmk,behavior-macro";
-            label = "macro_LANG1";
-            #binding-cells = <0>;
-            bindings = <&kp LANG1>, <&to WIN>;
-        };
-        macro_LANG2: macro_LANG2 {
-            compatible = "zmk,behavior-macro";
-            label = "macro_LANG2";
-            #binding-cells = <0>;
-            bindings = <&kp LANG2>, <&to QWE>;
-        };
+        // macro_INT2: macro_INT2 {
+        //     compatible = "zmk,behavior-macro";
+        //     label = "macro_INT2";
+        //     #binding-cells = <0>;
+        //     bindings = <&kp INT2>, <&to WIN>;
+        // };
+        // macro_INT5: macro_INT5 {
+        //     compatible = "zmk,behavior-macro";
+        //     label = "macro_INT5";
+        //     #binding-cells = <0>;
+        //     bindings = <&kp INT5>, <&to QWE>;
+        // };
+        // macro_LANG1: macro_LANG1 {
+        //     compatible = "zmk,behavior-macro";
+        //     label = "macro_LANG1";
+        //     #binding-cells = <0>;
+        //     bindings = <&kp LANG1>, <&to WIN>;
+        // };
+        // macro_LANG2: macro_LANG2 {
+        //     compatible = "zmk,behavior-macro";
+        //     label = "macro_LANG2";
+        //     #binding-cells = <0>;
+        //     bindings = <&kp LANG2>, <&to QWE>;
+        // };
         // タップ時の動作: 指定レイヤーへ移動し、LANG1を送信
         // LANG1用のマクロ
         t_lang1: t_lang1 {
