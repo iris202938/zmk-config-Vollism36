@@ -4054,12 +4054,6 @@
             tapping-term-ms = <160>;
             bindings = <&lt CAD INT2>, <&to_CAD_i2>;
         };
-		td_lt_num_i5: tap_dance_layer_tap_num_i5 {  // タップでINT5、ホールドでNUMレイヤ、ダブルタップでNUMレイヤ保持
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <150>;
-            bindings = <&lt NUM INT5>, <&to_NUM_i5>;
-        };
         td_lt_movw_i2: tap_dance_layer_tap_movw_i2 {  // タップでかな、ホールドでMOVWレイヤ、ダブルタップでMOVWレイヤ保持、無変換
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
