@@ -4632,7 +4632,7 @@
             bindings = <&kp LANG2>, <&to QWE>;
         };
         // タップ時の動作: 指定レイヤーへ移動し、LANG1を送信
-        LANG1用のマクロ
+        // LANG1用のマクロ
         t_lang1: t_lang1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
