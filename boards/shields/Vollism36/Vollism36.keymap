@@ -82,12 +82,37 @@
             bindings = <&ng_off>;
             layers = <QWE NGN>; // デフォルトレイヤーが0、薙刀式レイヤーが1の前提
         };
-        adj {
-            bindings = <&mo ADJ>;
-            key-positions = <32 33>;
-            layers = <QWE NGN WIN CAD>;
-            timeout-ms = <70>;
+        combo_ng_onl {
+            timeout-ms = <80>;
+            key-positions = <15 16>; // H, Jのキー位置に書き換えてください
+            bindings = <&ng_onl>;
+            layers = <LIN>; // デフォルトレイヤーがLINの前提
         };
+        combo_ng_offl {
+            timeout-ms = <80>;
+            key-positions = <13 14>; // F, Gのキー位置に書き換えてください
+            bindings = <&ng_offl>;
+            layers = <LIN NGNL>; // デフォルトレイヤーがLIN、薙刀式レイヤーが1の前提
+        };
+        combo_ADJ {
+            timeout-ms = <70>;
+            key-positions = <32 33>;
+            layers = <QWE NGN NIC>;
+            bindings = <&mo ADJ>;
+        };
+        combo_ADJL {
+            timeout-ms = <70>;
+            key-positions = <32 33>;
+            layers = <LIN NGNL NICL>;
+            bindings = <&mo ADJL>;
+        };
+        combo_ADJW {
+            timeout-ms = <70>;
+            key-positions = <32 33>;
+            layers = <CAD WIN>;
+            bindings = <&mo ADJW>;
+        };
+        
         esc_l {
             bindings = <&kp ESC>;
             key-positions = <0 10>;
@@ -5868,6 +5893,20 @@ combo_YOTTU2 {
             #binding-cells = <0>;
             bindings
                 = <&macro_tap &kp LANGUAGE_2 &kp INTERNATIONAL_5 &to 0>
+                ;
+        };
+        ng_onl: ng_onl {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp LANG1 &kp INT4 &to NGNL>
+                ;
+        };
+        ng_offl: ng_offl {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp LANG2 &kp INT5 &to LIN>
                 ;
         };
 		// ハイコントラスト切り替え (Win: Shift + Alt + PrintScreen)
