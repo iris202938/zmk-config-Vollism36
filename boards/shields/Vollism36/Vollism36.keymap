@@ -4794,6 +4794,11 @@ combo_YOTTU2 {
         #binding-cells = <0>;
         bindings = <&to QWE &out OUT_USB &to LIN>;
     };
+    usb_lCAD: usb_lCAD { // USB接続を選択し、レイヤーCADを有効化
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&to QWE &out OUT_USB &to CAD>;
+    };
     usb_lWIN: usb_lWIN { // USB接続を選択し、レイヤーWINを有効化
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
