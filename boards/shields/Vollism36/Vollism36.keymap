@@ -175,8 +175,14 @@
         };
         combo_LALT {
             bindings = <&kp LALT>;
+            key-positions = <20 21>;
+            layers = <QWE>;
+            timeout-ms = <80>;
+        };
+        combo_RALT {
+            bindings = <&kp RALT>;
             key-positions = <28 29>;
-            layers = <QWE LIN CAD>;
+            layers = <LIN CAD>;
             timeout-ms = <80>;
         };
         ctrl_l {
@@ -194,7 +200,13 @@
         gui_l {
             bindings = <&kp LGUI>;
             key-positions = <20 21>;
-            layers = <QWE CAD LWR LWRL LWRW RSE RSEL RSEW>;
+            layers = <CAD LWRL LWRW RSEL RSEW>;
+            timeout-ms = <80>;
+        };
+        gui_r {
+            bindings = <&kp RGUI>;
+            key-positions = <28 29>;
+            layers = <QWE LWR RSE>;
             timeout-ms = <80>;
         };
         sqt {
