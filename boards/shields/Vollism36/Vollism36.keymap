@@ -269,6 +269,12 @@
             layers = <RSE RSEL RSEW>;
             timeout-ms = <80>;
         };
+        combo_e_key { // ECADの文字修正
+            timeout-ms = <80>;
+            key-positions = <25 26>;
+            layers = <CAD RSEW>;
+            bindings = <&kp E>;
+        };
         nlck {
             bindings = <&kp KP_NLCK>;
             key-positions = <8 9>;
@@ -479,6 +485,127 @@
             layers = <QWE LIN CAD NUM>;
             timeout-ms = <80>;
         };
+        k_tab_1 { // ECADカウントアップ数
+            bindings = <&k_tab_1>;
+            key-positions = <34 26>;
+            layers = <CAD>;
+            timeout-ms = <80>;
+        };
+        k_tab_2 { // ECADカウントアップ数2
+            bindings = <&k_tab_2>;
+            key-positions = <34 27>;
+            layers = <CAD>;
+            timeout-ms = <80>;
+        };
+        k_tab_3 { // ECADカウントアップ数3
+            bindings = <&k_tab_3>;
+            key-positions = <34 28>;
+            layers = <CAD>;
+            timeout-ms = <80>;
+        };
+        k_tab_4 { // ECADカウントアップ数4
+            bindings = <&k_tab_4>;
+            key-positions = <34 16>;
+            layers = <CAD>;
+            timeout-ms = <80>;
+        };
+        k_tab_5 { // ECADカウントアップ数5
+            bindings = <&k_tab_5>;
+            key-positions = <34 17>;
+            layers = <CAD>;
+            timeout-ms = <80>;
+        };
+        k_tab_6 { // ECADカウントアップ数6
+            bindings = <&k_tab_6>;
+            key-positions = <34 18>;
+            layers = <CAD>;
+            timeout-ms = <80>;
+        };
+        k_tab_7 { // ECADカウントアップ数7
+            bindings = <&k_tab_7>;
+            key-positions = <34 6>;
+            layers = <CAD>;
+            timeout-ms = <80>;
+        };
+        k_tab_8 { // ECADカウントアップ数8
+            bindings = <&k_tab_8>;
+            key-positions = <34 7>;
+            layers = <CAD>;
+            timeout-ms = <80>;
+        };
+        k_tab_9 { // ECADカウントアップ数9
+            bindings = <&k_tab_9>;
+            key-positions = <34 8>;
+            layers = <CAD>;
+            timeout-ms = <80>;
+        };
+        k_tab_10 { // ECADカウントアップ数10
+            bindings = <&k_tab_10>;
+            key-positions = <34 25>;
+            layers = <CAD>;
+            timeout-ms = <80>;
+        };
+        k_tab_minus_1 { // ECADカウントアップ数-1
+            bindings = <&k_tab_minus_1>;
+            key-positions = <34 26 19>;
+            layers = <CAD>;
+            timeout-ms = <80>;
+        };
+        k_tab_minus_2 { // ECADカウントアップ数-2
+            bindings = <&k_tab_minus_2>;
+            key-positions = <34 27 19>;
+            layers = <CAD>;
+            timeout-ms = <80>;
+        };
+        k_tab_minus_3 { // ECADカウントアップ数-3
+            bindings = <&k_tab_minus_3>;
+            key-positions = <34 28 19>;
+            layers = <CAD>;
+            timeout-ms = <80>;
+        };
+        k_tab_minus_4 { // ECADカウントアップ数-4
+            bindings = <&k_tab_minus_4>;
+            key-positions = <34 16 19>;
+            layers = <CAD>;
+            timeout-ms = <80>;
+        };
+        k_tab_minus_5 { // ECADカウントアップ数-5
+            bindings = <&k_tab_minus_5>;
+            key-positions = <34 17 19>;
+            layers = <CAD>;
+            timeout-ms = <80>;
+        };
+        k_tab_minus_6 { // ECADカウントアップ数-6
+            bindings = <&k_tab_minus_6>;
+            key-positions = <34 18 19>;
+            layers = <CAD>;
+            timeout-ms = <80>;
+        };
+        k_tab_minus_7 { // ECADカウントアップ数-7
+            bindings = <&k_tab_minus_7>;
+            key-positions = <34 6 19>;
+            layers = <CAD>;
+            timeout-ms = <80>;
+        };
+        k_tab_minus_8 { // ECADカウントアップ数-8
+            bindings = <&k_tab_minus_8>;
+            key-positions = <34 7 19>;
+            layers = <CAD>;
+            timeout-ms = <80>;
+        };
+        k_tab_minus_9 { // ECADカウントアップ数-9
+            bindings = <&k_tab_minus_9>;
+            key-positions = <34 8 19>;
+            layers = <CAD>;
+            timeout-ms = <80>;
+        };
+        k_tab_minus_10 { // ECADカウントアップ数-10
+            bindings = <&k_tab_minus_10>;
+            key-positions = <34 25 19>;
+            layers = <CAD>;
+            timeout-ms = <80>;
+        };
+
         // exl_ecd_paste {
         //     bindings = <&exl_ecd_paste>;
         //     key-positions = <0 10>;
@@ -486,7 +613,7 @@
         //     timeout-ms = <80>;
         // };
 
-combo_JPQMARKL {
+        combo_JPQMARKL {
             timeout-ms = <50>;
             key-positions = <10 31>; // 旧 13 37
             layers = <RSE>; 
@@ -5938,6 +6065,319 @@ combo_YOTTU2 {
                 ;
         };
         
+        k_tab_1: k_tab_1 { // カウントアップ数
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            tap-ms = <30>;
+            wait-ms = <30>;
+            bindings
+                // = <&macro_tap &kp K> // ECADカウントアップ
+                // , <&macro_tap &mkp MB1>
+                =  <&macro_tap &kp ENTER>
+                , <&macro_tap &kp TAB>
+                , <&macro_tap &kp TAB>
+                , <&macro_tap &kp TAB>
+                ;
+        };
+        k_tab_2: k_tab_2 { // カウントアップ数2
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            tap-ms = <30>;
+            wait-ms = <30>;
+            bindings
+                // = <&macro_tap &kp K> // ECADカウントアップ
+                // , <&macro_tap &mkp MB1>
+                =  <&macro_tap &kp ENTER>
+                , <&macro_tap &kp TAB>
+                , <&macro_tap &kp TAB>
+                , <&macro_tap &kp TAB>
+                , <&macro_tap &kp N2>
+                ;
+        };
+        k_tab_3: k_tab_3 { // カウントアップ数3
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            tap-ms = <30>;
+            wait-ms = <30>;
+            bindings
+                // = <&macro_tap &kp K> // ECADカウントアップ
+                // , <&macro_tap &mkp MB1>
+                =  <&macro_tap &kp ENTER>
+                , <&macro_tap &kp TAB>
+                , <&macro_tap &kp TAB>
+                , <&macro_tap &kp TAB>
+                , <&macro_tap &kp N3>
+                ;
+        };
+        k_tab_4: k_tab_4 { // カウントアップ数4
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            tap-ms = <30>;
+            wait-ms = <30>;
+            bindings
+                // = <&macro_tap &kp K> // ECADカウントアップ
+                // , <&macro_tap &mkp MB1>
+                =  <&macro_tap &kp ENTER>
+                , <&macro_tap &kp TAB>
+                , <&macro_tap &kp TAB>
+                , <&macro_tap &kp TAB>
+                , <&macro_tap &kp N4>
+                ;
+        };
+        k_tab_5: k_tab_5 { // カウントアップ数5
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            tap-ms = <30>;
+            wait-ms = <30>;
+            bindings
+                // = <&macro_tap &kp K> // ECADカウントアップ
+                // , <&macro_tap &mkp MB1>
+                =  <&macro_tap &kp ENTER>
+                , <&macro_tap &kp TAB>
+                , <&macro_tap &kp TAB>
+                , <&macro_tap &kp TAB>
+                , <&macro_tap &kp N5>
+                ;
+        };
+        k_tab_6: k_tab_6 { // カウントアップ数6
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            tap-ms = <30>;
+            wait-ms = <30>;
+            bindings
+                // = <&macro_tap &kp K> // ECADカウントアップ
+                // , <&macro_tap &mkp MB1>
+                =  <&macro_tap &kp ENTER>
+                , <&macro_tap &kp TAB>
+                , <&macro_tap &kp TAB>
+                , <&macro_tap &kp TAB>
+                , <&macro_tap &kp N6>
+                ;
+        };
+        k_tab_7: k_tab_7 { // カウントアップ数7
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            tap-ms = <30>;
+            wait-ms = <30>;
+            bindings
+                // = <&macro_tap &kp K> // ECADカウントアップ
+                // , <&macro_tap &mkp MB1>
+                =  <&macro_tap &kp ENTER>
+                , <&macro_tap &kp TAB>
+                , <&macro_tap &kp TAB>
+                , <&macro_tap &kp TAB>
+                , <&macro_tap &kp N7>
+                ;
+        };
+        k_tab_8: k_tab_8 { // カウントアップ数8
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            tap-ms = <30>;
+            wait-ms = <30>;
+            bindings
+                // = <&macro_tap &kp K> // ECADカウントアップ
+                // , <&macro_tap &mkp MB1>
+                = <&macro_tap &kp ENTER>
+                , <&macro_tap &kp TAB>
+                , <&macro_tap &kp TAB>
+                , <&macro_tap &kp TAB>
+                , <&macro_tap &kp N8>
+                ;
+        };
+        k_tab_9: k_tab_9 { // カウントアップ数9
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            tap-ms = <30>;
+            wait-ms = <30>;
+            bindings
+                // = <&macro_tap &kp K> // ECADカウントアップ
+                // , <&macro_tap &mkp MB1>
+                =  <&macro_tap &kp ENTER>
+                , <&macro_tap &kp TAB>
+                , <&macro_tap &kp TAB>
+                , <&macro_tap &kp TAB>
+                , <&macro_tap &kp N9>
+                ;
+        };
+        k_tab_10: k_tab_10 { // カウントアップ数10
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            tap-ms = <30>;
+            wait-ms = <30>;
+            bindings
+                // = <&macro_tap &kp K> // ECADカウントアップ
+                // , <&macro_tap &mkp MB1>
+                = <&macro_tap &kp ENTER>
+                , <&macro_tap &kp TAB>
+                , <&macro_tap &kp TAB>
+                , <&macro_tap &kp TAB>
+                , <&macro_tap &kp N1>
+                , <&macro_tap &kp N0>
+                ;
+        };
+
+        k_tab_minus_1: k_tab_minus_1 { // カウントアップ数-1
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            tap-ms = <30>;
+            wait-ms = <30>;
+            bindings
+                // = <&macro_tap &kp K> // ECADカウントアップ
+                // , <&macro_tap &mkp MB1>
+                = <&macro_tap &kp ENTER>
+                , <&macro_tap &kp TAB>
+                , <&macro_tap &kp TAB>
+                , <&macro_tap &kp TAB>
+            , <&macro_tap &kp KP_MINUS>
+            , <&macro_tap &kp N1>
+                ;
+        };
+        k_tab_minus_2: k_tab_minus_2 { // カウントアップ数-2
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            tap-ms = <30>;
+            wait-ms = <30>;
+            bindings
+                // = <&macro_tap &kp K> // ECADカウントアップ
+                // , <&macro_tap &mkp MB1>
+                = <&macro_tap &kp ENTER>
+                , <&macro_tap &kp TAB>
+                , <&macro_tap &kp TAB>
+                , <&macro_tap &kp TAB>
+                , <&macro_tap &kp KP_MINUS>
+                , <&macro_tap &kp N2>
+                ;
+        };
+        k_tab_minus_3: k_tab_minus_3 { // カウントアップ数-3
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            tap-ms = <30>;
+            wait-ms = <30>;
+            bindings
+                // = <&macro_tap &kp K> // ECADカウントアップ
+                // , <&macro_tap &mkp MB1>
+                = <&macro_tap &kp ENTER>
+                , <&macro_tap &kp TAB>
+                , <&macro_tap &kp TAB>
+                , <&macro_tap &kp TAB>
+                , <&macro_tap &kp KP_MINUS>
+                , <&macro_tap &kp N3>
+                ;
+        };
+        k_tab_minus_4: k_tab_minus_4 { // カウントアップ数-4
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            tap-ms = <30>;
+            wait-ms = <30>;
+            bindings
+                // = <&macro_tap &kp K> // ECADカウントアップ
+                // , <&macro_tap &mkp MB1>
+                = <&macro_tap &kp ENTER>
+                , <&macro_tap &kp TAB>
+                , <&macro_tap &kp TAB>
+                , <&macro_tap &kp TAB>
+                , <&macro_tap &kp KP_MINUS>
+                , <&macro_tap &kp N4>
+                ;
+        };
+        k_tab_minus_5: k_tab_minus_5 { // カウントアップ数-5
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            tap-ms = <30>;
+            wait-ms = <30>;
+            bindings
+                // = <&macro_tap &kp K> // ECADカウントアップ
+                // , <&macro_tap &mkp MB1>
+                = <&macro_tap &kp ENTER>
+                , <&macro_tap &kp TAB>
+                , <&macro_tap &kp TAB>
+                , <&macro_tap &kp TAB>
+                , <&macro_tap &kp KP_MINUS>
+                , <&macro_tap &kp N5>
+                ;
+        };
+        k_tab_minus_6: k_tab_minus_6 { // カウントアップ数-6
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            tap-ms = <30>;
+            wait-ms = <30>;
+            bindings
+                // = <&macro_tap &kp K> // ECADカウントアップ
+                // , <&macro_tap &mkp MB1>
+                = <&macro_tap &kp ENTER>
+                , <&macro_tap &kp TAB>
+                , <&macro_tap &kp TAB>
+                , <&macro_tap &kp TAB>
+                , <&macro_tap &kp KP_MINUS>
+                , <&macro_tap &kp N6>
+                ;
+        };
+        k_tab_minus_7: k_tab_minus_7 { // カウントアップ数-7
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            tap-ms = <30>;
+            wait-ms = <30>;
+            bindings
+                // = <&macro_tap &kp K> // ECADカウントアップ
+                // , <&macro_tap &mkp MB1>
+                = <&macro_tap &kp ENTER>
+                , <&macro_tap &kp TAB>
+                , <&macro_tap &kp TAB>
+                , <&macro_tap &kp TAB>
+                , <&macro_tap &kp KP_MINUS>
+                , <&macro_tap &kp N7>
+                ;
+        };
+        k_tab_minus_8: k_tab_minus_8 { // カウントアップ数-8
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            tap-ms = <30>;
+            wait-ms = <30>;
+            bindings
+                // = <&macro_tap &kp K> // ECADカウントアップ
+                // , <&macro_tap &mkp MB1>
+                = <&macro_tap &kp ENTER>
+                , <&macro_tap &kp TAB>
+                , <&macro_tap &kp TAB>
+                , <&macro_tap &kp TAB>
+                , <&macro_tap &kp KP_MINUS>
+                , <&macro_tap &kp N8>
+                ;
+        };
+        k_tab_minus_9: k_tab_minus_9 { // カウントアップ数-9
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            tap-ms = <30>;
+            wait-ms = <30>;
+            bindings
+                // = <&macro_tap &kp K> // ECADカウントアップ
+                // , <&macro_tap &mkp MB1>
+                = <&macro_tap &kp ENTER>
+                , <&macro_tap &kp TAB>
+                , <&macro_tap &kp TAB>
+                , <&macro_tap &kp TAB>
+                , <&macro_tap &kp KP_MINUS>
+                , <&macro_tap &kp N9>
+                ;
+        };
+        k_tab_minus_10: k_tab_minus_10 { // カウントアップ数-10
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            tap-ms = <30>;
+            wait-ms = <30>;
+            bindings
+                // = <&macro_tap &kp K> // ECADカウントアップ
+                // , <&macro_tap &mkp MB1>
+                = <&macro_tap &kp ENTER>
+                , <&macro_tap &kp TAB>
+                , <&macro_tap &kp TAB>
+                , <&macro_tap &kp TAB>
+                , <&macro_tap &kp KP_MINUS>
+                , <&macro_tap &kp N1>
+                , <&macro_tap &kp N0>
+                ;
+        };
+
         ng_on: ng_on {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
