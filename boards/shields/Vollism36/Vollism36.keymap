@@ -251,6 +251,24 @@
             layers = <LWR LWRL LWRW>;
             timeout-ms = <80>;
         };
+        cmd_x {
+            bindings = <&cmd_x>;
+            key-positions = <8 9>;
+            layers = <RSE>;
+            timeout-ms = <80>;
+        };
+        cmd_c {
+            bindings = <&cmd_c>;
+            key-positions = <18 19>;
+            layers = <RSE>;
+            timeout-ms = <80>;
+        };
+        cmd_v {
+            bindings = <&cmd_v>;
+            key-positions = <26 27>;
+            layers = <RSE>;
+            timeout-ms = <80>;
+        };
         ctrl_x {
             bindings = <&ctrl_x>;
             key-positions = <8 9>;
@@ -4609,6 +4627,33 @@ combo_YOTTU2 {
                 = <&macro_press &kp LALT>
                 , <&macro_tap &kp DOWN>
                 , <&macro_release &kp LALT>
+                ;
+        };
+        cmd_x: cmd_x { // 切り取り
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_tap &kp X>
+                , <&macro_release &kp LGUI>
+                ;
+        };
+        cmd_c: cmd_c { // コピー
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_tap &kp C>
+                , <&macro_release &kp LGUI>
+                ;
+        };
+        cmd_v: cmd_v { // 貼り付け
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_tap &kp V>
+                , <&macro_release &kp LGUI>
                 ;
         };
         ctrl_x: ctrl_x { // 切り取り
