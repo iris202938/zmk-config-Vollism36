@@ -743,7 +743,7 @@ combo_XA {
         };
 
         combo_RE {
-            timeout-ms = <50>;
+            timeout-ms = <54>;
             key-positions = <4 31>; // 旧 5 37
             layers = <NIC NICL>;
             bindings = <&macro_RE>;
@@ -1030,7 +1030,7 @@ combo_JPTILDER {
         };
 
         combo_YO {
-            timeout-ms = <50>;
+            timeout-ms = <53>;
             key-positions = <5 34>; // 旧 6 40
             layers = <NIC NICL>;
             bindings = <&macro_YO>;
