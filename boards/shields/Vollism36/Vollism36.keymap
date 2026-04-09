@@ -210,7 +210,7 @@
             timeout-ms = <80>;
         };
         combo_LGUI_LCTRL {
-            bindings = <&kp LGUI> <&kp LCTRL>;
+            bindings = <&kp LGUI &kp LCTRL>;
             key-positions = <10 20>;
             layers = <LWR LWRL LWRW>;
             timeout-ms = <80>;
