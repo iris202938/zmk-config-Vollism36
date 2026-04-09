@@ -445,61 +445,61 @@
         };
         tab_1 {
             bindings = <&tab_1>;
-            key-positions = <1 3 26>;
+            key-positions = <32 26>;
             layers = <QWE LIN CAD NUM>;
             timeout-ms = <80>;
         };
         tab_2 {
             bindings = <&tab_2>;
-            key-positions = <1 3 27>;
+            key-positions = <32 27>;
             layers = <QWE LIN CAD NUM>;
             timeout-ms = <80>;
         };
         tab_3 {
             bindings = <&tab_3>;
-            key-positions = <1 3 28>;
+            key-positions = <32 28>;
             layers = <QWE LIN CAD NUM>;
             timeout-ms = <80>;
         };
         tab_4 {
             bindings = <&tab_4>;
-            key-positions = <1 3 16>;
+            key-positions = <32 16>;
             layers = <QWE LIN CAD NUM>;
             timeout-ms = <80>;
         };
         tab_5 {
             bindings = <&tab_5>;
-            key-positions = <1 3 17>;
+            key-positions = <32 17>;
             layers = <QWE LIN CAD NUM>;
             timeout-ms = <80>;
         };
         tab_6 {
             bindings = <&tab_6>;
-            key-positions = <1 3 18>;
+            key-positions = <32 18>;
             layers = <QWE LIN CAD NUM>;
             timeout-ms = <80>;
         };
         tab_7 {
             bindings = <&tab_7>;
-            key-positions = <1 3 6>;
+            key-positions = <32 6>;
             layers = <QWE LIN CAD NUM>;
             timeout-ms = <80>;
         };
         tab_8 {
             bindings = <&tab_8>;
-            key-positions = <1 3 7>;
+            key-positions = <32 7>;
             layers = <QWE LIN CAD NUM>;
             timeout-ms = <80>;
         };
         tab_9 {
             bindings = <&tab_9>;
-            key-positions = <1 3 8>;
+            key-positions = <32 8>;
             layers = <QWE LIN CAD NUM>;
             timeout-ms = <80>;
         };
         tab_0 {
             bindings = <&tab_0>;
-            key-positions = <1 3 9>;
+            key-positions = <32 25>;
             layers = <QWE LIN CAD NUM>;
             timeout-ms = <80>;
         };
