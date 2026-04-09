@@ -4271,7 +4271,7 @@ combo_YOTTU2 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <230>;
-            bindings = <&all_ht A A>, <&ctrl_a_a>, <&ctrl_d_a>, <&ctrl_f_a>;
+            bindings = <&all_ht LCTRL A>, <&ctrl_a_a>, <&ctrl_d_a>, <&ctrl_f_a>;
         };
 
         // --- Tap Dance B ---
@@ -4295,7 +4295,7 @@ combo_YOTTU2 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <230>;
-            bindings = <&all_ht D D>, <&ctrl_a_d>, <&ctrl_d_d>, <&ctrl_f_d>;
+            bindings = <&all_ht LSHFT D>, <&ctrl_a_d>, <&ctrl_d_d>, <&ctrl_f_d>;
         };
 
         // --- Tap Dance E ---
@@ -4311,7 +4311,7 @@ combo_YOTTU2 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <230>;
-            bindings = <&all_ht F F>, <&ctrl_a_f>, <&ctrl_d_f>, <&ctrl_f_f>;
+            bindings = <&all_ht LGUI F>, <&ctrl_a_f>, <&ctrl_d_f>, <&ctrl_f_f>;
         };
 
         // --- Tap Dance G ---
@@ -4343,7 +4343,7 @@ combo_YOTTU2 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <230>;
-            bindings = <&all_ht J J>, <&ctrl_a_j>, <&ctrl_d_j>, <&ctrl_f_j>;
+            bindings = <&all_ht RGUI J>, <&ctrl_a_j>, <&ctrl_d_j>, <&ctrl_f_j>;
         };
 
         // --- Tap Dance K ---
@@ -4351,7 +4351,7 @@ combo_YOTTU2 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <230>;
-            bindings = <&all_ht K K>, <&ctrl_a_k>, <&ctrl_d_k>, <&ctrl_f_k>;
+            bindings = <&all_ht RSHFT K>, <&ctrl_a_k>, <&ctrl_d_k>, <&ctrl_f_k>;
         };
 
         // --- Tap Dance L ---
@@ -4359,7 +4359,7 @@ combo_YOTTU2 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <230>;
-            bindings = <&all_ht L L>, <&ctrl_a_l>, <&ctrl_d_l>, <&ctrl_f_l>;
+            bindings = <&all_ht RALT L>, <&ctrl_a_l>, <&ctrl_d_l>, <&ctrl_f_l>;
         };
 
         // --- Tap Dance M ---
@@ -4391,7 +4391,7 @@ combo_YOTTU2 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <230>;
-            bindings = <&all_ht P P>, <&ctrl_a_p>, <&ctrl_d_p>, <&ctrl_f_p>;
+            bindings = <&all_ht RSHFT P>, <&ctrl_a_p>, <&ctrl_d_p>, <&ctrl_f_p>;
         };
 
         // --- Tap Dance Q ---
@@ -4399,7 +4399,7 @@ combo_YOTTU2 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <230>;
-            bindings = <&all_ht Q Q>, <&ctrl_a_q>, <&ctrl_d_q>, <&ctrl_f_q>;
+            bindings = <&all_ht LSHFT Q>, <&ctrl_a_q>, <&ctrl_d_q>, <&ctrl_f_q>;
         };
 
         // --- Tap Dance R ---
@@ -4415,7 +4415,7 @@ combo_YOTTU2 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <230>;
-            bindings = <&all_ht S S>, <&ctrl_a_s>, <&ctrl_d_s>, <&ctrl_f_s>;
+            bindings = <&all_ht LALT S>, <&ctrl_a_s>, <&ctrl_d_s>, <&ctrl_f_s>;
         };
 
         // --- Tap Dance T ---
@@ -4480,7 +4480,7 @@ combo_YOTTU2 {
             #binding-cells = <0>;
             tapping-term-ms = <230>;
             // 1-Tap: 通常キー, 2-Taps: 0.5mm , 3-Taps: 0.25mm
-            bindings = <&all_ht SEMICOLON SEMICOLON>, <&ctrl_alt_l>, <&ctrl_alt_semi>; 
+            bindings = <&all_ht RCTRL SEMICOLON>, <&ctrl_alt_l>, <&ctrl_alt_semi>; 
         };
 
         // --- Tap Dance COMMA ---
