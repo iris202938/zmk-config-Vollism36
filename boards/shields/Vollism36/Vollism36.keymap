@@ -176,13 +176,13 @@
         combo_LALT {
             bindings = <&kp LALT>;
             key-positions = <20 21>;
-            layers = <QWE>;
+            layers = <QWE LWR RSE>;
             timeout-ms = <80>;
         };
         combo_RALT {
             bindings = <&kp RALT>;
             key-positions = <28 29>;
-            layers = <LIN CAD>;
+            layers = <LIN CAD LWRL LWRW>;
             timeout-ms = <80>;
         };
         ctrl_l {
