@@ -210,7 +210,7 @@
             timeout-ms = <80>;
         };
         combo_LGUI_LCTRL {
-            bindings = <&kp LGUI &kp LCTRL>;
+            bindings = <&LGUI_LCTRL>;
             key-positions = <10 20>;
             layers = <LWR LWRL LWRW>;
             timeout-ms = <80>;
@@ -4807,6 +4807,11 @@ combo_YOTTU2 {
                 , <&macro_tap     &kp INT5>
                 , <&macro_release &kp RALT>
                 ;
+        };
+        LGUI_LCTRL: LGUI_LCTRL {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LGUI>, <&kp LCTRL>;
         };
         win_right: win_right { // デスクトップ移動進む
             compatible = "zmk,behavior-macro";
