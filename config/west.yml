@@ -47,6 +47,11 @@ manifest:
       remote: hsgw
       revision: main
       path: modules/zmk-feature-sensor_rotation
+      # https://github.com/badjeff/zmk-input-processor-report-rate-limit
+    - name: zmk-input-processor-report-rate-limit
+      remote: badjeff
+      revision: main
+      path: modules/zmk-input-processor-report-rate-limit
     - name: zmk-naginata # ここを追加
       remote: eswai
       revision: main
