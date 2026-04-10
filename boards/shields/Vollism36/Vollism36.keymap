@@ -6130,8 +6130,8 @@ combo_YOTTU2 {
             bindings
                 // = <&macro_tap &kp K> // ECADカウントアップ
                 // , <&macro_tap &mkp MB1>
-                =  <&macro_tap &kp ENTER>
-                , <&macro_tap &kp TAB>
+                // =  <&macro_tap &kp ENTER>
+                = <&macro_tap &kp TAB>
                 , <&macro_tap &kp TAB>
                 , <&macro_tap &kp TAB>
                 ;
@@ -6144,8 +6144,8 @@ combo_YOTTU2 {
             bindings
                 // = <&macro_tap &kp K> // ECADカウントアップ
                 // , <&macro_tap &mkp MB1>
-                =  <&macro_tap &kp ENTER>
-                , <&macro_tap &kp TAB>
+                // =  <&macro_tap &kp ENTER>
+                = <&macro_tap &kp TAB>
                 , <&macro_tap &kp TAB>
                 , <&macro_tap &kp TAB>
                 , <&macro_tap &kp N2>
@@ -6159,8 +6159,8 @@ combo_YOTTU2 {
             bindings
                 // = <&macro_tap &kp K> // ECADカウントアップ
                 // , <&macro_tap &mkp MB1>
-                =  <&macro_tap &kp ENTER>
-                , <&macro_tap &kp TAB>
+                // =  <&macro_tap &kp ENTER>
+                = <&macro_tap &kp TAB>
                 , <&macro_tap &kp TAB>
                 , <&macro_tap &kp TAB>
                 , <&macro_tap &kp N3>
@@ -6174,8 +6174,8 @@ combo_YOTTU2 {
             bindings
                 // = <&macro_tap &kp K> // ECADカウントアップ
                 // , <&macro_tap &mkp MB1>
-                =  <&macro_tap &kp ENTER>
-                , <&macro_tap &kp TAB>
+                // =  <&macro_tap &kp ENTER>
+                = <&macro_tap &kp TAB>
                 , <&macro_tap &kp TAB>
                 , <&macro_tap &kp TAB>
                 , <&macro_tap &kp N4>
@@ -6189,8 +6189,8 @@ combo_YOTTU2 {
             bindings
                 // = <&macro_tap &kp K> // ECADカウントアップ
                 // , <&macro_tap &mkp MB1>
-                =  <&macro_tap &kp ENTER>
-                , <&macro_tap &kp TAB>
+                // =  <&macro_tap &kp ENTER>
+                = <&macro_tap &kp TAB>
                 , <&macro_tap &kp TAB>
                 , <&macro_tap &kp TAB>
                 , <&macro_tap &kp N5>
@@ -6204,8 +6204,8 @@ combo_YOTTU2 {
             bindings
                 // = <&macro_tap &kp K> // ECADカウントアップ
                 // , <&macro_tap &mkp MB1>
-                =  <&macro_tap &kp ENTER>
-                , <&macro_tap &kp TAB>
+                // =  <&macro_tap &kp ENTER>
+                = <&macro_tap &kp TAB>
                 , <&macro_tap &kp TAB>
                 , <&macro_tap &kp TAB>
                 , <&macro_tap &kp N6>
@@ -6219,8 +6219,8 @@ combo_YOTTU2 {
             bindings
                 // = <&macro_tap &kp K> // ECADカウントアップ
                 // , <&macro_tap &mkp MB1>
-                =  <&macro_tap &kp ENTER>
-                , <&macro_tap &kp TAB>
+                // =  <&macro_tap &kp ENTER>
+                = <&macro_tap &kp TAB>
                 , <&macro_tap &kp TAB>
                 , <&macro_tap &kp TAB>
                 , <&macro_tap &kp N7>
@@ -6234,8 +6234,8 @@ combo_YOTTU2 {
             bindings
                 // = <&macro_tap &kp K> // ECADカウントアップ
                 // , <&macro_tap &mkp MB1>
-                = <&macro_tap &kp ENTER>
-                , <&macro_tap &kp TAB>
+                // = <&macro_tap &kp ENTER>
+                = <&macro_tap &kp TAB>
                 , <&macro_tap &kp TAB>
                 , <&macro_tap &kp TAB>
                 , <&macro_tap &kp N8>
@@ -6249,8 +6249,8 @@ combo_YOTTU2 {
             bindings
                 // = <&macro_tap &kp K> // ECADカウントアップ
                 // , <&macro_tap &mkp MB1>
-                =  <&macro_tap &kp ENTER>
-                , <&macro_tap &kp TAB>
+                // =  <&macro_tap &kp ENTER>
+                = <&macro_tap &kp TAB>
                 , <&macro_tap &kp TAB>
                 , <&macro_tap &kp TAB>
                 , <&macro_tap &kp N9>
@@ -6264,8 +6264,8 @@ combo_YOTTU2 {
             bindings
                 // = <&macro_tap &kp K> // ECADカウントアップ
                 // , <&macro_tap &mkp MB1>
-                = <&macro_tap &kp ENTER>
-                , <&macro_tap &kp TAB>
+                // = <&macro_tap &kp ENTER>
+                = <&macro_tap &kp TAB>
                 , <&macro_tap &kp TAB>
                 , <&macro_tap &kp TAB>
                 , <&macro_tap &kp N1>
@@ -6281,8 +6281,8 @@ combo_YOTTU2 {
             bindings
                 // = <&macro_tap &kp K> // ECADカウントアップ
                 // , <&macro_tap &mkp MB1>
-                = <&macro_tap &kp ENTER>
-                , <&macro_tap &kp TAB>
+                // = <&macro_tap &kp ENTER>
+                = <&macro_tap &kp TAB>
                 , <&macro_tap &kp TAB>
                 , <&macro_tap &kp TAB>
             , <&macro_tap &kp KP_MINUS>
@@ -6297,8 +6297,8 @@ combo_YOTTU2 {
             bindings
                 // = <&macro_tap &kp K> // ECADカウントアップ
                 // , <&macro_tap &mkp MB1>
-                = <&macro_tap &kp ENTER>
-                , <&macro_tap &kp TAB>
+                // = <&macro_tap &kp ENTER>
+                = <&macro_tap &kp TAB>
                 , <&macro_tap &kp TAB>
                 , <&macro_tap &kp TAB>
                 , <&macro_tap &kp KP_MINUS>
@@ -6313,8 +6313,8 @@ combo_YOTTU2 {
             bindings
                 // = <&macro_tap &kp K> // ECADカウントアップ
                 // , <&macro_tap &mkp MB1>
-                = <&macro_tap &kp ENTER>
-                , <&macro_tap &kp TAB>
+                // = <&macro_tap &kp ENTER>
+                = <&macro_tap &kp TAB>
                 , <&macro_tap &kp TAB>
                 , <&macro_tap &kp TAB>
                 , <&macro_tap &kp KP_MINUS>
@@ -6329,8 +6329,8 @@ combo_YOTTU2 {
             bindings
                 // = <&macro_tap &kp K> // ECADカウントアップ
                 // , <&macro_tap &mkp MB1>
-                = <&macro_tap &kp ENTER>
-                , <&macro_tap &kp TAB>
+                // = <&macro_tap &kp ENTER>
+                = <&macro_tap &kp TAB>
                 , <&macro_tap &kp TAB>
                 , <&macro_tap &kp TAB>
                 , <&macro_tap &kp KP_MINUS>
@@ -6345,8 +6345,8 @@ combo_YOTTU2 {
             bindings
                 // = <&macro_tap &kp K> // ECADカウントアップ
                 // , <&macro_tap &mkp MB1>
-                = <&macro_tap &kp ENTER>
-                , <&macro_tap &kp TAB>
+                // = <&macro_tap &kp ENTER>
+                = <&macro_tap &kp TAB>
                 , <&macro_tap &kp TAB>
                 , <&macro_tap &kp TAB>
                 , <&macro_tap &kp KP_MINUS>
@@ -6361,8 +6361,8 @@ combo_YOTTU2 {
             bindings
                 // = <&macro_tap &kp K> // ECADカウントアップ
                 // , <&macro_tap &mkp MB1>
-                = <&macro_tap &kp ENTER>
-                , <&macro_tap &kp TAB>
+                // = <&macro_tap &kp ENTER>
+                = <&macro_tap &kp TAB>
                 , <&macro_tap &kp TAB>
                 , <&macro_tap &kp TAB>
                 , <&macro_tap &kp KP_MINUS>
@@ -6377,8 +6377,8 @@ combo_YOTTU2 {
             bindings
                 // = <&macro_tap &kp K> // ECADカウントアップ
                 // , <&macro_tap &mkp MB1>
-                = <&macro_tap &kp ENTER>
-                , <&macro_tap &kp TAB>
+                // = <&macro_tap &kp ENTER>
+                = <&macro_tap &kp TAB>
                 , <&macro_tap &kp TAB>
                 , <&macro_tap &kp TAB>
                 , <&macro_tap &kp KP_MINUS>
@@ -6393,8 +6393,8 @@ combo_YOTTU2 {
             bindings
                 // = <&macro_tap &kp K> // ECADカウントアップ
                 // , <&macro_tap &mkp MB1>
-                = <&macro_tap &kp ENTER>
-                , <&macro_tap &kp TAB>
+                // = <&macro_tap &kp ENTER>
+                = <&macro_tap &kp TAB>
                 , <&macro_tap &kp TAB>
                 , <&macro_tap &kp TAB>
                 , <&macro_tap &kp KP_MINUS>
@@ -6409,8 +6409,8 @@ combo_YOTTU2 {
             bindings
                 // = <&macro_tap &kp K> // ECADカウントアップ
                 // , <&macro_tap &mkp MB1>
-                = <&macro_tap &kp ENTER>
-                , <&macro_tap &kp TAB>
+                // = <&macro_tap &kp ENTER>
+                = <&macro_tap &kp TAB>
                 , <&macro_tap &kp TAB>
                 , <&macro_tap &kp TAB>
                 , <&macro_tap &kp KP_MINUS>
@@ -6425,8 +6425,8 @@ combo_YOTTU2 {
             bindings
                 // = <&macro_tap &kp K> // ECADカウントアップ
                 // , <&macro_tap &mkp MB1>
-                = <&macro_tap &kp ENTER>
-                , <&macro_tap &kp TAB>
+                // = <&macro_tap &kp ENTER>
+                = <&macro_tap &kp TAB>
                 , <&macro_tap &kp TAB>
                 , <&macro_tap &kp TAB>
                 , <&macro_tap &kp KP_MINUS>
