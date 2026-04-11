@@ -6526,7 +6526,7 @@ combo_YOTTU2 {
             &mt LSHFT Q     &kp W           &kp E           &kp R           &kp T                                           &kp Y           &kp U           &kp I           &kp O           &mt RSHFT P
             &mt LCTRL A     &mt LALT S      &mt LSHFT D     &mt LGUI F                                      &kp G           &kp H           &mt RGUI J      &mt RSHFT K     &mt RALT L      &mt RCTRL SEMICOLON
             &mt LALT Z      &kp X           &kp C           &kp V                                           &kp B           &kp N           &kp M           &kp COMMA       &kp DOT         &mt RGUI SLASH
-                                                            &td_lt_num_i5   &mt LSHFT SPACE &lt LWR TAB     &lt RSE ENTER   &kp INT4        &lt MOV INT2
+                                                            &lt NUM LANG2   &mt LSHFT SPACE &lt LWR TAB     &lt RSE ENTER   &mt RSHFT SPACE &ht_lg1 MOV 0
             >;
         };
 
@@ -6598,7 +6598,7 @@ combo_YOTTU2 {
             &kp Q           &kp W           &kp E           &kp R           &kp T                                           &kp Y           &kp U           &kp I           &kp O           &kp P
             &kp A           &kp S           &kp D           &kp F                                           &kp G           &kp H           &kp J           &kp K           &kp L           &kp SEMICOLON
             &kp Z           &kp X           &kp C           &kp V                                           &kp B           &kp N           &kp M           &kp COMMA       &kp DOT         &kp SLASH
-                                                            &htC_it5 NUM 0  &kp SPACE       &lt LWRW TAB    &lt RSEW ENTER	&kp INT4        &td_lt_movw_i2
+                                                            &htC_it5 NUM 0  &kp SPACE       &lt LWRW TAB    &lt RSEW ENTER	&kp INT4        &td_lt_movw_i2  
             >;
         };
 
