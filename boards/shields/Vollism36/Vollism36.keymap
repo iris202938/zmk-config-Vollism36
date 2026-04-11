@@ -4553,13 +4553,13 @@ combo_YOTTU2 {
             tap-ms = <0>;
             #binding-cells = <1>;
             bindings
-                = <&macro_press &mo QWE>
+                = <&macro_press &mo CAD>
                 , <&macro_param_1to1>
                 , <&macro_press &kp MACRO_PLACEHOLDER>
                 , <&macro_pause_for_release>
                 , <&macro_param_1to1>
                 , <&macro_release &kp MACRO_PLACEHOLDER>
-                , <&macro_release &mo QWE>
+                , <&macro_release &mo CAD>
                 ;
         };
 
