@@ -158,13 +158,13 @@
         combo_TSHIFT {
             bindings = <&kp RSHIFT>;
             key-positions = <30 35>;
-            layers = <QWE LIN CAD WIN>;
+            layers = <QWE LIN CAD>;
             timeout-ms = <55>;
         };
         combo_TSHIFTN {
             timeout-ms = <55>;
             key-positions = <30 35>;
-            layers = <NGN NIC NGNL NICL>;
+            layers = <WIN NGN NIC NGNL NICL>;
             bindings = <&qm RSHIFT>;
         };
         combo_CAPSWORD {
