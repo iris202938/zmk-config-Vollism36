@@ -431,25 +431,25 @@
             layers = <CAD>;
             timeout-ms = <80>;
         };
-        combo_alt_home {   // 複写左90度回転[AHK]
-            bindings = <&alt_home>;
+        combo_alt_home {   // タップで複写左90度回転[AHK]、ホールドでRALT
+            bindings = <&combo_ht_home RALT 0>;
             key-positions = <1 32 29>;
             layers = <CAD>;
-            timeout-ms = <80>;
+            timeout-ms = <70>;
         };
-        combo_alt_end {   // 複写右90度回転[AHK]
+        combo_alt_end {   // タップで複写右90度回転[AHK]、ホールドでRALT
             bindings = <&alt_end>;
             key-positions = <3 32 29>;
             layers = <CAD>;
             timeout-ms = <80>;
         };
-        combo_alt_comma { // 移動左90度回転[AHK]
+        combo_alt_comma { // タップで移動左90度回転[AHK]、ホールドでRALT
             bindings = <&alt_comma>;
             key-positions = <27 29>;
             layers = <CAD>;
             timeout-ms = <80>;
         };
-        combo_alt_dot { // 移動右90度回転[AHK]
+        combo_alt_dot { // タップで移動右90度回転[AHK]、ホールドでRALT
             bindings = <&alt_dot>;
             key-positions = <28 29>;
             layers = <CAD>;
@@ -4218,6 +4218,14 @@ combo_YOTTU2 {
             flavor = "hold-preferred";
             tapping-term-ms = <150>;
             bindings = <&mo>, <&t_int5>;
+        };
+        // AHK用のHold-Tap: ホールドでRALT, タップでマクロ(alt_home)
+        combo_ht_home: combo_ht_home {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <150>;
+            bindings = <&kp>, <&alt_home>;
         };
         td_lt_mov_l1: tap_dance_layer_tap_mov_l1 {  // タップでLANG1、ホールドでMOVレイヤ、ダブルタップでMOVレイヤ保持
             compatible = "zmk,behavior-tap-dance";
