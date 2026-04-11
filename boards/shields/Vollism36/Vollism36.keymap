@@ -234,7 +234,7 @@
             timeout-ms = <80>;
         };
         alt_enter {
-            bindings = <&kp RA(ENTER)>;
+            bindings = <&kp alt_enter>;
             key-positions = <28 29>;
             layers = <RSEL RSEW>;
             timeout-ms = <80>;
@@ -4699,6 +4699,17 @@ combo_YOTTU2 {
                 = <&macro_press &kp LCTRL>
                 , <&macro_tap &kp V>
                 , <&macro_release &kp LCTRL>
+                ;
+        };
+        alt_enter: alt_enter { // alt+enter
+            compatible = "zmk,behavior-macro";
+            wait-ms = <30>;
+            tap-ms = <30>;
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp RALT>
+                , <&macro_tap &kp ENTER>
+                , <&macro_release &kp RALT>
                 ;
         };
 
