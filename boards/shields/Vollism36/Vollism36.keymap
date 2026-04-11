@@ -281,12 +281,12 @@
             layers = <RSE>;
             timeout-ms = <80>;
         };
-        // cmd_c {
-        //     bindings = <&cmd_c>;
-        //     key-positions = <18 19>;
-        //     layers = <RSE>;
-        //     timeout-ms = <80>;
-        // };
+        cmd_c {
+            bindings = <&cmd_c>;
+            key-positions = <18 19>;
+            layers = <RSE>;
+            timeout-ms = <80>;
+        };
         cmd_v {
             bindings = <&cmd_v>;
             key-positions = <26 27>;
