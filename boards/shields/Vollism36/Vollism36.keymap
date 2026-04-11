@@ -236,7 +236,7 @@
         alt_slash {
             bindings = <&file_f>;
             key-positions = <18 29>;
-            layers = <QWE LIN CAD>;
+            layers = <CAD>;
             timeout-ms = <80>;
         };
         alt_enter {
@@ -344,13 +344,13 @@
         file_f {
             bindings = <&file_f>;
             key-positions = <1 2>;
-            layers = <QWE LIN CAD>;
+            layers = <CAD>;
             timeout-ms = <80>;
         };
         file_r {
             bindings = <&file_r>;
             key-positions = <2 3>;
-            layers = <QWE LIN CAD>;
+            layers = <CAD>;
             timeout-ms = <80>;
         };
         pr_pg {
@@ -367,8 +367,8 @@
         };
         j_ahk {
             bindings = <&int5_g>;
-            key-positions = <16 26>;
-            layers = <QWE LIN CAD>;
+            key-positions = <14 15>;
+            layers = <CAD>;
             timeout-ms = <80>;
         };
         combo_exl_fill { // Excelのオートフィル
@@ -422,21 +422,9 @@
         int5_g_c {
             bindings = <&int5_g>;
             key-positions = <19 29>;
-            layers = <QWE LIN CAD>;
+            layers = <CAD>;
             timeout-ms = <80>;
         };
-        // int5_g_r {
-        //     bindings = <&int5_g>;
-        //     key-positions = <11 13>;
-        //     layers = <QWE CAD>;
-        //     timeout-ms = <80>;
-        // };
-        // combo_ss { // スクリーンショット
-        //     bindings = <&win_shift_s>;
-        //     key-positions = <0 11 20>;
-        //     layers = <CAD>;
-        //     timeout-ms = <80>;
-        // };
         combo_symbol_call {  // シンボル一覧(AHK)
             bindings = <&ctrl_alt_s>;
             key-positions = <10 11 29>;
