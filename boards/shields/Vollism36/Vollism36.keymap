@@ -116,13 +116,13 @@
         esc_l {
             bindings = <&kp ESC>;
             key-positions = <0 10>;
-            layers = <QWE MOV CAD>;
+            layers = <QWE LIN MOV CAD>;
             timeout-ms = <80>;
         };
         esc_r {
             bindings = <&kp ESC>;
             key-positions = <9 19>;
-            layers = <QWE CAD>;
+            layers = <QWE LIN CAD>;
             timeout-ms = <80>;
         };
         // tab {
@@ -169,8 +169,14 @@
         };
         combo_LGUI {
             bindings = <&kp LGUI>;
-            key-positions = <30 31>;
-            layers = <LWR LWRL LWRW>;
+            key-positions = <20 21>;
+            layers = <LIN CAD LWRL LWRW RSEL RSEW>;
+            timeout-ms = <80>;
+        };
+        combo_RGUI {
+            bindings = <&kp RGUI>;
+            key-positions = <28 29>;
+            layers = <QWE LWR RSE>;
             timeout-ms = <80>;
         };
         combo_LALT {
@@ -182,7 +188,7 @@
         combo_RALT {
             bindings = <&kp RALT>;
             key-positions = <28 29>;
-            layers = <LIN CAD LWRL LWRW>;
+            layers = <LIN CAD LWRL LWRW RSEL RSEW>;
             timeout-ms = <80>;
         };
         ctrl_l {
