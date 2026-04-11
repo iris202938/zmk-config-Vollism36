@@ -234,7 +234,7 @@
             timeout-ms = <80>;
         };
         alt_enter {
-            bindings = <&kp alt_enter>;
+            bindings = <&alt_enter>;
             key-positions = <28 29>;
             layers = <RSEL RSEW>;
             timeout-ms = <80>;
