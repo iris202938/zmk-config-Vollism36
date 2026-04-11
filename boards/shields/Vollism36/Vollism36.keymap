@@ -203,12 +203,12 @@
             layers = <QWE LIN CAD>;
             timeout-ms = <80>;
         };
-        ctrl_r {
-            bindings = <&kp RCTRL>;
-            key-positions = <18 19>;
-            layers = <QWE LIN CAD>;
-            timeout-ms = <80>;
-        };
+        // ctrl_r {
+        //     bindings = <&kp RCTRL>;
+        //     key-positions = <18 19>;
+        //     layers = <QWE LIN CAD>;
+        //     timeout-ms = <80>;
+        // };
         gui_l {
             bindings = <&kp LGUI>;
             key-positions = <20 21>;
@@ -227,8 +227,8 @@
             layers = <LWR LWRL LWRW>;
             timeout-ms = <80>;
         };
-        sqt {
-            bindings = <&kp SQT>;
+        rctrl_sqt {
+            bindings = <&mt RCTRL SQT>;
             key-positions = <18 19>;
             layers = <QWE LIN CAD>;
             timeout-ms = <80>;
@@ -281,12 +281,12 @@
             layers = <RSE>;
             timeout-ms = <80>;
         };
-        cmd_c {
-            bindings = <&cmd_c>;
-            key-positions = <18 19>;
-            layers = <RSE>;
-            timeout-ms = <80>;
-        };
+        // cmd_c {
+        //     bindings = <&cmd_c>;
+        //     key-positions = <18 19>;
+        //     layers = <RSE>;
+        //     timeout-ms = <80>;
+        // };
         cmd_v {
             bindings = <&cmd_v>;
             key-positions = <26 27>;
