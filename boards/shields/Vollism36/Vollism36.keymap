@@ -131,18 +131,18 @@
         //     layers = <QWE MOV CAD>;
         //     timeout-ms = <80>;
         // };
-        // wind_l {
-        //     bindings = <&win_left>;
-        //     key-positions = <11 12>;
-        //     layers = <LWR LWRL LWRW>;
-        //     timeout-ms = <80>;
-        // };
-        // wind_r {
-        //     bindings = <&win_right>;
-        //     key-positions = <12 13>;
-        //     layers = <LWR LWRL LWRW>;
-        //     timeout-ms = <80>;
-        // };
+        wind_l {
+            bindings = <&win_left>;
+            key-positions = <11 12>;
+            layers = <LWR LWRL LWRW>;
+            timeout-ms = <80>;
+        };
+        wind_r {
+            bindings = <&win_right>;
+            key-positions = <12 13>;
+            layers = <LWR LWRL LWRW>;
+            timeout-ms = <80>;
+        };
         shift_l {
             bindings = <&kp LSHFT>;
             key-positions = <0 1>;
@@ -227,24 +227,30 @@
             layers = <QWE LIN CAD>;
             timeout-ms = <80>;
         };
-        // alt_enter {
-        //     bindings = <&kp LA(ENTER)>;
-        //     key-positions = <33 35>;
-        //     layers = <WIN>;
-        //     timeout-ms = <80>;
-        // };
-        // gui_enter {
-        //     bindings = <&kp LG(ENTER)>;
-        //     key-positions = <30 33>;
-        //     layers = <WIN>;
-        //     timeout-ms = <80>;
-        // };
-        // gui_backspace {
-        //     bindings = <&kp LG(BACKSPACE)>;
-        //     key-positions = <30 32>;
-        //     layers = <WIN>;
-        //     timeout-ms = <80>;
-        // };
+        alt_enter {
+            bindings = <&kp RA(ENTER)>;
+            key-positions = <28 29>;
+            layers = <RSEL RSEW>;
+            timeout-ms = <80>;
+        };
+        gui_enter {
+            bindings = <&kp RG(ENTER)>;
+            key-positions = <28 29>;
+            layers = <RSE>;
+            timeout-ms = <80>;
+        };
+        gui_left {
+            bindings = <&kp LG(LEFT)>;
+            key-positions = <21 22>;
+            layers = <LWRL LWRW>;
+            timeout-ms = <80>;
+        };
+        gui_right {
+            bindings = <&kp LG(RIGHT)>;
+            key-positions = <22 23>;
+            layers = <LWRL LWRW>;
+            timeout-ms = <80>;
+        };
         CTRL_PG_DN {
             bindings = <&kp LC(PG_DN)>;
             key-positions = <0 1>;
@@ -425,25 +431,25 @@
             layers = <CAD>;
             timeout-ms = <80>;
         };
-        combo_alt_home {   // 移動左90度回転[AHK]
+        combo_alt_home {   // 複写左90度回転[AHK]
             bindings = <&alt_home>;
             key-positions = <1 32 29>;
             layers = <CAD>;
             timeout-ms = <80>;
         };
-        combo_alt_end {   // 移動右90度回転[AHK]
+        combo_alt_end {   // 複写右90度回転[AHK]
             bindings = <&alt_end>;
             key-positions = <3 32 29>;
             layers = <CAD>;
             timeout-ms = <80>;
         };
-        combo_alt_comma { // 複写左90度回転[AHK]
+        combo_alt_comma { // 移動左90度回転[AHK]
             bindings = <&alt_comma>;
             key-positions = <27 29>;
             layers = <CAD>;
             timeout-ms = <80>;
         };
-        combo_alt_dot { // 複写右90度回転[AHK]
+        combo_alt_dot { // 移動右90度回転[AHK]
             bindings = <&alt_dot>;
             key-positions = <28 29>;
             layers = <CAD>;
@@ -5950,7 +5956,7 @@ combo_YOTTU2 {
                 , <&macro_release &kp LCTRL>
                 ;
         };	
-        alt_home: alt_home { // 移動左90度回転[AHK]
+        alt_home: alt_home { // 複写左90度回転[AHK]
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -5959,7 +5965,7 @@ combo_YOTTU2 {
                 , <&macro_release &kp LALT>
                 ;
         };
-        alt_end: alt_end { // 移動右90度回転[AHK]
+        alt_end: alt_end { // 複写右90度回転[AHK]
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -5968,7 +5974,7 @@ combo_YOTTU2 {
                 , <&macro_release &kp LALT>
                 ;
         };
-        alt_comma: alt_comma { // 複写左90度回転[AHK]
+        alt_comma: alt_comma { // 移動左90度回転[AHK]
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -5977,7 +5983,7 @@ combo_YOTTU2 {
                 , <&macro_release &kp LALT>
                 ;
         };
-        alt_dot: alt_dot { // 複写右90度回転[AHK]
+        alt_dot: alt_dot { // 移動右90度回転[AHK]
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
