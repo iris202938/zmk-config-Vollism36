@@ -112,6 +112,12 @@
             layers = <CAD WIN>;
             bindings = <&mo ADJW>;
         };
+        combo_to_LIN {
+            timeout-ms = <70>;
+            key-positions = <30 35>;
+            layers = <ADJ ADJL ADJW>;
+            bindings = <&to LIN>;
+        };
         
         esc_l {
             bindings = <&kp ESC>;
