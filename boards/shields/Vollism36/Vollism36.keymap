@@ -205,7 +205,7 @@
         combo_RALT {
             bindings = <&kp RALT>;
             key-positions = <28 29>;
-            layers = <LIN CAD LWRL LWRW RSEL RSEW>;
+            layers = <LIN CAD LWRL LWRW>;
             timeout-ms = <80>;
         };
         ctrl_l {
