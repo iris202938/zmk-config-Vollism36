@@ -178,12 +178,12 @@
             layers = <QWE LIN CAD>;
             timeout-ms = <65>;
         };
-        combo_CAPSWORD {
-            timeout-ms = <80>;
-            key-positions = <20 29>;
-            layers = <QWE CAD>;
-            bindings = <&caps_word>;
-        };
+        // combo_CAPSWORD {
+        //     timeout-ms = <80>;
+        //     key-positions = <20 29>;
+        //     layers = <QWE LIN CAD>;
+        //     bindings = <&caps_word>;
+        // };
         combo_LGUI {
             bindings = <&kp LGUI>;
             key-positions = <20 21>;
