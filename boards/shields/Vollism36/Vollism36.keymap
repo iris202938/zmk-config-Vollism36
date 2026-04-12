@@ -172,8 +172,8 @@
             layers = <QWE LIN CAD>;
             timeout-ms = <65>;
         };
-        combo_ht_caps_word {
-            bindings = <&combo_ht_caps RSHIFT 0>;
+        combo_caps_word {
+            bindings = <&combo_ht_caps_word RSHIFT 0>;
             key-positions = <30 35>;
             layers = <WIN NGN NIC NGNL NICL>;
             timeout-ms = <65>;
