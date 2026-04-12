@@ -167,15 +167,15 @@
             timeout-ms = <80>;
         };
         combo_TSHIFT {
-            bindings = <&kp RSHIFT>;
+            bindings = <&qm RSHIFT>;
             key-positions = <30 35>;
-            layers = <QWE LIN CAD>;
+            layers = <WIN NGN NIC NGNL NICL>;            
             timeout-ms = <65>;
         };
         combo_caps_word {
             bindings = <&combo_ht_caps_word RSHIFT 0>;
             key-positions = <30 35>;
-            layers = <WIN NGN NIC NGNL NICL>;
+            layers = <QWE LIN CAD>;
             timeout-ms = <65>;
         };
         combo_CAPSWORD {
