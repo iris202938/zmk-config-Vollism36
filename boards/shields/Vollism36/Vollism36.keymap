@@ -6564,13 +6564,22 @@ combo_CHII {
                 , <&macro_tap &kp O>         // 書式(Format)
                 , <&macro_tap &kp R>;        // シート名の変更(Rename)
         };
-        sk_cad: sk_cad {
+        sk_ctrl: sk_ctrl {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;
             tap-ms = <0>;
             bindings
                 = <&macro_tap &sk LCTRL &sl CAD>
+                ;
+        };
+        sk_gui: sk_gui {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings
+                = <&macro_tap &sk LGUI &sl CAD>
                 ;
         };
     };
@@ -6666,7 +6675,7 @@ combo_CHII {
             &mt LSHFT PG_UP &kp LC(A)       &kp UP          &kp LC(E)       &mkp MB3                                        &kp DEL         &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT &msc SCRL_UP
             &mt LCTRL PG_DN &kp LEFT        &kp DOWN        &kp RIGHT   	                                &kp LS(LG(N3))  &kp BSPC        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT &msc SCRL_DOWN
             &mt LALT LC(V)  &mkp MB1        &mkp MB3        &mkp MB2		                                &kp LS(LG(N4))  &mkp MB1        &kp ENTER       &kp LA(LEFT)    &kp LA(RIGHT)   &mt  RGUI LC(V)
-                                                            &kp LSHFT       &sk_cad         &trans          &ht_lg1 ADJ 0   &kp LS(LC(V))   &kp RSHFT
+                                                            &kp LSHFT       &sk_ctrl        &trans          &ht_lg1 ADJ 0   &kp LS(LC(V))   &kp RSHFT
             >;
         };
 
@@ -6676,7 +6685,7 @@ combo_CHII {
             &mt LSHFT PG_UP &kp HOME        &kp UP          &kp END         &mkp MB3                                        &kp DEL         &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT &msc SCRL_UP
             &mt LCTRL PG_DN &kp LEFT        &kp DOWN        &kp RIGHT   	                                &kp LG(S)       &kp BSPC        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT &msc SCRL_DOWN
             &mt LALT LC(V)  &mkp MB1        &mkp MB3        &mkp MB2		                                &win_shift_s    &mkp MB1        &kp ENTER       &kp LC(LEFT)    &kp LC(RIGHT)   &mt  RGUI LG(V)
-                                                            &kp LSHFT       &sk_cad	        &trans          &ht_it4 ADJL 0  &kp LS(LC(V))   &kp RSHFT
+                                                            &kp LSHFT       &sk_ctrl        &trans          &ht_it4 ADJL 0  &kp LS(LC(V))   &kp RSHFT
             >;
         };
 
@@ -6686,7 +6695,7 @@ combo_CHII {
             &mt LSHFT PG_UP &kp HOME        &kp UP          &kp END         &mkp MB3                                        &kp DEL         &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT &msc SCRL_UP
             &mt LCTRL PG_DN &kp LEFT        &kp DOWN        &kp RIGHT   	                                &kp LG(S)       &kp BSPC        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT &msc SCRL_DOWN
             &mt LALT LC(V)  &mkp MB1        &mkp MB3        &mkp MB2		                                &win_shift_s    &mkp MB1        &kp ENTER       &kp LC(LEFT)    &kp LC(RIGHT)   &mt  RGUI LG(V)
-                                                            &kp LSHFT       &sk_cad	        &trans          &htW_it4 ADJW 0 &kp LS(LC(V))   &kp RSHFT
+                                                            &kp LSHFT       &sk_ctrl        &trans          &htW_it4 ADJW 0 &kp LS(LC(V))   &kp RSHFT
             >;
         };
 
@@ -6696,7 +6705,7 @@ combo_CHII {
             &mt LSHFT F1    &kp F2          &kp F3          &kp F4          &kp F5         		         		            &kp F6          &kp F7    	    &kp F8          &kp F9          &kp F10
             &macro_JPN1	    &macro_JPN2	    &macro_JPN3     &macro_JPN4                                     &macro_JPN5	    &macro_JPN6     &macro_JPN7     &macro_JPN8	    &macro_JPN9     &macro_JPN0
             &mt LALT INT1   &kp BSLH        &kp INT3        &kp SLASH   		     		                &kp ASTRK       &kp MINUS       &kp PLUS  	    &kp LBKT        &kp RBKT        &mt RGUI LC(V)
-                                                            &kp LSHFT       &kp SPACE       &ht_lg2 ADJ 0   &trans          &kp RCTRL       &kp RSHFT
+                                                            &kp LSHFT       &kp SPACE       &ht_lg2 ADJ 0   &trans          &sk_gui         &kp RSHFT
             >;
         };
 
@@ -6706,7 +6715,7 @@ combo_CHII {
             &mt LSHFT F1    &kp F2          &kp F3          &kp F4          &kp F5         		         		            &kp F6          &kp F7    	    &kp F8          &kp F9          &kp F10
             &mt LCTRL N1    &kp N2          &kp N3          &kp N4      		     		                &kp N5          &kp N6          &kp N7    	    &kp N8          &kp N9          &kp N0
             &mt LGUI INT1   &kp BSLH        &kp INT3        &kp SLASH   		     		                &kp ASTRK       &kp MINUS       &kp PLUS  	    &kp LBKT        &kp RBKT        &mt RALT LC(V)
-                                                            &kp LSHFT       &kp SPACE       &ht_it5 ADJL 0  &trans          &kp RCTRL       &kp RSHFT
+                                                            &kp LSHFT       &kp SPACE       &ht_it5 ADJL 0  &trans          &sk_gui         &kp RSHFT
             >;
         };
 
@@ -6716,7 +6725,7 @@ combo_CHII {
             &mt LSHFT F1    &kp F2          &kp F3          &kp F4          &kp F5         		         		            &kp F6          &kp F7    	    &kp F8          &kp F9          &kp F10
             &mt LCTRL N1    &kp N2          &kp N3          &kp N4      		     		                &kp N5          &kp N6          &kp N7    	    &kp N8          &kp N9          &kp N0
             &mt LGUI INT1   &kp BSLH        &kp INT3        &kp SLASH   		     		                &kp ASTRK       &kp MINUS       &kp PLUS  	    &kp LBKT        &kp RBKT        &mt RALT LC(V)
-                                                            &kp LSHFT       &kp SPACE       &htC_it5 ADJW 0 &trans          &kp RCTRL       &kp RSHFT
+                                                            &kp LSHFT       &kp SPACE       &htC_it5 ADJW 0 &trans          &sk_gui         &kp RSHFT
             >;
         };
 
