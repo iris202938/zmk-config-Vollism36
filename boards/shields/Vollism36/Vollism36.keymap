@@ -172,8 +172,8 @@
             layers = <QWE LIN CAD>;
             timeout-ms = <65>;
         };
-        combo_TSHIFTN {
-            bindings = <&qm RSHIFT>;
+        combo_ht_caps_word {
+            bindings = <&combo_ht_caps RSHIFT 0>;
             key-positions = <30 35>;
             layers = <WIN NGN NIC NGNL NICL>;
             timeout-ms = <65>;
@@ -4279,6 +4279,14 @@ combo_CHII {
             flavor = "tap-preferred";
             tapping-term-ms = <150>;
             bindings = <&kp>, <&alt_dot>;
+        };
+        // Hold-Tap: ホールドで&qm RSHIFT, タップで&caps_word
+        combo_ht_caps_word: combo_ht_caps_word {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <150>;
+            bindings = <&qm>, <&caps_word>;
         };
         td_lt_mov_l1: tap_dance_layer_tap_mov_l1 {  // タップでLANG1、ホールドでMOVレイヤ、ダブルタップでMOVレイヤ保持
             compatible = "zmk,behavior-tap-dance";
