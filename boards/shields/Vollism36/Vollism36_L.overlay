@@ -10,14 +10,26 @@
 
 #define QWE 0
 #define NGN 1
-#define CAD 2
-#define WIN 3
-#define LWR 4
-#define RSE 5
-#define ADJ 6
-#define MOV 7
-#define NUM 8
-#define BLE 9
+#define NIC 2
+#define LIN 3
+#define NGNL 4
+#define NICL 5
+#define CAD 6
+#define WIN 7
+#define LWR 8
+#define LWRL 9
+#define LWRW 10
+#define RSE 11
+#define RSEL 12
+#define RSEW 13
+#define ADJ 14
+#define ADJL 15
+#define ADJW 16
+#define MOV 17
+#define MOVL 18
+#define MOVW 19
+#define NUM 20
+#define BLE 21
 
 / {
     /* 既存の定義（input_processorsなど）と同じ階層に追加 */
@@ -50,7 +62,7 @@
             compatible = "zmk,input-processor-keybind";
             #input-processor-cells = <0>;
             bindings = <&kp RIGHT>, <&kp LEFT>, <&kp UP>, <&kp DOWN>;
-            threshold = <3>; // 方向キーが勝手に入る場合はしきい値を少し上げる
+            threshold = <2>; // 方向キーが勝手に入る場合はしきい値を少し上げる
             mode = <1>;
             tick = <50>; // ティック間隔
 			wait-ms = <0>; // 待機時間
@@ -63,7 +75,7 @@
         device = <&trackball>;
 
         /* ==========================================================
-        Layer 9: BLE (通常マウス)
+        Layer 21: BLE (通常マウス)
         ========================================================== */
         l_ble {
             layers = <BLE>;
@@ -71,7 +83,7 @@
         };
 
         /* ==========================================================
-        Layer 8: NUM (通常マウス)
+        Layer 20: NUM (通常マウス)
         ========================================================== */
         l_num {
             layers = <NUM>;
@@ -79,7 +91,41 @@
         };
 
         /* ==========================================================
-        Layer 7: MOV (方向キー変換)
+        Layer 19: MOVW (方向キー変換)
+        ========================================================== */
+        l_movw {
+            layers = <MOVW>; 
+            input-processors = 
+                <&sensor_rotation>, 
+                <&zip_xy_scaler 200 100>, 
+                <&xy_to_keys>;
+            process-next;
+        };
+
+        l_movw_prevent {
+            layers = <MOVW>;
+            input-processors = <&zip_xy_scaler 0 1>;
+        };
+
+        /* ==========================================================
+        Layer 18: MOVL (方向キー変換)
+        ========================================================== */
+        l_movl {
+            layers = <MOVL>; 
+            input-processors = 
+                <&sensor_rotation>, 
+                <&zip_xy_scaler 200 100>, 
+                <&xy_to_keys>;
+            process-next;
+        };
+
+        l_movl_prevent {
+            layers = <MOVL>;
+            input-processors = <&zip_xy_scaler 0 1>;
+        };
+
+        /* ==========================================================
+        Layer 17: MOV (方向キー変換)
         ========================================================== */
         l_mov {
             layers = <MOV>; 
@@ -96,7 +142,23 @@
         };
 
         /* ==========================================================
-        Layer 6: ADJ (通常マウス)
+        Layer 16: ADJW (通常マウス)
+        ========================================================== */
+        l_adjw {
+            layers = <ADJW>;
+            input-processors = <&sensor_rotation>;
+        };
+
+        /* ==========================================================
+        Layer 15: ADJL (通常マウス)
+        ========================================================== */
+        l_adjl {
+            layers = <ADJL>;
+            input-processors = <&sensor_rotation>;
+        };
+
+        /* ==========================================================
+        Layer 14: ADJ (通常マウス)
         ========================================================== */
         l_adj {
             layers = <ADJ>;
@@ -104,7 +166,33 @@
         };
 
         /* ==========================================================
-        Layer 5: RSE (スクロール)
+        Layer 13: RSEW (スクロール)
+        ========================================================== */
+        l_rsew {
+            layers = <RSEW>;
+            input-processors = 
+                <&sensor_rotation>,
+                <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>,
+                <&zip_xy_scaler 1 30>,
+                <&zip_xy_to_scroll_mapper>,
+                <&zip_xy_scaler 0 1>; 
+        };
+
+        /* ==========================================================
+        Layer 12: RSEL (スクロール)
+        ========================================================== */
+        l_rsel {
+            layers = <RSEL>;
+            input-processors = 
+                <&sensor_rotation>,
+                <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>,
+                <&zip_xy_scaler 1 30>,
+                <&zip_xy_to_scroll_mapper>,
+                <&zip_xy_scaler 0 1>; 
+        };
+
+        /* ==========================================================
+        Layer 11: RSE (スクロール)
         ========================================================== */
         l_rse {
             layers = <RSE>;
@@ -117,7 +205,23 @@
         };
 
         /* ==========================================================
-        Layer 4: LWR (通常マウス)
+        Layer 10: LWRW (通常マウス)
+        ========================================================== */
+        l_lwrw {
+            layers = <LWRW>;
+            input-processors = <&sensor_rotation>;
+        };
+
+        /* ==========================================================
+        Layer 9: LWRL (通常マウス)
+        ========================================================== */
+        l_lwrl {
+            layers = <LWRL>;
+            input-processors = <&sensor_rotation>;
+        };
+
+        /* ==========================================================
+        Layer 8: LWR (通常マウス)
         ========================================================== */
         l_lwr {
             layers = <LWR>;
@@ -125,7 +229,7 @@
         };
 
         /* ==========================================================
-        Layer 3: WIN (方向キー変換)
+        Layer 7: WIN (方向キー変換)
         ========================================================== */
         l_win {
             layers = <WIN>; 
@@ -142,10 +246,42 @@
         };
 
         /* ==========================================================
-        Layer 2: CAD (通常マウス)
+        Layer 6: CAD (通常マウス)
         ========================================================== */
         l_cad {
             layers = <CAD>;
+            input-processors = <&sensor_rotation>;
+        };
+
+        /* ==========================================================
+        Layer 5: NICL (通常マウス)
+        ========================================================== */
+        l_nicl {
+            layers = <NICL>;
+            input-processors = <&sensor_rotation>;
+        };
+
+        /* ==========================================================
+        Layer 4: NGNL (通常マウス)
+        ========================================================== */
+        l_ngnl {
+            layers = <NGNL>;
+            input-processors = <&sensor_rotation>;
+        };
+
+        /* ==========================================================
+        Layer 3: LIN (通常マウス)
+        ========================================================== */
+        l_lin {
+            layers = <LIN>;
+            input-processors = <&sensor_rotation>;
+        };
+
+        /* ==========================================================
+        Layer 2: NIC (通常マウス)
+        ========================================================== */
+        l_nic {
+            layers = <NIC>;
             input-processors = <&sensor_rotation>;
         };
 
