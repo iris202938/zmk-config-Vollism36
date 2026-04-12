@@ -159,13 +159,13 @@
             bindings = <&kp RSHIFT>;
             key-positions = <30 35>;
             layers = <QWE LIN CAD>;
-            timeout-ms = <60>;
+            timeout-ms = <65>;
         };
         combo_TSHIFTN {
             bindings = <&qm RSHIFT>;
             key-positions = <30 35>;
             layers = <WIN NGN NIC NGNL NICL>;
-            timeout-ms = <60>;
+            timeout-ms = <65>;
         };
         combo_CAPSWORD {
             timeout-ms = <80>;
@@ -296,19 +296,19 @@
         ctrl_x {
             bindings = <&ctrl_x>;
             key-positions = <8 9>;
-            layers = <RSE RSEL RSEW>;
+            layers = <RSEL RSEW>;
             timeout-ms = <80>;
         };
         ctrl_c {
             bindings = <&ctrl_c>;
             key-positions = <18 19>;
-            layers = <RSE RSEL RSEW>;
+            layers = <RSEL RSEW>;
             timeout-ms = <80>;
         };
         ctrl_v {
             bindings = <&ctrl_v>;
             key-positions = <26 27>;
-            layers = <RSE RSEL RSEW>;
+            layers = <RSEL RSEW>;
             timeout-ms = <80>;
         };
         combo_e_key { // ECADの文字修正
@@ -431,20 +431,38 @@
             layers = <CAD>;
             timeout-ms = <80>;
         };
-        combo_alt_home {   // タップで複写左90度回転[AHK]、ホールドでRALT
-            bindings = <&combo_ht_home RALT 0>;
+        // combo_alt_home {   // タップで複写左90度回転[AHK]、ホールドでRALT
+        //     bindings = <&combo_ht_home RALT 0>;
+        //     key-positions = <1 32 29>;
+        //     layers = <CAD>;
+        //     timeout-ms = <70>;
+        // };
+        // combo_alt_end {   // タップで複写右90度回転[AHK]、ホールドでRALT
+        //     bindings = <&combo_ht_end RALT 0>;
+        //     key-positions = <3 32 29>;
+        //     layers = <CAD>;
+        //     timeout-ms = <70>;
+        // };
+        // combo_alt_comma { // タップで移動左90度回転[AHK]、ホールドでRALT
+        //     bindings = <&combo_ht_comma RALT 0>;
+        //     key-positions = <27 29>;
+        //     layers = <CAD>;
+        //     timeout-ms = <80>;
+        // };
+        combo_alt_home {   // 複写左90度回転[AHK]
+            bindings = <&alt_home>;
             key-positions = <1 32 29>;
             layers = <CAD>;
             timeout-ms = <70>;
         };
-        combo_alt_end {   // タップで複写右90度回転[AHK]、ホールドでRALT
-            bindings = <&combo_ht_end RALT 0>;
+        combo_alt_end {   // 複写右90度回転[AHK]
+            bindings = <&alt_end>;
             key-positions = <3 32 29>;
             layers = <CAD>;
             timeout-ms = <70>;
         };
-        combo_alt_comma { // タップで移動左90度回転[AHK]、ホールドでRALT
-            bindings = <&combo_ht_comma RALT 0>;
+        combo_alt_comma { // 移動左90度回転[AHK]
+            bindings = <&alt_comma>;
             key-positions = <27 29>;
             layers = <CAD>;
             timeout-ms = <80>;
