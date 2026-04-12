@@ -43,8 +43,13 @@
     flavor = "hold-preferred";
 };
 
+&sk {
+    release-after-ms = <2000>; // 2秒間入力を待つ
+    quick-release;
+};
+
 &sl {
-    release-after-ms = <600>;
+    release-after-ms = <2000>; // 2秒間入力を待つ
 };
 
 &caps_word {
@@ -1435,7 +1440,7 @@ combo_CHII {
         };
 
         // B (29) と同時打鍵 (-29) - 濁音/半濁音の「いぃ」
-combo_NII {
+        combo_NII {
             timeout-ms = <50>;
             key-positions = <24 6>; // 旧 29 7
             layers = <NIC NICL>;
@@ -1537,7 +1542,7 @@ combo_NII {
         };
 
         // M (31) と同時打鍵 (-31) - 「う」段 + 「ゅ」の音
-combo_RYU {
+        combo_RYU {
             timeout-ms = <50>;
             key-positions = <26 2>; // 旧 31 3
             layers = <NIC NICL>;
@@ -1639,7 +1644,7 @@ combo_RYU {
         };
 
         // E (3) と同時打鍵 (-3) - 「え」段 + 「ぇ」の音
-combo_CHE {
+        combo_CHE {
             timeout-ms = <50>;
             key-positions = <2 6>; // 旧 3 7
             layers = <NIC NICL>;
@@ -1765,7 +1770,7 @@ combo_CHE {
         };
 
         // P (10) と同時打鍵 (-10) - 「え」段 + 「ぇ」の音、特殊な「ヴェ」
-combo_VE {
+        combo_VE {
             timeout-ms = <50>;
             key-positions = <9 10>; // 旧 10 13
             layers = <NIC NICL>;
@@ -1879,7 +1884,7 @@ combo_VE {
         };
 
         // S (14) と同時打鍵 (-14) - 「お」段 + 「ょ」の音
-combo_NYO {
+        combo_NYO {
             timeout-ms = <50>;
             key-positions = <11 6>; // 旧 14 7
             layers = <NIC NICL>;
@@ -2029,7 +2034,7 @@ combo_NYO {
         };
 
         // / (34) と同時打鍵 (-34) - 濁音/半濁音の促音
-combo_GATTU {
+        combo_GATTU {
             timeout-ms = <50>;
             key-positions = <29 1>; // 旧 34 2
             layers = <NIC NICL>;
@@ -2201,7 +2206,7 @@ combo_GATTU {
         };
 
         // Z (25) と同時打鍵 (-25) - 濁音/半濁音の促音、その他
-combo_YOTTU2 {
+        combo_YOTTU2 {
             timeout-ms = <50>;
             key-positions = <20 4>; // 旧 25 5
             layers = <NIC NICL>;
