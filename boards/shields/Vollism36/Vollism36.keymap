@@ -257,7 +257,7 @@
             timeout-ms = <80>;
         };
         gui_enter {
-            bindings = <&kp RG(ENTER)>;
+            bindings = <&gui_enter>;
             key-positions = <28 29>;
             layers = <RSE>;
             timeout-ms = <80>;
@@ -4765,6 +4765,17 @@ combo_CHII {
                 = <&macro_press &kp RALT>
                 , <&macro_tap &kp ENTER>
                 , <&macro_release &kp RALT>
+                ;
+        };
+        gui_enter: gui_enter { // gui+enter
+            compatible = "zmk,behavior-macro";
+            wait-ms = <30>;
+            tap-ms = <30>;
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp RGUI>
+                , <&macro_tap &kp ENTER>
+                , <&macro_release &kp RGUI>
                 ;
         };
 
