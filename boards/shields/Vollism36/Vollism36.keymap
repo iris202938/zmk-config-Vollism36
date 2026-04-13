@@ -474,13 +474,13 @@
         };
         combo_alt_comma { // 移動左90度回転[AHK]
             bindings = <&alt_comma>;
-            key-positions = <27 29>;
+            key-positions = <33 27 29>;
             layers = <CAD>;
             timeout-ms = <80>;
         };
         combo_alt_dot { // タップで移動右90度回転[AHK]、ホールドでRALT
-            bindings = <&combo_ht_dot RALT 0>;
-            key-positions = <28 29>;
+            bindings = <&alt_dot>;
+            key-positions = <33 28 29>;
             layers = <CAD>;
             timeout-ms = <70>;
         };
@@ -4248,38 +4248,38 @@ combo_CHII {
             tapping-term-ms = <150>;
             bindings = <&mo>, <&t_int5>;
         };
-        // AHK用のHold-Tap: ホールドでRALT, タップでマクロ(alt_home)
-        combo_ht_home: combo_ht_home {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <150>;
-            bindings = <&kp>, <&alt_home>;
-        };
-        // AHK用のHold-Tap: ホールドでRALT, タップでマクロ(alt_end)
-        combo_ht_end: combo_ht_end {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <150>;
-            bindings = <&kp>, <&alt_end>;
-        };
-        // AHK用のHold-Tap: ホールドでRALT, タップでマクロ(alt_comma)
-        combo_ht_comma: combo_ht_comma {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <150>;
-            bindings = <&kp>, <&alt_comma>;
-        };
-        // AHK用のHold-Tap: ホールドでRALT, タップでマクロ(alt_dot)
-        combo_ht_dot: combo_ht_dot {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <150>;
-            bindings = <&kp>, <&alt_dot>;
-        };
+        // // AHK用のHold-Tap: ホールドでRALT, タップでマクロ(alt_home)
+        // combo_ht_home: combo_ht_home {
+        //     compatible = "zmk,behavior-hold-tap";
+        //     #binding-cells = <2>;
+        //     flavor = "tap-preferred";
+        //     tapping-term-ms = <150>;
+        //     bindings = <&kp>, <&alt_home>;
+        // };
+        // // AHK用のHold-Tap: ホールドでRALT, タップでマクロ(alt_end)
+        // combo_ht_end: combo_ht_end {
+        //     compatible = "zmk,behavior-hold-tap";
+        //     #binding-cells = <2>;
+        //     flavor = "tap-preferred";
+        //     tapping-term-ms = <150>;
+        //     bindings = <&kp>, <&alt_end>;
+        // };
+        // // AHK用のHold-Tap: ホールドでRALT, タップでマクロ(alt_comma)
+        // combo_ht_comma: combo_ht_comma {
+        //     compatible = "zmk,behavior-hold-tap";
+        //     #binding-cells = <2>;
+        //     flavor = "tap-preferred";
+        //     tapping-term-ms = <150>;
+        //     bindings = <&kp>, <&alt_comma>;
+        // };
+        // // AHK用のHold-Tap: ホールドでRALT, タップでマクロ(alt_dot)
+        // combo_ht_dot: combo_ht_dot {
+        //     compatible = "zmk,behavior-hold-tap";
+        //     #binding-cells = <2>;
+        //     flavor = "tap-preferred";
+        //     tapping-term-ms = <150>;
+        //     bindings = <&kp>, <&alt_dot>;
+        // };
         // Hold-Tap: ホールドで&qm RSHIFT, タップで&caps_word
         combo_ht_caps_word: combo_ht_caps_word {
             compatible = "zmk,behavior-hold-tap";
