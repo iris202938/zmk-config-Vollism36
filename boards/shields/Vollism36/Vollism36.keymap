@@ -6589,7 +6589,7 @@ combo_CHII {
             wait-ms = <0>;
             tap-ms = <0>;
             bindings
-                = <&macro_tap &sk LCTRL &sl CAD>
+                = <&macro_tap &sk LCTRL &sl WIN>
                 ;
         };
         sk_gui: sk_gui {
@@ -6598,7 +6598,7 @@ combo_CHII {
             wait-ms = <0>;
             tap-ms = <0>;
             bindings
-                = <&macro_tap &sk LGUI &sl CAD>
+                = <&macro_tap &sk LGUI &sl WIN>
                 ;
         };
     };
