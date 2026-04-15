@@ -4330,6 +4330,12 @@ combo_CHII {
             tapping-term-ms = <170>;
             bindings = <&lt NUM INT5>, <&to_NUM_i5>;
         };
+        td_lt_num_esc: tap_dance_layer_tap_num_esc {  // タップでesc、ホールドでNUMレイヤ、ダブルタップでNUMレイヤ保持、無変換
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <170>;
+            bindings = <&lt NUM ESC>, <&to_NUM_i5>;
+        };
 
         // A-Z共通のHold-Tap定義
         all_ht: all_hold_tap {
@@ -6684,7 +6690,7 @@ combo_CHII {
             &kp Q           &kp W           &kp E           &kp R           &kp T                                           &kp Y           &kp U           &kp I           &kp O           &kp P
             &kp A           &kp S           &kp D           &kp F                                           &kp G           &kp H           &kp J           &kp K           &kp L           &kp SEMICOLON
             &kp Z           &kp X           &kp C           &kp V                                           &kp B           &kp N           &kp M           &kp COMMA       &kp DOT         &kp SLASH
-                                                            &htC_it5 NUM 0  &kp SPACE       &lt LWRW TAB    &lt RSEW ENTER	&kp INT4        &td_lt_movw_i2  
+                                                            &td_lt_num_esc  &kp SPACE       &lt LWRW TAB    &lt RSEW ENTER	&kp INT4        &td_lt_movw_i2  
             >;
         };
 
@@ -6804,7 +6810,7 @@ combo_CHII {
             &kp LS(LC(TAB)) &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT &msc SCRL_UP                                    &lt BLE LC(Y)   &kp HOME        &kp UP          &kp END         &kp PG_UP
             &mt LCTRL MB1   &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT                                 &msc SCRL_DOWN  &lt BLE BSPC    &kp LEFT        &kp DOWN        &kp RIGHT       &kp PG_DN
             &mt LGUI Z      &kp LA(LEFT)    &mkp MB3        &kp LA(RIGHT)                                   &kp LC(TAB)     &kp LC(Z)       &kp LC(PG_UP)   &kp LG(LBKT)    &kp LG(RBKT)    &kp LC(PG_DN)
-                                                            &kp LC(C)       &kp LC(V)       &mkp MB2        &kp ENTER       &mkp MB1        &to WIN
+                                                            &kp LC(C)       &kp LC(V)       &mkp MB2        &kp ENTER       &mkp MB1        &to CAD
             >;
         };
 
@@ -6814,7 +6820,7 @@ combo_CHII {
             &kp PG_UP       &kp HOME        &kp UP          &kp END         &lt BLE CARET                                   &kp KP_SLASH    &kp KP_N7       &kp KP_N8       &kp KP_N9       &kp KP_MULTIPLY
             &kp PG_DN       &kp LEFT        &kp DOWN        &kp RIGHT                                       &lt BLE DEL     &kp BSPC        &kp KP_N4       &kp KP_N5       &kp KP_N6       &kp KP_MINUS
             &alt_left	    &alt_down       &alt_up         &alt_right                                      &kp EQUAL       &kp KP_N0       &kp KP_N1       &kp KP_N2       &kp KP_N3       &kp KP_PLUS
-                                                            &trans          &pr_pg	        &nx_pg          &kp KP_ENTER    &kp UNDER       &kp SPACE
+                                                            &to CAD         &pr_pg	        &nx_pg          &kp KP_ENTER    &kp UNDER       &kp SPACE
             >;
         };
 
