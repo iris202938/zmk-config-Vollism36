@@ -124,17 +124,39 @@
             bindings = <&to LIN>;
         };
         
-        esc_l {
-            bindings = <&kp ESC>;
-            key-positions = <0 10>;
+        // esc_l {
+        //     bindings = <&kp ESC>;
+        //     key-positions = <0 10>;
+        //     layers = <QWE LIN MOV CAD>;
+        //     timeout-ms = <80>;
+        // };
+        // esc_r {
+        //     bindings = <&kp ESC>;
+        //     key-positions = <9 19>;
+        //     layers = <QWE LIN CAD>;
+        //     timeout-ms = <80>;
+        // };
+        combo_esc_mods_l {
+            timeout-ms = <50>;
             layers = <QWE LIN MOV CAD>;
-            timeout-ms = <80>;
+            // ② ここで使用するキーのインデックスを指定（例：JとKなど）
+            key-positions = <0 10>; 
+            /* ③ 定義したbehaviorを呼び出す
+                第一引数（Hold）: LS(LCTL) -> Shift + Ctrl
+                第二引数（Tap） : ESC
+            */
+            bindings = <&esc_ctrl_shift LS(LCTL) ESC>;
         };
-        esc_r {
-            bindings = <&kp ESC>;
-            key-positions = <9 19>;
-            layers = <QWE LIN CAD>;
-            timeout-ms = <80>;
+        combo_esc_mods_r {
+            timeout-ms = <50>;
+            layers = <QWE LIN MOV CAD>;
+            // ② ここで使用するキーのインデックスを指定（例：JとKなど）
+            key-positions = <9 19>; 
+            /* ③ 定義したbehaviorを呼び出す
+                第一引数（Hold）: LS(LCTL) -> Shift + Ctrl
+                第二引数（Tap） : ESC
+            */
+            bindings = <&esc_ctrl_shift RS(RCTL) ESC>;
         };
         // tab {
         //     bindings = <&kp TAB>;
@@ -4287,6 +4309,16 @@ combo_CHII {
             flavor = "tap-preferred";
             tapping-term-ms = <150>;
             bindings = <&qm>, <&caps_word>;
+        };
+        // ① ホールド・タップの挙動を定義
+        esc_ctrl_shift: esc_ctrl_shift {
+            compatible = "zmk,behavior-hold-tap";
+            label = "ESC_CTRL_SHIFT";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;    // 長押しと判定されるまでの時間
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";   // タップを優先する設定
+            bindings = <&kp>, <&kp>;
         };
         td_lt_mov_l1: tap_dance_layer_tap_mov_l1 {  // タップでLANG1、ホールドでMOVレイヤ、ダブルタップでMOVレイヤ保持
             compatible = "zmk,behavior-tap-dance";
