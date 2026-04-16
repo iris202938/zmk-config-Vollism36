@@ -138,7 +138,7 @@
         // };
         combo_esc_mods_l {
             timeout-ms = <50>;
-            layers = <QWE LIN MOV CAD>;
+            layers = <QWE LIN MOV CAD ADJ ADJL ADJW>;
             // ② ここで使用するキーのインデックスを指定（例：JとKなど）
             key-positions = <0 10>; 
             /* ③ 定義したbehaviorを呼び出す
@@ -227,7 +227,7 @@
         combo_RALT {
             bindings = <&kp RALT>;
             key-positions = <28 29>;
-            layers = <LIN CAD LWRL LWRW>;
+            layers = <LIN CAD LWRL LWRW RSEL RSEW ADJL ADJW>;
             timeout-ms = <80>;
         };
         ctrl_l {
