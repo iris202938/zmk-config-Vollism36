@@ -296,14 +296,14 @@
             layers = <LWRL LWRW>;
             timeout-ms = <80>;
         };
-        CTRL_PG_DN {
-            bindings = <&kp LC(PG_DN)>;
+        CTRL_PG_UP {
+            bindings = <&kp LC(PG_UP)>;
             key-positions = <0 1>;
             layers = <LWR LWRL LWRW>;
             timeout-ms = <80>;
         };
-        CTRL_PG_UP {
-            bindings = <&kp LC(PG_UP)>;
+        CTRL_PG_DN {
+            bindings = <&kp LC(PG_DN)>;
             key-positions = <10 11>;
             layers = <LWR LWRL LWRW>;
             timeout-ms = <80>;
