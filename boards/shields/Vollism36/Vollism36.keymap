@@ -4584,7 +4584,7 @@ combo_CHII {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <230>;
-            bindings = <&all_ht Z Z>, <&ctrl_a_z>, <&ctrl_d_z>, <&ctrl_f_z>;
+            bindings = <&all_ht LGUI Z>, <&ctrl_a_z>, <&ctrl_d_z>, <&ctrl_f_z>;
         };
 
         // --- Tap Dance SEMICOLON ---
@@ -4620,7 +4620,7 @@ combo_CHII {
             #binding-cells = <0>;
             tapping-term-ms = <230>;
             // 1-Tap: 通常キー, 2-Taps: 1G , 3-Taps: 1/4G
-            bindings = <&all_ht SLASH SLASH>, <&ctrl_alt_j>, <&ctrl_alt_k>;
+            bindings = <&all_ht RALT SLASH>, <&ctrl_alt_j>, <&ctrl_alt_k>;
         };
     };
 
