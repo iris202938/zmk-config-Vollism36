@@ -137,7 +137,7 @@
         //     timeout-ms = <80>;
         // };
         combo_esc_mods_l {
-            timeout-ms = <50>;
+            timeout-ms = <70>;
             layers = <QWE LIN MOV CAD ADJ ADJL ADJW>;
             // ② ここで使用するキーのインデックスを指定（例：JとKなど）
             key-positions = <0 10>; 
@@ -148,7 +148,7 @@
             bindings = <&esc_ctrl_shift &ctrl_shift ESC>;
         };
         combo_esc_mods_r {
-            timeout-ms = <50>;
+            timeout-ms = <70>;
             layers = <QWE LIN MOV CAD>;
             // ② ここで使用するキーのインデックスを指定（例：JとKなど）
             key-positions = <9 19>; 
@@ -156,7 +156,7 @@
                 第一引数（Hold）: LS(LCTL) -> Shift + Ctrl
                 第二引数（Tap） : ESC
             */
-            bindings = <&esc_ctrl_shift &ctrl_shift ESC>;
+            bindings = <&esc_ctrl_shift &ctrl_shift ESC>;.
         };
         // tab {
         //     bindings = <&kp TAB>;
@@ -4384,7 +4384,7 @@ combo_CHII {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <230>;
-            bindings = <&all_ht LCTRL A>, <&ctrl_a_a>, <&ctrl_d_a>, <&ctrl_f_a>;
+            bindings = <&all_ht LGUI A>, <&ctrl_a_a>, <&ctrl_d_a>, <&ctrl_f_a>;
         };
 
         // --- Tap Dance B ---
@@ -4424,7 +4424,7 @@ combo_CHII {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <230>;
-            bindings = <&all_ht LGUI F>, <&ctrl_a_f>, <&ctrl_d_f>, <&ctrl_f_f>;
+            bindings = <&all_ht LCTRL F>, <&ctrl_a_f>, <&ctrl_d_f>, <&ctrl_f_f>;
         };
 
         // --- Tap Dance G ---
@@ -4456,7 +4456,7 @@ combo_CHII {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <230>;
-            bindings = <&all_ht RGUI J>, <&ctrl_a_j>, <&ctrl_d_j>, <&ctrl_f_j>;
+            bindings = <&all_ht RCTRL J>, <&ctrl_a_j>, <&ctrl_d_j>, <&ctrl_f_j>;
         };
 
         // --- Tap Dance K ---
@@ -4504,7 +4504,7 @@ combo_CHII {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <230>;
-            bindings = <&all_ht RSHFT P>, <&ctrl_a_p>, <&ctrl_d_p>, <&ctrl_f_p>;
+            bindings = <&all_ht P P>, <&ctrl_a_p>, <&ctrl_d_p>, <&ctrl_f_p>;
         };
 
         // --- Tap Dance Q ---
@@ -4512,7 +4512,7 @@ combo_CHII {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <230>;
-            bindings = <&all_ht LSHFT Q>, <&ctrl_a_q>, <&ctrl_d_q>, <&ctrl_f_q>;
+            bindings = <&all_ht Q Q>, <&ctrl_a_q>, <&ctrl_d_q>, <&ctrl_f_q>;
         };
 
         // --- Tap Dance R ---
@@ -4584,7 +4584,7 @@ combo_CHII {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <230>;
-            bindings = <&all_ht LGUI Z>, <&ctrl_a_z>, <&ctrl_d_z>, <&ctrl_f_z>;
+            bindings = <&all_ht Z Z>, <&ctrl_a_z>, <&ctrl_d_z>, <&ctrl_f_z>;
         };
 
         // --- Tap Dance SEMICOLON ---
@@ -4593,7 +4593,7 @@ combo_CHII {
             #binding-cells = <0>;
             tapping-term-ms = <230>;
             // 1-Tap: 通常キー, 2-Taps: 0.5mm , 3-Taps: 0.25mm
-            bindings = <&all_ht RCTRL SEMICOLON>, <&ctrl_alt_l>, <&ctrl_alt_semi>; 
+            bindings = <&all_ht RGUI SEMICOLON>, <&ctrl_alt_l>, <&ctrl_alt_semi>; 
         };
 
         // --- Tap Dance COMMA ---
@@ -4620,7 +4620,7 @@ combo_CHII {
             #binding-cells = <0>;
             tapping-term-ms = <230>;
             // 1-Tap: 通常キー, 2-Taps: 1G , 3-Taps: 1/4G
-            bindings = <&all_ht RALT SLASH>, <&ctrl_alt_j>, <&ctrl_alt_k>;
+            bindings = <&all_ht SLASH SLASH>, <&ctrl_alt_j>, <&ctrl_alt_k>;
         };
     };
 
@@ -6658,9 +6658,9 @@ combo_CHII {
         QWE {
             bindings = <
         // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
-            &mt LSHFT Q     &kp W           &kp E           &kp R           &kp T                                           &kp Y           &kp U           &kp I           &kp O           &mt RSHFT P
-            &mt LCTRL A     &mt LALT S      &mt LSHFT D     &mt LGUI F                                      &kp G           &kp H           &mt RGUI J      &mt RSHFT K     &mt RALT L      &mt RCTRL SEMICOLON
-            &mt LALT Z      &kp X           &kp C           &kp V                                           &kp B           &kp N           &kp M           &kp COMMA       &kp DOT         &mt RGUI SLASH
+            &kp Q           &kp W           &kp E           &kp R           &kp T                                           &kp Y           &kp U           &kp I           &kp O           &kp P
+            &mt LGUI A      &mt LALT S      &mt LSHFT D     &mt LCTRL F                                     &kp G           &kp H           &mt RCTRL J     &mt RSHFT K     &mt RALT L      &mt RGUI SEMICOLON
+            &kp Z           &kp X           &kp C           &kp V                                           &kp B           &kp N           &kp M           &kp COMMA       &kp DOT         &kp SLASH
                                                             &lt NUM LANG2   &mt LSHFT SPACE &lt LWR TAB     &lt RSE ENTER   &mt RSHFT SPACE &ht_lg1 MOV 0
             >;
         };
@@ -6690,9 +6690,9 @@ combo_CHII {
         LIN {
             bindings = <
         // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
-            &mt LSHFT Q     &kp W           &kp E           &kp R           &kp T                                           &kp Y           &kp U           &kp I           &kp O           &mt RSHFT P
-            &mt LCTRL A     &mt LALT S      &mt LSHFT D     &mt LGUI F                                      &kp G           &kp H           &mt RGUI J      &mt RSHFT K     &mt RALT L      &mt RCTRL SEMICOLON
-            &mt LGUI Z      &kp X           &kp C           &kp V                                           &kp B           &kp N           &kp M           &kp COMMA       &kp DOT         &mt RALT SLASH
+            &kp Q           &kp W           &kp E           &kp R           &kp T                                           &kp Y           &kp U           &kp I           &kp O           &kp P
+            &mt LGUI A      &mt LALT S      &mt LSHFT D     &mt LCTRL F                                     &kp G           &kp H           &mt RCTRL J     &mt RSHFT K     &mt RALT L      &mt RGUI SEMICOLON
+            &kp Z           &kp X           &kp C           &kp V                                           &kp B           &kp N           &kp M           &kp COMMA       &kp DOT         &kp SLASH
                                                             &lt NUM INT5    &mt LSHFT SPACE &lt LWRL TAB	&lt RSEL ENTER	&mt RSHFT SPACE &ht_it4 MOVL 0
             >;
         };
