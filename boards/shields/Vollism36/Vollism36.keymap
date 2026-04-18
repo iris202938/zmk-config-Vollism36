@@ -176,18 +176,18 @@
             layers = <LWR LWRL LWRW>;
             timeout-ms = <80>;
         };
-        shift_l {
-            bindings = <&kp LSHFT>;
-            key-positions = <0 1>;
-            layers = <QWE LIN CAD>;
-            timeout-ms = <80>;
-        };
-        shift_r {
-            bindings = <&kp RSHFT>;
-            key-positions = <8 9>;
-            layers = <QWE LIN CAD>;
-            timeout-ms = <80>;
-        };
+        // shift_l {
+        //     bindings = <&kp LSHFT>;
+        //     key-positions = <0 1>;
+        //     layers = <QWE LIN CAD>;
+        //     timeout-ms = <80>;
+        // };
+        // shift_r {
+        //     bindings = <&kp RSHFT>;
+        //     key-positions = <8 9>;
+        //     layers = <QWE LIN CAD>;
+        //     timeout-ms = <80>;
+        // };
         combo_TSHIFT {
             bindings = <&qm RSHIFT>;
             key-positions = <30 35>;
