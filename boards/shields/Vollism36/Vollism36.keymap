@@ -6691,7 +6691,7 @@ combo_CHII {
             bindings = <
         // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
             &kp Q           &kp W           &kp E           &kp R           &kp T                                           &kp Y           &kp U           &kp I           &kp O           &kp P
-            &mt LGUI A      &mt LALT S      &mt LSHFT D     &mt LCTRL F                                     &kp G           &kp H           &mt RCTRL J     &mt RSHFT K     &mt RALT L      &mt RGUI SEMICOLON
+            &mt LGUI A      &mt LALT S      &mt LSHFT D     &mt LCTRL F                                     &kp G           &kp H           &mt RCTRL J     &mt RSHFT K     &mt RALT L      &mt RGUI SEMI
             &kp Z           &kp X           &kp C           &kp V                                           &kp B           &kp N           &kp M           &kp COMMA       &kp DOT         &kp SLASH
                                                             &lt NUM INT5    &mt LSHFT SPACE &lt LWRL TAB	&lt RSEL ENTER	&mt RSHFT SPACE &ht_it4 MOVL 0
             >;
@@ -6742,8 +6742,8 @@ combo_CHII {
         // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
             &mt LSHFT PG_UP &kp LC(A)       &kp UP          &kp LC(E)       &kp LS(TAB)                                     &kp DEL         &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT &msc SCRL_UP
             &mt LCTRL PG_DN &kp LEFT        &kp DOWN        &kp RIGHT   	                                &kp LS(LG(N3))  &kp BSPC        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT &msc SCRL_DOWN
-            &mt LALT LC(V)  &mkp MB1        &mkp MB3        &mkp MB2		                                &kp LS(LG(N4))  &mkp MB1        &kp ENTER       &kp LA(LEFT)    &kp LA(RIGHT)   &mt  RGUI LC(V)
-                                                            &kp LSHFT       &sk_ctrl        &trans          &ht_lg1 ADJ 0   &kp LS(LC(V))   &kp RSHFT
+            &mt LALT LC(V)  &mkp MB1        &mkp MB3        &mkp MB2		                                &kp LS(LG(N4))  &mkp MB1        &kp ENTER       &kp LA(LEFT)    &kp LA(RIGHT)   &qmt  RGUI LC(V)
+                                                            &qm LSHFT       &sk_ctrl        &trans          &ht_lg1 ADJ 0   &kp LS(LC(V))   &qm RSHFT
             >;
         };
 
@@ -6752,8 +6752,8 @@ combo_CHII {
         // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
             &mt LSHFT PG_UP &kp HOME        &kp UP          &kp END         &kp LS(TAB)                                     &kp DEL         &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT &msc SCRL_UP
             &mt LCTRL PG_DN &kp LEFT        &kp DOWN        &kp RIGHT   	                                &kp LG(S)       &kp BSPC        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT &msc SCRL_DOWN
-            &mt LGUI LC(V)  &mkp MB1        &mkp MB3        &mkp MB2		                                &win_shift_s    &mkp MB1        &kp ENTER       &kp LC(LEFT)    &kp LC(RIGHT)   &mt  RALT LG(V)
-                                                            &kp LSHFT       &sk_ctrl        &trans          &ht_it4 ADJL 0  &kp LS(LC(V))   &kp RSHFT
+            &mt LGUI LC(V)  &mkp MB1        &mkp MB3        &mkp MB2		                                &win_shift_s    &mkp MB1        &kp ENTER       &kp LC(LEFT)    &kp LC(RIGHT)   &qmt  RALT LG(V)
+                                                            &qm LSHFT       &sk_ctrl        &trans          &ht_it4 ADJL 0  &kp LS(LC(V))   &qm RSHFT
             >;
         };
 
@@ -6762,8 +6762,8 @@ combo_CHII {
         // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
             &mt LSHFT PG_UP &kp HOME        &kp UP          &kp END         &kp LS(TAB)                                     &kp DEL         &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT &msc SCRL_UP
             &mt LCTRL PG_DN &kp LEFT        &kp DOWN        &kp RIGHT   	                                &kp LG(S)       &kp BSPC        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT &msc SCRL_DOWN
-            &mt LGUI LC(V)  &mkp MB1        &mkp MB3        &mkp MB2		                                &win_shift_s    &mkp MB1        &kp ENTER       &kp LC(LEFT)    &kp LC(RIGHT)   &mt  RALT LG(V)
-                                                            &kp LSHFT       &sk_ctrl        &trans          &htW_it4 ADJW 0 &kp LS(LC(V))   &kp RSHFT
+            &mt LGUI LC(V)  &mkp MB1        &mkp MB3        &mkp MB2		                                &win_shift_s    &mkp MB1        &kp ENTER       &kp LC(LEFT)    &kp LC(RIGHT)   &qmt  RALT LG(V)
+                                                            &qm LSHFT       &sk_ctrl        &trans          &htW_it4 ADJW 0 &kp LS(LC(V))   &qm RSHFT
             >;
         };
 
@@ -6772,35 +6772,35 @@ combo_CHII {
         // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
             &mt LSHFT F1    &kp F2          &kp F3          &kp F4          &kp F5         		         		            &kp F6          &kp F7    	    &kp F8          &kp F9          &kp F10
             &macro_JPN1	    &macro_JPN2	    &macro_JPN3     &macro_JPN4                                     &macro_JPN5	    &macro_JPN6     &macro_JPN7     &macro_JPN8	    &macro_JPN9     &macro_JPN0
-            &mt LALT INT1   &kp BSLH        &kp INT3        &kp SLASH   		     		                &kp ASTRK       &kp MINUS       &kp PLUS  	    &kp LBKT        &kp RBKT        &mt RGUI LC(V)
-                                                            &kp LSHFT       &kp SPACE       &ht_lg2 ADJ 0   &trans          &sk_gui         &kp RSHFT
+            &mt LALT INT1   &kp BSLH        &kp INT3        &kp SLASH   		     		                &kp ASTRK       &kp MINUS       &kp PLUS  	    &kp LBKT        &kp RBKT        &qmt RGUI LC(V)
+                                                            &qm LSHFT       &kp SPACE       &ht_lg2 ADJ 0   &trans          &sk_gui         &qm RSHFT
             >;
         };
 
         RSEL {
             bindings = <
         // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
-            &mt LSHFT F1    &kp F2          &kp F3          &kp F4          &kp F5         		         		            &kp F6          &kp F7    	    &kp F8          &kp F9          &kp F10
-            &mt LCTRL N1    &kp N2          &kp N3          &kp N4      		     		                &kp N5          &kp N6          &kp N7    	    &kp N8          &kp N9          &kp N0
-            &mt LGUI INT1   &kp BSLH        &kp INT3        &kp SLASH   		     		                &kp ASTRK       &kp MINUS       &kp PLUS  	    &kp LBKT        &kp RBKT        &mt RALT LC(V)
-                                                            &kp LSHFT       &kp SPACE       &ht_it5 ADJL 0  &trans          &sk_gui         &kp RSHFT
+            &qmt LSHFT F1   &kp F2          &kp F3          &kp F4          &kp F5         		         		            &kp F6          &kp F7    	    &kp F8          &kp F9          &kp F10
+            &qmt LCTRL N1   &kp N2          &kp N3          &kp N4      		     		                &kp N5          &kp N6          &kp N7    	    &kp N8          &kp N9          &kp N0
+            &qmt LGUI INT1  &kp BSLH        &kp INT3        &kp SLASH   		     		                &kp ASTRK       &kp MINUS       &kp PLUS  	    &kp LBKT        &kp RBKT        &qmt RALT LC(V)
+                                                            &qm LSHFT       &kp SPACE       &ht_it5 ADJL 0  &trans          &sk_gui         &qm RSHFT
             >;
         };
 
         RSEW {
             bindings = <
         // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
-            &mt LSHFT F1    &kp F2          &kp F3          &kp F4          &kp F5         		         		            &kp F6          &kp F7    	    &kp F8          &kp F9          &kp F10
-            &mt LCTRL N1    &kp N2          &kp N3          &kp N4      		     		                &kp N5          &kp N6          &kp N7    	    &kp N8          &kp N9          &kp N0
-            &mt LGUI INT1   &kp BSLH        &kp INT3        &kp SLASH   		     		                &kp ASTRK       &kp MINUS       &kp PLUS  	    &kp LBKT        &kp RBKT        &mt RALT LC(V)
-                                                            &kp LSHFT       &kp SPACE       &htC_it5 ADJW 0 &trans          &sk_gui         &kp RSHFT
+            &qmt LSHFT F1   &kp F2          &kp F3          &kp F4          &kp F5         		         		            &kp F6          &kp F7    	    &kp F8          &kp F9          &kp F10
+            &qmt LCTRL N1   &kp N2          &kp N3          &kp N4      		     		                &kp N5          &kp N6          &kp N7    	    &kp N8          &kp N9          &kp N0
+            &qmt LGUI INT1  &kp BSLH        &kp INT3        &kp SLASH   		     		                &kp ASTRK       &kp MINUS       &kp PLUS  	    &kp LBKT        &kp RBKT        &qmt RALT LC(V)
+                                                            &qm LSHFT       &kp SPACE       &htC_it5 ADJW 0 &trans          &sk_gui         &qm RSHFT
             >;
         };
 
         ADJ {
             bindings = <
         // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
-            &mt LSHFT F11   &kp F12         &kp C_MUTE      &kp C_VOL_DN    &kp C_VOL_UP                                    &kp CAPS        &kp PSCRN       &kp SLCK        &kp PAUSE_BREAK &kp LS(UP)
+            &qmt LSHFT F11  &kp F12         &kp C_MUTE      &kp C_VOL_DN    &kp C_VOL_UP                                    &kp CAPS        &kp PSCRN       &kp SLCK        &kp PAUSE_BREAK &kp LS(UP)
             &out OUT_BLE    &usb_lCAD       &bt3_lCAD       &kp LS(RIGHT)                                   &kp G           &kp INT5        &file_r         &pr_pg          &nx_pg          &file_f
             &bt0_lQWE       &bt1_lNICL      &bt2_lNICL      &kp K_APP                                       &kp LS(LEFT)    &kp LS(DOWN) &kp LS(LG(LEFT)) &kp LS(LA(LEFT)) &kp LS(LA(RIGHT)) &kp LS(LG(RIGHT))
                                                             &to QWE         &kp LS(LEFT)    &trans          &trans          &kp LS(RIGHT)  	&to CAD
@@ -6810,7 +6810,7 @@ combo_CHII {
         ADJL {
             bindings = <
         // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
-            &mt LSHFT F11   &kp F12         &kp C_MUTE      &kp C_VOL_DN    &kp C_VOL_UP                                    &kp CAPS        &kp PSCRN       &kp SLCK        &kp PAUSE_BREAK &kp LS(UP)
+            &qmt LSHFT F11  &kp F12         &kp C_MUTE      &kp C_VOL_DN    &kp C_VOL_UP                                    &kp CAPS        &kp PSCRN       &kp SLCK        &kp PAUSE_BREAK &kp LS(UP)
             &out OUT_BLE    &usb_lCAD       &bt3_lCAD       &kp LS(RIGHT)                                   &kp G           &kp INT5        &file_r         &pr_pg          &nx_pg          &file_f
             &bt0_lQWE       &bt1_lNICL      &bt2_lNICL      &kp K_APP                                       &kp LS(LEFT)    &kp LS(DOWN)    &kp LS(HOME) &kp LS(LC(LEFT)) &kp LS(LC(RIGHT)) &kp LS(END)
                                                             &to QWE         &grave_uc       &trans          &trans          &tilde_uc	    &to CAD
@@ -6820,7 +6820,7 @@ combo_CHII {
         ADJW {
             bindings = <
         // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
-            &mt LSHFT F11   &kp F12         &kp C_MUTE      &kp C_VOL_DN    &kp C_VOL_UP                                    &kp CAPS        &kp PSCRN       &kp SLCK        &kp PAUSE_BREAK &kp LS(UP)
+            &qmt LSHFT F11  &kp F12         &kp C_MUTE      &kp C_VOL_DN    &kp C_VOL_UP                                    &kp CAPS        &kp PSCRN       &kp SLCK        &kp PAUSE_BREAK &kp LS(UP)
             &out OUT_BLE    &usb_lCAD       &bt3_lCAD       &kp LS(RIGHT)                                   &kp G           &kp INT5        &file_r         &pr_pg          &nx_pg          &file_f
             &bt0_lQWE       &bt1_lNICL      &bt2_lNICL      &kp K_APP                                       &kp LS(LEFT)    &kp LS(DOWN)    &kp LS(HOME) &kp LS(LC(LEFT)) &kp LS(LC(RIGHT)) &kp LS(END)
                                                             &to QWE         &grave_uc       &trans          &trans          &tilde_uc	    &to CAD
