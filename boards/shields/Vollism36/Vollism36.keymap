@@ -156,7 +156,7 @@
                 第一引数（Hold）: LS(LCTL) -> Shift + Ctrl
                 第二引数（Tap） : ESC
             */
-            bindings = <&esc_ctrl_shift &ctrl_shift ESC>;.
+            bindings = <&esc_ctrl_shift &ctrl_shift ESC>;
         };
         // tab {
         //     bindings = <&kp TAB>;
