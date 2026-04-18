@@ -6771,7 +6771,7 @@ combo_CHII {
             bindings = <
         // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
             &qmt LSHFT F1   &kp F2          &kp F3          &kp F4          &kp F5         		         		            &kp F6          &kp F7    	    &kp F8          &kp F9          &kp F10
-            &qmacro_JPN1    &macro_JPN2	    &macro_JPN3     &macro_JPN4                                     &macro_JPN5	    &macro_JPN6     &macro_JPN7     &macro_JPN8	    &macro_JPN9     &macro_JPN0
+            &macro_JPN1     &macro_JPN2	    &macro_JPN3     &macro_JPN4                                     &macro_JPN5	    &macro_JPN6     &macro_JPN7     &macro_JPN8	    &macro_JPN9     &macro_JPN0
             &qmt LALT INT1  &kp BSLH        &kp INT3        &kp SLASH   		     		                &kp ASTRK       &kp MINUS       &kp PLUS  	    &kp LBKT        &kp RBKT        &qmt RGUI LC(V)
                                                             &qm LSHFT       &kp SPACE       &ht_lg2 ADJ 0   &trans          &sk_gui         &qm RSHFT
             >;
