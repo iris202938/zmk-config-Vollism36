@@ -145,7 +145,7 @@
                 第一引数（Hold）: LS(LCTL) -> Shift + Ctrl
                 第二引数（Tap） : ESC
             */
-            bindings = <&esc_ctrl_shift ctrl_shift ESC>;
+            bindings = <&esc_ctrl_shift &ctrl_shift ESC>;
         };
         combo_esc_mods_r {
             timeout-ms = <50>;
@@ -156,7 +156,7 @@
                 第一引数（Hold）: LS(LCTL) -> Shift + Ctrl
                 第二引数（Tap） : ESC
             */
-            bindings = <&esc_ctrl_shift ctrl_shift ESC>;
+            bindings = <&esc_ctrl_shift &ctrl_shift ESC>;
         };
         // tab {
         //     bindings = <&kp TAB>;
@@ -4827,12 +4827,13 @@ combo_CHII {
         ctrl_shift: ctrl_shift { // ctrl+shiftマクロ
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LCTRL>
-                , <&macro_press &kp LSHFT>
-                , <&macro_release &kp LSHFT>
-                , <&macro_release &kp LCTRL>
-                ;
+            bindings = <&kp LCTRL &kp LSHFT>; // Ctrl+Shiftを押しっぱなしにするマクロ
+            // bindings
+            //     = <&macro_press &kp LCTRL>
+            //     , <&macro_press &kp LSHFT>
+            //     , <&macro_release &kp LSHFT>
+            //     , <&macro_release &kp LCTRL>
+            //     ;
         };	
 
         grave_uc: grave_uc {
