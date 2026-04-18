@@ -209,33 +209,33 @@
         combo_LGUI {
             bindings = <&kp LGUI>;
             key-positions = <20 21>;
-            layers = <LIN CAD LWRL LWRW RSEL RSEW>;
+            layers = <LWRL LWRW RSEL RSEW>;
             timeout-ms = <80>;
         };
         combo_RGUI {
             bindings = <&kp RGUI>;
             key-positions = <28 29>;
-            layers = <QWE LWR RSE>;
+            layers = <LWR RSE>;
             timeout-ms = <80>;
         };
         combo_LALT {
             bindings = <&kp LALT>;
             key-positions = <20 21>;
-            layers = <QWE LWR RSE>;
+            layers = <LWR RSE>;
             timeout-ms = <80>;
         };
         combo_RALT {
             bindings = <&kp RALT>;
             key-positions = <28 29>;
-            layers = <LIN CAD LWRL LWRW RSEL RSEW ADJL ADJW>;
+            layers = <LWRL LWRW RSEL RSEW ADJL ADJW>;
             timeout-ms = <80>;
         };
-        ctrl_l {
-            bindings = <&kp LCTRL>;
-            key-positions = <10 11>;
-            layers = <QWE LIN CAD>;
-            timeout-ms = <80>;
-        };
+        // ctrl_l {
+        //     bindings = <&kp LCTRL>;
+        //     key-positions = <10 11>;
+        //     layers = <QWE LIN CAD>;
+        //     timeout-ms = <80>;
+        // };
         // ctrl_r {
         //     bindings = <&kp RCTRL>;
         //     key-positions = <18 19>;
@@ -245,13 +245,13 @@
         gui_l {
             bindings = <&kp LGUI>;
             key-positions = <20 21>;
-            layers = <CAD LWRL LWRW RSEL RSEW>;
+            layers = <LWRL LWRW RSEL RSEW>;
             timeout-ms = <80>;
         };
         gui_r {
             bindings = <&kp RGUI>;
             key-positions = <28 29>;
-            layers = <QWE LWR RSE>;
+            layers = <LWR RSE>;
             timeout-ms = <80>;
         };
         combo_LGUI_LCTRL {
@@ -260,8 +260,8 @@
             layers = <LWR LWRL LWRW>;
             timeout-ms = <80>;
         };
-        rctrl_sqt {
-            bindings = <&mt RCTRL SQT>;
+        combo_sqt {
+            bindings = <&kp SQT>;
             key-positions = <18 19>;
             layers = <QWE LIN CAD>;
             timeout-ms = <80>;
