@@ -44,12 +44,12 @@
 };
 
 &sk {
-    release-after-ms = <2000>; // 2秒間入力を待つ
+    release-after-ms = <3000>; // 3秒間入力を待つ
     quick-release;
 };
 
 &sl {
-    release-after-ms = <2000>; // 2秒間入力を待つ
+    release-after-ms = <3000>; // 3秒間入力を待つ
 };
 
 &caps_word {
@@ -145,7 +145,7 @@
                 第一引数（Hold）: LS(LCTL) -> Shift + Ctrl
                 第二引数（Tap） : ESC
             */
-            bindings = <&esc_ctrl_shift LS(LCTL) ESC>;
+            bindings = <&esc_ctrl_shift ctrl_shift ESC>;
         };
         combo_esc_mods_r {
             timeout-ms = <50>;
@@ -156,7 +156,7 @@
                 第一引数（Hold）: LS(LCTL) -> Shift + Ctrl
                 第二引数（Tap） : ESC
             */
-            bindings = <&esc_ctrl_shift RS(RCTL) ESC>;
+            bindings = <&esc_ctrl_shift ctrl_shift ESC>;
         };
         // tab {
         //     bindings = <&kp TAB>;
@@ -4824,6 +4824,16 @@ combo_CHII {
                 , <&macro_release &kp RGUI>
                 ;
         };
+        ctrl_shift: ctrl_shift { // ctrl+shiftマクロ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_press &kp LSHFT>
+                , <&macro_release &kp LSHFT>
+                , <&macro_release &kp LCTRL>
+                ;
+        };	
 
         grave_uc: grave_uc {
             compatible = "zmk,behavior-macro";
