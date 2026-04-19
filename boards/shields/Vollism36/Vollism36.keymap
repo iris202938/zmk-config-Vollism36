@@ -297,7 +297,7 @@
             timeout-ms = <80>;
         };
         gui_left {
-            bindings = <&kp LG(ENTER) LG(LEFT)>;
+            bindings = <&kp LG(BSPC) LG(LEFT)>;
             key-positions = <21 22>;
             layers = <LWRL LWRW>;
             timeout-ms = <80>;
