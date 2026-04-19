@@ -230,6 +230,18 @@
             layers = <LWRL LWRW RSEL RSEW ADJL ADJW>;
             timeout-ms = <80>;
         };
+        combo_sl_LALT {
+            bindings = <&sk_alt:>;
+            key-positions = <30 31>;
+            layers = <LWR LWRL LWRW>;
+            timeout-ms = <80>;
+        };
+        combo_sl_RALT {
+            bindings = <&sk_alt:>;
+            key-positions = <34 35>;
+            layers = <RSE RSEL RSEW>;
+            timeout-ms = <80>;
+        };
         // ctrl_l {
         //     bindings = <&kp LCTRL>;
         //     key-positions = <10 11>;
@@ -6648,6 +6660,15 @@ combo_CHII {
             tap-ms = <0>;
             bindings
                 = <&macro_tap &sk LGUI &sl WIN>
+                ;
+        };
+        sk_alt: sk_alt {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings
+                = <&macro_tap &sk LALT &sl WIN>
                 ;
         };
     };
