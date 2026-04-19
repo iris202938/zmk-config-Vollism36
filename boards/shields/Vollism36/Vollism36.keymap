@@ -269,7 +269,7 @@
         combo_LGUI_LCTRL {
             bindings = <&LGUI_LCTRL>;
             key-positions = <10 20>;
-            layers = <LWR LWRL LWRW>;
+            layers = <LWRL LWRW>;
             timeout-ms = <80>;
         };
         combo_sqt {
@@ -297,7 +297,7 @@
             timeout-ms = <80>;
         };
         gui_left {
-            bindings = <&kp LG(LEFT)>;
+            bindings = <&kp LG(LEFT) LG(ENTER)>;
             key-positions = <21 22>;
             layers = <LWRL LWRW>;
             timeout-ms = <80>;
