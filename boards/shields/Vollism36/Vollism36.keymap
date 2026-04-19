@@ -332,12 +332,12 @@
             layers = <RSE>;
             timeout-ms = <80>;
         };
-        cmd_v {
-            bindings = <&cmd_v>;
-            key-positions = <26 27>;
-            layers = <RSE>;
-            timeout-ms = <80>;
-        };
+        // cmd_v {
+        //     bindings = <&cmd_v>;
+        //     key-positions = <26 27>;
+        //     layers = <RSE>;
+        //     timeout-ms = <80>;
+        // };
         ctrl_x {
             bindings = <&ctrl_x>;
             key-positions = <8 9>;
@@ -350,12 +350,12 @@
             layers = <RSEL RSEW>;
             timeout-ms = <80>;
         };
-        ctrl_v {
-            bindings = <&ctrl_v>;
-            key-positions = <26 27>;
-            layers = <RSEL RSEW>;
-            timeout-ms = <80>;
-        };
+        // ctrl_v {
+        //     bindings = <&ctrl_v>;
+        //     key-positions = <26 27>;
+        //     layers = <RSEL RSEW>;
+        //     timeout-ms = <80>;
+        // };
         combo_e_key { // ECADの文字修正
             timeout-ms = <80>;
             key-positions = <25 26>;
