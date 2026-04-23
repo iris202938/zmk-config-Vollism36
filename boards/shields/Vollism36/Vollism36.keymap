@@ -4397,7 +4397,7 @@ combo_CHII {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <230>;
-            bindings = <&all_ht LGCTRL A>, <&ctrl_a_a>, <&ctrl_d_a>, <&ctrl_f_a>;
+            bindings = <&all_ht LCTRL A>, <&ctrl_a_a>, <&ctrl_d_a>, <&ctrl_f_a>;
         };
 
         // --- Tap Dance B ---
