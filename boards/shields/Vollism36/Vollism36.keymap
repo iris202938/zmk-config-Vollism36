@@ -6696,9 +6696,9 @@ combo_CHII {
         QWE {
             bindings = <
         // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
-            &kp Q           &kp W           &kp E           &kp R           &kp T                                           &kp Y           &kp U           &kp I           &kp O           &kp P
-            &mt LGUI A      &mt LALT S      &mt LSHFT D     &mt LCTRL F                                     &kp G           &kp H           &mt RCTRL J     &mt RSHFT K     &mt RALT L      &mt_s RGUI SEMI
-            &kp Z           &kp X           &kp C           &kp V                                           &kp B           &kp N           &kp M           &kp COMMA       &kp DOT         &kp SLASH
+            &mt LSHFT Q     &kp W           &kp E           &kp R           &kp T                                           &kp Y           &kp U           &kp I           &kp O           &mt RSHFT P
+            &mt LCTRL A     &kp S           &kp D           &kp F                                           &kp G           &kp H           &kp J           &kp K           &kp L           &mt RCTRL SEMI
+            &mt LALT Z      &kp X           &kp C           &kp V                                           &kp B           &kp N           &kp M           &kp COMMA       &kp DOT         &mt RGUI SLASH
                                                             &lt NUM LANG2   &mt LSHFT SPACE &lt LWR TAB     &lt RSE ENTER   &mt RSHFT SPACE &ht_lg1 MOV 0
             >;
         };
@@ -6728,9 +6728,9 @@ combo_CHII {
         LIN {
             bindings = <
         // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
-            &kp Q           &kp W           &kp E           &kp R           &kp T                                           &kp Y           &kp U           &kp I           &kp O           &kp P
-            &mt LGUI A      &mt LALT S      &mt LSHFT D     &mt LCTRL F                                     &kp G           &kp H           &mt RCTRL J     &mt RSHFT K     &mt RALT L      &mt RGUI SEMI
-            &kp Z           &kp X           &kp C           &kp V                                           &kp B           &kp N           &kp M           &kp COMMA       &kp DOT         &kp SLASH
+            &mt LSHFT Q     &kp W           &kp E           &kp R           &kp T                                           &kp Y           &kp U           &kp I           &kp O           &mt RSHFT P
+            &mt LCTRL A     &kp S           &kp D           &kp F                                           &kp G           &kp H           &kp J           &kp K           &kp L           &mt RCTRL SEMI
+            &mt LGUI Z      &kp X           &kp C           &kp V                                           &kp B           &kp N           &kp M           &kp COMMA       &kp DOT         &mt RALT SLASH
                                                             &lt NUM INT5    &mt LSHFT SPACE &lt LWRL TAB	&lt RSEL ENTER	&mt RSHFT SPACE &ht_it4 MOVL 0
             >;
         };
