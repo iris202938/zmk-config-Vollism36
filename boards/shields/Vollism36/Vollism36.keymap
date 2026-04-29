@@ -326,19 +326,19 @@
         cmd_x {
             bindings = <&cmd_x>;
             key-positions = <8 9>;
-            layers = <RSE>;
+            layers = <LWRL LWRW RSE>;
             timeout-ms = <80>;
         };
         cmd_c {
             bindings = <&cmd_c>;
             key-positions = <18 19>;
-            layers = <RSE>;
+            layers = <LWRL LWRW RSE>;
             timeout-ms = <80>;
         };
         cmd_v {
             bindings = <&cmd_v>;
             key-positions = <27 28>;
-            layers = <RSE>;
+            layers = <LWRL LWRW RSE>;
             timeout-ms = <80>;
         };
         ctrl_x {
