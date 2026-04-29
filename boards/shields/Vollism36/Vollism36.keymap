@@ -233,8 +233,8 @@
             layers = <LIN CAD LWRL LWRW RSEL RSEW ADJL ADJW MOVL MOVW>;
             timeout-ms = <80>;
         };
-        combo_sl_LALT {
-            bindings = <&sk_alt>;
+        combo_sl_LCTRL_LSHFT {
+            bindings = <&sk_ct_sh>;
             key-positions = <30 31>;
             layers = <LWR LWRL LWRW>;
             timeout-ms = <80>;
@@ -6703,6 +6703,15 @@
             tap-ms = <0>;
             bindings
                 = <&macro_tap &sk LALT &sl WINS>
+                ;
+        };
+        sk_ct_sh: sk_ctrl_shift {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings
+                = <&macro_tap &sk LCTRL &sk LSHFT &sl WINS>
                 ;
         };
         // 通常の判定時間（例: 240ms）
