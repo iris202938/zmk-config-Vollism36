@@ -6705,20 +6705,20 @@
                 = <&macro_tap &sk LALT &sl WINS>
                 ;
         };
-        // 通常の判定時間（例: 200ms）
+        // 通常の判定時間（例: 240ms）
         mt_s: mod_tap_slow {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <200>;
+            tapping-term-ms = <240>;
             bindings = <&kp>, <&kp>;
         };
-        // 特定のキー用の短い判定時間（例: 180ms）
+        // 特定のキー用の短い判定時間（例: 200ms）
         mt_m: mod_tap_mid {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <180>; // ここを個別に設定
+            tapping-term-ms = <200>; // ここを個別に設定
             bindings = <&kp>, <&kp>;
         };
         // 特定のキー用の短い判定時間（例: 170ms）
