@@ -5818,7 +5818,7 @@ combo_CHII {
                 ;
         };
 
-        // Ctrl + F, G: 部品表編集
+        // Ctrl + F, G: 部品表編集+再作成
         ctrl_f_g: ctrl_f_g {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -5826,6 +5826,8 @@ combo_CHII {
                 = <&macro_press &kp LCTRL>
                 , <&macro_tap &kp F>, <&macro_release &kp LCTRL>
                 , <&macro_tap &kp G>
+                , <&macro_tap &kp LALT>
+                , <&macro_tap &kp M>
                 ;
         };
 
@@ -6688,12 +6690,12 @@ combo_CHII {
             tapping-term-ms = <180>; // ここを個別に設定
             bindings = <&kp>, <&kp>;
         };
-        // 特定のキー用の短い判定時間（例: 160ms）
+        // 特定のキー用の短い判定時間（例: 170ms）
         mt_f: mod_tap_fast {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <160>; // ここを個別に設定
+            tapping-term-ms = <170>; // ここを個別に設定
             bindings = <&kp>, <&kp>;
         };
     };
