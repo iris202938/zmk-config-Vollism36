@@ -4338,67 +4338,67 @@
         td_lt_mov_l1: tap_dance_layer_tap_mov_l1 {  // タップでLANG1、ホールドでMOVレイヤ、ダブルタップでMOVレイヤ保持
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <170>;
+            tapping-term-ms = <190>;
             bindings = <&lt MOV LANG1>, <&to MOV>;
         };
         td_lt_num_l2: tap_dance_layer_tap_num_l2 {  // タップでLANG2、ホールドでNUMレイヤ、ダブルタップでNUMレイヤ保持
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <170>;
+            tapping-term-ms = <190>;
             bindings = <&lt NUM LANG2>, <&to NUM>;
         };
         td_lt_mov_i2: tap_dance_layer_tap_mov_i2 {  // タップでINT2、ホールドでMOVレイヤ、ダブルタップでMOVレイヤ保持
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <170>;
+            tapping-term-ms = <190>;
             bindings = <&lt MOV INT2>, <&to_MOV_i2>;
         };
         td_lt_mov_esc: tap_dance_layer_tap_mov_esc {  // タップでESC、ホールドでMOVレイヤ、ダブルタップでMOVレイヤ保持
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <170>;
+            tapping-term-ms = <190>;
             bindings = <&lt MOV ESC>, <&to MOV>;
         };
         td_lt_cad_i2: tap_dance_layer_tap_cad_i2 {  // タップでかな、ホールドでCADレイヤ、ダブルタップでCADレイヤ保持
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <170>;
+            tapping-term-ms = <190>;
             bindings = <&lt CAD INT2>, <&to_CAD_i2>;
         };
         td_lt_movw_i2: tap_dance_layer_tap_movw_i2 {  // タップでかな、ホールドでMOVWレイヤ、ダブルタップでMOVWレイヤ保持、無変換
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <170>;
+            tapping-term-ms = <190>;
             bindings = <&lt MOVW INT2>, <&to_MOVW_i5>;
         };
         td_lt_num_i5: tap_dance_layer_tap_num_i5 {  // タップで無変換、ホールドでNUMレイヤ、ダブルタップでNUMレイヤ保持、無変換
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <170>;
+            tapping-term-ms = <190>;
             bindings = <&lt NUM INT5>, <&to_NUM_i5>;
         };
         td_lt_numw_i5: tap_dance_layer_tap_numw_i5 {  // タップで無変換、ホールドでNUMWレイヤ、ダブルタップでNUMWレイヤ保持、無変換
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <170>;
+            tapping-term-ms = <190>;
             bindings = <&lt NUMW INT5>, <&to_NUMW_i5>;
         };
         td_lt_num_esc: tap_dance_layer_tap_num_esc {  // タップでesc、ホールドでNUMレイヤ、ダブルタップでNUMレイヤ保持、無変換
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <170>;
+            tapping-term-ms = <190>;
             bindings = <&lt NUM ESC>, <&to_NUM_i5>;
         };
         td_lt_numl_esc: tap_dance_layer_tap_numl_esc {  // タップでesc、ホールドでNUMLレイヤ、ダブルタップでNUMLレイヤ保持、無変換
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <170>;
+            tapping-term-ms = <190>;
             bindings = <&lt NUML ESC>, <&to_NUML_i5>;
         };
         td_lt_numw_esc: tap_dance_layer_tap_numw_esc {  // タップでesc、ホールドでNUMWレイヤ、ダブルタップでNUMWレイヤ保持、無変換
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <170>;
+            tapping-term-ms = <190>;
             bindings = <&lt NUMW ESC>, <&to_NUMW_i5>;
         };
 
