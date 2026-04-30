@@ -5081,7 +5081,7 @@
             tap-ms = <10>;
             bindings 
                 = <&to LIN> // レイヤー3（LIN）に戻る
-                , <&macro_wait_time 30> // ここで30ミリ秒待機
+                , <&macro_wait_time 20> // ここで20ミリ秒待機
                 , <&kp  INT5>;
         };
         tW_int4: tW_int4 {
