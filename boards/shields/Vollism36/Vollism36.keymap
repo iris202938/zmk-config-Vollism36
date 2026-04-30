@@ -6812,7 +6812,7 @@
             &td_Q           &td_W           &td_E           &td_R           &td_T                                           &td_Y           &td_U           &td_I           &td_O           &td_P
             &td_A           &td_S           &td_D           &td_F                                           &td_G           &td_H           &td_J           &td_K           &td_L           &td_SEMI
             &td_Z           &td_X           &td_C           &td_V                                           &td_B           &td_N           &td_M           &td_COMMA       &td_DOT         &td_SLASH
-                                                            &td_lt_numw_i5  &kp SPACE       &lt LWRW TAB    &lt RSEW ENTER	&kp RSHFT ESC   &htW_it4 MOVW 0
+                                                            &td_lt_numw_i5  &kp SPACE       &lt LWRW TAB    &lt RSEW ENTER	&mt RSHFT ESC   &htW_it4 MOVW 0
             >;
         };
 
