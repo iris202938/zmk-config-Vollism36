@@ -4940,6 +4940,11 @@
             #binding-cells = <0>;
             bindings = <&to MOV>, <&kp INT2>;
         };
+        to_MOVL_i5: to_MOVL_INT5{
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to MOVL>, <&kp INT5>;
+        };
         to_MOVW_i5: to_MOVW_INT5{
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
