@@ -434,37 +434,37 @@
         mb1_cad {
             bindings = <&mkp MB1>;
             key-positions = <26 27>;
-            layers = <QWE LIN CAD LWR LWRL LWRW>;
+            layers = <QWE LIN CAD LWR LWRL LWRW WINS>;
             timeout-ms = <60>;
         };
         mb2_cad {
             bindings = <&mkp MB2>;
             key-positions = <27 28>;
-            layers = <QWE LIN CAD LWR LWRL LWRW>;
+            layers = <QWE LIN CAD LWR LWRL LWRW WINS>;
             timeout-ms = <60>;
         };
         mb3_cad {
             bindings = <&mkp MB3>;
             key-positions = <26 28>;
-            layers = <QWE LIN CAD LWR LWRL LWRW>;
+            layers = <QWE LIN CAD LWR LWRL LWRW WINS>;
             timeout-ms = <60>;
         };
         mb1_l_cad {
             bindings = <&mkp MB1>;
             key-positions = <13 22>;
-            layers = <QWE LIN CAD>;
+            layers = <QWE LIN CAD WINS>;
             timeout-ms = <80>;
         };
         mb2_l_cad {
             bindings = <&mkp MB2>;
             key-positions = <13 32>;
-            layers = <QWE LIN CAD>;
+            layers = <QWE LIN CAD WINS>;
             timeout-ms = <80>;
         };
         mb3_l_cad {
             bindings = <&mkp MB3>;
             key-positions = <22 32>;
-            layers = <QWE LIN CAD>;
+            layers = <QWE LIN CAD WINS>;
             timeout-ms = <80>;
         };
         int5_g_c {
