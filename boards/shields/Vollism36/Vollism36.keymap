@@ -6794,7 +6794,7 @@
             &mt_s LSHFT Q   &kp W           &kp E           &kp R           &kp T                                           &kp Y           &kp U           &kp I           &kp O           &mt_s RSHFT P
             &mt_s LCTRL A   &kp S           &kp D           &kp F                                           &kp G           &kp H           &kp J           &kp K           &kp L           &mt_s RCTRL SEMI
             &mt_s LALT Z    &kp X           &kp C           &kp V                                           &kp B           &kp N           &kp M           &kp COMMA       &kp DOT         &mt_s RGUI SLASH
-                                                            &td_lt_numl_esc &mt LSHFT SPACE &lt LWRL TAB	&lt RSEL ENTER	&mt RSHFT SPACE &ht_it4 MOVL 0
+                                                            &td_lt_numl_esc &mt LSHFT SPACE &lt LWRL TAB	&lt RSEL ENTER	&mt RSHFT SPACE &td_lt_movl_esc
             >;
         };
 
@@ -6814,7 +6814,7 @@
             &macro_JPPERIOD &macro_KA       &macro_TA       &macro_KO       &macro_SA                                       &macro_RA       &macro_TI       &macro_KU       &macro_TU       &macro_JPCOMMA1
             &macro_U        &macro_SI	    &macro_TE       &macro_KE                                       &macro_SE       &macro_HA       &macro_TO       &macro_KI       &macro_I        &macro_NN
             &macro_JPTEN    &macro_HI	    &macro_SU       &macro_HU                                       &macro_HE       &macro_ME       &macro_SO       &macro_NE       &macro_HO       &macro_JPNAKATEN
-                                                            &td_lt_numl_esc &kp SPACE       &lt LWRL TAB    &lt RSEL ENTER  &kp LS(SPACE)   &lt MOVL INT4
+                                                            &td_lt_numl_esc &kp SPACE       &lt LWRL TAB    &lt RSEL ENTER  &kp LS(SPACE)   &td_lt_movl_esc
             >;
         };
 
