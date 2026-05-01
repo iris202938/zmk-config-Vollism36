@@ -4377,6 +4377,12 @@
             tapping-term-ms = <190>;
             bindings = <&lt CAD INT2>, <&to_CAD_i2>;
         };
+        td_lt_movl_esc: tap_dance_layer_tap_movl_esc {  // タップでesc、ホールドでMOVLレイヤ、ダブルタップでMOVLレイヤ保持、無変換
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <190>;
+            bindings = <&lt MOVL ESC>, <&to_MOVL_i5>;
+        };
         td_lt_movw_i2: tap_dance_layer_tap_movw_i2 {  // タップでかな、ホールドでMOVWレイヤ、ダブルタップでMOVWレイヤ保持、無変換
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
