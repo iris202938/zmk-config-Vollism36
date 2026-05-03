@@ -449,6 +449,43 @@
 			layers = <QWE LIN CAD RSE RSEL RSEW>;
             bindings = <&m_xl_rename>;
         };
+        combo_ADJ_ss1 { // ADJレイヤーでのスクリーンショット1
+            timeout-ms = <80>;
+        	key-positions = <3 6>; // R,Uのキー位置に書き換えてください
+			layers = <ADJ>;
+            bindings = <&kp LS(LG(N3))>;
+        };
+        combo_ADJ_ss2 { // ADJレイヤーでのスクリーンショット2
+            timeout-ms = <80>;
+        	key-positions = <13 16>; // F,Jのキー位置に書き換えてください
+			layers = <ADJ>;
+            bindings = <&kp LS(LG(N4))>;
+        };
+        combo_ADJL_ss1 { // ADJLレイヤーでのスクリーンショット1
+            timeout-ms = <80>;
+        	key-positions = <3 6>; // R,Uのキー位置に書き換えてください
+			layers = <ADJL>;
+            bindings = <&kp LG(S)>;
+        };
+        combo_ADJL_ss2 { // ADJLレイヤーでのスクリーンショット2
+            timeout-ms = <80>;
+        	key-positions = <13 16>; // F,Jのキー位置に書き換えてください
+			layers = <ADJL>;
+            bindings = &win_shift_s>;
+        };
+        combo_ADJW_ss1 { // ADJWレイヤーでのスクリーンショット1
+            timeout-ms = <80>;
+        	key-positions = <3 6>; // R,Uのキー位置に書き換えてください
+			layers = <ADJW>;
+            bindings = <&kp LG(S)>;
+        };
+        combo_ADJW_ss2 { // ADJWレイヤーでのスクリーンショット2
+            timeout-ms = <80>;
+        	key-positions = <13 16>; // F,Jのキー位置に書き換えてください
+			layers = <ADJW>;
+            bindings = &win_shift_s>;
+        };
+
         mb1_cad {
             bindings = <&mkp MB1>;
             key-positions = <26 27>;
@@ -6881,8 +6918,8 @@
             bindings = <
         // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
             &mt_s LSHFT PG_UP &kp LC(A)     &kp UP          &kp LC(E)       &kp LS(TAB)                                     &kp DEL         &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT &mt_s RSHFT SCRL_UP
-            &mt_s LCTRL PG_DN &kp LEFT      &kp DOWN        &kp RIGHT   	                                &kp LS(LG(N3))  &kp BSPC        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT &mt_s RCTRL SCRL_DOWN
-            &mt_s LGUI LC(V)  &mkp MB1      &mkp MB3        &mkp MB2		                                &kp LS(LG(N4))  &mkp MB1        &kp ENTER       &kp LA(LEFT)    &kp LA(RIGHT)   &mt_s RALT RG(V)
+            &mt_s LCTRL PG_DN &kp LEFT      &kp DOWN        &kp RIGHT   	                                &trans          &kp BSPC        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT &mt_s RCTRL SCRL_DOWN
+            &mt_s LGUI LC(V)  &mkp MB1      &mkp MB3        &mkp MB2		                                &trans          &mkp MB1        &kp ENTER       &kp LA(LEFT)    &kp LA(RIGHT)   &mt_s RALT RG(V)
                                                             &kp LSHFT       &sk_ctrl        &trans          &ht_lg1 ADJ 0   &kp LS(LC(V))   &kp RSHFT
             >;
         };
@@ -6891,8 +6928,8 @@
             bindings = <
         // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
             &mt_s LSHFT PG_UP &kp HOME      &kp UP          &kp END         &kp LS(TAB)                                     &kp DEL         &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT &mt_s RSHFT SCRL_UP
-            &mt_s LCTRL PG_DN &kp LEFT      &kp DOWN        &kp RIGHT   	                                &kp LG(S)       &kp BSPC        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT &mt_s RCTRL SCRL_DOWN
-            &mt_s LALT LC(V)  &mkp MB1      &mkp MB3        &mkp MB2		                                &win_shift_s    &mkp MB1        &kp ENTER       &kp LC(LEFT)    &kp LC(RIGHT)   &mt_s RGUI RG(V)
+            &mt_s LCTRL PG_DN &kp LEFT      &kp DOWN        &kp RIGHT   	                                &trans          &kp BSPC        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT &mt_s RCTRL SCRL_DOWN
+            &mt_s LALT LC(V)  &mkp MB1      &mkp MB3        &mkp MB2		                                &trans          &mkp MB1        &kp ENTER       &kp LC(LEFT)    &kp LC(RIGHT)   &mt_s RGUI RG(V)
                                                             &kp LSHFT       &sk_ctrl        &trans          &ht_it4 ADJL 0  &kp LS(LC(V))   &kp RSHFT
             >;
         };
@@ -6901,8 +6938,8 @@
             bindings = <
         // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
             &mt_s LSHFT PG_UP &kp HOME      &kp UP          &kp END         &kp LS(TAB)                                     &kp DEL         &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT &mt_s RSHFT SCRL_UP
-            &mt_s LCTRL PG_DN &kp LEFT      &kp DOWN        &kp RIGHT   	                                &kp LG(S)       &kp BSPC        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT &mt_s RCTRL SCRL_DOWN
-            &mt_s LALT LC(V)  &mkp MB1      &mkp MB3        &mkp MB2		                                &win_shift_s    &mkp MB1        &kp ENTER       &kp LC(LEFT)    &kp LC(RIGHT)   &mt_s RGUI RG(V)
+            &mt_s LCTRL PG_DN &kp LEFT      &kp DOWN        &kp RIGHT   	                                &trans          &kp BSPC        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT &mt_s RCTRL SCRL_DOWN
+            &mt_s LALT LC(V)  &mkp MB1      &mkp MB3        &mkp MB2		                                &trans          &mkp MB1        &kp ENTER       &kp LC(LEFT)    &kp LC(RIGHT)   &mt_s RGUI RG(V)
                                                             &kp LSHFT       &sk_ctrl        &trans          &htW_it4 ADJW 0 &kp LS(LC(V))   &kp RSHFT
             >;
         };
