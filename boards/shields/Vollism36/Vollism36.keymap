@@ -471,7 +471,7 @@
             timeout-ms = <80>;
         	key-positions = <13 16>; // F,Jのキー位置に書き換えてください
 			layers = <ADJL>;
-            bindings = &win_shift_s>;
+            bindings = <&win_shift_s>;
         };
         combo_ADJW_ss1 { // ADJWレイヤーでのスクリーンショット1
             timeout-ms = <80>;
@@ -483,7 +483,7 @@
             timeout-ms = <80>;
         	key-positions = <13 16>; // F,Jのキー位置に書き換えてください
 			layers = <ADJW>;
-            bindings = &win_shift_s>;
+            bindings = <&win_shift_s>;
         };
 
         mb1_cad {
