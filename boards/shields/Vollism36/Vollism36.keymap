@@ -31,8 +31,10 @@
 #define MOVL 18
 #define MOVW 19
 #define NUM 20
-#define WINS 21
-#define BLE 22
+#define NUML 21
+#define NUMW 22
+#define WINS 23
+#define BLE 24
 
 &mt {
     flavor = "hold-preferred";
@@ -124,7 +126,25 @@
             layers = <ADJ ADJL ADJW>;
             bindings = <&to LIN>;
         };
-        
+        combo_to_NUM {
+            timeout-ms = <70>;
+            key-positions = <30 32>;
+            layers = <QWE NIC NGN>;
+            bindings = <&to NUM>;
+        };
+        combo_to_NUML {
+            timeout-ms = <70>;
+            key-positions = <30 32>;
+            layers = <LIN NICL NGNL>;
+            bindings = <&to NUML>;
+        };
+        combo_to_NUMW {
+            timeout-ms = <70>;
+            key-positions = <30 32>;
+            layers = <CAD WIN>;
+            bindings = <&to NUMW>;
+        };
+
         // esc_l {
         //     bindings = <&kp ESC>;
         //     key-positions = <0 10>;
@@ -231,8 +251,8 @@
             layers = <LIN CAD LWRL LWRW RSEL RSEW ADJL ADJW MOVL MOVW>;
             timeout-ms = <80>;
         };
-        combo_sl_LALT {
-            bindings = <&sk_alt>;
+        combo_sl_LCTRL_LSHFT {
+            bindings = <&sk_ct_sh>;
             key-positions = <30 31>;
             layers = <LWR LWRL LWRW>;
             timeout-ms = <80>;
@@ -324,19 +344,19 @@
         cmd_x {
             bindings = <&cmd_x>;
             key-positions = <8 9>;
-            layers = <RSE>;
+            layers = <LWRL LWRW RSE>;
             timeout-ms = <80>;
         };
         cmd_c {
             bindings = <&cmd_c>;
             key-positions = <18 19>;
-            layers = <RSE>;
+            layers = <LWRL LWRW RSE>;
             timeout-ms = <80>;
         };
         cmd_v {
             bindings = <&cmd_v>;
             key-positions = <27 28>;
-            layers = <RSE>;
+            layers = <LWRL LWRW RSE>;
             timeout-ms = <80>;
         };
         ctrl_x {
@@ -366,13 +386,13 @@
         nlck {
             bindings = <&kp KP_NLCK>;
             key-positions = <8 9>;
-            layers = <NUM>;
+            layers = <NUM NUML NUMW>;
             timeout-ms = <80>;
         };
         dot_question {
             bindings = <&kp KP_DOT>;
             key-positions = <18 19>;
-            layers = <NUM>;
+            layers = <NUM NUML NUMW>;
             timeout-ms = <80>;
         };
         mt_LCTRL_GRAVE {
@@ -429,40 +449,77 @@
 			layers = <QWE LIN CAD RSE RSEL RSEW>;
             bindings = <&m_xl_rename>;
         };
+        combo_ADJ_ss1 { // ADJレイヤーでのスクリーンショット1
+            timeout-ms = <80>;
+        	key-positions = <3 6>; // R,Uのキー位置に書き換えてください
+			layers = <ADJ>;
+            bindings = <&kp LS(LG(N3))>;
+        };
+        combo_ADJ_ss2 { // ADJレイヤーでのスクリーンショット2
+            timeout-ms = <80>;
+        	key-positions = <13 16>; // F,Jのキー位置に書き換えてください
+			layers = <ADJ>;
+            bindings = <&kp LS(LG(N4))>;
+        };
+        combo_ADJL_ss1 { // ADJLレイヤーでのスクリーンショット1
+            timeout-ms = <80>;
+        	key-positions = <3 6>; // R,Uのキー位置に書き換えてください
+			layers = <ADJL>;
+            bindings = <&kp LG(S)>;
+        };
+        combo_ADJL_ss2 { // ADJLレイヤーでのスクリーンショット2
+            timeout-ms = <80>;
+        	key-positions = <13 16>; // F,Jのキー位置に書き換えてください
+			layers = <ADJL>;
+            bindings = <&win_shift_s>;
+        };
+        combo_ADJW_ss1 { // ADJWレイヤーでのスクリーンショット1
+            timeout-ms = <80>;
+        	key-positions = <3 6>; // R,Uのキー位置に書き換えてください
+			layers = <ADJW>;
+            bindings = <&kp LG(S)>;
+        };
+        combo_ADJW_ss2 { // ADJWレイヤーでのスクリーンショット2
+            timeout-ms = <80>;
+        	key-positions = <13 16>; // F,Jのキー位置に書き換えてください
+			layers = <ADJW>;
+            bindings = <&win_shift_s>;
+        };
+
         mb1_cad {
             bindings = <&mkp MB1>;
             key-positions = <26 27>;
-            layers = <QWE LIN CAD LWR LWRL LWRW>;
+            layers = <QWE LIN CAD LWR LWRL LWRW WINS>;
             timeout-ms = <60>;
         };
         mb2_cad {
             bindings = <&mkp MB2>;
             key-positions = <27 28>;
-            layers = <QWE LIN CAD LWR LWRL LWRW>;
+            layers = <QWE LIN CAD LWR LWRL LWRW WINS>;
             timeout-ms = <60>;
         };
         mb3_cad {
             bindings = <&mkp MB3>;
             key-positions = <26 28>;
-            layers = <QWE LIN CAD LWR LWRL LWRW>;
+            layers = <QWE LIN CAD LWR LWRL LWRW WINS>;
             timeout-ms = <60>;
         };
         mb1_l_cad {
             bindings = <&mkp MB1>;
             key-positions = <13 22>;
-            layers = <QWE LIN CAD>;
+            layers = <QWE LIN CAD WINS>;
             timeout-ms = <80>;
         };
         mb2_l_cad {
             bindings = <&mkp MB2>;
             key-positions = <13 32>;
-            layers = <QWE LIN CAD>;
+            layers = <QWE LIN CAD WINS>;
             timeout-ms = <80>;
         };
         mb3_l_cad {
             bindings = <&mkp MB3>;
             key-positions = <22 32>;
-            layers = <QWE LIN CAD>;
+            layers = <QWE LIN CAD WINS>;
             timeout-ms = <80>;
         };
         int5_g_c {
@@ -522,61 +579,61 @@
         tab_1 {
             bindings = <&tab_1>;
             key-positions = <32 26>;
-            layers = <QWE LIN CAD NUM>;
+            layers = <QWE LIN CAD NUM NUML NUMW>;
             timeout-ms = <80>;
         };
         tab_2 {
             bindings = <&tab_2>;
             key-positions = <32 27>;
-            layers = <QWE LIN CAD NUM>;
+            layers = <QWE LIN CAD NUM NUML NUMW>;
             timeout-ms = <80>;
         };
         tab_3 {
             bindings = <&tab_3>;
             key-positions = <32 28>;
-            layers = <QWE LIN CAD NUM>;
+            layers = <QWE LIN CAD NUM NUML NUMW>;
             timeout-ms = <80>;
         };
         tab_4 {
             bindings = <&tab_4>;
             key-positions = <32 16>;
-            layers = <QWE LIN CAD NUM>;
+            layers = <QWE LIN CAD NUM NUML NUMW>;
             timeout-ms = <80>;
         };
         tab_5 {
             bindings = <&tab_5>;
             key-positions = <32 17>;
-            layers = <QWE LIN CAD NUM>;
+            layers = <QWE LIN CAD NUM NUML NUMW>;
             timeout-ms = <80>;
         };
         tab_6 {
             bindings = <&tab_6>;
             key-positions = <32 18>;
-            layers = <QWE LIN CAD NUM>;
+            layers = <QWE LIN CAD NUM NUML NUMW>;
             timeout-ms = <80>;
         };
         tab_7 {
             bindings = <&tab_7>;
             key-positions = <32 6>;
-            layers = <QWE LIN CAD NUM>;
+            layers = <QWE LIN CAD NUM NUML NUMW>;
             timeout-ms = <80>;
         };
         tab_8 {
             bindings = <&tab_8>;
             key-positions = <32 7>;
-            layers = <QWE LIN CAD NUM>;
+            layers = <QWE LIN CAD NUM NUML NUMW>;
             timeout-ms = <80>;
         };
         tab_9 {
             bindings = <&tab_9>;
             key-positions = <32 8>;
-            layers = <QWE LIN CAD NUM>;
+            layers = <QWE LIN CAD NUM NUML NUMW>;
             timeout-ms = <80>;
         };
         tab_0 {
             bindings = <&tab_0>;
             key-positions = <32 25>;
-            layers = <QWE LIN CAD NUM>;
+            layers = <QWE LIN CAD NUM NUML NUMW>;
             timeout-ms = <80>;
         };
         k_tab_1 { // ECADカウントアップ数
@@ -784,7 +841,7 @@
             bindings = <&macro_JPRDKAGIL>;
         };
 
-combo_XA {
+        combo_XA {
             timeout-ms = <50>;
             key-positions = <0 31>; // 旧 1 37
             layers = <NIC NICL>;
@@ -854,7 +911,7 @@ combo_XA {
             bindings = <&macro_PI>;
         };
 
-combo_WO {
+        combo_WO {
             timeout-ms = <50>;
             key-positions = <10 31>; // 旧 13 37
             layers = <NIC NICL>;
@@ -931,7 +988,7 @@ combo_WO {
             bindings = <&macro_XU>;
         };
 
-combo_JPMINUS2 {
+        combo_JPMINUS2 {
             timeout-ms = <50>;
             key-positions = <21 31>; // 旧 26 37
             layers = <NIC NICL>;
@@ -1064,7 +1121,7 @@ combo_JPMINUS2 {
         //  bindings = <&macro_JPRDKAGIR>;
         // };
 
-combo_JPTILDER {
+        combo_JPTILDER {
             timeout-ms = <50>;
             key-positions = <0 34>; // 旧 1 40
             layers = <NIC NICL>;
@@ -1204,7 +1261,7 @@ combo_JPTILDER {
             bindings = <&macro_XTU>;
         };
         
-combo_JPCOMMA2 {
+        combo_JPCOMMA2 {
             timeout-ms = <50>;
             key-positions = <20 34>; // 旧 25 40
             layers = <NIC NICL>;
@@ -1275,8 +1332,8 @@ combo_JPCOMMA2 {
         };
 
         // 以下拗音拡張
-    // R (4) と同時打鍵 (-4)
-combo_CHYA {
+        // R (4) と同時打鍵 (-4)
+        combo_CHYA {
             timeout-ms = <50>;
             key-positions = <3 6>; // 旧 4 7
             layers = <NIC NICL>;
@@ -1393,7 +1450,7 @@ combo_CHYA {
 
         // ... (以下、同様に他の拗音や特殊音のコンボを追加。拗音拡張機能のみ抜粋)
         // C (27) と同時打鍵 (-27) - 「い」段 + 「ぃ」の音
-combo_CHII {
+        combo_CHII {
             timeout-ms = <50>;
             key-positions = <22 6>; // 旧 27 7
             layers = <NIC NICL>;
@@ -4333,53 +4390,99 @@ combo_CHII {
             flavor = "tap-preferred";   // タップを優先する設定
             bindings = <&kp>, <&kp>;
         };
+        td_lt_num_lbkt: tap_dance_layer_tap_num_lbkt {  // タップで[、ホールドでNUMレイヤ、ダブルタップでNUMレイヤ保持
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <190>;
+            bindings = <&lt NUM LBKT>, <&to NUM>;
+        };
+        td_lt_mov_rbkt: tap_dance_layer_tap_mov_rbkt {  // タップで]、ホールドでMOVレイヤ、ダブルタップでMOVレイヤ保持
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <190>;
+            bindings = <&lt MOV RBKT>, <&to MOV>;
+        };
         td_lt_mov_l1: tap_dance_layer_tap_mov_l1 {  // タップでLANG1、ホールドでMOVレイヤ、ダブルタップでMOVレイヤ保持
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <170>;
+            tapping-term-ms = <190>;
             bindings = <&lt MOV LANG1>, <&to MOV>;
         };
         td_lt_num_l2: tap_dance_layer_tap_num_l2 {  // タップでLANG2、ホールドでNUMレイヤ、ダブルタップでNUMレイヤ保持
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <170>;
+            tapping-term-ms = <190>;
             bindings = <&lt NUM LANG2>, <&to NUM>;
         };
         td_lt_mov_i2: tap_dance_layer_tap_mov_i2 {  // タップでINT2、ホールドでMOVレイヤ、ダブルタップでMOVレイヤ保持
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <170>;
+            tapping-term-ms = <190>;
             bindings = <&lt MOV INT2>, <&to_MOV_i2>;
         };
         td_lt_mov_esc: tap_dance_layer_tap_mov_esc {  // タップでESC、ホールドでMOVレイヤ、ダブルタップでMOVレイヤ保持
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <170>;
+            tapping-term-ms = <190>;
             bindings = <&lt MOV ESC>, <&to MOV>;
         };
         td_lt_cad_i2: tap_dance_layer_tap_cad_i2 {  // タップでかな、ホールドでCADレイヤ、ダブルタップでCADレイヤ保持
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <170>;
+            tapping-term-ms = <190>;
             bindings = <&lt CAD INT2>, <&to_CAD_i2>;
+        };
+        td_lt_movl_esc: tap_dance_layer_tap_movl_esc {  // タップでesc、ホールドでMOVLレイヤ、ダブルタップでMOVLレイヤ保持、無変換
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <190>;
+            bindings = <&lt MOVL ESC>, <&to_MOVL_i5>;
         };
         td_lt_movw_i2: tap_dance_layer_tap_movw_i2 {  // タップでかな、ホールドでMOVWレイヤ、ダブルタップでMOVWレイヤ保持、無変換
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <170>;
+            tapping-term-ms = <190>;
             bindings = <&lt MOVW INT2>, <&to_MOVW_i5>;
         };
         td_lt_num_i5: tap_dance_layer_tap_num_i5 {  // タップで無変換、ホールドでNUMレイヤ、ダブルタップでNUMレイヤ保持、無変換
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <170>;
+            tapping-term-ms = <190>;
             bindings = <&lt NUM INT5>, <&to_NUM_i5>;
+        };
+        td_lt_numw_i5: tap_dance_layer_tap_numw_i5 {  // タップで無変換、ホールドでNUMWレイヤ、ダブルタップでNUMWレイヤ保持、無変換
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <190>;
+            bindings = <&lt NUMW INT5>, <&to_NUMW_i5>;
         };
         td_lt_num_esc: tap_dance_layer_tap_num_esc {  // タップでesc、ホールドでNUMレイヤ、ダブルタップでNUMレイヤ保持、無変換
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <170>;
+            tapping-term-ms = <190>;
             bindings = <&lt NUM ESC>, <&to_NUM_i5>;
+        };
+        td_lt_numl_esc: tap_dance_layer_tap_numl_esc {  // タップでesc、ホールドでNUMLレイヤ、ダブルタップでNUMLレイヤ保持、無変換
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <190>;
+            bindings = <&lt NUML ESC>, <&to_NUML_i5>;
+        };
+        td_lt_numw_esc: tap_dance_layer_tap_numw_esc {  // タップでesc、ホールドでNUMWレイヤ、ダブルタップでNUMWレイヤ保持、無変換
+        
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <190>;
+            bindings = <&lt NUMW ESC>, <&to_NUMW_i5>;
+        };
+
+        lt_bl: lt_balanced {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LT_BALANCED";
+            #binding-cells = <2>;
+            tapping-term-ms = <190>;
+            flavor = "balanced";  // 他のキーがタップされたら即座にNUMレイヤーを確定
+            bindings = <&mo>, <&kp>;
         };
 
         // A-Z共通のHold-Tap定義
@@ -4902,6 +5005,11 @@ combo_CHII {
             #binding-cells = <0>;
             bindings = <&to MOV>, <&kp INT2>;
         };
+        to_MOVL_i5: to_MOVL_INT5{
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to MOVL>, <&kp INT5>;
+        };
         to_MOVW_i5: to_MOVW_INT5{
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -4926,6 +5034,16 @@ combo_CHII {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&to NUM>, <&kp INT5>;
+        };
+        to_NUML_i5: to_NUML_i5 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to NUML>, <&kp INT5>;
+        };
+        to_NUMW_i5: to_NUMW_i5 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to NUMW>, <&kp INT5>;
         };
 
         int5_g: int5_g { // 端点再設定(AHK)
@@ -5051,7 +5169,7 @@ combo_CHII {
             tap-ms = <10>;
             bindings 
                 = <&to LIN> // レイヤー3（LIN）に戻る
-                , <&macro_wait_time 30> // ここで30ミリ秒待機
+                , <&macro_wait_time 20> // ここで20ミリ秒待機
                 , <&kp  INT5>;
         };
         tW_int4: tW_int4 {
@@ -6676,20 +6794,29 @@ combo_CHII {
                 = <&macro_tap &sk LALT &sl WINS>
                 ;
         };
-        // 通常の判定時間（例: 200ms）
+        sk_ct_sh: sk_ctrl_shift {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings
+                = <&macro_tap &sk LCTRL &sk LSHFT &sl WINS>
+                ;
+        };
+        // 通常の判定時間（例: 240ms）
         mt_s: mod_tap_slow {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <200>;
+            tapping-term-ms = <240>;
             bindings = <&kp>, <&kp>;
         };
-        // 特定のキー用の短い判定時間（例: 180ms）
+        // 特定のキー用の短い判定時間（例: 200ms）
         mt_m: mod_tap_mid {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <180>; // ここを個別に設定
+            tapping-term-ms = <200>; // ここを個別に設定
             bindings = <&kp>, <&kp>;
         };
         // 特定のキー用の短い判定時間（例: 170ms）
@@ -6711,7 +6838,7 @@ combo_CHII {
             &mt_s LSHFT Q   &kp W           &kp E           &kp R           &kp T                                           &kp Y           &kp U           &kp I           &kp O           &mt_s RSHFT P
             &mt_s LCTRL A   &kp S           &kp D           &kp F                                           &kp G           &kp H           &kp J           &kp K           &kp L           &mt_s RCTRL SEMI
             &mt_s LGUI Z    &kp X           &kp C           &kp V                                           &kp B           &kp N           &kp M           &kp COMMA       &kp DOT         &mt_s RALT SLASH
-                                                            &lt NUM LANG2   &mt LSHFT SPACE &lt LWR TAB     &lt RSE ENTER   &mt RSHFT SPACE &ht_lg1 MOV 0
+                                                            &lt_bl NUM LBKT &mt LSHFT SPACE &lt LWR TAB     &lt RSE ENTER   &mt RSHFT SPACE &td_lt_mov_rbkt
             >;
         };
 
@@ -6733,7 +6860,7 @@ combo_CHII {
             &macro_JPPERIOD &macro_KA       &macro_TA       &macro_KO       &macro_SA                                       &macro_RA       &macro_TI       &macro_KU       &macro_TU       &macro_JPCOMMA1
             &macro_U        &macro_SI	    &macro_TE       &macro_KE                                       &macro_SE       &macro_HA       &macro_TO       &macro_KI       &macro_I        &macro_NN
             &macro_JPTEN    &macro_HI	    &macro_SU       &macro_HU                                       &macro_HE       &macro_ME       &macro_SO       &macro_NE       &macro_HO       &macro_JPNAKATEN
-                                                            &ht_lg2 NUM 0   &kp SPACE       &lt LWR TAB     &lt RSE ENTER   &kp LS(SPACE)   &trans
+                                                            &lt_bl NUM LBKT &kp SPACE       &lt LWR TAB     &lt RSE ENTER   &kp LS(SPACE)   &trans
             >;
         };
 
@@ -6743,7 +6870,7 @@ combo_CHII {
             &mt_s LSHFT Q   &kp W           &kp E           &kp R           &kp T                                           &kp Y           &kp U           &kp I           &kp O           &mt_s RSHFT P
             &mt_s LCTRL A   &kp S           &kp D           &kp F                                           &kp G           &kp H           &kp J           &kp K           &kp L           &mt_s RCTRL SEMI
             &mt_s LALT Z    &kp X           &kp C           &kp V                                           &kp B           &kp N           &kp M           &kp COMMA       &kp DOT         &mt_s RGUI SLASH
-                                                            &lt NUM INT5    &mt LSHFT SPACE &lt LWRL TAB	&lt RSEL ENTER	&mt RSHFT SPACE &ht_it4 MOVL 0
+                                                            &lt_bl NUML ESC &mt LSHFT SPACE &lt LWRL TAB	&lt RSEL ENTER	&mt RSHFT SPACE &td_lt_movl_esc
             >;
         };
 
@@ -6763,7 +6890,7 @@ combo_CHII {
             &macro_JPPERIOD &macro_KA       &macro_TA       &macro_KO       &macro_SA                                       &macro_RA       &macro_TI       &macro_KU       &macro_TU       &macro_JPCOMMA1
             &macro_U        &macro_SI	    &macro_TE       &macro_KE                                       &macro_SE       &macro_HA       &macro_TO       &macro_KI       &macro_I        &macro_NN
             &macro_JPTEN    &macro_HI	    &macro_SU       &macro_HU                                       &macro_HE       &macro_ME       &macro_SO       &macro_NE       &macro_HO       &macro_JPNAKATEN
-                                                            &ht_it5 NUM 0   &kp SPACE       &lt LWRL TAB    &lt RSEL ENTER  &kp LS(SPACE)   &lt MOVL INT4
+                                                            &lt_bl NUML ESC &kp SPACE       &lt LWRL TAB    &lt RSEL ENTER  &kp LS(SPACE)   &td_lt_movl_esc
             >;
         };
 
@@ -6773,7 +6900,7 @@ combo_CHII {
             &td_Q           &td_W           &td_E           &td_R           &td_T                                           &td_Y           &td_U           &td_I           &td_O           &td_P
             &td_A           &td_S           &td_D           &td_F                                           &td_G           &td_H           &td_J           &td_K           &td_L           &td_SEMI
             &td_Z           &td_X           &td_C           &td_V                                           &td_B           &td_N           &td_M           &td_COMMA       &td_DOT         &td_SLASH
-                                                            &td_lt_num_i5   &kp SPACE       &lt LWRW TAB    &lt RSEW ENTER	&qmt RCTRL TAB  &htW_it4 MOVW 0
+                                                            &lt_bl NUMW INT5 &kp SPACE      &lt LWRW TAB    &lt RSEW ENTER	&mt RSHFT ESC   &htW_it4 MOVW 0 // INT4はALT+変換のAHKマクロ用
             >;
         };
 
@@ -6783,7 +6910,7 @@ combo_CHII {
             &kp Q           &kp W           &kp E           &kp R           &kp T                                           &kp Y           &kp U           &kp I           &kp O           &kp P
             &kp A           &kp S           &kp D           &kp F                                           &kp G           &kp H           &kp J           &kp K           &kp L           &kp SEMI
             &kp Z           &kp X           &kp C           &kp V                                           &kp B           &kp N           &kp M           &kp COMMA       &kp DOT         &kp SLASH
-                                                            &td_lt_num_esc  &kp SPACE       &lt LWRW TAB    &lt RSEW ENTER	&kp INT4        &td_lt_movw_i2
+                                                            &lt_bl NUMW INT5 &kp SPACE      &lt LWRW TAB    &lt RSEW ENTER	&kp INT4        &td_lt_movw_i2
             >;
         };
 
@@ -6791,8 +6918,8 @@ combo_CHII {
             bindings = <
         // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
             &mt_s LSHFT PG_UP &kp LC(A)     &kp UP          &kp LC(E)       &kp LS(TAB)                                     &kp DEL         &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT &mt_s RSHFT SCRL_UP
-            &mt_s LCTRL PG_DN &kp LEFT      &kp DOWN        &kp RIGHT   	                                &kp LS(LG(N3))  &kp BSPC        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT &mt_s RCTRL SCRL_DOWN
-            &mt_s LGUI LC(V)  &mkp MB1      &mkp MB3        &mkp MB2		                                &kp LS(LG(N4))  &mkp MB1        &kp ENTER       &kp LA(LEFT)    &kp LA(RIGHT)   &mt_m RALT RG(V)
+            &mt_s LCTRL PG_DN &kp LEFT      &kp DOWN        &kp RIGHT   	                                &trans          &kp BSPC        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT &mt_s RCTRL SCRL_DOWN
+            &mt_s LGUI LC(V)  &mkp MB1      &mkp MB3        &mkp MB2		                                &trans          &mkp MB1        &kp ENTER       &kp LA(LEFT)    &kp LA(RIGHT)   &mt_s RALT RG(V)
                                                             &kp LSHFT       &sk_ctrl        &trans          &ht_lg1 ADJ 0   &kp LS(LC(V))   &kp RSHFT
             >;
         };
@@ -6801,8 +6928,8 @@ combo_CHII {
             bindings = <
         // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
             &mt_s LSHFT PG_UP &kp HOME      &kp UP          &kp END         &kp LS(TAB)                                     &kp DEL         &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT &mt_s RSHFT SCRL_UP
-            &mt_s LCTRL PG_DN &kp LEFT      &kp DOWN        &kp RIGHT   	                                &kp LG(S)       &kp BSPC        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT &mt_s RCTRL SCRL_DOWN
-            &mt_s LALT LC(V)  &mkp MB1      &mkp MB3        &mkp MB2		                                &win_shift_s    &mkp MB1        &kp ENTER       &kp LC(LEFT)    &kp LC(RIGHT)   &mt_m RGUI RG(V)
+            &mt_s LCTRL PG_DN &kp LEFT      &kp DOWN        &kp RIGHT   	                                &trans          &kp BSPC        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT &mt_s RCTRL SCRL_DOWN
+            &mt_s LALT LC(V)  &mkp MB1      &mkp MB3        &mkp MB2		                                &trans          &mkp MB1        &kp ENTER       &kp LC(LEFT)    &kp LC(RIGHT)   &mt_s RGUI RG(V)
                                                             &kp LSHFT       &sk_ctrl        &trans          &ht_it4 ADJL 0  &kp LS(LC(V))   &kp RSHFT
             >;
         };
@@ -6811,8 +6938,8 @@ combo_CHII {
             bindings = <
         // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
             &mt_s LSHFT PG_UP &kp HOME      &kp UP          &kp END         &kp LS(TAB)                                     &kp DEL         &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT &mt_s RSHFT SCRL_UP
-            &mt_s LCTRL PG_DN &kp LEFT      &kp DOWN        &kp RIGHT   	                                &kp LG(S)       &kp BSPC        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT &mt_s RCTRL SCRL_DOWN
-            &mt_s LALT LC(V)  &mkp MB1      &mkp MB3        &mkp MB2		                                &win_shift_s    &mkp MB1        &kp ENTER       &kp LC(LEFT)    &kp LC(RIGHT)   &mt_m RGUI RG(V)
+            &mt_s LCTRL PG_DN &kp LEFT      &kp DOWN        &kp RIGHT   	                                &trans          &kp BSPC        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT &mt_s RCTRL SCRL_DOWN
+            &mt_s LALT LC(V)  &mkp MB1      &mkp MB3        &mkp MB2		                                &trans          &mkp MB1        &kp ENTER       &kp LC(LEFT)    &kp LC(RIGHT)   &mt_s RGUI RG(V)
                                                             &kp LSHFT       &sk_ctrl        &trans          &htW_it4 ADJW 0 &kp LS(LC(V))   &kp RSHFT
             >;
         };
@@ -6822,7 +6949,7 @@ combo_CHII {
         // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
             &mt_s LSHFT F1  &kp F2          &kp F3          &kp F4          &kp F5         		         		            &kp F6          &kp F7    	    &kp F8          &kp F9          &mt_s RSHFT F10
             &macro_JPN1     &macro_JPN2	    &macro_JPN3     &macro_JPN4                                     &macro_JPN5	    &macro_JPN6     &macro_JPN7     &macro_JPN8	    &macro_JPN9     &macro_JPN0
-            &mt_s LGUI INT1 &kp BSLH        &kp INT3        &kp SLASH   		     		                &kp ASTRK       &kp MINUS       &kp PLUS  	    &kp LBKT        &kp RBKT        &mt_m RALT RG(V)
+            &mt_s LGUI INT1 &kp BSLH        &kp INT3        &kp SLASH   		     		                &kp ASTRK       &kp MINUS       &kp PLUS  	    &kp LBKT        &kp RBKT        &mt_s RALT RG(V)
                                                             &kp LSHFT       &kp SPACE       &ht_lg2 ADJ 0   &trans          &sk_gui         &kp RSHFT
             >;
         };
@@ -6832,7 +6959,7 @@ combo_CHII {
         // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
             &mt_s LSHFT F1  &kp F2          &kp F3          &kp F4          &kp F5         		         		            &kp F6          &kp F7    	    &kp F8          &kp F9          &mt_s RSHFT F10
             &mt_s LCTRL N1  &kp N2          &kp N3          &kp N4      		     		                &kp N5          &kp N6          &kp N7    	    &kp N8          &kp N9          &mt_s RCTRL N0
-            &mt_s LALT INT1 &kp BSLH        &kp INT3        &kp SLASH   		     		                &kp ASTRK       &kp MINUS       &kp PLUS  	    &kp LBKT        &kp RBKT        &mt_m RGUI RC(V)
+            &mt_s LALT INT1 &kp BSLH        &kp INT3        &kp SLASH   		     		                &kp ASTRK       &kp MINUS       &kp PLUS  	    &kp LBKT        &kp RBKT        &mt_s RGUI RC(V)
                                                             &kp LSHFT       &kp SPACE       &ht_it5 ADJL 0  &trans          &sk_gui         &kp RSHFT
             >;
         };
@@ -6842,7 +6969,7 @@ combo_CHII {
         // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
             &mt_s LSHFT F1  &kp F2          &kp F3          &kp F4          &kp F5         		         		            &kp F6          &kp F7    	    &kp F8          &kp F9          &mt_s RSHFT F10
             &mt_s LCTRL N1  &kp N2          &kp N3          &kp N4      		     		                &kp N5          &kp N6          &kp N7    	    &kp N8          &kp N9          &mt_s RCTRL N0
-            &mt_s LALT INT1 &kp BSLH        &kp INT3        &kp SLASH   		     		                &kp ASTRK       &kp MINUS       &kp PLUS  	    &kp LBKT        &kp RBKT        &mt_m GUI RC(V)
+            &mt_s LALT INT1 &kp BSLH        &kp INT3        &kp SLASH   		     		                &kp ASTRK       &kp MINUS       &kp PLUS  	    &kp LBKT        &kp RBKT        &mt_s GUI RC(V)
                                                             &kp LSHFT       &kp SPACE       &htC_it5 ADJW 0 &trans          &sk_gui         &kp RSHFT
             >;
         };
@@ -6883,7 +7010,7 @@ combo_CHII {
             &kp LS(LC(TAB)) &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT &msc SCRL_UP                                    &lt BLE LC(Y)   &kp LC(A)       &kp UP          &kp LC(E)       &kp PG_UP
             &mt_s LCTRL MB1 &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT                                 &msc SCRL_DOWN  &lt BLE BSPC    &kp LEFT        &kp DOWN        &kp RIGHT       &kp PG_DN
             &mt_s LGUI Z    &kp LG(LBKT)    &mkp MB3        &kp LG(RBKT)                                    &kp LC(TAB)     &kp LC(Z)       &kp LS(LC(TAB)) &kp LA(LEFT)    &kp LA(RIGHT)   &kp LC(TAB)
-                                                            &kp LG(C)       &kp LG(V)       &mkp MB2        &kp ENTER       &mkp MB1        &trans
+                                                            &kp LG(C)       &kp LG(V)       &mkp MB2        &kp ENTER       &mkp MB1        &to QWE
             >;
         };
 
@@ -6893,7 +7020,7 @@ combo_CHII {
             &kp LS(LC(TAB)) &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT &msc SCRL_UP                                    &lt BLE LC(Y)   &kp HOME        &kp UP          &kp END         &kp PG_UP
             &mt_s LCTRL MB1 &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT                                 &msc SCRL_DOWN  &lt BLE BSPC    &kp LEFT        &kp DOWN        &kp RIGHT       &kp PG_DN
             &mt_s LALT Z    &kp LA(LEFT)    &mkp MB3        &kp LA(RIGHT)                                   &kp LC(TAB)     &kp LC(Z)       &kp LC(PG_UP)   &kp LG(LBKT)    &kp LG(RBKT)    &kp LC(PG_DN)
-                                                            &kp LC(C)       &kp LC(V)       &mkp MB2        &kp ENTER       &mkp MB1        &trans
+                                                            &kp LC(C)       &kp LC(V)       &mkp MB2        &kp ENTER       &mkp MB1        &to LIN
             >;
         };
 
@@ -6910,10 +7037,30 @@ combo_CHII {
         NUM {
             bindings = <
         // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
+            &kp PG_UP       &kp LC(A)       &kp UP          &kp LC(E)       &lt BLE CARET                                   &kp KP_SLASH    &kp KP_N7       &kp KP_N8       &kp KP_N9       &kp KP_MULTIPLY
+            &kp PG_DN       &kp LEFT        &kp DOWN        &kp RIGHT                                       &lt BLE DEL     &kp BSPC        &kp KP_N4       &kp KP_N5       &kp KP_N6       &kp KP_MINUS
+            &alt_left	    &alt_down       &alt_up         &alt_right                                      &kp EQUAL       &kp KP_N0       &kp KP_N1       &kp KP_N2       &kp KP_N3       &kp KP_PLUS
+                                                            &t_lang2        &pr_pg	        &nx_pg          &kp KP_ENTER    &kp UNDER       &kp SPACE
+            >;
+        };
+
+        NUML {
+            bindings = <
+        // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
             &kp PG_UP       &kp HOME        &kp UP          &kp END         &lt BLE CARET                                   &kp KP_SLASH    &kp KP_N7       &kp KP_N8       &kp KP_N9       &kp KP_MULTIPLY
             &kp PG_DN       &kp LEFT        &kp DOWN        &kp RIGHT                                       &lt BLE DEL     &kp BSPC        &kp KP_N4       &kp KP_N5       &kp KP_N6       &kp KP_MINUS
             &alt_left	    &alt_down       &alt_up         &alt_right                                      &kp EQUAL       &kp KP_N0       &kp KP_N1       &kp KP_N2       &kp KP_N3       &kp KP_PLUS
-                                                            &to CAD         &pr_pg	        &nx_pg          &kp KP_ENTER    &kp UNDER       &kp SPACE
+                                                            &t_int5         &pr_pg	        &nx_pg          &kp KP_ENTER    &kp UNDER       &kp SPACE
+            >;
+        };
+
+        NUMW {
+            bindings = <
+        // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
+            &kp PG_UP       &kp HOME        &kp UP          &kp END         &lt BLE CARET                                   &kp KP_SLASH    &kp KP_N7       &kp KP_N8       &kp KP_N9       &kp KP_MULTIPLY
+            &kp PG_DN       &kp LEFT        &kp DOWN        &kp RIGHT                                       &lt BLE DEL     &kp BSPC        &kp KP_N4       &kp KP_N5       &kp KP_N6       &kp KP_MINUS
+            &alt_left	    &alt_down       &alt_up         &alt_right                                      &kp EQUAL       &kp KP_N0       &kp KP_N1       &kp KP_N2       &kp KP_N3       &kp KP_PLUS
+                                                            &tC_int5        &pr_pg	        &nx_pg          &kp KP_ENTER    &kp UNDER       &kp SPACE
             >;
         };
 
@@ -6923,7 +7070,7 @@ combo_CHII {
             &kp Q           &kp W           &kp E           &kp R           &kp T                                           &kp Y           &kp U           &kp I           &kp O           &kp P
             &kp A           &kp S           &kp D           &kp F                                           &kp G           &kp H           &kp J           &kp K           &kp L           &kp SEMI
             &kp Z           &kp X           &kp C           &kp V                                           &kp B           &kp N           &kp M           &kp COMMA       &kp DOT         &kp SLASH
-                                                            &kp LSHFT       &kp SPACE       &lt LWRW TAB    &lt RSEW ENTER	&kp INT4        &kp RSHFT
+                                                            &qm LSHFT       &kp SPACE       &kp TAB         &kp ENTER	    &kp INT4        &qm RALT
             >;
         };
 

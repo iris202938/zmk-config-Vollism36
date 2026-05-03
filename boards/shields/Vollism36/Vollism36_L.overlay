@@ -29,8 +29,10 @@
 #define MOVL 18
 #define MOVW 19
 #define NUM 20
-#define WINS 21
-#define BLE 22
+#define NUML 21
+#define NUMW 22
+#define WINS 23
+#define BLE 24
 
 / {
     /* 既存の定義（input_processorsなど）と同じ階層に追加 */
@@ -76,7 +78,7 @@
         device = <&trackball>;
 
         /* ==========================================================
-        Layer 22: BLE (通常マウス)
+        Layer 24: BLE (通常マウス)
         ========================================================== */
         l_ble {
             layers = <BLE>;
@@ -84,10 +86,26 @@
         };
 
         /* ==========================================================
-        Layer 21: WINS (通常マウス)
+        Layer 23: WINS (通常マウス)
         ========================================================== */
         l_wins {
             layers = <WINS>;
+            input-processors = <&sensor_rotation>;
+        };
+
+        /* ==========================================================
+        Layer 22: NUMW (通常マウス)
+        ========================================================== */
+        l_numw {
+            layers = <NUMW>;
+            input-processors = <&sensor_rotation>;
+        };
+
+        /* ==========================================================
+        Layer 21: NUML (通常マウス)
+        ========================================================== */
+        l_numl {
+            layers = <NUML>;
             input-processors = <&sensor_rotation>;
         };
 
