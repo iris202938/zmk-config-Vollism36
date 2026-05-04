@@ -144,6 +144,24 @@
             layers = <CAD WIN>;
             bindings = <&to NUMW>;
         };
+        combo_to_MOV {
+            timeout-ms = <70>;
+            key-positions = <33 35>;
+            layers = <QWE NIC NGN>;
+            bindings = <&to MOV>;
+        };
+        combo_to_MOVL {
+            timeout-ms = <70>;
+            key-positions = <33 35>;
+            layers = <LIN NICL NGNL>;
+            bindings = <&to MOVL>;
+        };
+        combo_to_MOVW {
+            timeout-ms = <70>;
+            key-positions = <33 35>;
+            layers = <CAD WIN>;
+            bindings = <&to MOVW>;
+        };
 
         // esc_l {
         //     bindings = <&kp ESC>;
