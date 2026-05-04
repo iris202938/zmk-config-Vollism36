@@ -4396,54 +4396,54 @@
         //     tapping-term-ms = <190>;
         //     bindings = <&lt NUM LBKT>, <&to NUM>;
         // };
-        td_lt_mov_rbkt: tap_dance_layer_tap_mov_rbkt {  // タップで]、ホールドでMOVレイヤ、ダブルタップでMOVレイヤ保持
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <190>;
-            bindings = <&lt MOV RBKT>, <&to MOV>;
-        };
-        td_lt_mov_l1: tap_dance_layer_tap_mov_l1 {  // タップでLANG1、ホールドでMOVレイヤ、ダブルタップでMOVレイヤ保持
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <190>;
-            bindings = <&lt MOV LANG1>, <&to MOV>;
-        };
+        // td_lt_mov_rbkt: tap_dance_layer_tap_mov_rbkt {  // タップで]、ホールドでMOVレイヤ、ダブルタップでMOVレイヤ保持
+        //     compatible = "zmk,behavior-tap-dance";
+        //     #binding-cells = <0>;
+        //     tapping-term-ms = <190>;
+        //     bindings = <&lt MOV RBKT>, <&to MOV>;
+        // };
+        // td_lt_mov_l1: tap_dance_layer_tap_mov_l1 {  // タップでLANG1、ホールドでMOVレイヤ、ダブルタップでMOVレイヤ保持
+        //     compatible = "zmk,behavior-tap-dance";
+        //     #binding-cells = <0>;
+        //     tapping-term-ms = <190>;
+        //     bindings = <&lt MOV LANG1>, <&to MOV>;
+        // };
         // td_lt_num_l2: tap_dance_layer_tap_num_l2 {  // タップでLANG2、ホールドでNUMレイヤ、ダブルタップでNUMレイヤ保持
         //     compatible = "zmk,behavior-tap-dance";
         //     #binding-cells = <0>;
         //     tapping-term-ms = <190>;
         //     bindings = <&lt NUM LANG2>, <&to NUM>;
         // };
-        td_lt_mov_i2: tap_dance_layer_tap_mov_i2 {  // タップでINT2、ホールドでMOVレイヤ、ダブルタップでMOVレイヤ保持
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <190>;
-            bindings = <&lt MOV INT2>, <&to_MOV_i2>;
-        };
-        td_lt_mov_esc: tap_dance_layer_tap_mov_esc {  // タップでESC、ホールドでMOVレイヤ、ダブルタップでMOVレイヤ保持
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <190>;
-            bindings = <&lt MOV ESC>, <&to MOV>;
-        };
-        td_lt_cad_i2: tap_dance_layer_tap_cad_i2 {  // タップでかな、ホールドでCADレイヤ、ダブルタップでCADレイヤ保持
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <190>;
-            bindings = <&lt CAD INT2>, <&to_CAD_i2>;
-        };
-        td_lt_movl_esc: tap_dance_layer_tap_movl_esc {  // タップでesc、ホールドでMOVLレイヤ、ダブルタップでMOVLレイヤ保持、無変換
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <190>;
-            bindings = <&lt MOVL ESC>, <&to_MOVL_i5>;
-        };
-        td_lt_movw_i2: tap_dance_layer_tap_movw_i2 {  // タップでかな、ホールドでMOVWレイヤ、ダブルタップでMOVWレイヤ保持、無変換
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <190>;
-            bindings = <&lt MOVW INT2>, <&to_MOVW_i5>;
-        };
+        // td_lt_mov_i2: tap_dance_layer_tap_mov_i2 {  // タップでINT2、ホールドでMOVレイヤ、ダブルタップでMOVレイヤ保持
+        //     compatible = "zmk,behavior-tap-dance";
+        //     #binding-cells = <0>;
+        //     tapping-term-ms = <190>;
+        //     bindings = <&lt MOV INT2>, <&to_MOV_i2>;
+        // };
+        // td_lt_mov_esc: tap_dance_layer_tap_mov_esc {  // タップでESC、ホールドでMOVレイヤ、ダブルタップでMOVレイヤ保持
+        //     compatible = "zmk,behavior-tap-dance";
+        //     #binding-cells = <0>;
+        //     tapping-term-ms = <190>;
+        //     bindings = <&lt MOV ESC>, <&to MOV>;
+        // };
+        // td_lt_cad_i2: tap_dance_layer_tap_cad_i2 {  // タップでかな、ホールドでCADレイヤ、ダブルタップでCADレイヤ保持
+        //     compatible = "zmk,behavior-tap-dance";
+        //     #binding-cells = <0>;
+        //     tapping-term-ms = <190>;
+        //     bindings = <&lt CAD INT2>, <&to_CAD_i2>;
+        // };
+        // td_lt_movl_esc: tap_dance_layer_tap_movl_esc {  // タップでesc、ホールドでMOVLレイヤ、ダブルタップでMOVLレイヤ保持、無変換
+        //     compatible = "zmk,behavior-tap-dance";
+        //     #binding-cells = <0>;
+        //     tapping-term-ms = <190>;
+        //     bindings = <&lt MOVL ESC>, <&to_MOVL_i5>;
+        // };
+        // td_lt_movw_i2: tap_dance_layer_tap_movw_i2 {  // タップでかな、ホールドでMOVWレイヤ、ダブルタップでMOVWレイヤ保持、無変換
+        //     compatible = "zmk,behavior-tap-dance";
+        //     #binding-cells = <0>;
+        //     tapping-term-ms = <190>;
+        //     bindings = <&lt MOVW INT2>, <&to_MOVW_i5>;
+        // };
         // td_lt_num_i5: tap_dance_layer_tap_num_i5 {  // タップで無変換、ホールドでNUMレイヤ、ダブルタップでNUMレイヤ保持、無変換
         //     compatible = "zmk,behavior-tap-dance";
         //     #binding-cells = <0>;
@@ -6838,7 +6838,7 @@
             &mt_s LSHFT Q   &kp W           &kp E           &kp R           &kp T                                           &kp Y           &kp U           &kp I           &kp O           &mt_s RSHFT P
             &mt_s LCTRL A   &kp S           &kp D           &kp F                                           &kp G           &kp H           &kp J           &kp K           &kp L           &mt_s RCTRL SEMI
             &mt_s LGUI Z    &kp X           &kp C           &kp V                                           &kp B           &kp N           &kp M           &kp COMMA       &kp DOT         &mt_s RALT SLASH
-                                                            &lt_bl NUM LBKT &mt LSHFT SPACE &lt LWR TAB     &lt RSE ENTER   &mt RSHFT SPACE &td_lt_mov_rbkt
+                                                            &lt_bl NUM LBKT &mt LSHFT SPACE &lt LWR TAB     &lt RSE ENTER   &mt RSHFT SPACE &lt_bl MOV RBKT
             >;
         };
 
@@ -6860,7 +6860,7 @@
             &macro_JPPERIOD &macro_KA       &macro_TA       &macro_KO       &macro_SA                                       &macro_RA       &macro_TI       &macro_KU       &macro_TU       &macro_JPCOMMA1
             &macro_U        &macro_SI	    &macro_TE       &macro_KE                                       &macro_SE       &macro_HA       &macro_TO       &macro_KI       &macro_I        &macro_NN
             &macro_JPTEN    &macro_HI	    &macro_SU       &macro_HU                                       &macro_HE       &macro_ME       &macro_SO       &macro_NE       &macro_HO       &macro_JPNAKATEN
-                                                            &lt_bl NUM LBKT &kp SPACE       &lt LWR TAB     &lt RSE ENTER   &kp LS(SPACE)   &trans
+                                                            &lt_bl NUM LBKT &kp SPACE       &lt LWR TAB     &lt RSE ENTER   &kp LS(SPACE)   &lt_bl MOV RBKT
             >;
         };
 
@@ -6870,7 +6870,7 @@
             &mt_s LSHFT Q   &kp W           &kp E           &kp R           &kp T                                           &kp Y           &kp U           &kp I           &kp O           &mt_s RSHFT P
             &mt_s LCTRL A   &kp S           &kp D           &kp F                                           &kp G           &kp H           &kp J           &kp K           &kp L           &mt_s RCTRL SEMI
             &mt_s LALT Z    &kp X           &kp C           &kp V                                           &kp B           &kp N           &kp M           &kp COMMA       &kp DOT         &mt_s RGUI SLASH
-                                                            &lt_bl NUML ESC &mt LSHFT SPACE &lt LWRL TAB	&lt RSEL ENTER	&mt RSHFT SPACE &td_lt_movl_esc
+                                                            &lt_bl NUML ESC &mt LSHFT SPACE &lt LWRL TAB	&lt RSEL ENTER	&mt RSHFT SPACE &lt_bl MOVL ESC
             >;
         };
 
@@ -6890,7 +6890,7 @@
             &macro_JPPERIOD &macro_KA       &macro_TA       &macro_KO       &macro_SA                                       &macro_RA       &macro_TI       &macro_KU       &macro_TU       &macro_JPCOMMA1
             &macro_U        &macro_SI	    &macro_TE       &macro_KE                                       &macro_SE       &macro_HA       &macro_TO       &macro_KI       &macro_I        &macro_NN
             &macro_JPTEN    &macro_HI	    &macro_SU       &macro_HU                                       &macro_HE       &macro_ME       &macro_SO       &macro_NE       &macro_HO       &macro_JPNAKATEN
-                                                            &lt_bl NUML ESC &kp SPACE       &lt LWRL TAB    &lt RSEL ENTER  &kp LS(SPACE)   &td_lt_movl_esc
+                                                            &lt_bl NUML ESC &kp SPACE       &lt LWRL TAB    &lt RSEL ENTER  &kp LS(SPACE)   &lt_bl MOVL ESC
             >;
         };
 
@@ -6900,7 +6900,7 @@
             &td_Q           &td_W           &td_E           &td_R           &td_T                                           &td_Y           &td_U           &td_I           &td_O           &td_P
             &td_A           &td_S           &td_D           &td_F                                           &td_G           &td_H           &td_J           &td_K           &td_L           &td_SEMI
             &td_Z           &td_X           &td_C           &td_V                                           &td_B           &td_N           &td_M           &td_COMMA       &td_DOT         &td_SLASH
-                                                            &lt_bl NUMW INT5 &kp SPACE      &lt LWRW TAB    &lt RSEW ENTER	&mt RSHFT ESC   &htW_it4 MOVW 0 // INT4はALT+変換のAHKマクロ用
+                                                            &lt_bl NUMW INT5 &kp SPACE      &lt LWRW TAB    &lt RSEW ENTER	&mt RSHFT ESC   &lt_bl MOVW INT4 // INT4はALT+変換のAHKマクロ用
             >;
         };
 
@@ -6910,7 +6910,7 @@
             &kp Q           &kp W           &kp E           &kp R           &kp T                                           &kp Y           &kp U           &kp I           &kp O           &kp P
             &kp A           &kp S           &kp D           &kp F                                           &kp G           &kp H           &kp J           &kp K           &kp L           &kp SEMI
             &kp Z           &kp X           &kp C           &kp V                                           &kp B           &kp N           &kp M           &kp COMMA       &kp DOT         &kp SLASH
-                                                            &lt_bl NUMW INT5 &kp SPACE      &lt LWRW TAB    &lt RSEW ENTER	&kp INT4        &td_lt_movw_i2
+                                                            &lt_bl NUMW INT5 &kp SPACE      &lt LWRW TAB    &lt RSEW ENTER	&kp INT4        &lt_bl MOVW INT4
             >;
         };
 
