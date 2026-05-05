@@ -323,18 +323,20 @@
             layers = <CAD>;
             timeout-ms = <80>;
         };
-        alt_enter {
-            bindings = <&alt_enter>;
-            key-positions = <28 29>;
-            layers = <RSEL RSEW>;
-            timeout-ms = <80>;
-        };
-        gui_enter {
-            bindings = <&gui_enter>;
-            key-positions = <28 29>;
-            layers = <RSE>;
-            timeout-ms = <80>;
-        };
+        // combo_RALTと被るため保留
+        // alt_enter {
+        //     bindings = <&alt_enter>;
+        //     key-positions = <28 29>;
+        //     layers = <RSEL RSEW>;
+        //     timeout-ms = <80>;
+        // };
+        // gui_enter {
+        //     bindings = <&gui_enter>;
+        //     key-positions = <28 29>;
+        //     layers = <RSE>;
+        //     timeout-ms = <80>;
+        // };
+        // combo_RGUIと被るため保留
         gui_left {
             bindings = <&kp LG(LEFT)>;
             key-positions = <21 22>;
