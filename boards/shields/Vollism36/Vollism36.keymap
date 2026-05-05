@@ -4938,8 +4938,8 @@
         };
         alt_enter: alt_enter { // alt+enter
             compatible = "zmk,behavior-macro";
-            wait-ms = <30>;
-            tap-ms = <30>;
+            wait-ms = <40>;
+            tap-ms = <40>;
             #binding-cells = <0>;
             bindings
                 = <&macro_press &kp RALT>
@@ -4949,8 +4949,8 @@
         };
         gui_enter: gui_enter { // gui+enter
             compatible = "zmk,behavior-macro";
-            wait-ms = <30>;
-            tap-ms = <30>;
+            wait-ms = <40>;
+            tap-ms = <40>;
             #binding-cells = <0>;
             bindings
                 = <&macro_press &kp RGUI>
