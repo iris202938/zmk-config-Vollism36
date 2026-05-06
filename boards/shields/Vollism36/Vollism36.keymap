@@ -6892,7 +6892,7 @@
             &mt_s LSHFT Q   &kp W           &kp E           &kp R           &kp T                                           &kp Y           &kp U           &kp I           &kp O           &mt_s RSHFT P
             &mt_s LCTRL A   &kp S           &kp D           &kp F                                           &kp G           &kp H           &kp J           &kp K           &kp L           &mt_s RCTRL SEMI
             &mt_s LALT Z    &kp X           &kp C           &kp V                                           &kp B           &kp N           &kp M           &kp COMMA       &kp DOT         &mt_s RGUI SLASH
-                                                            &lt_bl NUML ESC &mt LSHFT SPACE &lt_bl LWR TAB	&lt RSEL ENTER	&mt RSHFT SPACE &lt_bl MOVL ESC
+                                                            &lt_bl NUML ESC &mt LSHFT SPACE &lt_bl LWRL TAB	&lt RSEL ENTER	&mt RSHFT SPACE &lt_bl MOVL ESC
             >;
         };
 
