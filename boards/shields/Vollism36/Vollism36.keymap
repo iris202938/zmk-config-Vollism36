@@ -6858,7 +6858,7 @@
             &mt_s LSHFT Q   &kp W           &kp E           &kp R           &kp T                                           &kp Y           &kp U           &kp I           &kp O           &mt_s RSHFT P
             &mt_s LCTRL A   &kp S           &kp D           &kp F                                           &kp G           &kp H           &kp J           &kp K           &kp L           &mt_s RCTRL SEMI
             &mt_s LGUI Z    &kp X           &kp C           &kp V                                           &kp B           &kp N           &kp M           &kp COMMA       &kp DOT         &mt_s RALT SLASH
-                                                            &lt_bl NUM LBKT &mt LSHFT SPACE &lt LWR TAB     &lt RSE ENTER   &mt RSHFT SPACE &lt_bl MOV RBKT
+                                                            &lt_bl NUM LBKT &mt LSHFT SPACE &lt_bl LWR TAB  &lt RSE ENTER   &mt RSHFT SPACE &lt_bl MOV RBKT
             >;
         };
 
@@ -6870,7 +6870,7 @@
             &ng Q           &ng W           &ng E           &ng R           &ng T                                           &ng Y           &ng U           &ng I           &ng O           &ng P
             &ng A           &ng S           &ng D           &ng F                                           &ng G           &ng H           &ng J           &ng K           &ng L           &ng SEMI
             &ng Z           &ng X           &ng C           &ng V                                           &ng B           &ng N           &ng M           &ng COMMA       &ng DOT         &ng SLASH
-                                                            &trans          &ng SPACE       &lt LWR TAB     &lt RSE ENTER   &ng SPACE       &trans
+                                                            &trans          &ng SPACE       &lt_bl LWR TAB  &lt RSE ENTER   &ng SPACE       &trans
             >;
         };
 
@@ -6880,7 +6880,7 @@
             &macro_JPPERIOD &macro_KA       &macro_TA       &macro_KO       &macro_SA                                       &macro_RA       &macro_TI       &macro_KU       &macro_TU       &macro_JPCOMMA1
             &macro_U        &macro_SI	    &macro_TE       &macro_KE                                       &macro_SE       &macro_HA       &macro_TO       &macro_KI       &macro_I        &macro_NN
             &macro_JPTEN    &macro_HI	    &macro_SU       &macro_HU                                       &macro_HE       &macro_ME       &macro_SO       &macro_NE       &macro_HO       &macro_JPNAKATEN
-                                                            &lt_bl NUM LBKT &kp SPACE       &lt LWR TAB     &lt RSE ENTER   &kp LS(SPACE)   &lt_bl MOV RBKT
+                                                            &lt_bl NUM LBKT &kp SPACE       &lt_bl LWR TAB  &lt RSE ENTER   &kp LS(SPACE)   &lt_bl MOV RBKT
             >;
         };
 
@@ -6890,7 +6890,7 @@
             &mt_s LSHFT Q   &kp W           &kp E           &kp R           &kp T                                           &kp Y           &kp U           &kp I           &kp O           &mt_s RSHFT P
             &mt_s LCTRL A   &kp S           &kp D           &kp F                                           &kp G           &kp H           &kp J           &kp K           &kp L           &mt_s RCTRL SEMI
             &mt_s LALT Z    &kp X           &kp C           &kp V                                           &kp B           &kp N           &kp M           &kp COMMA       &kp DOT         &mt_s RGUI SLASH
-                                                            &lt_bl NUML ESC &mt LSHFT SPACE &lt LWRL TAB	&lt RSEL ENTER	&mt RSHFT SPACE &lt_bl MOVL ESC
+                                                            &lt_bl NUML ESC &mt LSHFT SPACE &lt_bl LWR TAB	&lt RSEL ENTER	&mt RSHFT SPACE &lt_bl MOVL ESC
             >;
         };
 
@@ -6900,7 +6900,7 @@
             &ng Q           &ng W           &ng E           &ng R           &ng T                                           &ng Y           &ng U           &ng I           &ng O           &ng P
             &ng A           &ng S           &ng D           &ng F                                           &ng G           &ng H           &ng J           &ng K           &ng L           &ng SEMI
             &ng Z           &ng X           &ng C           &ng V                                           &ng B           &ng N           &ng M           &ng COMMA       &ng DOT         &ng SLASH
-                                                            &trans          &ng SPACE       &lt LWRL TAB    &lt RSEL ENTER  &ng SPACE	    &trans
+                                                            &trans          &ng SPACE       &lt_bl LWRL TAB &lt RSEL ENTER  &ng SPACE	    &trans
             >;
         };
 
@@ -6910,7 +6910,7 @@
             &macro_JPPERIOD &macro_KA       &macro_TA       &macro_KO       &macro_SA                                       &macro_RA       &macro_TI       &macro_KU       &macro_TU       &macro_JPCOMMA1
             &macro_U        &macro_SI	    &macro_TE       &macro_KE                                       &macro_SE       &macro_HA       &macro_TO       &macro_KI       &macro_I        &macro_NN
             &macro_JPTEN    &macro_HI	    &macro_SU       &macro_HU                                       &macro_HE       &macro_ME       &macro_SO       &macro_NE       &macro_HO       &macro_JPNAKATEN
-                                                            &lt_bl NUML ESC &kp SPACE       &lt LWRL TAB    &lt RSEL ENTER  &kp LS(SPACE)   &lt_bl MOVL ESC
+                                                            &lt_bl NUML ESC &kp SPACE       &lt_bl LWRL TAB &lt RSEL ENTER  &kp LS(SPACE)   &lt_bl MOVL ESC
             >;
         };
 
@@ -6920,7 +6920,7 @@
             &td_Q           &td_W           &td_E           &td_R           &td_T                                           &td_Y           &td_U           &td_I           &td_O           &td_P
             &td_A           &td_S           &td_D           &td_F                                           &td_G           &td_H           &td_J           &td_K           &td_L           &td_SEMI
             &td_Z           &td_X           &td_C           &td_V                                           &td_B           &td_N           &td_M           &td_COMMA       &td_DOT         &td_SLASH
-                                                            &lt_bl NUMW INT5 &kp SPACE      &lt LWRW TAB    &lt RSEW ENTER	&mt RSHFT ESC   &lt_bl MOVW INT4 // INT4はALT+変換のAHKマクロ用
+                                                            &lt_bl NUMW INT5 &kp SPACE      &lt_bl LWRW TAB &lt RSEW ENTER	&mt RSHFT ESC   &lt_bl MOVW INT4 // INT4はALT+変換のAHKマクロ用
             >;
         };
 
@@ -6930,7 +6930,7 @@
             &kp Q           &kp W           &kp E           &kp R           &kp T                                           &kp Y           &kp U           &kp I           &kp O           &kp P
             &kp A           &kp S           &kp D           &kp F                                           &kp G           &kp H           &kp J           &kp K           &kp L           &kp SEMI
             &kp Z           &kp X           &kp C           &kp V                                           &kp B           &kp N           &kp M           &kp COMMA       &kp DOT         &kp SLASH
-                                                            &lt_bl NUMW INT5 &kp SPACE      &lt LWRW TAB    &lt RSEW ENTER	&kp INT4        &lt_bl MOVW INT4
+                                                            &lt_bl NUMW INT5 &kp SPACE      &lt_bl LWRW TAB &lt RSEW ENTER	&kp INT4        &lt_bl MOVW INT4
             >;
         };
 
