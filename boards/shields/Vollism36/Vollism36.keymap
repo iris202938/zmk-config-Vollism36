@@ -5180,7 +5180,7 @@
         t_int4: t_int4 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to NICL &kp INT4>; // レイヤー5（NICL）に戻る
+            bindings = <&to NICL &kp INT4 &kp LANG1>; // レイヤー5（NICL）に戻る
         };
         t_int5: t_int5 {
             compatible = "zmk,behavior-macro";
@@ -5190,12 +5190,13 @@
             bindings 
                 = <&to LIN> // レイヤー3（LIN）に戻る
                 , <&macro_wait_time 20> // ここで20ミリ秒待機
-                , <&kp  INT5>;
+                , <&kp  INT5>
+                , <&kp  LANG2>;
         };
         tW_int4: tW_int4 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to WIN &kp INT4>; // レイヤー7（WIN）に戻る
+            bindings = <&to WIN &kp INT4 &kp LANG1>; // レイヤー7（WIN）に戻る
         };
         tC_int5: tC_int5 {
             compatible = "zmk,behavior-macro";
@@ -5205,7 +5206,8 @@
             bindings 
                 = <&to CAD> // レイヤー6（CAD）に戻る
                 , <&macro_wait_time 30> // ここで30ミリ秒待機
-                , <&kp  INT5>;
+                , <&kp  INT5>
+                , <&kp  LANG2>;
         };
         bt0_lQWE: bt0_lQWE { // Bluetoothプロファイル0を選択し、レイヤーQWEを有効化
             compatible = "zmk,behavior-macro";
