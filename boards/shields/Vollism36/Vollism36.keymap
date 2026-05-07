@@ -175,27 +175,17 @@
         //     layers = <QWE LIN CAD>;
         //     timeout-ms = <80>;
         // };
-        combo_esc_mods_l {
-            timeout-ms = <70>;
+        combo_esc_l {
+            timeout-ms = <75>;
             layers = <QWE LIN MOV CAD ADJ ADJL ADJW>;
-            // ② ここで使用するキーのインデックスを指定（例：JとKなど）
             key-positions = <0 10>; 
-            /* ③ 定義したbehaviorを呼び出す
-                第一引数（Hold）: LS(LCTL) -> Shift + Ctrl
-                第二引数（Tap） : ESC
-            */
-            bindings = <&esc_ctrl_shift &ctrl_shift ESC>;
+            bindings = <&kp ESC>;
         };
-        combo_esc_mods_r {
-            timeout-ms = <70>;
+        combo_esc_r {
+            timeout-ms = <75>;
             layers = <QWE LIN MOV CAD>;
-            // ② ここで使用するキーのインデックスを指定（例：JとKなど）
             key-positions = <9 19>; 
-            /* ③ 定義したbehaviorを呼び出す
-                第一引数（Hold）: LS(LCTL) -> Shift + Ctrl
-                第二引数（Tap） : ESC
-            */
-            bindings = <&esc_ctrl_shift &ctrl_shift ESC>;
+            bindings = <&kp ESC>;
         };
         // tab {
         //     bindings = <&kp TAB>;
@@ -4401,15 +4391,15 @@
             bindings = <&qm>, <&caps_word>;
         };
         // ① ホールド・タップの挙動を定義
-        esc_ctrl_shift: esc_ctrl_shift {
-            compatible = "zmk,behavior-hold-tap";
-            label = "ESC_CTRL_SHIFT";
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;    // 長押しと判定されるまでの時間
-            quick-tap-ms = <0>;
-            flavor = "tap-preferred";   // タップを優先する設定
-            bindings = <&kp>, <&kp>;
-        };
+        // esc_ctrl_shift: esc_ctrl_shift {
+        //     compatible = "zmk,behavior-hold-tap";
+        //     label = "ESC_CTRL_SHIFT";
+        //     #binding-cells = <2>;
+        //     tapping-term-ms = <150>;    // 長押しと判定されるまでの時間
+        //     quick-tap-ms = <0>;
+        //     flavor = "tap-preferred";   // タップを優先する設定
+        //     bindings = <&kp>, <&kp>;
+        // };
         // td_lt_num_lbkt: tap_dance_layer_tap_num_lbkt {  // タップで[、ホールドでNUMレイヤ、ダブルタップでNUMレイヤ保持
         //     compatible = "zmk,behavior-tap-dance";
         //     #binding-cells = <0>;
