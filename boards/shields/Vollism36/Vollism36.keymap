@@ -416,17 +416,17 @@
             timeout-ms = <80>;
         };
         mt_LCTRL_GRAVE {
-            bindings = <&mt LCTRL GRAVE>;
+            bindings = <&kp GRAVE>;
             key-positions = <10 11>;
             layers = <RSE RSEL RSEW>;
             timeout-ms = <80>;
         };
-        mt_LCTRL_LANG5 {
-            bindings = <&mt LCTRL LANG5>;
-            key-positions = <10 11>;
-            layers = <ADJ ADJL ADJW>;
-            timeout-ms = <80>;
-        };
+        // mt_LCTRL_LANG5 {
+        //     bindings = <&kp LANG5>;
+        //     key-positions = <10 11>;
+        //     layers = <ADJ ADJL ADJW>;
+        //     timeout-ms = <80>;
+        // };
         file_f {
             bindings = <&file_f>;
             key-positions = <1 2>;
@@ -451,12 +451,12 @@
             layers = <QWE LIN CAD>;
             timeout-ms = <80>;
         };
-        j_ahk {
-            bindings = <&int5_g>;
-            key-positions = <14 15>;
-            layers = <CAD>;
-            timeout-ms = <80>;
-        };
+        // j_ahk {
+        //     bindings = <&int5_g>;
+        //     key-positions = <14 15>;
+        //     layers = <CAD>;
+        //     timeout-ms = <80>;
+        // };
         combo_exl_fill { // Excelのオートフィル
             timeout-ms = <80>;
             key-positions = <2 7 11>; // E,I,Sのキー位置に書き換えてください
