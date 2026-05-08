@@ -515,9 +515,9 @@
             timeout-ms = <60>;
         };
         mb1_shft_cad {
-            bindings = <&kp LS(MB1)>;
+            bindings = <&shft_mb1>;
             key-positions = <26 27 28>;
-            layers = <CAD LWR>;
+            layers = <CAD LWRW>;
             timeout-ms = <70>;
         };
         mb1_l_cad {
@@ -4932,6 +4932,17 @@
                 = <&macro_press &kp LCTRL>
                 , <&macro_tap &kp V>
                 , <&macro_release &kp LCTRL>
+                ;
+        };
+        shft_mb1: shft_mb1 { // Shiftキー+左クリック
+            compatible = "zmk,behavior-macro";
+            wait-ms = <40>;
+            tap-ms = <40>;
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &mkp MB1>
+                , <&macro_release &kp LSHFT>
                 ;
         };
         alt_enter: alt_enter { // alt+enter
