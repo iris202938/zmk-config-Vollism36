@@ -514,10 +514,16 @@
             layers = <QWE LIN CAD LWR LWRL LWRW WINS>;
             timeout-ms = <60>;
         };
-        mb1_shft_cad {
+        mb1_shft_cad_r {
             bindings = <&shft_mb1>;
             key-positions = <26 27 28>;
             layers = <CAD LWRW>;
+            timeout-ms = <70>;
+        };
+        mb1_shft_cad_l {
+            bindings = <&shft_mb1>;
+            key-positions = <13 22 32>;
+            layers = <CAD>;
             timeout-ms = <70>;
         };
         mb1_l_cad {
