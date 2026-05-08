@@ -515,7 +515,7 @@
             timeout-ms = <60>;
         };
         mb1_shft_cad {
-            bindings = <&LS(MB1)>;
+            bindings = <&kp LS(MB1)>;
             key-positions = <26 27 28>;
             layers = <CAD LWR>;
             timeout-ms = <70>;
