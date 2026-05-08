@@ -514,6 +514,12 @@
             layers = <QWE LIN CAD LWR LWRL LWRW WINS>;
             timeout-ms = <60>;
         };
+        mb1_shft_cad {
+            bindings = <&LS(MB1)>;
+            key-positions = <26 27 28>;
+            layers = <CAD LWR>;
+            timeout-ms = <70>;
+        };
         mb1_l_cad {
             bindings = <&mkp MB1>;
             key-positions = <13 22>;
