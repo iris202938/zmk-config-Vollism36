@@ -1,18 +1,13 @@
-
 manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    # - name: Reinmuth66
-      # url-base: https://github.com/Reinmuth66
     - name: badjeff
       url-base: https://github.com/badjeff
     - name: sayu-hub
       url-base: https://github.com/sayu-hub
     - name: zettaface
       url-base: https://github.com/zettaface
-    # - name: caksoylar  # <-- led
-      # url-base: https://github.com/caksoylar
     - name: iris202938  # <-- led
       url-base: https://github.com/iris202938
     - name: hsgw
@@ -26,28 +21,18 @@ manifest:
       revision: v0.3
       import: app/west.yml
     - name: zmk-pmw3610-driver  # <-- トラボドライバ
-      # remote: Reinmuth66
-      # remote: badjeff
       remote: sayu-hub
       revision: main
     - name: zmk-input-processor-keybind
       remote: zettaface
       revision: main
-    # - name: zmk-input-transform-processors
-    #   remote: zmkfirmware
-    #   revision: main
-    # - name: zmk-rgbled-widget  # <-- led
-      # remote: caksoylar
     - name: zmk-rgbled-widget  # <-- led
       remote: iris202938
-      # remote: Reinmuth66
       revision: main
-      # https://github.com/hsgw/zmk-feature-sensor_rotation
     - name: zmk-feature-sensor_rotation
       remote: hsgw
       revision: main
       path: modules/zmk-feature-sensor_rotation
-      # https://github.com/badjeff/zmk-input-processor-report-rate-limit
     - name: zmk-input-processor-report-rate-limit
       remote: badjeff
       revision: main
@@ -57,3 +42,4 @@ manifest:
       revision: main
   self:
     path: config
+    
