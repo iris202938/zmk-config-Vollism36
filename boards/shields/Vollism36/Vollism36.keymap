@@ -6935,7 +6935,7 @@
             &td_Q           &td_W           &td_E           &td_R           &td_T                                           &td_Y           &td_U           &td_I           &td_O           &td_P
             &td_A           &td_S           &td_D           &td_F                                           &td_G           &td_H           &td_J           &td_K           &td_L           &td_SEMI
             &td_Z           &td_X           &td_C           &td_V                                           &td_B           &td_N           &td_M           &td_COMMA       &td_DOT         &td_SLASH
-                                                            &lt_bl NUMW INT5 &kp SPACE      &lt LWRW TAB    &lt RSEW ENTER	&mt RSHFT ESC   &lt_bl MOVW INT4 // INT4はALT+変換のAHKマクロ用
+                                                            &kp SPACE      &lt LWRW TAB    &lt_bl NUMW INT5 &lt_bl MOVW INT4 &lt RSEW ENTER	&mt RSHFT ESC
             >;
         };
 
@@ -6945,7 +6945,7 @@
             &kp Q           &kp W           &kp E           &kp R           &kp T                                           &kp Y           &kp U           &kp I           &kp O           &kp P
             &kp A           &kp S           &kp D           &kp F                                           &kp G           &kp H           &kp J           &kp K           &kp L           &kp SEMI
             &kp Z           &kp X           &kp C           &kp V                                           &kp B           &kp N           &kp M           &kp COMMA       &kp DOT         &kp SLASH
-                                                            &lt_bl NUMW ESC &kp SPACE      &lt LWRW TAB     &lt RSEW ENTER	&kp INT4        &lt_bl MOVW ESC
+                                                            &kp SPACE      &lt LWRW TAB     &lt_bl NUMW ESC &lt_bl MOVW ESC &lt RSEW ENTER	&kp INT4
             >;
         };
 
@@ -6955,7 +6955,7 @@
             &mt_s LSHFT PG_UP &kp LC(A)     &kp UP          &kp LC(E)       &kp LS(TAB)                                     &kp DEL         &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT &mt_s RSHFT SCRL_UP
             &mt_s LCTRL PG_DN &kp LEFT      &kp DOWN        &kp RIGHT   	                                &trans          &kp BSPC        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT &mt_s RCTRL SCRL_DOWN
             &mt_s LGUI LC(V)  &mkp MB1      &mkp MB3        &mkp MB2		                                &trans          &mkp MB1        &kp ENTER       &kp LA(LEFT)    &kp LA(RIGHT)   &mt RALT RG(V)
-                                                            &kp LSHFT       &sk_ctrl        &trans          &ht_lg1 ADJ 0   &kp LS(LC(V))   &kp RSHFT
+                                                            &sk_ctrl        &trans          &kp LSHFT       &kp RSHFT       &ht_lg1 ADJ 0   &kp LS(LC(V))   
             >;
         };
 
@@ -6965,7 +6965,7 @@
             &mt_s LSHFT PG_UP &kp HOME      &kp UP          &kp END         &kp LS(TAB)                                     &kp DEL         &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT &mt_s RSHFT SCRL_UP
             &mt_s LCTRL PG_DN &kp LEFT      &kp DOWN        &kp RIGHT   	                                &trans          &kp BSPC        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT &mt_s RCTRL SCRL_DOWN
             &mt_s LALT LC(V)  &mkp MB1      &mkp MB3        &mkp MB2		                                &trans          &mkp MB1        &kp ENTER       &kp LC(LEFT)    &kp LC(RIGHT)   &mt RGUI RG(V)
-                                                            &kp LSHFT       &sk_ctrl        &trans          &ht_it4 ADJL 0  &kp LS(LC(V))   &kp RSHFT
+                                                            &sk_ctrl        &trans          &kp LSHFT       &kp RSHFT       &ht_it4 ADJL 0  &kp LS(LC(V))
             >;
         };
 
@@ -6975,7 +6975,7 @@
             &mt_s LSHFT PG_UP &kp HOME      &kp UP          &kp END         &kp LS(TAB)                                     &kp DEL         &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT &mt_s RSHFT SCRL_UP
             &mt_s LCTRL PG_DN &kp LEFT      &kp DOWN        &kp RIGHT   	                                &trans          &kp BSPC        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT &mt_s RCTRL SCRL_DOWN
             &mt_s LALT LC(V)  &mkp MB1      &mkp MB3        &mkp MB2		                                &trans          &mkp MB1        &kp ENTER       &kp LC(LEFT)    &kp LC(RIGHT)   &mt RGUI RG(V)
-                                                            &kp LSHFT       &sk_ctrl        &trans          &htW_it4 ADJW 0 &kp LS(LC(V))   &kp RSHFT
+                                                            &sk_ctrl        &trans          &kp LSHFT       &kp RSHFT       &htW_it4 ADJW 0 &kp LS(LC(V))
             >;
         };
 
@@ -6985,7 +6985,7 @@
             &mt_s LSHFT F1  &kp F2          &kp F3          &kp F4          &kp F5         		         		            &kp F6          &kp F7    	    &kp F8          &kp F9          &mt_s RSHFT F10
             &macro_JPN1     &macro_JPN2	    &macro_JPN3     &macro_JPN4                                     &macro_JPN5	    &macro_JPN6     &macro_JPN7     &macro_JPN8	    &macro_JPN9     &macro_JPN0
             &mt_s LGUI INT1 &kp BSLH        &kp INT3        &kp SLASH   		     		                &kp ASTRK       &kp MINUS       &kp PLUS  	    &kp LBKT        &kp RBKT        &mt RALT RG(V)
-                                                            &kp LSHFT       &kp SPACE       &ht_lg2 ADJ 0   &trans          &sk_gui         &kp RSHFT
+                                                            &kp SPACE       &ht_lg2 ADJ 0   &kp LSHFT       &kp RSHFT       &trans          &sk_gui
             >;
         };
 
@@ -6995,7 +6995,7 @@
             &mt_s LSHFT F1  &kp F2          &kp F3          &kp F4          &kp F5         		         		            &kp F6          &kp F7    	    &kp F8          &kp F9          &mt_s RSHFT F10
             &mt_s LCTRL N1  &kp N2          &kp N3          &kp N4      		     		                &kp N5          &kp N6          &kp N7    	    &kp N8          &kp N9          &mt_s RCTRL N0
             &mt_s LALT INT1 &kp BSLH        &kp INT3        &kp SLASH   		     		                &kp ASTRK       &kp MINUS       &kp PLUS  	    &kp LBKT        &kp RBKT        &mt RGUI RC(V)
-                                                            &kp LSHFT       &kp SPACE       &ht_it5 ADJL 0  &trans          &sk_gui         &kp RSHFT
+                                                            &kp SPACE       &ht_it5 ADJL 0  &kp LSHFT       &kp RSHFT       &trans          &sk_gui
             >;
         };
 
@@ -7005,7 +7005,7 @@
             &mt_s LSHFT F1  &kp F2          &kp F3          &kp F4          &kp F5         		         		            &kp F6          &kp F7    	    &kp F8          &kp F9          &mt_s RSHFT F10
             &mt_s LCTRL N1  &kp N2          &kp N3          &kp N4      		     		                &kp N5          &kp N6          &kp N7    	    &kp N8          &kp N9          &mt_s RCTRL N0
             &mt_s LALT INT1 &kp BSLH        &kp INT3        &kp SLASH   		     		                &kp ASTRK       &kp MINUS       &kp PLUS  	    &kp LBKT        &kp RBKT        &mt GUI RC(V)
-                                                            &kp LSHFT       &kp SPACE       &htC_it5 ADJW 0 &trans          &sk_gui         &kp RSHFT
+                                                            &kp SPACE       &htC_it5 ADJW 0 &kp LSHFT       &kp RSHFT       &trans          &sk_gui
             >;
         };
 
@@ -7015,7 +7015,7 @@
             &mt_s LSHFT F11 &kp F12         &kp C_MUTE      &kp C_VOL_DN    &kp C_VOL_UP                                    &kp CAPS        &kp PSCRN       &kp SLCK        &kp PAUSE_BREAK &kp LS(UP)
             &out OUT_BLE    &usb_lCAD       &bt3_lCAD       &kp LS(RIGHT)                                   &kp G           &kp INT5        &file_r         &pr_pg          &nx_pg          &file_f
             &bt0_lQWE       &bt1_lNICL      &bt2_lNICL      &kp K_APP                                       &kp LS(LEFT)    &kp LS(DOWN) &kp LS(LG(LEFT)) &kp LS(LA(LEFT)) &kp LS(LA(RIGHT)) &kp LS(LG(RIGHT))
-                                                            &to QWE         &grave_uc       &trans          &trans          &tilde_uc	    &to CAD
+                                                            &grave_uc       &trans          &to QWE         &to CAD         &trans          &tilde_uc
             >;
         };
 
@@ -7025,7 +7025,7 @@
             &mt_s LSHFT F11 &kp F12         &kp C_MUTE      &kp C_VOL_DN    &kp C_VOL_UP                                    &kp CAPS        &kp PSCRN       &kp SLCK        &kp PAUSE_BREAK &kp LS(UP)
             &out OUT_BLE    &usb_lCAD       &bt3_lCAD       &kp LS(RIGHT)                                   &kp G           &kp INT5        &file_r         &pr_pg          &nx_pg          &file_f
             &bt0_lQWE       &bt1_lNICL      &bt2_lNICL      &kp K_APP                                       &kp LS(LEFT)    &kp LS(DOWN)    &kp LS(HOME) &kp LS(LC(LEFT)) &kp LS(LC(RIGHT)) &kp LS(END)
-                                                            &to QWE         &grave_uc       &trans          &trans          &tilde_uc	    &to CAD
+                                                            &grave_uc       &trans          &to QWE         &to CAD         &trans          &tilde_uc
             >;
         };
 
@@ -7035,7 +7035,7 @@
             &mt_s LSHFT F11 &kp F12         &kp C_MUTE      &kp C_VOL_DN    &kp C_VOL_UP                                    &kp CAPS        &kp PSCRN       &kp SLCK        &kp PAUSE_BREAK &kp LS(UP)
             &out OUT_BLE    &usb_lCAD       &bt3_lCAD       &kp LS(RIGHT)                                   &kp G           &kp INT5        &file_r         &pr_pg          &nx_pg          &file_f
             &bt0_lQWE       &bt1_lNICL      &bt2_lNICL      &kp K_APP                                       &kp LS(LEFT)    &kp LS(DOWN)    &kp LS(HOME) &kp LS(LC(LEFT)) &kp LS(LC(RIGHT)) &kp LS(END)
-                                                            &to QWE         &grave_uc       &trans          &trans          &tilde_uc	    &to CAD
+                                                            &grave_uc       &trans          &to QWE         &to CAD         &trans          &tilde_ucs
             >;
         };
 
@@ -7045,7 +7045,7 @@
             &kp LS(LC(TAB)) &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT &msc SCRL_UP                                    &lt BLE LC(Y)   &kp LC(A)       &kp UP          &kp LC(E)       &kp PG_UP
             &mt_s LCTRL MB1 &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT                                 &msc SCRL_DOWN  &lt BLE BSPC    &kp LEFT        &kp DOWN        &kp RIGHT       &kp PG_DN
             &mt_s LGUI Z    &kp LG(LBKT)    &mkp MB3        &kp LG(RBKT)                                    &kp LC(TAB)     &kp LC(Z)       &kp LS(LC(TAB)) &kp LA(LEFT)    &kp LA(RIGHT)   &kp LC(TAB)
-                                                            &kp LG(C)       &kp LG(V)       &mkp MB2        &kp ENTER       &mkp MB1        &to QWE
+                                                            &kp LG(V)       &mkp MB2        &kp LG(C)       &to QWE         &kp ENTER       &mkp MB1
             >;
         };
 
@@ -7055,7 +7055,7 @@
             &kp LS(LC(TAB)) &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT &msc SCRL_UP                                    &lt BLE LC(Y)   &kp HOME        &kp UP          &kp END         &kp PG_UP
             &mt_s LCTRL MB1 &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT                                 &msc SCRL_DOWN  &lt BLE BSPC    &kp LEFT        &kp DOWN        &kp RIGHT       &kp PG_DN
             &mt_s LALT Z    &kp LA(LEFT)    &mkp MB3        &kp LA(RIGHT)                                   &kp LC(TAB)     &kp LC(Z)       &kp LC(PG_UP)   &kp LG(LBKT)    &kp LG(RBKT)    &kp LC(PG_DN)
-                                                            &kp LC(C)       &kp LC(V)       &mkp MB2        &kp ENTER       &mkp MB1        &to LIN
+                                                            &kp LC(V)       &mkp MB2        &kp LC(C)       &to LIN         &kp ENTER       &mkp MB1
             >;
         };
 
@@ -7065,7 +7065,7 @@
             &kp LS(LC(TAB)) &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT &msc SCRL_UP                                    &lt BLE LC(Y)   &kp HOME        &kp UP          &kp END         &kp PG_UP
             &mt_s LCTRL MB1 &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT                                 &msc SCRL_DOWN  &lt BLE BSPC    &kp LEFT        &kp DOWN        &kp RIGHT       &kp PG_DN
             &mt_s LALT Z    &kp LA(LEFT)    &mkp MB3        &kp LA(RIGHT)                                   &kp LC(TAB)     &kp LC(Z)       &kp LC(PG_UP)   &kp LG(LBKT)    &kp LG(RBKT)    &kp LC(PG_DN)
-                                                            &kp LC(C)       &kp LC(V)       &mkp MB2        &kp ENTER       &mkp MB1        &to CAD
+                                                            &kp LC(V)       &mkp MB2        &kp LC(C)       &to CAD         &kp ENTER       &mkp MB1
             >;
         };
 
@@ -7075,7 +7075,7 @@
             &kp PG_UP       &kp LC(A)       &kp UP          &kp LC(E)       &lt BLE CARET                                   &kp KP_SLASH    &kp KP_N7       &kp KP_N8       &kp KP_N9       &kp KP_MULTIPLY
             &kp PG_DN       &kp LEFT        &kp DOWN        &kp RIGHT                                       &lt BLE DEL     &kp BSPC        &kp KP_N4       &kp KP_N5       &kp KP_N6       &kp KP_MINUS
             &alt_left	    &alt_down       &alt_up         &alt_right                                      &kp EQUAL       &kp KP_N0       &kp KP_N1       &kp KP_N2       &kp KP_N3       &kp KP_PLUS
-                                                            &t_lang2        &pr_pg	        &nx_pg          &kp KP_ENTER    &kp UNDER       &kp SPACE
+                                                            &pr_pg	        &nx_pg          &t_lang2        &kp SPACE       &kp KP_ENTER    &kp UNDER
             >;
         };
 
@@ -7085,7 +7085,7 @@
             &kp PG_UP       &kp HOME        &kp UP          &kp END         &lt BLE CARET                                   &kp KP_SLASH    &kp KP_N7       &kp KP_N8       &kp KP_N9       &kp KP_MULTIPLY
             &kp PG_DN       &kp LEFT        &kp DOWN        &kp RIGHT                                       &lt BLE DEL     &kp BSPC        &kp KP_N4       &kp KP_N5       &kp KP_N6       &kp KP_MINUS
             &alt_left	    &alt_down       &alt_up         &alt_right                                      &kp EQUAL       &kp KP_N0       &kp KP_N1       &kp KP_N2       &kp KP_N3       &kp KP_PLUS
-                                                            &t_int5         &pr_pg	        &nx_pg          &kp KP_ENTER    &kp UNDER       &kp SPACE
+                                                            &pr_pg	        &nx_pg          &t_int5         &kp SPACE       &kp KP_ENTER    &kp UNDER
             >;
         };
 
@@ -7095,7 +7095,7 @@
             &kp PG_UP       &kp HOME        &kp UP          &kp END         &lt BLE CARET                                   &kp KP_SLASH    &kp KP_N7       &kp KP_N8       &kp KP_N9       &kp KP_MULTIPLY
             &kp PG_DN       &kp LEFT        &kp DOWN        &kp RIGHT                                       &lt BLE DEL     &kp BSPC        &kp KP_N4       &kp KP_N5       &kp KP_N6       &kp KP_MINUS
             &alt_left	    &alt_down       &alt_up         &alt_right                                      &kp EQUAL       &kp KP_N0       &kp KP_N1       &kp KP_N2       &kp KP_N3       &kp KP_PLUS
-                                                            &tC_int5        &pr_pg	        &nx_pg          &kp KP_ENTER    &kp UNDER       &kp SPACE
+                                                            &pr_pg	        &nx_pg          &tC_int5        &kp SPACE       &kp KP_ENTER    &kp UNDER
             >;
         };
 
@@ -7105,7 +7105,7 @@
             &kp Q           &kp W           &kp E           &kp R           &kp T                                           &kp Y           &kp U           &kp I           &kp O           &kp P
             &kp A           &kp S           &kp D           &kp F                                           &kp G           &kp H           &kp J           &kp K           &kp L           &kp SEMI
             &kp Z           &kp X           &kp C           &kp V                                           &kp B           &kp N           &kp M           &kp COMMA       &kp DOT         &kp SLASH
-                                                            &qm LSHFT       &kp SPACE       &kp TAB         &kp ENTER	    &kp INT4        &qm RALT
+                                                            &kp SPACE       &kp TAB         &qm LSHFT       &qm RALT        &kp ENTER	    &kp INT4
             >;
         };
 
@@ -7115,7 +7115,7 @@
             &sys_reset      &bootloader     &kp INT3        &kp INT6        &bt BT_CLR_ALL                                  &bt BT_CLR_ALL  &m_hi_con   	&kp GRAVE       &bootloader     &sys_reset
             &kp LC(LG(T))   &kp LC(LG(C))   &kp LC(LG(P))   &kp LC(LG(G))                                   &trans          &trans          &kp LC(LG(E))   &kp LC(LG(A))   &kp LC(LG(L))   &kp LC(LG(X))
             &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3                                    &bootloader     &bootloader     &bt4_lLIN       &kp TILDE       &kp TILDE2      &kp K_CALC
-                                                            &trans          &kp LS(LG(F23)) &bt BT_CLR      &bt BT_CLR      &kp LA(LG(G))   &trans
+                                                            &kp LS(LG(F23)) &bt BT_CLR      &trans          &trans          &bt BT_CLR      &kp LA(LG(G))
             >;
         };
     };
