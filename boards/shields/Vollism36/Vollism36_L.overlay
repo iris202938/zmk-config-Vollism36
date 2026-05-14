@@ -118,16 +118,20 @@
         };
 
         /* ==========================================================
-        Layer 19: MOVW (スクロール)
+        Layer 19: MOVW (方向キー変換)
         ========================================================== */
         l_movw {
-            layers = <MOVW>;
+            layers = <MOVW>; 
             input-processors = 
-                <&sensor_rotation>,
-                <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>,
-                <&zip_xy_scaler 1 30>,
-                <&zip_xy_to_scroll_mapper>,
-                <&zip_xy_scaler 0 1>; 
+                <&sensor_rotation>, 
+                <&zip_xy_scaler 200 100>, 
+                <&xy_to_keys>;
+            process-next;
+        };
+
+        l_movw_prevent {
+            layers = <MOVW>;
+            input-processors = <&zip_xy_scaler 0 1>;
         };
 
         /* ==========================================================
