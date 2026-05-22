@@ -261,20 +261,11 @@
         };
 
         /* ==========================================================
-        Layer 7: WIN (方向キー変換)
+        Layer 7: WIN (通常マウス)
         ========================================================== */
         l_win {
-            layers = <WIN>; 
-            input-processors = 
-                <&sensor_rotation>, 
-                <&zip_xy_scaler 200 100>, 
-                <&xy_to_keys>;
-            process-next;
-        };
-
-        l_win_prevent {
             layers = <WIN>;
-            input-processors = <&zip_xy_scaler 0 1>;
+            input-processors = <&sensor_rotation>;
         };
 
         /* ==========================================================
