@@ -177,7 +177,7 @@
         // };
         combo_esc_l {
             timeout-ms = <75>;
-            layers = <QWE LIN MOV CAD ADJ ADJL ADJW>;
+            layers = <QWE LIN MOV CAD ADJ ADJL ADJW NUM NUML NUMW>;
             key-positions = <0 10>; 
             bindings = <&kp ESC>;
         };
@@ -7072,8 +7072,8 @@
         NUM {
             bindings = <
         // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
-            &kp PG_UP       &kp LC(A)       &kp UP          &kp LC(E)       &lt BLE CARET                                   &kp KP_SLASH    &kp KP_N7       &kp KP_N8       &kp KP_N9       &kp KP_MULTIPLY
-            &kp PG_DN       &kp LEFT        &kp DOWN        &kp RIGHT                                       &lt BLE DEL     &kp BSPC        &kp KP_N4       &kp KP_N5       &kp KP_N6       &kp KP_MINUS
+            &mt_s LSHFT PG_UP &kp LC(A)     &kp UP          &kp LC(E)       &lt BLE CARET                                   &kp KP_SLASH    &kp KP_N7       &kp KP_N8       &kp KP_N9       &kp KP_MULTIPLY
+            &mt_s LCTRL PG_DN &kp LEFT      &kp DOWN        &kp RIGHT                                       &lt BLE DEL     &kp BSPC        &kp KP_N4       &kp KP_N5       &kp KP_N6       &kp KP_MINUS
             &alt_left	    &alt_down       &alt_up         &alt_right                                      &kp EQUAL       &kp KP_N0       &kp KP_N1       &kp KP_N2       &kp KP_N3       &kp KP_PLUS
                                                             &t_lang2        &pr_pg	        &nx_pg          &kp KP_ENTER    &kp UNDER       &kp SPACE
             >;
@@ -7082,8 +7082,8 @@
         NUML {
             bindings = <
         // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
-            &kp PG_UP       &kp HOME        &kp UP          &kp END         &lt BLE CARET                                   &kp KP_SLASH    &kp KP_N7       &kp KP_N8       &kp KP_N9       &kp KP_MULTIPLY
-            &kp PG_DN       &kp LEFT        &kp DOWN        &kp RIGHT                                       &lt BLE DEL     &kp BSPC        &kp KP_N4       &kp KP_N5       &kp KP_N6       &kp KP_MINUS
+            &mt_s LSHFT PG_UP &kp HOME      &kp UP          &kp END         &lt BLE CARET                                   &kp KP_SLASH    &kp KP_N7       &kp KP_N8       &kp KP_N9       &kp KP_MULTIPLY
+            &mt_s LCTRL PG_DN &kp LEFT      &kp DOWN        &kp RIGHT                                       &lt BLE DEL     &kp BSPC        &kp KP_N4       &kp KP_N5       &kp KP_N6       &kp KP_MINUS
             &alt_left	    &alt_down       &alt_up         &alt_right                                      &kp EQUAL       &kp KP_N0       &kp KP_N1       &kp KP_N2       &kp KP_N3       &kp KP_PLUS
                                                             &t_int5         &pr_pg	        &nx_pg          &kp KP_ENTER    &kp UNDER       &kp SPACE
             >;
@@ -7092,8 +7092,8 @@
         NUMW {
             bindings = <
         // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
-            &kp PG_UP       &kp HOME        &kp UP          &kp END         &lt BLE CARET                                   &kp KP_SLASH    &kp KP_N7       &kp KP_N8       &kp KP_N9       &kp KP_MULTIPLY
-            &kp PG_DN       &kp LEFT        &kp DOWN        &kp RIGHT                                       &lt BLE DEL     &kp BSPC        &kp KP_N4       &kp KP_N5       &kp KP_N6       &kp KP_MINUS
+            &mt_s LSHFT PG_UP &kp HOME      &kp UP          &kp END         &lt BLE CARET                                   &kp KP_SLASH    &kp KP_N7       &kp KP_N8       &kp KP_N9       &kp KP_MULTIPLY
+            &mt_s LCTRL PG_DN &kp LEFT      &kp DOWN        &kp RIGHT                                       &lt BLE DEL     &kp BSPC        &kp KP_N4       &kp KP_N5       &kp KP_N6       &kp KP_MINUS
             &alt_left	    &alt_down       &alt_up         &alt_right                                      &kp EQUAL       &kp KP_N0       &kp KP_N1       &kp KP_N2       &kp KP_N3       &kp KP_PLUS
                                                             &tC_int5        &pr_pg	        &nx_pg          &kp KP_ENTER    &kp UNDER       &kp SPACE
             >;
@@ -7105,7 +7105,7 @@
             &kp Q           &kp W           &kp E           &kp R           &kp T                                           &kp Y           &kp U           &kp I           &kp O           &kp P
             &kp A           &kp S           &kp D           &kp F                                           &kp G           &kp H           &kp J           &kp K           &kp L           &kp SEMI
             &kp Z           &kp X           &kp C           &kp V                                           &kp B           &kp N           &kp M           &kp COMMA       &kp DOT         &kp SLASH
-                                                            &trans       	&kp SPACE       &trans         	&trans	    	&kp INT4        &trans
+                                                            &kp LSHFT       &kp SPACE       &kp TAB         &kp ENTER	    &kp INT4        &kp RCTRL
             >;
         };
 
