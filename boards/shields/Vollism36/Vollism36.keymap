@@ -441,6 +441,14 @@
             layers = <QWE LIN CAD>;
             timeout-ms = <80>;
         };
+
+        combo_file_f { // ファイル切替
+            bindings = <&file_f>;
+            key-positions = <31 32>;
+            layers = <NUM NUML NUMW>;
+            timeout-ms = <80>;
+        };
+
         // j_ahk {
         //     bindings = <&int5_g>;
         //     key-positions = <14 15>;
