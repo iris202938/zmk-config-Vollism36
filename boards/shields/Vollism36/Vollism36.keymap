@@ -417,6 +417,12 @@
         //     layers = <ADJ ADJL ADJW>;
         //     timeout-ms = <80>;
         // };
+        ins {
+            bindings = <&kp INS>;
+            key-positions = <8 9>;
+            layers = <ADJ ADJL ADJW>;
+            timeout-ms = <80>;
+        };
         file_f {
             bindings = <&file_f>;
             key-positions = <1 2>;
@@ -7021,7 +7027,7 @@
             bindings = <
         // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
             &mt_s LSHFT F11 &kp F12         &kp C_MUTE      &kp C_VOL_DN    &kp C_VOL_UP                                    &kp CAPS        &kp PSCRN       &kp SLCK        &kp PAUSE_BREAK &kp LS(UP)
-            &out OUT_BLE    &usb_lCAD       &bt3_lCAD       &kp LS(RIGHT)                                   &kp G           &kp INT5        &file_r         &pr_pg          &nx_pg          &file_f
+            &kp LCTRL       &usb_lCAD       &bt3_lCAD       &kp LS(RIGHT)                                   &kp G           &kp INT5        &file_r         &pr_pg          &nx_pg          &file_f
             &bt0_lQWE       &bt1_lNICL      &bt2_lNICL      &kp K_APP                                       &kp LS(LEFT)    &kp LS(DOWN) &kp LS(LG(LEFT)) &kp LS(LA(LEFT)) &kp LS(LA(RIGHT)) &kp LS(LG(RIGHT))
                                                             &to QWE         &grave_uc       &trans          &trans          &tilde_uc	    &to CAD
             >;
@@ -7031,7 +7037,7 @@
             bindings = <
         // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
             &mt_s LSHFT F11 &kp F12         &kp C_MUTE      &kp C_VOL_DN    &kp C_VOL_UP                                    &kp CAPS        &kp PSCRN       &kp SLCK        &kp PAUSE_BREAK &kp LS(UP)
-            &out OUT_BLE    &usb_lCAD       &bt3_lCAD       &kp LS(RIGHT)                                   &kp G           &kp INT5        &file_r         &pr_pg          &nx_pg          &file_f
+            &kp LCTRL       &usb_lCAD       &bt3_lCAD       &kp LS(RIGHT)                                   &kp G           &kp INT5        &file_r         &pr_pg          &nx_pg          &file_f
             &bt0_lQWE       &bt1_lNICL      &bt2_lNICL      &kp K_APP                                       &kp LS(LEFT)    &kp LS(DOWN)    &kp LS(HOME) &kp LS(LC(LEFT)) &kp LS(LC(RIGHT)) &kp LS(END)
                                                             &to QWE         &grave_uc       &trans          &trans          &tilde_uc	    &to CAD
             >;
@@ -7041,7 +7047,7 @@
             bindings = <
         // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
             &mt_s LSHFT F11 &kp F12         &kp C_MUTE      &kp C_VOL_DN    &kp C_VOL_UP                                    &kp CAPS        &kp PSCRN       &kp SLCK        &kp PAUSE_BREAK &kp LS(UP)
-            &out OUT_BLE    &usb_lCAD       &bt3_lCAD       &kp LS(RIGHT)                                   &kp G           &kp INT5        &file_r         &pr_pg          &nx_pg          &file_f
+            &kp LCTRL       &usb_lCAD       &bt3_lCAD       &kp LS(RIGHT)                                   &kp G           &kp INT5        &file_r         &pr_pg          &nx_pg          &file_f
             &bt0_lQWE       &bt1_lNICL      &bt2_lNICL      &kp K_APP                                       &kp LS(LEFT)    &kp LS(DOWN)    &kp LS(HOME) &kp LS(LC(LEFT)) &kp LS(LC(RIGHT)) &kp LS(END)
                                                             &to QWE         &grave_uc       &trans          &trans          &tilde_uc	    &to CAD
             >;
@@ -7083,7 +7089,7 @@
             &mt_s LSHFT PG_UP &kp LC(A)     &kp UP          &kp LC(E)       &lt BLE CARET                                   &kp KP_SLASH    &kp KP_N7       &kp KP_N8       &kp KP_N9       &kp KP_MULTIPLY
             &mt_s LCTRL PG_DN &kp LEFT      &kp DOWN        &kp RIGHT                                       &lt BLE DEL     &kp BSPC        &kp KP_N4       &kp KP_N5       &kp KP_N6       &kp KP_MINUS
             &alt_left	    &alt_down       &alt_up         &alt_right                                      &kp EQUAL       &kp KP_N0       &kp KP_N1       &kp KP_N2       &kp KP_N3       &kp KP_PLUS
-                                                            &t_lang2        &pr_pg	        &lt LWR TAB     &kp KP_ENTER    &kp UNDER       &kp SPACE
+                                                            &t_lang2        &pr_pg	        &kp TAB         &kp KP_ENTER    &kp UNDER       &kp SPACE
             >;
         };
 
@@ -7093,7 +7099,7 @@
             &mt_s LSHFT PG_UP &kp HOME      &kp UP          &kp END         &lt BLE CARET                                   &kp KP_SLASH    &kp KP_N7       &kp KP_N8       &kp KP_N9       &kp KP_MULTIPLY
             &mt_s LCTRL PG_DN &kp LEFT      &kp DOWN        &kp RIGHT                                       &lt BLE DEL     &kp BSPC        &kp KP_N4       &kp KP_N5       &kp KP_N6       &kp KP_MINUS
             &alt_left	    &alt_down       &alt_up         &alt_right                                      &kp EQUAL       &kp KP_N0       &kp KP_N1       &kp KP_N2       &kp KP_N3       &kp KP_PLUS
-                                                            &t_int5         &pr_pg	        &lt LWRL TAB    &kp KP_ENTER    &kp UNDER       &kp SPACE
+                                                            &t_int5         &pr_pg	        &kp TAB     &kp KP_ENTER    &kp UNDER       &kp SPACE
             >;
         };
 
@@ -7103,7 +7109,7 @@
             &mt_s LSHFT PG_UP &kp HOME      &kp UP          &kp END         &lt BLE CARET                                   &kp KP_SLASH    &kp KP_N7       &kp KP_N8       &kp KP_N9       &kp KP_MULTIPLY
             &mt_s LCTRL PG_DN &kp LEFT      &kp DOWN        &kp RIGHT                                       &lt BLE DEL     &kp BSPC        &kp KP_N4       &kp KP_N5       &kp KP_N6       &kp KP_MINUS
             &alt_left	    &alt_down       &alt_up         &alt_right                                      &kp EQUAL       &kp KP_N0       &kp KP_N1       &kp KP_N2       &kp KP_N3       &kp KP_PLUS
-                                                            &tC_int5        &pr_pg	        &lt LWRW TAB    &kp KP_ENTER    &kp UNDER       &kp SPACE
+                                                            &tC_int5        &pr_pg	        &kp TAB         &kp KP_ENTER    &kp UNDER       &kp SPACE
             >;
         };
 
