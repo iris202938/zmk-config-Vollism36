@@ -5151,6 +5151,7 @@
                 <&kp ENTER>,                            // Enter（確定）
                 <&macro_press &kp LALT>, <&kp TAB>,     // Altを押しながらTab
                 <&macro_release &kp LALT>,              // Altを離す（ウィンドウ切り替え）
+                <&macro_wait_time 20>,                  // ここで20ミリ秒待機
                 <&kp LC(V)>,                            // Ctrl + V（貼り付け）
                 <&kp ENTER>,                            // Enter
                 <&kp ESC>,                              // Esc
@@ -5170,6 +5171,7 @@
                 <&kp TAB>,                              // ★ EnterからTABに変更（右のセルへ移動＆確定）
                 <&macro_press &kp LALT>, <&kp TAB>,     // Altを押しながらTab
                 <&macro_release &kp LALT>,              // Altを離す（ウィンドウ切り替え）
+                <&macro_wait_time 20>,                  // ここで20ミリ秒待機
                 <&kp LC(V)>,                            // Ctrl + V（貼り付け）
                 <&kp ENTER>,                            // Enter
                 <&kp ESC>,                              // Esc
