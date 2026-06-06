@@ -5136,7 +5136,45 @@
                 <&kp F2>,               // 編集モードに入る
                 <&kp LC(A)>,            // 全選択 (Ctrl + A)
                 <&kp LC(C)>,            // コピー (Ctrl + C)
-                    <&kp TAB>;              // 確定＆右のセルへ移動
+                <&kp TAB>;              // 確定＆右のセルへ移動
+        };
+        // HiMacroから変換：コピー ➔ 画面切り替え ➔ 貼り付け ➔ 元の画面に戻る
+        ecl_transfer: ecl_transfer {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <50>;  // HiMacroの「50」に合わせたウェイト設定
+            tap-ms = <50>;   // キーを押し下げている時間
+            bindings = 
+                <&kp F2>,                               // F2（編集モード）
+                <&kp LC(A)>,                            // Ctrl + A（全選択）
+                <&kp LC(C)>,                            // Ctrl + C（コピー）
+                <&kp ENTER>,                            // Enter（確定）
+                <&macro_press &kp LALT>, <&kp TAB>,     // Altを押しながらTab
+                <&macro_release &kp LALT>,              // Altを離す（ウィンドウ切り替え）
+                <&kp LC(V)>,                            // Ctrl + V（貼り付け）
+                <&kp ENTER>,                            // Enter
+                <&kp ESC>,                              // Esc
+                <&macro_press &kp LALT>, <&kp TAB>,     // Altを押しながらTab
+                <&macro_release &kp LALT>;              // Altを離す（元の画面に戻る）
+        };
+        // HiMacro変換版：コピー ➔ TAB移動 ➔ 画面切り替え ➔ 貼り付け ➔ 元の画面に戻る
+        ecl_transfer_t: ecl_transfer_t {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <50>;  // HiMacro基準の50msウェイト
+            tap-ms = <50>;   
+            bindings = 
+                <&kp F2>,                               // F2（編集モード）
+                <&kp LC(A)>,                            // Ctrl + A（全選択）
+                <&kp LC(C)>,                            // Ctrl + C（コピー）
+                <&kp TAB>,                              // ★ EnterからTABに変更（右のセルへ移動＆確定）
+                <&macro_press &kp LALT>, <&kp TAB>,     // Altを押しながらTab
+                <&macro_release &kp LALT>,              // Altを離す（ウィンドウ切り替え）
+                <&kp LC(V)>,                            // Ctrl + V（貼り付け）
+                <&kp ENTER>,                            // Enter
+                <&kp ESC>,                              // Esc
+                <&macro_press &kp LALT>, <&kp TAB>,     // Altを押しながらTab
+                <&macro_release &kp LALT>;              // Altを離す（元の画面に戻る）
         };
         alt_int4: alt_int4 { // Alt+変換 選択位置移動(複写)(AHK)
             compatible = "zmk,behavior-macro";
@@ -7060,7 +7098,7 @@
         ADJL {
             bindings = <
         // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
-            &mt_s LSHFT F11 &kp F12         &kp C_MUTE      &kp C_VOL_DN    &kp C_VOL_UP                                    &kp CAPS        &kp PSCRN       &kp SLCK        &kp PAUSE_BREAK &kp LS(UP)
+            &mt_s LSHFT F11 &kp F12         &kp C_MUTE      &ecl_transfer   &ecl_transfer_t                                 &kp CAPS        &kp PSCRN       &kp SLCK        &kp PAUSE_BREAK &kp LS(UP)
             &kp LCTRL       &usb_lCAD       &bt3_lCAD       &kp LS(RIGHT)                                   &kp G           &kp INT5        &file_r         &pr_pg          &nx_pg          &file_f
             &bt0_lQWE       &bt1_lNICL      &bt2_lNICL      &kp K_APP                                       &kp LS(LEFT)    &kp LS(DOWN)    &kp LS(HOME) &kp LS(LC(LEFT)) &kp LS(LC(RIGHT)) &kp LS(END)
                                                             &to QWE         &grave_uc       &trans          &trans          &tilde_uc	    &to CAD
@@ -7070,7 +7108,7 @@
         ADJW {
             bindings = <
         // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
-            &mt_s LSHFT F11 &kp F12         &kp C_MUTE      &kp C_VOL_DN    &kp C_VOL_UP                                    &kp CAPS        &kp PSCRN       &kp SLCK        &kp PAUSE_BREAK &kp LS(UP)
+            &mt_s LSHFT F11 &kp F12         &kp C_MUTE      &ecl_transfer   &ecl_transfer_t                                 &kp CAPS        &kp PSCRN       &kp SLCK        &kp PAUSE_BREAK &kp LS(UP)
             &kp LCTRL       &usb_lCAD       &bt3_lCAD       &kp LS(RIGHT)                                   &kp G           &kp INT5        &file_r         &pr_pg          &nx_pg          &file_f
             &bt0_lQWE       &bt1_lNICL      &bt2_lNICL      &kp K_APP                                       &kp LS(LEFT)    &kp LS(DOWN)    &kp LS(HOME) &kp LS(LC(LEFT)) &kp LS(LC(RIGHT)) &kp LS(END)
                                                             &to QWE         &grave_uc       &trans          &trans          &tilde_uc	    &to CAD
