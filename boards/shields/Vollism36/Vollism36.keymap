@@ -5303,77 +5303,77 @@
         bt0_lQWE: bt0_lQWE { // Bluetoothプロファイル0を選択し、レイヤーQWEを有効化
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to QWE &bt BT_SEL 0 &to QWE>;
+            bindings = <&to QWE &out OUT_BLE &bt BT_SEL 0 &to QWE>;
         };
         bt0_lNIC: bt0_lNIC { // Bluetoothプロファイル0を選択し、レイヤーNICを有効化
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to QWE &bt BT_SEL 0 &to NIC>;
+            bindings = <&to QWE &out OUT_BLE &bt BT_SEL 0 &to NIC>;
         };
         bt1_lNIC: bt1_lNIC { // Bluetoothプロファイル1を選択し、レイヤーNICを有効化
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to QWE &bt BT_SEL 1 &to NIC>;
+            bindings = <&to QWE &out OUT_BLE &bt BT_SEL 1 &to NIC>;
         };
         bt1_lNICL: bt1_lNICL { // Bluetoothプロファイル1を選択し、レイヤーNICLを有効化
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to QWE &bt BT_SEL 1 &to NICL>;
+            bindings = <&to QWE &out OUT_BLE &bt BT_SEL 1 &to NICL>;
         };
         bt1_lWIN: bt1_lWIN { // Bluetoothプロファイル1を選択し、レイヤーWINを有効化
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to QWE &bt BT_SEL 1 &to WIN>;
+            bindings = <&to QWE &out OUT_BLE &bt BT_SEL 1 &to WIN>;
         };
         bt2_lLIN: bt2_lLIN { // Bluetoothプロファイル2を選択し、レイヤーLINを有効化
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to QWE &bt BT_SEL 2 &to LIN>;
+            bindings = <&to QWE &out OUT_BLE &bt BT_SEL 2 &to LIN>;
         };
         bt2_lWIN: bt2_lWIN { // Bluetoothプロファイル2を選択し、レイヤーWINを有効化
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to QWE &bt BT_SEL 2 &to WIN>;
+            bindings = <&to QWE &out OUT_BLE &bt BT_SEL 2 &to WIN>;
         };
         bt2_lNICL: bt2_lNICL { // Bluetoothプロファイル2を選択し、レイヤーNICLを有効化
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to QWE &bt BT_SEL 2 &to NICL>;
+            bindings = <&to QWE &out OUT_BLE &bt BT_SEL 2 &to NICL>;
         };
         bt3_lLIN: bt3_lLIN { // Bluetoothプロファイル3を選択し、レイヤーLINを有効化
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to QWE &bt BT_SEL 3 &to LIN>;
+            bindings = <&to QWE &out OUT_BLE &bt BT_SEL 3 &to LIN>;
         };
         bt3_lCAD: bt3_lCAD { // Bluetoothプロファイル3を選択し、レイヤーCADを有効化
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to QWE &bt BT_SEL 3 &to CAD>;
+            bindings = <&to QWE &out OUT_BLE &bt BT_SEL 3 &to CAD>;
         };
         bt3_lWIN: bt3_lWIN { // Bluetoothプロファイル3を選択し、レイヤーWINを有効化
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to QWE &bt BT_SEL 3 &to WIN>;
+            bindings = <&to QWE &out OUT_BLE &bt BT_SEL 3 &to WIN>;
         };
         bt3_lNICL: bt3_lNICL { // Bluetoothプロファイル3を選択し、レイヤーNICLを有効化
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to QWE &bt BT_SEL 3 &to NICL>;
+            bindings = <&to QWE &out OUT_BLE &bt BT_SEL 3 &to NICL>;
         };
         bt4_lNIC: bt4_lNIC { // Bluetoothプロファイル4を選択し、レイヤーNICを有効化
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to QWE &bt BT_SEL 4 &to NIC>;
+            bindings = <&to QWE &out OUT_BLE &bt BT_SEL 4 &to NIC>;
         };
         bt4_lLIN: bt4_lLIN { // Bluetoothプロファイル4を選択し、レイヤーLINを有効化
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to QWE &bt BT_SEL 4 &to LIN>;
+            bindings = <&to QWE &out OUT_BLE &bt BT_SEL 4 &to LIN>;
         };
         bt4_lNICL: bt4_lNICL { // Bluetoothプロファイル4を選択し、レイヤーNICLを有効化
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to QWE &bt BT_SEL 4 &to NICL>;
+            bindings = <&to QWE &out OUT_BLE &bt BT_SEL 4 &to NICL>;
         };
         usb_lLIN: usb_lLIN { // USB接続を選択し、レイヤーLINを有効化
             compatible = "zmk,behavior-macro";
@@ -7099,7 +7099,7 @@
         ADJ {
             bindings = <
         // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
-            &mt_s LSHFT F11 &kp F12         &out OUT_BLE    &kp C_VOL_DN    &kp C_VOL_UP                                    &kp CAPS        &kp PSCRN       &kp SLCK        &kp PAUSE_BREAK &kp LS(UP)
+            &mt_s LSHFT F11 &kp F12         &kp C_MUTE      &kp C_VOL_DN    &kp C_VOL_UP                                    &kp CAPS        &kp PSCRN       &kp SLCK        &kp PAUSE_BREAK &kp LS(UP)
             &kp LCTRL       &usb_lCAD       &bt3_lCAD       &kp LS(RIGHT)                                   &kp G           &kp INT5        &file_r         &pr_pg          &nx_pg          &file_f
             &bt0_lQWE       &bt1_lNICL      &bt2_lNICL      &kp K_APP                                       &kp LS(LEFT)    &kp LS(DOWN) &kp LS(LG(LEFT)) &kp LS(LA(LEFT)) &kp LS(LA(RIGHT)) &kp LS(LG(RIGHT))
                                                             &to QWE         &sk_alt         &trans          &trans          &sk_gui	        &to CAD
@@ -7109,7 +7109,7 @@
         ADJL {
             bindings = <
         // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
-            &mt_s LSHFT F11 &kp F12         &out OUT_BLE    &ecl_transfer   &ecl_transfer_t                                 &kp CAPS        &kp PSCRN       &kp SLCK        &kp PAUSE_BREAK &kp LS(UP)
+            &mt_s LSHFT F11 &kp F12         &kp C_MUTE      &ecl_transfer   &ecl_transfer_t                                 &kp CAPS        &kp PSCRN       &kp SLCK        &kp PAUSE_BREAK &kp LS(UP)
             &kp LCTRL       &usb_lCAD       &bt3_lCAD       &kp LS(RIGHT)                                   &kp G           &kp INT5        &file_r         &pr_pg          &nx_pg          &file_f
             &bt0_lQWE       &bt1_lNICL      &bt2_lNICL      &kp K_APP                                       &kp LS(LEFT)    &kp LS(DOWN)    &kp LS(HOME) &kp LS(LC(LEFT)) &kp LS(LC(RIGHT)) &kp LS(END)
                                                             &to QWE         &sk_gui         &trans          &trans          &sk_alt	        &to CAD
@@ -7119,7 +7119,7 @@
         ADJW {
             bindings = <
         // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
-            &mt_s LSHFT F11 &kp F12         &out OUT_BLE    &ecl_transfer   &ecl_transfer_t                                 &kp CAPS        &kp PSCRN       &kp SLCK        &kp PAUSE_BREAK &kp LS(UP)
+            &mt_s LSHFT F11 &kp F12         &kp C_MUTE      &ecl_transfer   &ecl_transfer_t                                 &kp CAPS        &kp PSCRN       &kp SLCK        &kp PAUSE_BREAK &kp LS(UP)
             &kp LCTRL       &usb_lCAD       &bt3_lCAD       &kp LS(RIGHT)                                   &kp G           &kp INT5        &file_r         &pr_pg          &nx_pg          &file_f
             &bt0_lQWE       &bt1_lNICL      &bt2_lNICL      &kp K_APP                                       &kp LS(LEFT)    &kp LS(DOWN)    &kp LS(HOME) &kp LS(LC(LEFT)) &kp LS(LC(RIGHT)) &kp LS(END)
                                                             &to QWE         &sk_gui         &trans          &trans          &sk_alt	        &to CAD
