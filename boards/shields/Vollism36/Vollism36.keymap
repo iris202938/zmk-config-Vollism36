@@ -473,6 +473,18 @@
 			layers = <QWE LIN CAD RSE RSEL RSEW>;
             bindings = <&m_xl_rename>;
         };
+        combo_exl_group_close { // Excelのグループ化/閉じる
+            timeout-ms = <80>;
+            key-positions = <10 14>; // A,Hのキー位置に書き換えてください
+            layers = <ADJL ADJW>;
+            bindings = <&exl_group_close>;
+        };
+        combo_exl_group_open { // Excelのグループ化/開く
+            timeout-ms = <80>;
+            key-positions = <10 15>; // A,Jのキー位置に書き換えてください
+            layers = <ADJL ADJW>;
+            bindings = <&exl_group_open>;
+        };
         combo_ADJ_ss1 { // ADJレイヤーでのスクリーンショット1
             timeout-ms = <80>;
         	key-positions = <3 6>; // R,Uのキー位置に書き換えてください
@@ -615,61 +627,61 @@
         tab_1 {
             bindings = <&tab_1>;
             key-positions = <32 26>;
-            layers = <QWE LIN CAD NUM NUML NUMW>;
+            layers = <NUM NUML NUMW>;
             timeout-ms = <80>;
         };
         tab_2 {
             bindings = <&tab_2>;
             key-positions = <32 27>;
-            layers = <QWE LIN CAD NUM NUML NUMW>;
+            layers = <NUM NUML NUMW>;
             timeout-ms = <80>;
         };
         tab_3 {
             bindings = <&tab_3>;
             key-positions = <32 28>;
-            layers = <QWE LIN CAD NUM NUML NUMW>;
+            layers = <NUM NUML NUMW>;
             timeout-ms = <80>;
         };
         tab_4 {
             bindings = <&tab_4>;
             key-positions = <32 16>;
-            layers = <QWE LIN CAD NUM NUML NUMW>;
+            layers = <NUM NUML NUMW>;
             timeout-ms = <80>;
         };
         tab_5 {
             bindings = <&tab_5>;
             key-positions = <32 17>;
-            layers = <QWE LIN CAD NUM NUML NUMW>;
+            layers = <NUM NUML NUMW>;
             timeout-ms = <80>;
         };
         tab_6 {
             bindings = <&tab_6>;
             key-positions = <32 18>;
-            layers = <QWE LIN CAD NUM NUML NUMW>;
+            layers = <NUM NUML NUMW>;
             timeout-ms = <80>;
         };
         tab_7 {
             bindings = <&tab_7>;
             key-positions = <32 6>;
-            layers = <QWE LIN CAD NUM NUML NUMW>;
+            layers = <NUM NUML NUMW>;
             timeout-ms = <80>;
         };
         tab_8 {
             bindings = <&tab_8>;
             key-positions = <32 7>;
-            layers = <QWE LIN CAD NUM NUML NUMW>;
+            layers = <NUM NUML NUMW>;
             timeout-ms = <80>;
         };
         tab_9 {
             bindings = <&tab_9>;
             key-positions = <32 8>;
-            layers = <QWE LIN CAD NUM NUML NUMW>;
+            layers = <NUM NUML NUMW>;
             timeout-ms = <80>;
         };
         tab_0 {
             bindings = <&tab_0>;
             key-positions = <32 25>;
-            layers = <QWE LIN CAD NUM NUML NUMW>;
+            layers = <NUM NUML NUMW>;
             timeout-ms = <80>;
         };
         k_tab_1 { // ECADカウントアップ数
@@ -2156,7 +2168,6 @@
         #binding-cells = <0>;
         bindings = <&kp B>, <&kp U>;
         };
-        
         macro_BE: macro_BE{
         compatible = "zmk,behavior-macro";
         label = "macro_BE";
@@ -3019,6 +3030,26 @@
                 = <&macro_tap &kp LALT>
                 , <&macro_tap &kp E &kp I &kp S>;
             // ここで止まるので、設定を確認して手動でEnter
+        };
+        exl_group_close: excel_group_close { // Excelのグループ化/閉じる
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <30>;
+            tap-ms = <30>;   // キーを押し下げている時間
+            bindings = 
+                <&macro_tap &kp LALT>,      // Altをタップ
+                <&kp A>,
+                <&kp H>;                    // H（グループ化/閉じる）
+        };
+        exl_group_open: excel_group_open { // Excelのグループ化/開く
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <30>;
+            tap-ms = <30>;   // キーを押し下げている時間
+            bindings = 
+                <&macro_tap &kp LALT>,      // Altをタップ
+                <&kp A>,
+                <&kp J>;                    // J（グループ化/開く）
         };
         // 1. セル内文字列をコピーしてEnter
         cp_enter: cp_enter {
@@ -4956,8 +4987,8 @@
             bindings = <
         // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
             &mt_s LSHFT PG_UP &kp HOME      &kp UP          &kp END         &kp LS(TAB)                                     &kp DEL         &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT &mt_s RSHFT SCRL_UP
-            &mt_s LCTRL PG_DN &kp LEFT      &kp DOWN        &kp RIGHT   	                                &trans          &kp BSPC        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT &mt_s RCTRL SCRL_DOWN
-            &mt_s LALT LC(V)  &mkp MB1      &mkp MB3        &mkp MB2		                                &trans          &mkp MB1        &kp LS(ENTER)   &kp LC(LEFT)    &kp LC(RIGHT)   &mt RGUI RG(V)
+            &mt_s LCTRL PG_DN &kp LEFT      &kp DOWN        &kp RIGHT   	                              &kp LS(LA(RIGHT)) &kp BSPC        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT &mt_s RCTRL SCRL_DOWN
+            &mt_s LALT LC(V)  &mkp MB1      &mkp MB3        &mkp MB2		                              &kp LS(LA(LEFT))  &mkp MB1        &kp LS(ENTER)   &kp LC(LEFT)    &kp LC(RIGHT)   &mt RGUI RG(V)
                                                             &kp LSHFT       &sk_ctrl        &trans          &ht_it4 ADJL 0  &kp LS(LC(V))   &kp RSHFT
             >;
         };
@@ -4966,8 +4997,8 @@
             bindings = <
         // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
             &mt_s LSHFT PG_UP &kp HOME      &kp UP          &kp END         &kp LS(TAB)                                     &kp DEL         &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT &mt_s RSHFT SCRL_UP
-            &mt_s LCTRL PG_DN &kp LEFT      &kp DOWN        &kp RIGHT   	                                &trans          &kp BSPC        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT &mt_s RCTRL SCRL_DOWN
-            &mt_s LALT LC(V)  &mkp MB1      &mkp MB3        &mkp MB2		                                &trans          &mkp MB1        &kp LS(ENTER)   &kp LC(LEFT)    &kp LC(RIGHT)   &mt RGUI RG(V)
+            &mt_s LCTRL PG_DN &kp LEFT      &kp DOWN        &kp RIGHT   	                              &kp LS(LA(RIGHT)) &kp BSPC        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT &mt_s RCTRL SCRL_DOWN
+            &mt_s LALT LC(V)  &mkp MB1      &mkp MB3        &mkp MB2		                              &kp LS(LA(LEFT))  &mkp MB1        &kp LS(ENTER)   &kp LC(LEFT)    &kp LC(RIGHT)   &mt RGUI RG(V)
                                                             &kp LSHFT       &sk_ctrl        &trans          &htW_it4 ADJW 0 &kp LS(LC(V))   &kp RSHFT
             >;
         };
