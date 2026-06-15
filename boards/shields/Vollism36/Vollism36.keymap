@@ -3086,13 +3086,19 @@
                 <&kp LC(A)>,                            // Ctrl + A（全選択）
                 <&kp LC(C)>,                            // Ctrl + C（コピー）
                 <&kp ENTER>,                            // Enter（確定）
-                <&macro_press &kp LALT>, <&kp TAB>,     // Altを押しながらTab
+                <&macro_press &kp LALT>, 
+                <&macro_wait_time 20>,                  // ここで20ミリ秒待機
+                <&kp TAB>,                              // Altを押しながらTab
+                <&macro_wait_time 20>,                  // ここで20ミリ秒待機
                 <&macro_release &kp LALT>,              // Altを離す（ウィンドウ切り替え）
                 <&macro_wait_time 20>,                  // ここで20ミリ秒待機
                 <&kp LC(V)>,                            // Ctrl + V（貼り付け）
                 <&kp ENTER>,                            // Enter
                 <&kp ESC>,                              // Esc
-                <&macro_press &kp LALT>, <&kp TAB>,     // Altを押しながらTab
+                <&macro_press &kp LALT>,
+                <&macro_wait_time 20>,                  // ここで20ミリ秒待機
+                <&kp TAB>,                              // Altを押しながらTab
+                <&macro_wait_time 20>,                  // ここで20ミリ秒待機
                 <&macro_release &kp LALT>;              // Altを離す（元の画面に戻る）
         };
         // HiMacro変換版：コピー ➔ TAB移動 ➔ 画面切り替え ➔ 貼り付け ➔ 元の画面に戻る
@@ -3106,13 +3112,19 @@
                 <&kp LC(A)>,                            // Ctrl + A（全選択）
                 <&kp LC(C)>,                            // Ctrl + C（コピー）
                 <&kp TAB>,                              // ★ EnterからTABに変更（右のセルへ移動＆確定）
-                <&macro_press &kp LALT>, <&kp TAB>,     // Altを押しながらTab
+                <&macro_press &kp LALT>,
+                <&macro_wait_time 20>,                  // ここで20ミリ秒待機
+                <&kp TAB>,                              // Altを押しながらTab
+                <&macro_wait_time 20>,                  // ここで20ミリ秒待機
                 <&macro_release &kp LALT>,              // Altを離す（ウィンドウ切り替え）
                 <&macro_wait_time 20>,                  // ここで20ミリ秒待機
                 <&kp LC(V)>,                            // Ctrl + V（貼り付け）
                 <&kp ENTER>,                            // Enter
                 <&kp ESC>,                              // Esc
-                <&macro_press &kp LALT>, <&kp TAB>,     // Altを押しながらTab
+                <&macro_press &kp LALT>,
+                <&macro_wait_time 20>,                  // ここで20ミリ秒待機
+                <&kp TAB>,                              // Altを押しながらTab
+                <&macro_wait_time 20>,                  // ここで20ミリ秒待機
                 <&macro_release &kp LALT>;              // Altを離す（元の画面に戻る）
         };
         alt_int4: alt_int4 { // Alt+変換 選択位置移動(複写)(AHK)
