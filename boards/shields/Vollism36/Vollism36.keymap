@@ -1388,13 +1388,6 @@
     };
 
     behaviors {
-        // ★ 安全に150ms待機するためだけの挙動を定義
-        macro_wait_150: macro_wait_150 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <150>;
-            bindings = <macro_placeholder_time>;
-        };
         macro_LANG1: macro_LANG1 {
             compatible = "zmk,behavior-macro";
             label = "macro_LANG1";
@@ -3093,26 +3086,17 @@
                 <&kp LC(A)>,                            // Ctrl + A（全選択）
                 <&kp LC(C)>,                            // Ctrl + C（コピー）
                 <&kp TAB>,                              // 右のセルへ移動＆確定
-                
                 // ── 1回目の画面切り替え (Alt + Tab) ──
                 <&macro_press &kp LALT>,
                 <&kp TAB>,
                 <&macro_release &kp LALT>,
-                
-                // ★ 先ほど定義した150ms待機用のカスタムキーを呼び出す
-                <&macro_wait_150>,
-                
                 <&kp LC(V)>,                            // Ctrl + V（貼り付け）
                 <&kp ENTER>,                            // Enter
                 <&kp ESC>,                              // Esc
-                
                 // ── 2回目の画面切り替え (Excelに戻る) ──
                 <&macro_press &kp LALT>,
                 <&kp TAB>,
                 <&macro_release &kp LALT>,
-                
-                // ★ Excel画面に戻った後の150ms待機
-                <&macro_wait_150>;
         };
         // HiMacro変換版：コピー ➔ TAB移動 ➔ 画面切り替え ➔ 貼り付け ➔ 元の画面に戻る
         ecl_transfer: ecl_transfer {
