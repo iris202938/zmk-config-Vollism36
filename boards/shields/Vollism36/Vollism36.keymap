@@ -1393,7 +1393,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <150>;
-            bindings = <&macro_placeholder_time>;
+            bindings = <macro_placeholder_time>;
         };
         macro_LANG1: macro_LANG1 {
             compatible = "zmk,behavior-macro";
