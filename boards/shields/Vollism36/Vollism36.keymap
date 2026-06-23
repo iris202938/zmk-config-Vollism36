@@ -3075,31 +3075,37 @@
                 <&kp LC(C)>,            // コピー (Ctrl + C)
                 <&kp TAB>;              // 確定＆右のセルへ移動
         };
-        // HiMacroから変換：コピー ➔ 画面切り替え ➔ 貼り付け ➔ 元の画面に戻る
-        ecl_transfer: ecl_transfer {
+        // HiMacro変換版：コピー ➔ TAB移動 ➔ 画面切り替え ➔ 貼り付け ➔ 元の画面に戻る
+        ecl_transfer_t: ecl_transfer_t {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <50>;  // HiMacroの「50」に合わせたウェイト設定
-            tap-ms = <50>;   // キーを押し下げている時間
+            wait-ms = <50>;  // 通常のキー間隔はHiMacro基準の50ms
+            tap-ms = <50>;   
             bindings = 
                 <&kp F2>,                               // F2（編集モード）
                 <&kp LC(A)>,                            // Ctrl + A（全選択）
                 <&kp LC(C)>,                            // Ctrl + C（コピー）
-                <&kp ENTER>,                            // Enter（確定）
-                <&macro_press &kp LALT>, 
-                <&macro_wait_time 20>,                  // ここで20ミリ秒待機
-                <&kp TAB>,                              // Altを押しながらTab
-                <&macro_wait_time 20>,                  // ここで20ミリ秒待機
-                <&macro_release &kp LALT>,              // Altを離す（ウィンドウ切り替え）
-                <&macro_wait_time 20>,                  // ここで20ミリ秒待機
+                <&kp TAB>,                              // 右のセルへ移動＆確定
+                
+                // ── 1回目の画面切り替え (Alt + Tab) ──
+                <&macro_press &kp LALT>,
+                <&kp TAB>,
+                <&macro_release &kp LALT>,
+                
+                // ★ 画面が完全に切り替わるのを150ms待つ（重要）
+                <&macro_tap &{ wait-ms = <150>; bindings = <&macro_placeholder_time>; }>,
+                
                 <&kp LC(V)>,                            // Ctrl + V（貼り付け）
                 <&kp ENTER>,                            // Enter
                 <&kp ESC>,                              // Esc
+                
+                // ── 2回目の画面切り替え (Excelに戻る) ──
                 <&macro_press &kp LALT>,
-                <&macro_wait_time 20>,                  // ここで20ミリ秒待機
-                <&kp TAB>,                              // Altを押しながらTab
-                <&macro_wait_time 20>,                  // ここで20ミリ秒待機
-                <&macro_release &kp LALT>;              // Altを離す（元の画面に戻る）
+                <&kp TAB>,
+                <&macro_release &kp LALT>,
+                
+                // ★ Excel画面の描画が戻るのを150ms待つ（重要）
+                <&macro_tap &{ wait-ms = <150>; bindings = <&macro_placeholder_time>; }>;
         };
         // HiMacro変換版：コピー ➔ TAB移動 ➔ 画面切り替え ➔ 貼り付け ➔ 元の画面に戻る
         ecl_transfer_t: ecl_transfer_t {
