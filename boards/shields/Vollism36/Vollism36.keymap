@@ -3096,7 +3096,7 @@
                 // ── 2回目の画面切り替え (Excelに戻る) ──
                 <&macro_press &kp LALT>,
                 <&kp TAB>,
-                <&macro_release &kp LALT>,
+                <&macro_release &kp LALT>;
         };
         // HiMacro変換版：コピー ➔ TAB移動 ➔ 画面切り替え ➔ 貼り付け ➔ 元の画面に戻る
         ecl_transfer: ecl_transfer {
