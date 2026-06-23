@@ -3115,7 +3115,7 @@
                 <&macro_wait_150>;
         };
         // HiMacro変換版：コピー ➔ TAB移動 ➔ 画面切り替え ➔ 貼り付け ➔ 元の画面に戻る
-        ecl_transfer_t: ecl_transfer_t {
+        ecl_transfer: ecl_transfer {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <50>;  // HiMacro基準の50msウェイト
