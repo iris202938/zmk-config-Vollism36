@@ -5125,7 +5125,7 @@
         NUMW {
             bindings = <
         // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
-            &mt_s LSHFT PG_UP &kp HOME      &kp UP          &kp END         &lt BLE CARET                                   &kp KP_SLASH    &kp KP_N7       &kp KP_N8       &kp KP_N9       &kp KP_MULTIPLY
+            &mt_s LSHFT PG_UP &kp HOME      &kp UP          &kp END         &to BLE                                         &kp KP_SLASH    &kp KP_N7       &kp KP_N8       &kp KP_N9       &kp KP_MULTIPLY
             &mt_s LCTRL PG_DN &kp LEFT      &kp DOWN        &kp RIGHT                                       &lt BLE DEL     &kp BSPC        &kp KP_N4       &kp KP_N5       &kp KP_N6       &kp KP_MINUS
             &alt_left	    &alt_down       &alt_up         &alt_right                                      &kp EQUAL       &kp KP_N0       &kp KP_N1       &kp KP_N2       &kp KP_N3       &kp KP_PLUS
                                                             &tC_int5        &cp_tab	        &kp TAB         &kp KP_ENTER    &kp UNDER       &kp SPACE
@@ -5145,10 +5145,10 @@
         BLE {
             bindings = <
         // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
-            &sys_reset      &bootloader     &kp INT3        &kp INT6        &bt BT_CLR_ALL                                  &bt BT_CLR_ALL  &m_hi_con   	&kp GRAVE       &bootloader     &sys_reset
+            &sys_reset      &bootloader     &kp INT3        &kp INT6        &mkp MB2                                        &bt BT_CLR_ALL  &m_hi_con   	&kp GRAVE       &bootloader     &sys_reset
             &kp LC(LG(T))   &kp LC(LG(C))   &kp LC(LG(P))   &kp LC(LG(G))                                   &trans          &trans          &kp LC(LG(E))   &kp LC(LG(A))   &kp LC(LG(L))   &kp LC(LG(X))
-            &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3                                    &bootloader     &bootloader     &bt4_lLIN       &kp TILDE       &kp TILDE2      &kp K_CALC
-                                                            &trans          &kp LS(LG(F23)) &bt BT_CLR      &bt BT_CLR      &kp LA(LG(G))   &trans
+            &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3                                    &to CAD         &bootloader     &bt4_lLIN       &kp TILDE       &kp TILDE2      &kp K_CALC
+                                                            &trans          &mkp MB3        &mkp MB1        &bt BT_CLR      &kp LA(LG(G))   &trans
             >;
         };
     };
