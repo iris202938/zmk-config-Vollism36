@@ -525,19 +525,19 @@
         mb1_cad {
             bindings = <&mkp MB1>;
             key-positions = <26 27>;
-            layers = <QWE LIN CAD LWR LWRL LWRW WINS>;
+            layers = <LWR LWRL LWRW WINS>;
             timeout-ms = <60>;
         };
         mb2_cad {
             bindings = <&mkp MB2>;
             key-positions = <27 28>;
-            layers = <QWE LIN CAD LWR LWRL LWRW WINS>;
+            layers = <LWR LWRL LWRW WINS>;
             timeout-ms = <60>;
         };
         mb3_cad {
             bindings = <&mkp MB3>;
             key-positions = <26 28>;
-            layers = <QWE LIN CAD LWR LWRL LWRW WINS>;
+            layers = <LWR LWRL LWRW WINS>;
             timeout-ms = <60>;
         };
         mb1_shft_cad_r {
