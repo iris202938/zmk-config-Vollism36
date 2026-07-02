@@ -522,21 +522,21 @@
             bindings = <&win_shift_s>;
         };
 
-        mb1_cad {
-            bindings = <&mkp MB1>;
-            key-positions = <26 27>;
-            layers = <LWR LWRL LWRW WINS>;
-            timeout-ms = <60>;
-        };
+        // mb1_cad {
+        //     bindings = <&mkp MB1>;
+        //     key-positions = <26 27>;
+        //     layers = <LWR LWRL LWRW WINS>;
+        //     timeout-ms = <60>;
+        // };
         mb2_cad {
             bindings = <&mkp MB2>;
-            key-positions = <27 28>;
+            key-positions = <26 27>;
             layers = <LWR LWRL LWRW WINS>;
             timeout-ms = <60>;
         };
         mb3_cad {
             bindings = <&mkp MB3>;
-            key-positions = <26 28>;
+            key-positions = <25 27>;
             layers = <LWR LWRL LWRW WINS>;
             timeout-ms = <60>;
         };
