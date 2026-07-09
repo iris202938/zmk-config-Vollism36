@@ -89,7 +89,8 @@
         ========================================================== */
         l_ble {
             layers = <BLE>;
-            input-processors = <&sensor_rotation_alt>;
+            input-processors = <&sensor_rotation>
+                            , <&zip_xy_scaler 50 100>; // スケーリング（50/100）
         };
 
         /* ==========================================================
@@ -97,7 +98,8 @@
         ========================================================== */
         l_wins {
             layers = <WINS>;
-            input-processors = <&sensor_rotation>;
+            input-processors = <&sensor_rotation>
+                            , <&zip_xy_scaler 50 100>; // スケーリング（50/100）
         };
 
         /* ==========================================================
@@ -118,7 +120,8 @@
         ========================================================== */
         l_numl {
             layers = <NUML>;
-            input-processors = <&sensor_rotation>;
+            input-processors = <&sensor_rotation>
+                            , <&zip_xy_scaler 50 100>; // スケーリング（50/100）
         };
 
         /* ==========================================================
@@ -126,7 +129,8 @@
         ========================================================== */
         l_num {
             layers = <NUM>;
-            input-processors = <&sensor_rotation>;
+            input-processors = <&sensor_rotation>
+                            , <&zip_xy_scaler 50 100>; // スケーリング（50/100）
         };
 
         /* ==========================================================
@@ -185,7 +189,8 @@
         ========================================================== */
         l_adjw {
             layers = <ADJW>;
-            input-processors = <&sensor_rotation>;
+            input-processors = <&sensor_rotation>
+                            , <&zip_xy_scaler 50 100>; // スケーリング（50/100）
         };
 
         /* ==========================================================
@@ -193,7 +198,8 @@
         ========================================================== */
         l_adjl {
             layers = <ADJL>;
-            input-processors = <&sensor_rotation>;
+            input-processors = <&sensor_rotation>
+                            , <&zip_xy_scaler 50 100>; // スケーリング（50/100）
         };
 
         /* ==========================================================
@@ -201,7 +207,8 @@
         ========================================================== */
         l_adj {
             layers = <ADJ>;
-            input-processors = <&sensor_rotation>;
+            input-processors = <&sensor_rotation>
+                            , <&zip_xy_scaler 50 100>; // スケーリング（50/100）
         };
 
         /* ==========================================================
@@ -248,7 +255,8 @@
         ========================================================== */
         l_lwrw {
             layers = <LWRW>;
-            input-processors = <&sensor_rotation>;
+            input-processors = <&sensor_rotation>
+                            , <&zip_xy_scaler 50 100>; // スケーリング（50/100）
         };
 
         /* ==========================================================
@@ -256,7 +264,8 @@
         ========================================================== */
         l_lwrl {
             layers = <LWRL>;
-            input-processors = <&sensor_rotation>;
+            input-processors = <&sensor_rotation>
+                            , <&zip_xy_scaler 50 100>; // スケーリング（50/100）
         };
 
         /* ==========================================================
@@ -264,7 +273,8 @@
         ========================================================== */
         l_lwr {
             layers = <LWR>;
-            input-processors = <&sensor_rotation>;
+            input-processors = <&sensor_rotation>
+                            , <&zip_xy_scaler 50 100>; // スケーリング（50/100）
         };
 
         /* ==========================================================
@@ -272,7 +282,8 @@
         ========================================================== */
         l_win {
             layers = <WIN>;
-            input-processors = <&sensor_rotation>;
+            input-processors = <&sensor_rotation>
+                            , <&zip_xy_scaler 50 100>; // スケーリング（50/100）
         };
 
         /* ==========================================================
@@ -280,7 +291,8 @@
         ========================================================== */
         l_cad {
             layers = <CAD>;
-            input-processors = <&sensor_rotation>;
+            input-processors = <&sensor_rotation>
+                            , <&zip_xy_scaler 50 100>; // スケーリング（50/100）
         };
 
         /* ==========================================================
@@ -288,7 +300,8 @@
         ========================================================== */
         l_nicl {
             layers = <NICL>;
-            input-processors = <&sensor_rotation>;
+            input-processors = <&sensor_rotation>
+                            , <&zip_xy_scaler 50 100>; // スケーリング（50/100）
         };
 
         /* ==========================================================
@@ -296,7 +309,8 @@
         ========================================================== */
         l_ngnl {
             layers = <NGNL>;
-            input-processors = <&sensor_rotation>;
+            input-processors = <&sensor_rotation>
+                            , <&zip_xy_scaler 50 100>; // スケーリング（50/100）
         };
 
         /* ==========================================================
@@ -304,7 +318,8 @@
         ========================================================== */
         l_lin {
             layers = <LIN>;
-            input-processors = <&sensor_rotation>;
+            input-processors = <&sensor_rotation>
+                            , <&zip_xy_scaler 50 100>; // スケーリング（50/100）
         };
 
         /* ==========================================================
@@ -312,7 +327,8 @@
         ========================================================== */
         l_nic {
             layers = <NIC>;
-            input-processors = <&sensor_rotation>;
+            input-processors = <&sensor_rotation>
+                            , <&zip_xy_scaler 50 100>; // スケーリング（50/100）
         };
 
         /* ==========================================================
@@ -320,7 +336,8 @@
         ========================================================== */
         l_ngn {
             layers = <NGN>;
-            input-processors = <&sensor_rotation>;
+            input-processors = <&sensor_rotation>
+                            , <&zip_xy_scaler 50 100>; // スケーリング（50/100）
         };
 
         /* ==========================================================
@@ -328,7 +345,8 @@
         ========================================================== */
         l_qwe {
             layers = <QWE>;
-            input-processors = <&sensor_rotation>;
+            input-processors = <&sensor_rotation>
+                            , <&zip_xy_scaler 60 100>; // スケーリング（60/100）
         };
     };
 };
