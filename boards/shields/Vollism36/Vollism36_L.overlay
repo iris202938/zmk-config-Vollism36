@@ -55,10 +55,17 @@
 
 / {
     input_processors {
+        /* 既存のデフォルト角度（255度） */
         sensor_rotation: sensor_rotation {
             compatible = "zmk,input-processor-sensor-rotation";
             #input-processor-cells = <0>;
             rotation-angle = <255>;
+        };
+        /* 新設：別のレイヤで使いたい角度（例：75度） */
+        sensor_rotation_alt: sensor_rotation_alt {
+            compatible = "zmk,input-processor-sensor-rotation";
+            #input-processor-cells = <0>;
+            rotation-angle = <75>;  /* ここに対象レイヤで使いたい角度を指定 */
         };
 
         xy_to_keys: xy_to_keys {
@@ -82,7 +89,7 @@
         ========================================================== */
         l_ble {
             layers = <BLE>;
-            input-processors = <&sensor_rotation>;
+            input-processors = <&sensor_rotation_alt>;
         };
 
         /* ==========================================================
