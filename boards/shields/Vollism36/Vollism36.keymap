@@ -687,121 +687,121 @@
             k_tab_1 { // ECADカウントアップ数
                 bindings = <&k_tab_1>;
                 key-positions = <34 26>;
-                layers = <CAD>;
+                layers = <NUMW>;
                 timeout-ms = <80>;
             };
             k_tab_2 { // ECADカウントアップ数2
                 bindings = <&k_tab_2>;
                 key-positions = <34 27>;
-                layers = <CAD>;
+                layers = <NUMW>;
                 timeout-ms = <80>;
             };
             k_tab_3 { // ECADカウントアップ数3
                 bindings = <&k_tab_3>;
                 key-positions = <34 28>;
-                layers = <CAD>;
+                layers = <NUMW>;
                 timeout-ms = <80>;
             };
             k_tab_4 { // ECADカウントアップ数4
                 bindings = <&k_tab_4>;
                 key-positions = <34 16>;
-                layers = <CAD>;
+                layers = <NUMW>;
                 timeout-ms = <80>;
             };
             k_tab_5 { // ECADカウントアップ数5
                 bindings = <&k_tab_5>;
                 key-positions = <34 17>;
-                layers = <CAD>;
+                layers = <NUMW>;
                 timeout-ms = <80>;
             };
             k_tab_6 { // ECADカウントアップ数6
                 bindings = <&k_tab_6>;
                 key-positions = <34 18>;
-                layers = <CAD>;
+                layers = <NUMW>;
                 timeout-ms = <80>;
             };
             k_tab_7 { // ECADカウントアップ数7
                 bindings = <&k_tab_7>;
                 key-positions = <34 6>;
-                layers = <CAD>;
+                layers = <NUMW>;
                 timeout-ms = <80>;
             };
             k_tab_8 { // ECADカウントアップ数8
                 bindings = <&k_tab_8>;
                 key-positions = <34 7>;
-                layers = <CAD>;
+                layers = <NUMW>;
                 timeout-ms = <80>;
             };
             k_tab_9 { // ECADカウントアップ数9
                 bindings = <&k_tab_9>;
                 key-positions = <34 8>;
-                layers = <CAD>;
+                layers = <NUMW>;
                 timeout-ms = <80>;
             };
             k_tab_10 { // ECADカウントアップ数10
                 bindings = <&k_tab_10>;
                 key-positions = <34 25>;
-                layers = <CAD>;
+                layers = <NUMW>;
                 timeout-ms = <80>;
             };
             k_tab_minus_1 { // ECADカウントアップ数-1
                 bindings = <&k_tab_minus_1>;
                 key-positions = <34 26 19>;
-                layers = <CAD>;
+                layers = <NUMW>;
                 timeout-ms = <80>;
             };
             k_tab_minus_2 { // ECADカウントアップ数-2
                 bindings = <&k_tab_minus_2>;
                 key-positions = <34 27 19>;
-                layers = <CAD>;
+                layers = <NUMW>;
                 timeout-ms = <80>;
             };
             k_tab_minus_3 { // ECADカウントアップ数-3
                 bindings = <&k_tab_minus_3>;
                 key-positions = <34 28 19>;
-                layers = <CAD>;
+                layers = <NUMW>;
                 timeout-ms = <80>;
             };
             k_tab_minus_4 { // ECADカウントアップ数-4
                 bindings = <&k_tab_minus_4>;
                 key-positions = <34 16 19>;
-                layers = <CAD>;
+                layers = <NUMW>;
                 timeout-ms = <80>;
             };
             k_tab_minus_5 { // ECADカウントアップ数-5
                 bindings = <&k_tab_minus_5>;
                 key-positions = <34 17 19>;
-                layers = <CAD>;
+                layers = <NUMW>;
                 timeout-ms = <80>;
             };
             k_tab_minus_6 { // ECADカウントアップ数-6
                 bindings = <&k_tab_minus_6>;
                 key-positions = <34 18 19>;
-                layers = <CAD>;
+                layers = <NUMW>;
                 timeout-ms = <80>;
             };
             k_tab_minus_7 { // ECADカウントアップ数-7
                 bindings = <&k_tab_minus_7>;
                 key-positions = <34 6 19>;
-                layers = <CAD>;
+                layers = <NUMW>;
                 timeout-ms = <80>;
             };
             k_tab_minus_8 { // ECADカウントアップ数-8
                 bindings = <&k_tab_minus_8>;
                 key-positions = <34 7 19>;
-                layers = <CAD>;
+                layers = <NUMW>;
                 timeout-ms = <80>;
             };
             k_tab_minus_9 { // ECADカウントアップ数-9
                 bindings = <&k_tab_minus_9>;
                 key-positions = <34 8 19>;
-                layers = <CAD>;
+                layers = <NUMW>;
                 timeout-ms = <80>;
             };
             k_tab_minus_10 { // ECADカウントアップ数-10
                 bindings = <&k_tab_minus_10>;
                 key-positions = <34 25 19>;
-                layers = <CAD>;
+                layers = <NUMW>;
                 timeout-ms = <80>;
             };
 
