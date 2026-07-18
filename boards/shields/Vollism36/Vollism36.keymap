@@ -363,12 +363,12 @@
                 layers = <LWRL LWRW RSE>;
                 timeout-ms = <80>;
             };
-            cmd_v {
-                bindings = <&cmd_v>;
-                key-positions = <27 28>;
-                layers = <LWRL LWRW RSE>;
-                timeout-ms = <80>;
-            };
+            // cmd_v {
+            //     bindings = <&cmd_v>;
+            //     key-positions = <27 28>;
+            //     layers = <LWRL LWRW RSE>;
+            //     timeout-ms = <80>;
+            // };
             ctrl_x {
                 bindings = <&ctrl_x>;
                 key-positions = <8 9>;
@@ -381,12 +381,12 @@
                 layers = <RSEL RSEW>;
                 timeout-ms = <80>;
             };
-            ctrl_v {
-                bindings = <&ctrl_v>;
-                key-positions = <27 28>;
-                layers = <RSEL RSEW>;
-                timeout-ms = <80>;
-            };
+            // ctrl_v {
+            //     bindings = <&ctrl_v>;
+            //     key-positions = <27 28>;
+            //     layers = <RSEL RSEW>;
+            //     timeout-ms = <80>;
+            // };
             combo_e_key { // ECADの文字修正
                 timeout-ms = <80>;
                 key-positions = <25 26>;
@@ -530,7 +530,7 @@
             };
             mb2_cad {
                 bindings = <&mkp MB2>;
-                key-positions = <27 28 29>;
+                key-positions = <27 28>;
                 layers = <LWR LWRL LWRW WINS>;
                 timeout-ms = <60>;
             };
