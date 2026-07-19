@@ -37,7 +37,7 @@ manifest:
       remote: badjeff
       revision: main
       path: modules/zmk-input-processor-report-rate-limit
-    - name: zmk-naginata
+    # - name: zmk-naginata
       # remote: eswai
       # revision: main
   self:
