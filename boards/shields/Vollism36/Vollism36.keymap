@@ -1,5 +1,5 @@
     #include <behaviors.dtsi>
-    #include <behaviors/naginata.dtsi>
+    // #include <behaviors/naginata.dtsi>
     #include <dt-bindings/zmk/bt.h>
     #include <dt-bindings/zmk/keys.h>
     #include <dt-bindings/zmk/mouse.h>
@@ -11,30 +11,28 @@
     #define ZMK_POINTING_DEFAULT_SCRL_VAL 10
 
     #define QWE 0
-    #define NGN 1
-    #define NIC 2
-    #define LIN 3
-    #define NGNL 4
-    #define NICL 5
-    #define CAD 6
-    #define WIN 7
-    #define LWR 8
-    #define LWRL 9
-    #define LWRW 10
-    #define RSE 11
-    #define RSEL 12
-    #define RSEW 13
-    #define ADJ 14
-    #define ADJL 15
-    #define ADJW 16
-    #define MOV 17
-    #define MOVL 18
-    #define MOVW 19
-    #define NUM 20
-    #define NUML 21
-    #define NUMW 22
-    #define WINS 23
-    #define BLE 24
+    #define NIC 1
+    #define LIN 2
+    #define NICL 3
+    #define CAD 4
+    #define WIN 5
+    #define LWR 6
+    #define LWRL 7
+    #define LWRW 8
+    #define RSE 9
+    #define RSEL 10
+    #define RSEW 11
+    #define ADJ 12
+    #define ADJL 13
+    #define ADJW 14
+    #define MOV 15
+    #define MOVL 16
+    #define MOVW 17
+    #define NUM 18
+    #define NUML 19
+    #define NUMW 20
+    #define WINS 21
+    #define BLE 22
 
     &mt {
         flavor = "hold-preferred";
@@ -78,30 +76,30 @@
         // 10 11 12 13          14 15 16 17 18 19
         // 20 21 22 23          24 25 26 27 28 29	
         //          30 31 32    33 34 35 
-            combo_ng_on {
-                timeout-ms = <80>;
-                key-positions = <15 16>; // H, Jのキー位置に書き換えてください
-                bindings = <&ng_on>;
-                layers = <QWE>; // デフォルトレイヤーが0の前提
-            };
-            combo_ng_off {
-                timeout-ms = <80>;
-                key-positions = <13 14>; // F, Gのキー位置に書き換えてください
-                bindings = <&ng_off>;
-                layers = <QWE NGN>; // デフォルトレイヤーが0、薙刀式レイヤーが1の前提
-            };
-            combo_ng_onl {
-                timeout-ms = <80>;
-                key-positions = <15 16>; // H, Jのキー位置に書き換えてください
-                bindings = <&ng_onl>;
-                layers = <LIN>; // デフォルトレイヤーがLINの前提
-            };
-            combo_ng_offl {
-                timeout-ms = <80>;
-                key-positions = <13 14>; // F, Gのキー位置に書き換えてください
-                bindings = <&ng_offl>;
-                layers = <LIN NGNL>; // デフォルトレイヤーがLIN、薙刀式レイヤーが1の前提
-            };
+            // combo_ng_on {
+            //     timeout-ms = <80>;
+            //     key-positions = <15 16>; // H, Jのキー位置に書き換えてください
+            //     bindings = <&ng_on>;
+            //     layers = <QWE>; // デフォルトレイヤーが0の前提
+            // };
+            // combo_ng_off {
+            //     timeout-ms = <80>;
+            //     key-positions = <13 14>; // F, Gのキー位置に書き換えてください
+            //     bindings = <&ng_off>;
+            //     layers = <QWE NGN>; // デフォルトレイヤーが0、薙刀式レイヤーが1の前提
+            // };
+            // combo_ng_onl {
+            //     timeout-ms = <80>;
+            //     key-positions = <15 16>; // H, Jのキー位置に書き換えてください
+            //     bindings = <&ng_onl>;
+            //     layers = <LIN>; // デフォルトレイヤーがLINの前提
+            // };
+            // combo_ng_offl {
+            //     timeout-ms = <80>;
+            //     key-positions = <13 14>; // F, Gのキー位置に書き換えてください
+            //     bindings = <&ng_offl>;
+            //     layers = <LIN NGNL>; // デフォルトレイヤーがLIN、薙刀式レイヤーが1の前提
+            // };
             // combo_ADJ {
             //     timeout-ms = <70>;
             //     key-positions = <32 33>;
@@ -129,13 +127,13 @@
             combo_to_NUM {
                 timeout-ms = <70>;
                 key-positions = <30 32>;
-                layers = <QWE NIC NGN>;
+                layers = <QWE NIC>;
                 bindings = <&to NUM>;
             };
             combo_to_NUML {
                 timeout-ms = <70>;
                 key-positions = <30 32>;
-                layers = <LIN NICL NGNL>;
+                layers = <LIN NICL>;
                 bindings = <&to NUML>;
             };
             combo_to_NUMW {
@@ -147,13 +145,13 @@
             combo_to_MOV {
                 timeout-ms = <70>;
                 key-positions = <33 35>;
-                layers = <QWE NIC NGN>;
+                layers = <QWE NIC>;
                 bindings = <&to MOV>;
             };
             combo_to_MOVL {
                 timeout-ms = <70>;
                 key-positions = <33 35>;
-                layers = <LIN NICL NGNL>;
+                layers = <LIN NICL>;
                 bindings = <&to MOVL>;
             };
             combo_to_MOVW {
@@ -220,7 +218,7 @@
             combo_TSHIFT {
                 bindings = <&qm RSHIFT>;
                 key-positions = <30 35>;
-                layers = <WIN NGN NIC NGNL NICL>;            
+                layers = <WIN NIC NICL>;            
                 timeout-ms = <65>;
             };
             combo_caps_word {
@@ -4775,34 +4773,34 @@
                     ;
             };
 
-            ng_on: ng_on {
-                compatible = "zmk,behavior-macro";
-                #binding-cells = <0>;
-                bindings
-                    = <&macro_tap &kp LANGUAGE_1 &kp INTERNATIONAL_4 &to 1>
-                    ;
-            };
-            ng_off: ng_off {
-                compatible = "zmk,behavior-macro";
-                #binding-cells = <0>;
-                bindings
-                    = <&macro_tap &kp LANGUAGE_2 &kp INTERNATIONAL_5 &to 0>
-                    ;
-            };
-            ng_onl: ng_onl {
-                compatible = "zmk,behavior-macro";
-                #binding-cells = <0>;
-                bindings
-                    = <&macro_tap &kp LANG1 &kp INT4 &to NGNL>
-                    ;
-            };
-            ng_offl: ng_offl {
-                compatible = "zmk,behavior-macro";
-                #binding-cells = <0>;
-                bindings
-                    = <&macro_tap &kp LANG2 &kp INT5 &to LIN>
-                    ;
-            };
+            // ng_on: ng_on {
+            //     compatible = "zmk,behavior-macro";
+            //     #binding-cells = <0>;
+            //     bindings
+            //         = <&macro_tap &kp LANGUAGE_1 &kp INTERNATIONAL_4 &to 1>
+            //         ;
+            // };
+            // ng_off: ng_off {
+            //     compatible = "zmk,behavior-macro";
+            //     #binding-cells = <0>;
+            //     bindings
+            //         = <&macro_tap &kp LANGUAGE_2 &kp INTERNATIONAL_5 &to 0>
+            //         ;
+            // };
+            // ng_onl: ng_onl {
+            //     compatible = "zmk,behavior-macro";
+            //     #binding-cells = <0>;
+            //     bindings
+            //         = <&macro_tap &kp LANG1 &kp INT4 &to NGNL>
+            //         ;
+            // };
+            // ng_offl: ng_offl {
+            //     compatible = "zmk,behavior-macro";
+            //     #binding-cells = <0>;
+            //     bindings
+            //         = <&macro_tap &kp LANG2 &kp INT5 &to LIN>
+            //         ;
+            // };
             // ハイコントラスト切り替え (Win: Shift + Alt + PrintScreen)
             m_hi_con: m_hi_con {
                 compatible = "zmk,behavior-macro";
@@ -4912,15 +4910,15 @@
 
             // 薙刀式に必要な31キー(Enterもシフトキーにしたいときは32キー)を定義してください。
             // &kpの代わりに&ngを使います。通常はデフォルトレイヤーの次に配置してください(レイヤー番号1)。
-            NGN { 
-                bindings = <
-            // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
-                &ng Q           &ng W           &ng E           &ng R           &ng T                                           &ng Y           &ng U           &ng I           &ng O           &ng P
-                &ng A           &ng S           &ng D           &ng F                                           &ng G           &ng H           &ng J           &ng K           &ng L           &ng SEMI
-                &ng Z           &ng X           &ng C           &ng V                                           &ng B           &ng N           &ng M           &ng COMMA       &ng DOT         &ng SLASH
-                                                                &trans          &ng SPACE       &lt LWR TAB     &lt RSE ENTER   &ng SPACE       &trans
-                >;
-            };
+            // NGN { 
+            //     bindings = <
+            // // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
+            //     &ng Q           &ng W           &ng E           &ng R           &ng T                                           &ng Y           &ng U           &ng I           &ng O           &ng P
+            //     &ng A           &ng S           &ng D           &ng F                                           &ng G           &ng H           &ng J           &ng K           &ng L           &ng SEMI
+            //     &ng Z           &ng X           &ng C           &ng V                                           &ng B           &ng N           &ng M           &ng COMMA       &ng DOT         &ng SLASH
+            //                                                     &trans          &ng SPACE       &lt LWR TAB     &lt RSE ENTER   &ng SPACE       &trans
+            //     >;
+            // };
 
             NIC { 
                 bindings = <
@@ -4942,15 +4940,15 @@
                 >;
             };
 
-            NGNL { 
-                bindings = <
-            // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
-                &ng Q           &ng W           &ng E           &ng R           &ng T                                           &ng Y           &ng U           &ng I           &ng O           &ng P
-                &ng A           &ng S           &ng D           &ng F                                           &ng G           &ng H           &ng J           &ng K           &ng L           &ng SEMI
-                &ng Z           &ng X           &ng C           &ng V                                           &ng B           &ng N           &ng M           &ng COMMA       &ng DOT         &ng SLASH
-                                                                &trans          &ng SPACE       &lt LWRL TAB    &lt RSEL ENTER  &ng SPACE	    &trans
-                >;
-            };
+            // NGNL { 
+            //     bindings = <
+            // // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
+            //     &ng Q           &ng W           &ng E           &ng R           &ng T                                           &ng Y           &ng U           &ng I           &ng O           &ng P
+            //     &ng A           &ng S           &ng D           &ng F                                           &ng G           &ng H           &ng J           &ng K           &ng L           &ng SEMI
+            //     &ng Z           &ng X           &ng C           &ng V                                           &ng B           &ng N           &ng M           &ng COMMA       &ng DOT         &ng SLASH
+            //                                                     &trans          &ng SPACE       &lt LWRL TAB    &lt RSEL ENTER  &ng SPACE	    &trans
+            //     >;
+            // };
 
             NICL { 
                 bindings = <
