@@ -483,6 +483,24 @@
                 layers = <ADJL ADJW>;
                 bindings = <&exl_group_open>;
             };
+            combo_excel_move_row_cut { // Excelの行選択切取り
+                timeout-ms = <80>;
+                key-positions = <8 9>;
+                layers = <MOVL MOVW>;
+                bindings = <&excel_move_row_cut>;
+            };
+            combo_excel_move_row_copy { // Excelの行選択コピー
+                timeout-ms = <80>;
+                key-positions = <18 19>;
+                layers = <MOVL MOVW>;
+                bindings = <&excel_move_row_copy>;
+            };
+            combo_excel_move_row_paste { // Excelの行選択貼付
+                timeout-ms = <80>;
+                key-positions = <27 28>;
+                layers = <MOVL MOVW>;
+                bindings = <&excel_move_row_paste>;
+            };
             combo_ADJ_ss1 { // ADJレイヤーでのスクリーンショット1
                 timeout-ms = <80>;
                 key-positions = <3 6>; // R,Uのキー位置に書き換えてください
@@ -3086,6 +3104,53 @@
                     <&kp LC(A)>,            // 全選択 (Ctrl + A)
                     <&kp LC(C)>,            // コピー (Ctrl + C)
                     <&kp TAB>;              // 確定＆右のセルへ移動
+            };
+            excel_move_row_cut: excel_move_row_cut { // Excelの行選択切取り
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                wait-ms = <40>;
+                tap-ms = <40>;
+                bindings
+                    = <&macro_press   &kp LSFT>
+                    , <&macro_tap     &kp SPACE>
+                    , <&macro_release &kp LSFT>
+                    , <&macro_wait_time 100> // ここで100ミリ秒待機
+                    , <&macro_press   &kp LCTRL>
+                    , <&macro_tap     &kp X>
+                    , <&macro_release &kp LCTRL>
+                    ;
+            };
+            excel_move_row_copy: excel_move_row_copy { // Excelの行選択コピー
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                wait-ms = <40>;
+                tap-ms = <40>;
+                bindings
+                    = <&macro_press   &kp LSFT>
+                    , <&macro_tap     &kp SPACE>
+                    , <&macro_release &kp LSFT>
+                    , <&macro_wait_time 100> // ここで100ミリ秒待機
+                    , <&macro_press   &kp LCTRL>
+                    , <&macro_tap     &kp C>
+                    , <&macro_release &kp LCTRL>
+                    ;
+            };
+            excel_move_row_paste: excel_move_row_paste { // Excelの行移動(下に挿入)
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                wait-ms = <40>;
+                tap-ms = <40>;
+                bindings
+                    = <&macro_press   &kp LSFT>
+                    , <&macro_tap     &kp SPACE>
+                    , <&macro_release &kp LSFT>
+                    , <&macro_wait_time 100> // ここで100ミリ秒待機
+                    , <&macro_press   &kp LCTRL>
+                    // , <&macro_press   &kp LSFT>
+                    , <&macro_tap     &kp KP_PLUS>
+                    // , <&macro_release &kp LSFT>
+                    , <&macro_release &kp LCTRL>
+                    ;
             };
             // // HiMacro変換版：コピー ➔ TAB移動 ➔ 画面切り替え ➔ 貼り付け ➔ 元の画面に戻る
             // ecl_transfer_t: ecl_transfer_t {
