@@ -501,12 +501,6 @@
                 layers = <MOVL MOVW>;
                 bindings = <&excel_move_row_paste>;
             };
-            combo_ADJ_ss1 { // ADJレイヤーでのスクリーンショット1
-                timeout-ms = <80>;
-                key-positions = <3 6>; // R,Uのキー位置に書き換えてください
-                layers = <ADJ>;
-                bindings = <&kp LS(LG(N3))>;
-            };
             combo_RSE_t_lang2 { // RSEレイヤーでのIME OFF
                 timeout-ms = <70>;
                 key-positions = <11 12 13>;
@@ -524,6 +518,12 @@
                 key-positions = <11 12 13>;
                 layers = <RSEW>;
                 bindings = <&tC_int5>;
+            };
+            combo_ADJ_ss1 { // ADJレイヤーでのスクリーンショット1
+                timeout-ms = <80>;
+                key-positions = <3 6>; // R,Uのキー位置に書き換えてください
+                layers = <ADJ>;
+                bindings = <&kp LS(LG(N3))>;
             };
             combo_ADJ_ss2 { // ADJレイヤーでのスクリーンショット2
                 timeout-ms = <80>;
