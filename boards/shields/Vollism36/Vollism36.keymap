@@ -507,6 +507,24 @@
                 layers = <ADJ>;
                 bindings = <&kp LS(LG(N3))>;
             };
+            combo_RSE_t_lang2 { // RSEレイヤーでのIME OFF
+                timeout-ms = <80>;
+                key-positions = <11 12 13>;
+                layers = <RSE>;
+                bindings = <&t_lang2>;
+            };
+            combo_RSEL_t_int5 { // RSELレイヤーでのIME OFF
+                timeout-ms = <80>;
+                key-positions = <11 12 13>;
+                layers = <RSEL>;
+                bindings = <&t_int5>;
+            };
+            combo_RSEW_tC_int5 { // RSEWレイヤーでのIME OFF
+                timeout-ms = <80>;
+                key-positions = <11 12 13>;
+                layers = <RSEW>;
+                bindings = <&tC_int5>;
+            };
             combo_ADJ_ss2 { // ADJレイヤーでのスクリーンショット2
                 timeout-ms = <80>;
                 key-positions = <13 16>; // F,Jのキー位置に書き換えてください
