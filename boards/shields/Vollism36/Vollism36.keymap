@@ -5032,7 +5032,7 @@
             // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
                 &mt_s LSHFT Q   &kp W           &kp E           &kp R           &kp T                                           &kp Y           &kp U           &kp I           &kp O           &mt_s RSHFT P
                 &mt_s LCTRL A   &kp S           &kp D           &kp F                                           &kp G           &kp H           &kp J           &kp K           &kp L           &mt_s RCTRL SEMI
-                &mt_s LALT Z    &kp X           &kp C           &kp V                                           &kp B           &kp N           &kp M           &kp COMMA       &kp DOT         &mt_s RGUI SLASH
+                &mt_s LALT Z    &kp X           &kp C           &kp V                                           &kp B           &kp N           &kp M           &kp COMMA       &kp DOT         &mt_s LGUI SLASH
                                                                 &lt_bl NUML ESC &mt LSHFT SPACE &lt LWRL TAB	&lt RSEL ENTER	&mt RSHFT SPACE &lt_bl MOVL ESC
                 >;
             };
@@ -5092,7 +5092,7 @@
             // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
                 &mt_s LSHFT PG_UP &kp HOME      &kp UP          &kp END         &kp LS(TAB)                                     &kp DEL         &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT &mt_s RSHFT SCRL_UP
                 &mt_s LCTRL PG_DN &kp LEFT      &kp DOWN        &kp RIGHT   	                              &kp LS(LA(RIGHT)) &kp BSPC        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT &mt_s RCTRL SCRL_DOWN
-                &mt_s LALT LC(V)  &mkp MB1      &mkp MB3        &mkp MB2		                              &kp LS(LA(LEFT))  &mkp MB1        &kp LS(ENTER)   &kp LC(LEFT)    &kp LC(RIGHT)   &mt_cmd_v RGUI 0
+                &mt_s LALT LC(V)  &mkp MB1      &mkp MB3        &mkp MB2		                              &kp LS(LA(LEFT))  &mkp MB1        &kp LS(ENTER)   &kp LC(LEFT)    &kp LC(RIGHT)   &mt_cmd_v LGUI 0
                                                                 &kp LSHFT       &sk_ctrl        &trans          &ht_it4 ADJL 0  &kp LS(LC(V))   &kp RSHFT
                 >;
             };
@@ -5102,7 +5102,7 @@
             // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
                 &mt_s LSHFT PG_UP &kp HOME      &kp UP          &kp END         &kp LS(TAB)                                     &kp DEL         &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT &mt_s RSHFT SCRL_UP
                 &mt_s LCTRL PG_DN &kp LEFT      &kp DOWN        &kp RIGHT   	                              &kp LS(LA(RIGHT)) &kp BSPC        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT &mt_s RCTRL SCRL_DOWN
-                &mt_s LALT LC(V)  &mkp MB1      &mkp MB3        &mkp MB2		                              &kp LS(LA(LEFT))  &mkp MB1        &kp LS(ENTER)   &kp LC(LEFT)    &kp LC(RIGHT)   &mt_cmd_v RGUI 0
+                &mt_s LALT LC(V)  &mkp MB1      &mkp MB3        &mkp MB2		                              &kp LS(LA(LEFT))  &mkp MB1        &kp LS(ENTER)   &kp LC(LEFT)    &kp LC(RIGHT)   &mt_cmd_v LGUI 0
                                                                 &kp LSHFT       &sk_ctrl        &trans          &htW_it4 ADJW 0 &kp LS(LC(V))   &kp RSHFT
                 >;
             };
@@ -5122,7 +5122,7 @@
             // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
                 &mt_s LSHFT F1  &kp F2          &kp F3          &kp F4          &kp F5         		         		            &kp F6          &kp F7    	    &kp F8          &kp F9          &mt_s RSHFT F10
                 &mt_s LCTRL N1  &kp N2          &kp N3          &kp N4      		     		                &kp N5          &kp N6          &kp N7    	    &kp N8          &kp N9          &mt_s RCTRL N0
-                &mt_s LALT INT1 &kp BSLH        &kp INT3        &kp SLASH   		     		                &kp ASTRK       &kp MINUS       &kp PLUS  	    &kp LBKT        &kp RBKT        &mt_ctrl_v RGUI 0
+                &mt_s LALT INT1 &kp BSLH        &kp INT3        &kp SLASH   		     		                &kp ASTRK       &kp MINUS       &kp PLUS  	    &kp LBKT        &kp RBKT        &mt_ctrl_v LGUI 0
                                                                 &kp LSHFT       &kp SPACE       &ht_it5 ADJL 0  &trans          &sk_shft        &kp RSHFT
                 >;
             };
@@ -5132,7 +5132,7 @@
             // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
                 &mt_s LSHFT F1  &kp F2          &kp F3          &kp F4          &kp F5         		         		            &kp F6          &kp F7    	    &kp F8          &kp F9          &mt_s RSHFT F10
                 &mt_s LCTRL N1  &kp N2          &kp N3          &kp N4      		     		                &kp N5          &kp N6          &kp N7    	    &kp N8          &kp N9          &mt_s RCTRL N0
-                &mt_s LALT INT1 &kp BSLH        &kp INT3        &kp SLASH   		     		                &kp ASTRK       &kp MINUS       &kp PLUS  	    &kp LBKT        &kp RBKT        &mt_ctrl_v RGUI 0
+                &mt_s LALT INT1 &kp BSLH        &kp INT3        &kp SLASH   		     		                &kp ASTRK       &kp MINUS       &kp PLUS  	    &kp LBKT        &kp RBKT        &mt_ctrl_v LGUI 0
                                                                 &kp LSHFT       &kp SPACE       &htC_it5 ADJW 0 &trans          &sk_shft        &kp RSHFT
                 >;
             };
