@@ -5096,14 +5096,14 @@
                                                                 &kp LSHFT       &sk_shft        &trans          &ht_it4 ADJL 0  &kp LS(LC(V))   &kp RSHFT
                 >;
             };
-    
+
             LWRW {
                 bindings = <
             // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
                 &mt_s LSHFT PG_UP &kp HOME      &kp UP          &kp END         &kp LS(TAB)                                     &kp DEL         &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT &mt_s RSHFT SCRL_UP
                 &mt_s LCTRL PG_DN &kp LEFT      &kp DOWN        &kp RIGHT   	                              &kp LS(LA(RIGHT)) &kp BSPC        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT &mt_s RCTRL SCRL_DOWN
                 &mt_s LALT LC(V)  &mkp MB1      &mkp MB3        &mkp MB2		                              &kp LS(LA(LEFT))  &mkp MB1        &kp LS(ENTER)   &kp LC(LEFT)    &kp LC(RIGHT)   &mt_cmd_v LGUI 0
-                                                                &kp LSHFT       &sk_shift       &trans          &htW_it4 ADJW 0 &kp LS(LC(V))   &kp RSHFT
+                                                                &kp LSHFT       &sk_shft        &trans          &htW_it4 ADJW 0 &kp LS(LC(V))   &kp RSHFT
                 >;
             };
 
