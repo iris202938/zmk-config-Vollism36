@@ -251,7 +251,7 @@
                 layers = <QWE LWR RSE ADJ>;
                 timeout-ms = <80>;
             };
-            combo_LALT {
+            combo_RALT {
                 bindings = <&kp LALT>;
                 key-positions = <28 29>;
                 layers = <LIN CAD LWRL LWRW RSEL RSEW ADJL ADJW MOVL MOVW>;
