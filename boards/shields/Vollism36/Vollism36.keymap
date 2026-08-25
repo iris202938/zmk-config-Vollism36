@@ -507,6 +507,31 @@
                 layers = <MOVL MOVW>;
                 bindings = <&excel_line_erase>;
             };
+            combo_excel_ruled_line_free_write { // Excelの罫線ペン
+                timeout-ms = <80>;
+                key-positions = <15 24 1>;
+                layers = <MOVL MOVW>;
+                bindings = <&excel_ruled_line_free_write>;
+            };
+            combo_excel_ruled_line_free_erase { // Excelの罫線消しゴム
+                timeout-ms = <80>;
+                key-positions = <15 24 2>;
+                layers = <MOVL MOVW>;
+                bindings = <&excel_ruled_line_free_erase>;
+            };
+            combo_excel_ruled_line_all_drawing { // Excelの罫線格子状
+                timeout-ms = <80>;
+                key-positions = <15 24 10>;
+                layers = <MOVL MOVW>;
+                bindings = <&excel_ruled_line_all_drawing>;
+            };
+            combo_excel_ruled_line_fat_drawing { // Excelの罫線太い外枠
+                timeout-ms = <80>;
+                key-positions = <15 24 4>;
+                layers = <MOVL MOVW>;
+                bindings = <&excel_ruled_line_fat_drawing>;
+            };
+
             combo_lefthand_enter { // 左手のみでEnterを押す
                 timeout-ms = <80>;
                 key-positions = <21 22 23>;
@@ -3199,6 +3224,54 @@
                     , <&macro_release &kp LCTRL>
                     , <&macro_wait_time 100> // ここで100ミリ秒待機
                     , <&macro_tap     &kp PAUSE_BREAK>
+                    ;
+            };
+            excel_ruled_line_free_write: excel_ruled_line_free_write { // Excelの罫線ペン
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                wait-ms = <40>;
+                tap-ms = <40>;
+                bindings
+                    = <&macro_tap   &kp LALT>
+                    , <&macro_tap   &kp H>
+                    , <&macro_tap   &kp B>
+                    , <&macro_tap   &kp W>
+                    ;
+            };
+            excel_ruled_line_free_erase: excel_ruled_line_free_erase { // Excelの罫線消しゴム
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                wait-ms = <40>;
+                tap-ms = <40>;
+                bindings
+                    = <&macro_tap   &kp LALT>
+                    , <&macro_tap   &kp H>
+                    , <&macro_tap   &kp B>
+                    , <&macro_tap   &kp E>
+                    ;
+            };
+            excel_ruled_line_all_drawing: excel_ruled_line_all_drawing { // Excelの罫線格子状
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                wait-ms = <40>;
+                tap-ms = <40>;
+                bindings
+                    = <&macro_tap   &kp LALT>
+                    , <&macro_tap   &kp H>
+                    , <&macro_tap   &kp B>
+                    , <&macro_tap   &kp A>
+                    ;
+            };
+            excel_ruled_line_fat_drawing: excel_ruled_line_fat_drawing { // Excelの罫線太い外枠
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                wait-ms = <40>;
+                tap-ms = <40>;
+                bindings
+                    = <&macro_tap   &kp LALT>
+                    , <&macro_tap   &kp H>
+                    , <&macro_tap   &kp B>
+                    , <&macro_tap   &kp T>
                     ;
             };
             // // HiMacro変換版：コピー ➔ TAB移動 ➔ 画面切り替え ➔ 貼り付け ➔ 元の画面に戻る
