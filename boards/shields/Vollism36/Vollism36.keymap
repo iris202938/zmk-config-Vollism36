@@ -503,37 +503,37 @@
             };
             combo_excel_line_erase { // Excelの罫線消去
                 timeout-ms = <80>;
-                key-positions = <20 21 22>;
+                key-positions = <20 21 22>; // Z,X,Cのキー位置に書き換えてください
                 layers = <MOVL>;
                 bindings = <&excel_line_erase>;
             };
             combo_excel_line_erase_p { // Excelの罫線消去(Pause Break)
                 timeout-ms = <80>;
-                key-positions = <20 21 22>;
+                key-positions = <20 21 22>; // Z,X,Cのキー位置に書き換えてください
                 layers = <MOVW>;
                 bindings = <&excel_line_erase_p>;
             };
             combo_excel_ruled_line_free_write { // Excelの罫線ペン
                 timeout-ms = <80>;
-                key-positions = <15 24 1>;
+                key-positions = <15 24 1>; // H,B,Wのキー位置に書き換えてください
                 layers = <MOVL MOVW>;
                 bindings = <&excel_ruled_line_free_write>;
             };
             combo_excel_ruled_line_free_erase { // Excelの罫線消しゴム
                 timeout-ms = <80>;
-                key-positions = <15 24 2>;
+                key-positions = <15 24 2>; // H,B,Eのキー位置に書き換えてください
                 layers = <MOVL MOVW>;
                 bindings = <&excel_ruled_line_free_erase>;
             };
             combo_excel_ruled_line_all_drawing { // Excelの罫線格子状
                 timeout-ms = <80>;
-                key-positions = <15 24 10>;
+                key-positions = <15 24 10>; // H,B,Aのキー位置に書き換えてください
                 layers = <MOVL MOVW>;
                 bindings = <&excel_ruled_line_all_drawing>;
             };
             combo_excel_ruled_line_fat_drawing { // Excelの罫線太い外枠
                 timeout-ms = <80>;
-                key-positions = <15 24 4>;
+                key-positions = <15 24 4>; // H,B,Tのキー位置に書き換えてください
                 layers = <MOVL MOVW>;
                 bindings = <&excel_ruled_line_fat_drawing>;
             };
