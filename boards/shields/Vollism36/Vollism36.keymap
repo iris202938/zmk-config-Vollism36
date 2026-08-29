@@ -537,6 +537,12 @@
                 layers = <MOVL MOVW>;
                 bindings = <&excel_ruled_line_fat_drawing>;
             };
+            combo_excel_clear_cf { // Excelの条件付き書式のクリア(選択範囲)
+                timeout-ms = <80>;
+                key-positions = <15 18 22>; // H,L,Cのキー位置に書き換えてください
+                layers = <MOVL MOVW>;
+                bindings = <&excel_clear_cf>;
+            };
 
             combo_lefthand_enter { // 左手のみでEnterを押す
                 timeout-ms = <80>;
@@ -645,6 +651,12 @@
                 bindings = <&mkp MB3>;
                 key-positions = <22 32>;
                 layers = <QWE LIN CAD WINS>;
+                timeout-ms = <80>;
+            };
+            mb3_mb1 {
+                bindings = <&mb3_mb1>;
+                key-positions = <27 28 29>;
+                layers = <CAD>;
                 timeout-ms = <80>;
             };
             int5_g_c {
@@ -3294,6 +3306,29 @@
                     , <&macro_tap   &kp B>
                     , <&macro_tap   &kp T>
                     ;
+            };
+            excel_clear_cf: excel_clear_cf { // Excelの条件付き書式のクリア(選択範囲)
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                wait-ms = <40>;
+                tap-ms = <40>;
+                bindings
+                    = <&macro_tap     &kp LALT>
+                    , <&macro_tap     &kp H>
+                    , <&macro_tap     &kp L>
+                    , <&macro_tap     &kp C>
+                    , <&macro_tap     &kp S>
+                    ;
+            };
+            mb3_mb1: mb3_mb1 { //FreeCADのマウスボタン3+1 (トグル動作例)
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings
+                    = <&macro_press &mkp MB3>
+                    , <&macro_press &mkp MB1>
+                    , <&macro_pause_for_release>
+                    , <&macro_release &mkp MB3>
+                    , <&macro_release &mkp MB1>;
             };
             // // HiMacro変換版：コピー ➔ TAB移動 ➔ 画面切り替え ➔ 貼り付け ➔ 元の画面に戻る
             // ecl_transfer_t: ecl_transfer_t {
