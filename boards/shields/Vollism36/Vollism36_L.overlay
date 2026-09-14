@@ -5,8 +5,6 @@
 #include <dt-bindings/input/input-event-codes.h>
 #include <input/processors/sensor_rotation.dtsi>
 #include <input/processors/zmk-input-processor-keybind.dtsi>
-// #include <zephyr/dt-bindings/input/input-event-codes.h>
-// #include <behaviors/naginata.dtsi>
 
 #define QWE 0
 #define NIC 1
