@@ -32,7 +32,8 @@
     #define NUML 19
     #define NUMW 20
     #define WINS 21
-    #define BLE 22
+    #define AML 22
+    #define BLE 23
 
     &mt {
         flavor = "hold-preferred";
@@ -175,13 +176,13 @@
             // };
             combo_esc_l {
                 timeout-ms = <75>;
-                layers = <QWE LIN MOV CAD ADJ ADJL ADJW NUM NUML NUMW>;
+                layers = <QWE LIN MOV CAD ADJ ADJL ADJW NUM NUML NUMW AML>;
                 key-positions = <0 10>; 
                 bindings = <&kp ESC>;
             };
             combo_esc_r {
                 timeout-ms = <75>;
-                layers = <QWE LIN MOV CAD>;
+                layers = <QWE LIN MOV CAD AML>;
                 key-positions = <9 19>; 
                 bindings = <&kp ESC>;
             };
@@ -236,13 +237,13 @@
             combo_RGUI {
                 bindings = <&kp RGUI>;
                 key-positions = <28 29>;
-                layers = <QWE LWR RSE ADJ MOV>;
+                layers = <QWE LWR RSE ADJ MOV AML>;
                 timeout-ms = <80>;
             };
             combo_LGUI {
                 bindings = <&kp LGUI>;
                 key-positions = <20 21>;
-                layers = <LIN CAD LWRL LWRW RSEL RSEW MOVL MOVW>;
+                layers = <LIN CAD LWRL LWRW RSEL RSEW MOVL MOVW AML>;
                 timeout-ms = <80>;
             };
             combo_LALT {
@@ -254,7 +255,7 @@
             combo_RALT {
                 bindings = <&kp LALT>;
                 key-positions = <28 29>;
-                layers = <LIN CAD LWRL LWRW RSEL RSEW ADJL ADJW MOVL MOVW>;
+                layers = <LIN CAD LWRL LWRW RSEL RSEW ADJL ADJW MOVL MOVW AML>;
                 timeout-ms = <80>;
             };
             combo_sl_LCTRL_LSHFT {
@@ -632,7 +633,7 @@
             mb1_shft_cad_r {
                 bindings = <&shft_mb1>;
                 key-positions = <26 27 28>;
-                layers = <CAD LWRW>;
+                layers = <CAD LWRW AML>;
                 timeout-ms = <70>;
             };
             mb1_shft_cad_l {
@@ -668,7 +669,7 @@
             int5_g_c {
                 bindings = <&int5_g>;
                 key-positions = <19 29>;
-                layers = <CAD>;
+                layers = <CAD AML>;
                 timeout-ms = <80>;
             };
             combo_symbol_call {  // シンボル一覧(AHK)
@@ -5411,6 +5412,16 @@
                 &kp A           &kp S           &kp D           &kp F                                           &kp G           &kp H           &kp J           &kp K           &kp L           &kp SEMI
                 &kp Z           &kp X           &kp C           &kp V                                           &kp B           &kp N           &kp M           &kp COMMA       &kp DOT         &kp SLASH
                                                                 &kp LSHFT       &kp SPACE       &kp TAB         &kp ENTER	    &kp INT4        &kp RCTRL
+                >;
+            };
+
+            AML {
+                bindings = <
+            // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
+                &trans          &trans          &trans          &trans          &trans                                          &trans          &trans          &trans          &trans          &trans
+                &trans          &trans          &trans          &mkp MB1                                        &trans          &trans          &trans          &trans          &trans          &kp RCTRL
+                &trans          &trans          &trans          &trans                                          &trans          &mkp MB1        &trans          &mkp MB3        &mkp MB2        &trans
+                                                &trans          &trans          &kp LCTRL       &trans          &trans          &kp RSHFT       &trans
                 >;
             };
 
