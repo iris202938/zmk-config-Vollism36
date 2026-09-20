@@ -604,6 +604,12 @@
                 layers = <ADJW>;
                 bindings = <&win_shift_s>;
             };
+            combo_ADJLW_tss { // ADJL,ADJWレイヤーでのテキストスクリーンショット
+                timeout-ms = <80>;
+                key-positions = <4 5>; // T,Yのキー位置に書き換えてください
+                layers = <ADJL ADJW>;
+                bindings = <&win_shift_t>;
+            };
 
             mb1_cad {
                 bindings = <&mkp MB1>;
@@ -4530,6 +4536,17 @@
                     = <&macro_press &kp LGUI>
                     , <&macro_press &kp LSHFT>
                     , <&macro_tap &kp S>
+                    , <&macro_release &kp LGUI>
+                    , <&macro_release &kp LSHFT>
+                    ;
+            };	
+            win_shift_t: win_shift_t { // テキストスクリーンショット
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings
+                    = <&macro_press &kp LGUI>
+                    , <&macro_press &kp LSHFT>
+                    , <&macro_tap &kp T>
                     , <&macro_release &kp LGUI>
                     , <&macro_release &kp LSHFT>
                     ;

@@ -5,8 +5,6 @@
 #include <dt-bindings/input/input-event-codes.h>
 #include <input/processors/sensor_rotation.dtsi>
 #include <input/processors/zmk-input-processor-keybind.dtsi>
-// #include <zephyr/dt-bindings/input/input-event-codes.h>
-// #include <behaviors/naginata.dtsi>
 
 #define QWE 0
 #define NIC 1
@@ -114,7 +112,7 @@
         };
 
         /* ==========================================================
-        Layer 19: NUML (通常マウス)
+        Layer 19: NUML (スクロール)
         ========================================================== */
         l_numl {
             layers = <NUML>;
@@ -123,7 +121,7 @@
         };
 
         /* ==========================================================
-        Layer 18: NUM (通常マウス)
+        Layer 18: NUM (スクロール)
         ========================================================== */
         l_num {
             layers = <NUM>;
@@ -302,15 +300,6 @@
                             , <&zip_xy_scaler 50 100>; // スケーリング（50/100）
         };
 
-        // /* ==========================================================
-        // Layer 4: NGNL (通常マウス)
-        // ========================================================== */
-        // l_ngnl {
-        //     layers = <NGNL>;
-        //     input-processors = <&sensor_rotation>
-        //                     , <&zip_xy_scaler 50 100>; // スケーリング（50/100）
-        // };
-
         /* ==========================================================
         Layer 2: LIN (通常マウス)
         ========================================================== */
@@ -328,15 +317,6 @@
             input-processors = <&sensor_rotation>
                             , <&zip_xy_scaler 50 100>; // スケーリング（50/100）
         };
-
-        // /* ==========================================================
-        // Layer 1: NGN (通常マウス)
-        // ========================================================== */
-        // l_ngn {
-        //     layers = <NGN>;
-        //     input-processors = <&sensor_rotation>
-        //                     , <&zip_xy_scaler 50 100>; // スケーリング（50/100）
-        // };
 
         /* ==========================================================
         Layer 0: QWE (通常マウス)
@@ -380,12 +360,7 @@
         status = "okay";
         compatible = "pixart,pmw3610";
         reg = <0>;
-        // evt-type = <INPUT_EV_REL>; // あるいは <INPUT_EV_ABS>
         spi-max-frequency = <2000000>;
         irq-gpios = <&xiao_d 0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-        // cpi = <600>;
-        // evt-type = <INPUT_EV_REL>;
-        // x-input-code = <INPUT_REL_X>;
-        // y-input-code = <INPUT_REL_Y>;
     };
 };
