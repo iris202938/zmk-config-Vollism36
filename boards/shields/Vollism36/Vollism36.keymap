@@ -182,7 +182,7 @@
             };
             combo_esc_r {
                 timeout-ms = <75>;
-                layers = <QWE LIN MOV CAD AML>;
+                layers = <QWE LIN MOV CAD>;
                 key-positions = <9 19>; 
                 bindings = <&kp ESC>;
             };
@@ -235,9 +235,9 @@
             //     bindings = <&caps_word>;
             // };
             combo_RGUI {
-                bindings = <&kp RGUI>;
+                bindings = <&kp LGUI>;
                 key-positions = <28 29>;
-                layers = <QWE LWR RSE ADJ MOV AML>;
+                layers = <QWE LWR RSE ADJ MOV>;
                 timeout-ms = <80>;
             };
             combo_LGUI {
@@ -255,7 +255,7 @@
             combo_RALT {
                 bindings = <&kp LALT>;
                 key-positions = <28 29>;
-                layers = <LIN CAD LWRL LWRW RSEL RSEW ADJL ADJW MOVL MOVW AML>;
+                layers = <LIN CAD LWRL LWRW RSEL RSEW ADJL ADJW MOVL MOVW>;
                 timeout-ms = <80>;
             };
             combo_sl_LCTRL_LSHFT {
@@ -309,7 +309,7 @@
             alt_slash {
                 bindings = <&file_f>;
                 key-positions = <18 29>;
-                layers = <CAD>;
+                layers = <CAD AML>;
                 timeout-ms = <80>;
             };
             // combo_LALTと被るため保留
