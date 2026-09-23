@@ -104,7 +104,7 @@
         /* ==========================================================
         Layer 20: NUMW (スクロール)
         ========================================================== */
-         l_numw {
+        l_numw {
             layers = <NUMW>;
             input-processors = 
                 <&sensor_rotation>,
@@ -115,21 +115,29 @@
         };
 
         /* ==========================================================
-        Layer 19: NUML (通常マウス)
+        Layer 19: NUML (スクロール)
         ========================================================== */
         l_numl {
             layers = <NUML>;
-            input-processors = <&sensor_rotation>
-                            , <&zip_xy_scaler 100 100>; // スケーリング（100/100）
+            input-processors = 
+                <&sensor_rotation>,
+                <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>,
+                <&zip_xy_scaler 1 30>,
+                <&zip_xy_to_scroll_mapper>,
+                <&zip_xy_scaler 0 1>; 
         };
 
         /* ==========================================================
-        Layer 18: NUM (通常マウス)
+        Layer 18: NUM (スクロール)
         ========================================================== */
         l_num {
             layers = <NUM>;
-            input-processors = <&sensor_rotation>
-                            , <&zip_xy_scaler 100 100>; // スケーリング（100/100）
+            input-processors = 
+                <&sensor_rotation>,
+                <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>,
+                <&zip_xy_scaler 1 30>,
+                <&zip_xy_to_scroll_mapper>,
+                <&zip_xy_scaler 0 1>; 
         };
 
         /* ==========================================================
@@ -394,7 +402,7 @@
         27 // MB2
         28 // MB3
         19 // RCTRL
-        31 // LCTRL
+        31.  // LCTRL
         34 // RSHFT
     >;
 };
