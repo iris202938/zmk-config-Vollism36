@@ -5419,8 +5419,8 @@
                 bindings = <
             // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
                 &trans          &trans          &trans          &trans          &trans                                          &trans          &trans          &trans          &trans          &trans
-                &trans          &trans          &trans          &mkp MB1                                        &trans          &trans          &trans          &trans          &trans          &kp RCTRL
-                &trans          &trans          &trans          &trans                                          &trans          &mkp MB1        &trans          &mkp MB3        &mkp MB2        &trans
+                &trans          &trans          &trans          &trans                                          &trans          &trans          &trans          &trans          &trans          &kp RCTRL
+                &trans          &trans          &trans          &mkp MB1                                        &trans          &mkp MB1        &trans          &mkp MB3        &mkp MB2        &trans
                                                 &trans          &trans          &mt LCTRL SPACE &trans          &trans          &kp RSHFT       &trans
                 >;
             };
