@@ -402,7 +402,7 @@
         27 // MB2
         28 // MB3
         19 // RCTRL
-        31.  // LCTRL
+        31 // LCTRL
         34 // RSHFT
     >;
 };
