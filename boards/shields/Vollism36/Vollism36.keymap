@@ -77,48 +77,7 @@
         // 10 11 12 13          14 15 16 17 18 19
         // 20 21 22 23          24 25 26 27 28 29	
         //          30 31 32    33 34 35 
-            // combo_ng_on {
-            //     timeout-ms = <80>;
-            //     key-positions = <15 16>; // H, Jのキー位置に書き換えてください
-            //     bindings = <&ng_on>;
-            //     layers = <QWE>; // デフォルトレイヤーが0の前提
-            // };
-            // combo_ng_off {
-            //     timeout-ms = <80>;
-            //     key-positions = <13 14>; // F, Gのキー位置に書き換えてください
-            //     bindings = <&ng_off>;
-            //     layers = <QWE NGN>; // デフォルトレイヤーが0、薙刀式レイヤーが1の前提
-            // };
-            // combo_ng_onl {
-            //     timeout-ms = <80>;
-            //     key-positions = <15 16>; // H, Jのキー位置に書き換えてください
-            //     bindings = <&ng_onl>;
-            //     layers = <LIN>; // デフォルトレイヤーがLINの前提
-            // };
-            // combo_ng_offl {
-            //     timeout-ms = <80>;
-            //     key-positions = <13 14>; // F, Gのキー位置に書き換えてください
-            //     bindings = <&ng_offl>;
-            //     layers = <LIN NGNL>; // デフォルトレイヤーがLIN、薙刀式レイヤーが1の前提
-            // };
-            // combo_ADJ {
-            //     timeout-ms = <70>;
-            //     key-positions = <32 33>;
-            //     layers = <QWE NGN NIC>;
-            //     bindings = <&mo ADJ>;
-            // };
-            // combo_ADJL {
-            //     timeout-ms = <70>;
-            //     key-positions = <32 33>;
-            //     layers = <LIN NGNL NICL>;
-            //     bindings = <&mo ADJL>;
-            // };
-            // combo_ADJW {
-            //     timeout-ms = <70>;
-            //     key-positions = <32 33>;
-            //     layers = <CAD WIN>;
-            //     bindings = <&mo ADJW>;
-            // };
+
             combo_to_LIN {
                 timeout-ms = <70>;
                 key-positions = <30 35>;
@@ -162,18 +121,6 @@
                 bindings = <&to MOVW>;
             };
 
-            // esc_l {
-            //     bindings = <&kp ESC>;
-            //     key-positions = <0 10>;
-            //     layers = <QWE LIN MOV CAD>;
-            //     timeout-ms = <80>;
-            // };
-            // esc_r {
-            //     bindings = <&kp ESC>;
-            //     key-positions = <9 19>;
-            //     layers = <QWE LIN CAD>;
-            //     timeout-ms = <80>;
-            // };
             combo_esc_l {
                 timeout-ms = <75>;
                 layers = <QWE LIN MOV CAD ADJ ADJL ADJW NUM NUML NUMW AML>;
@@ -186,12 +133,7 @@
                 key-positions = <9 19>; 
                 bindings = <&kp ESC>;
             };
-            // tab {
-            //     bindings = <&kp TAB>;
-            //     key-positions = <1 3>;
-            //     layers = <QWE MOV CAD>;
-            //     timeout-ms = <80>;
-            // };
+
             wind_l {
                 bindings = <&win_left>;
                 key-positions = <11 12>;
@@ -204,18 +146,6 @@
                 layers = <LWR LWRL LWRW>;
                 timeout-ms = <80>;
             };
-            // shift_l {
-            //     bindings = <&kp LSHFT>;
-            //     key-positions = <0 1>;
-            //     layers = <QWE LIN CAD>;
-            //     timeout-ms = <80>;
-            // };
-            // shift_r {
-            //     bindings = <&kp RSHFT>;
-            //     key-positions = <8 9>;
-            //     layers = <QWE LIN CAD>;
-            //     timeout-ms = <80>;
-            // };
             combo_TSHIFT {
                 bindings = <&qm RSHIFT>;
                 key-positions = <30 35>;
@@ -228,32 +158,26 @@
                 layers = <QWE LIN CAD>;
                 timeout-ms = <65>;
             };
-            // combo_CAPSWORD {
-            //     timeout-ms = <80>;
-            //     key-positions = <20 29>;
-            //     layers = <QWE LIN CAD>;
-            //     bindings = <&caps_word>;
-            // };
-            combo_RGUI {
-                bindings = <&kp LGUI>;
+            combo_RALT {
+                bindings = <&kp LALT>;
                 key-positions = <28 29>;
                 layers = <QWE LWR RSE ADJ MOV>;
-                timeout-ms = <80>;
-            };
-            combo_LGUI {
-                bindings = <&kp LGUI>;
-                key-positions = <20 21>;
-                layers = <LIN CAD LWRL LWRW RSEL RSEW MOVL MOVW AML>;
                 timeout-ms = <80>;
             };
             combo_LALT {
                 bindings = <&kp LALT>;
                 key-positions = <20 21>;
+                layers = <LIN CAD LWRL LWRW RSEL RSEW MOVL MOVW AML>;
+                timeout-ms = <80>;
+            };
+            combo_LGUI {
+                bindings = <&kp LGUI>;
+                key-positions = <20 21>;
                 layers = <QWE LWR RSE ADJ>;
                 timeout-ms = <80>;
             };
-            combo_RALT {
-                bindings = <&kp LALT>;
+            combo_RGUI{
+                bindings = <&kp LGUI>;
                 key-positions = <28 29>;
                 layers = <LIN CAD LWRL LWRW RSEL RSEW ADJL ADJW MOVL MOVW>;
                 timeout-ms = <80>;
@@ -270,30 +194,6 @@
                 layers = <RSE RSEL RSEW>;
                 timeout-ms = <80>;
             };
-            // ctrl_l {
-            //     bindings = <&kp LCTRL>;
-            //     key-positions = <10 11>;
-            //     layers = <QWE LIN CAD>;
-            //     timeout-ms = <80>;
-            // };
-            // ctrl_r {
-            //     bindings = <&kp RCTRL>;
-            //     key-positions = <18 19>;
-            //     layers = <QWE LIN CAD>;
-            //     timeout-ms = <80>;
-            // };
-            // gui_l {
-            //     bindings = <&kp LGUI>;
-            //     key-positions = <20 21>;
-            //     layers = <LWRL LWRW RSEL RSEW>;
-            //     timeout-ms = <80>;
-            // };
-            // gui_r {
-            //     bindings = <&kp RGUI>;
-            //     key-positions = <28 29>;
-            //     layers = <LWR RSE>;
-            //     timeout-ms = <80>;
-            // };
             combo_LGUI_LCTRL {
                 bindings = <&LGUI_LCTRL>;
                 key-positions = <10 20>;
@@ -2763,7 +2663,7 @@
                 compatible = "zmk,behavior-tap-dance";
                 #binding-cells = <0>;
                 tapping-term-ms = <230>;
-                bindings = <&all_ht LALT Z>, <&ctrl_a_z>, <&ctrl_d_z>, <&ctrl_f_z>;
+                bindings = <&all_ht LGUI Z>, <&ctrl_a_z>, <&ctrl_d_z>, <&ctrl_f_z>;
             };
 
             // --- Tap Dance SEMICOLON ---
@@ -2799,7 +2699,7 @@
                 #binding-cells = <0>;
                 tapping-term-ms = <230>;
                 // 1-Tap: 通常キー, 2-Taps: 1G , 3-Taps: 1/4G
-                bindings = <&all_ht RGUI SLASH>, <&ctrl_alt_j>, <&ctrl_alt_k>;
+                bindings = <&all_ht LALT SLASH>, <&ctrl_alt_j>, <&ctrl_alt_k>;
             };
         };
 
@@ -5178,22 +5078,10 @@
             // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
                 &mt_s LSHFT Q   &kp W           &kp E           &kp R           &kp T                                           &kp Y           &kp U           &kp I           &kp O           &mt_s RSHFT P
                 &mt_s LCTRL A   &kp S           &kp D           &kp F                                           &kp G           &kp H           &kp J           &kp K           &kp L           &mt_s RCTRL SEMI
-                &mt_s LGUI Z    &kp X           &kp C           &kp V                                           &kp B           &kp N           &kp M           &kp COMMA       &kp DOT         &mt_s LALT SLASH
+                &mt_s LALT Z    &kp X           &kp C           &kp V                                           &kp B           &kp N           &kp M           &kp COMMA       &kp DOT         &mt_s LGUI SLASH
                                                                 &lt_bl NUM LBKT &mt LSHFT SPACE &lt LWR TAB     &lt RSE ENTER   &mt RSHFT SPACE &lt_bl MOV RBKT
                 >;
             };
-
-            // 薙刀式に必要な31キー(Enterもシフトキーにしたいときは32キー)を定義してください。
-            // &kpの代わりに&ngを使います。通常はデフォルトレイヤーの次に配置してください(レイヤー番号1)。
-            // NGN { 
-            //     bindings = <
-            // // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
-            //     &ng Q           &ng W           &ng E           &ng R           &ng T                                           &ng Y           &ng U           &ng I           &ng O           &ng P
-            //     &ng A           &ng S           &ng D           &ng F                                           &ng G           &ng H           &ng J           &ng K           &ng L           &ng SEMI
-            //     &ng Z           &ng X           &ng C           &ng V                                           &ng B           &ng N           &ng M           &ng COMMA       &ng DOT         &ng SLASH
-            //                                                     &trans          &ng SPACE       &lt LWR TAB     &lt RSE ENTER   &ng SPACE       &trans
-            //     >;
-            // };
 
             NIC { 
                 bindings = <
@@ -5210,20 +5098,10 @@
             // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
                 &mt_s LSHFT Q   &kp W           &kp E           &kp R           &kp T                                           &kp Y           &kp U           &kp I           &kp O           &mt_s RSHFT P
                 &mt_s LCTRL A   &kp S           &kp D           &kp F                                           &kp G           &kp H           &kp J           &kp K           &kp L           &mt_s RCTRL SEMI
-                &mt_s LALT Z    &kp X           &kp C           &kp V                                           &kp B           &kp N           &kp M           &kp COMMA       &kp DOT         &mt_s LGUI SLASH
+                &mt_s LGUI Z    &kp X           &kp C           &kp V                                           &kp B           &kp N           &kp M           &kp COMMA       &kp DOT         &mt_s LALT SLASH
                                                                 &lt_bl NUML ESC &mt LSHFT SPACE &lt LWRL TAB	&lt RSEL ENTER	&mt RSHFT SPACE &lt_bl MOVL ESC
                 >;
             };
-
-            // NGNL { 
-            //     bindings = <
-            // // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
-            //     &ng Q           &ng W           &ng E           &ng R           &ng T                                           &ng Y           &ng U           &ng I           &ng O           &ng P
-            //     &ng A           &ng S           &ng D           &ng F                                           &ng G           &ng H           &ng J           &ng K           &ng L           &ng SEMI
-            //     &ng Z           &ng X           &ng C           &ng V                                           &ng B           &ng N           &ng M           &ng COMMA       &ng DOT         &ng SLASH
-            //                                                     &trans          &ng SPACE       &lt LWRL TAB    &lt RSEL ENTER  &ng SPACE	    &trans
-            //     >;
-            // };
 
             NICL { 
                 bindings = <
@@ -5260,7 +5138,7 @@
             // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
                 &mt_s LSHFT PG_UP &kp LC(A)     &kp UP          &kp LC(E)       &kp LS(TAB)                                     &kp DEL         &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT &mt_s RSHFT SCRL_UP
                 &mt_s LCTRL PG_DN &kp LEFT      &kp DOWN        &kp RIGHT   	                                &trans          &kp BSPC        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT &mt_s RCTRL SCRL_DOWN
-                &mt_s LGUI LC(V)  &mkp MB1      &mkp MB3        &mkp MB2		                                &trans          &mkp MB1        &kp LS(ENTER)   &kp LA(LEFT)    &kp LA(RIGHT)   &mt_cmd_v LALT 0
+                &mt_s LALT LC(V)  &mkp MB1      &mkp MB3        &mkp MB2		                                &trans          &mkp MB1        &kp LS(ENTER)   &kp LA(LEFT)    &kp LA(RIGHT)   &mt_cmd_v LGUI 0
                                                                 &kp LSHFT       &sk_shft        &trans          &ht_lg1 ADJ 0   &kp LS(LC(V))   &kp RSHFT
                 >;
             };
@@ -5270,7 +5148,7 @@
             // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
                 &mt_s LSHFT PG_UP &kp HOME      &kp UP          &kp END         &kp LS(TAB)                                     &kp DEL         &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT &mt_s RSHFT SCRL_UP
                 &mt_s LCTRL PG_DN &kp LEFT      &kp DOWN        &kp RIGHT   	                              &kp LS(LA(RIGHT)) &kp BSPC        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT &mt_s RCTRL SCRL_DOWN
-                &mt_s LALT LC(V)  &mkp MB1      &mkp MB3        &mkp MB2		                              &kp LS(LA(LEFT))  &mkp MB1        &kp LS(ENTER)   &kp LC(LEFT)    &kp LC(RIGHT)   &mt_cmd_v LGUI 0
+                &mt_s LGUI LC(V)  &mkp MB1      &mkp MB3        &mkp MB2		                              &kp LS(LA(LEFT))  &mkp MB1        &kp LS(ENTER)   &kp LC(LEFT)    &kp LC(RIGHT)   &mt_cmd_v LALT 0
                                                                 &kp LSHFT       &sk_shft        &trans          &ht_it4 ADJL 0  &kp LS(LC(V))   &kp RSHFT
                 >;
             };
@@ -5280,7 +5158,7 @@
             // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
                 &mt_s LSHFT PG_UP &kp HOME      &kp UP          &kp END         &kp LS(TAB)                                     &kp DEL         &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT &mt_s RSHFT SCRL_UP
                 &mt_s LCTRL PG_DN &kp LEFT      &kp DOWN        &kp RIGHT   	                              &kp LS(LA(RIGHT)) &kp BSPC        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT &mt_s RCTRL SCRL_DOWN
-                &mt_s LALT LC(V)  &mkp MB1      &mkp MB3        &mkp MB2		                              &kp LS(LA(LEFT))  &mkp MB1        &kp LS(ENTER)   &kp LC(LEFT)    &kp LC(RIGHT)   &mt_cmd_v LGUI 0
+                &mt_s LGUI LC(V)  &mkp MB1      &mkp MB3        &mkp MB2		                              &kp LS(LA(LEFT))  &mkp MB1        &kp LS(ENTER)   &kp LC(LEFT)    &kp LC(RIGHT)   &mt_cmd_v LALT 0
                                                                 &kp LSHFT       &sk_shft        &trans          &htW_it4 ADJW 0 &kp LS(LC(V))   &kp RSHFT
                 >;
             };
@@ -5290,7 +5168,7 @@
             // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
                 &mt_s LSHFT F1  &kp F2          &kp F3          &kp F4          &kp F5         		         		            &kp F6          &kp F7    	    &kp F8          &kp F9          &mt_s RSHFT F10
                 &macro_JPN1     &macro_JPN2	    &macro_JPN3     &macro_JPN4                                     &macro_JPN5	    &macro_JPN6     &macro_JPN7     &macro_JPN8	    &macro_JPN9     &macro_JPN0
-                &mt_s LGUI INT1 &kp BSLH        &kp INT3        &kp SLASH   		     		                &kp ASTRK       &kp MINUS       &kp PLUS  	    &kp LBKT        &kp RBKT        &mt_cmd_v LALT 0
+                &mt_s LALT INT1 &kp BSLH        &kp INT3        &kp SLASH   		     		                &kp ASTRK       &kp MINUS       &kp PLUS  	    &kp LBKT        &kp RBKT        &mt_cmd_v LGUI 0
                                                                 &kp LSHFT       &kp SPACE       &ht_lg2 ADJ 0   &trans          &sk_ctrl        &kp RSHFT
                 >;
             };
@@ -5300,7 +5178,7 @@
             // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
                 &mt_s LSHFT F1  &kp F2          &kp F3          &kp F4          &kp F5         		         		            &kp F6          &kp F7    	    &kp F8          &kp F9          &mt_s RSHFT F10
                 &mt_s LCTRL N1  &kp N2          &kp N3          &kp N4      		     		                &kp N5          &kp N6          &kp N7    	    &kp N8          &kp N9          &mt_s RCTRL N0
-                &mt_s LALT INT1 &kp BSLH        &kp INT3        &kp SLASH   		     		                &kp ASTRK       &kp MINUS       &kp PLUS  	    &kp LBKT        &kp RBKT        &mt_ctrl_v LGUI 0
+                &mt_s LGUI INT1 &kp BSLH        &kp INT3        &kp SLASH   		     		                &kp ASTRK       &kp MINUS       &kp PLUS  	    &kp LBKT        &kp RBKT        &mt_ctrl_v LALT 0
                                                                 &kp LSHFT       &kp SPACE       &ht_it5 ADJL 0  &trans          &sk_ctrl        &kp RSHFT
                 >;
             };
@@ -5310,7 +5188,7 @@
             // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
                 &mt_s LSHFT F1  &kp F2          &kp F3          &kp F4          &kp F5         		         		            &kp F6          &kp F7    	    &kp F8          &kp F9          &mt_s RSHFT F10
                 &mt_s LCTRL N1  &kp N2          &kp N3          &kp N4      		     		                &kp N5          &kp N6          &kp N7    	    &kp N8          &kp N9          &mt_s RCTRL N0
-                &mt_s LALT INT1 &kp BSLH        &kp INT3        &kp SLASH   		     		                &kp ASTRK       &kp MINUS       &kp PLUS  	    &kp LBKT        &kp RBKT        &mt_ctrl_v LGUI 0
+                &mt_s LGUI INT1 &kp BSLH        &kp INT3        &kp SLASH   		     		                &kp ASTRK       &kp MINUS       &kp PLUS  	    &kp LBKT        &kp RBKT        &mt_ctrl_v LALT 0
                                                                 &kp LSHFT       &kp SPACE       &htC_it5 ADJW 0 &trans          &sk_ctrl        &kp RSHFT
                 >;
             };
@@ -5350,7 +5228,7 @@
             // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
                 &kp LS(LC(TAB)) &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT &msc SCRL_UP                                    &lt BLE LC(Y)   &kp LC(A)       &kp UP          &kp LC(E)       &kp PG_UP
                 &mt_s LCTRL MB1 &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT                                 &msc SCRL_DOWN  &lt BLE BSPC    &kp LEFT        &kp DOWN        &kp RIGHT       &kp PG_DN
-                &mt_s LGUI Z    &kp LG(LBKT)    &mkp MB3        &kp LG(RBKT)                                    &kp LC(TAB)     &kp LC(Z)       &kp LS(LC(TAB)) &kp LA(LEFT)    &kp LA(RIGHT)   &kp LC(TAB)
+                &mt_s LALT Z    &kp LG(LBKT)    &mkp MB3        &kp LG(RBKT)                                    &kp LC(TAB)     &kp LC(Z)       &kp LS(LC(TAB)) &kp LA(LEFT)    &kp LA(RIGHT)   &kp LC(TAB)
                                                                 &kp LG(C)       &kp LG(V)       &mkp MB2        &kp ENTER       &mkp MB1        &to QWE
                 >;
             };
@@ -5360,7 +5238,7 @@
             // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
                 &kp LS(LC(TAB)) &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT &msc SCRL_UP                                    &lt BLE LC(Y)   &kp HOME        &kp UP          &kp END         &kp PG_UP
                 &mt_s LCTRL MB1 &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT                                 &msc SCRL_DOWN  &lt BLE BSPC    &kp LEFT        &kp DOWN        &kp RIGHT       &kp PG_DN
-                &mt_s LALT Z    &kp LA(LEFT)    &mkp MB3        &kp LA(RIGHT)                                   &kp LC(TAB)     &kp LC(Z)       &kp LC(PG_UP)   &kp LG(LBKT)    &kp LG(RBKT)    &kp LC(PG_DN)
+                &mt_s LGUI Z    &kp LA(LEFT)    &mkp MB3        &kp LA(RIGHT)                                   &kp LC(TAB)     &kp LC(Z)       &kp LC(PG_UP)   &kp LG(LBKT)    &kp LG(RBKT)    &kp LC(PG_DN)
                                                                 &cp_tab         &cp_enter       &mkp MB2        &kp ENTER       &mkp MB1        &to LIN
                 >;
             };
@@ -5370,7 +5248,7 @@
             // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
                 &kp LS(LC(TAB)) &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT &msc SCRL_UP                                    &lt BLE LC(Y)   &kp HOME        &kp UP          &kp END         &kp PG_UP
                 &mt_s LCTRL MB1 &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT                                 &msc SCRL_DOWN  &lt BLE BSPC    &kp LEFT        &kp DOWN        &kp RIGHT       &kp PG_DN
-                &mt_s LALT Z    &kp LA(LEFT)    &mkp MB3        &kp LA(RIGHT)                                   &kp LC(TAB)     &kp LC(Z)       &kp LC(PG_UP)   &kp LG(LBKT)    &kp LG(RBKT)    &kp LC(PG_DN)
+                &mt_s LGUI Z    &kp LA(LEFT)    &mkp MB3        &kp LA(RIGHT)                                   &kp LC(TAB)     &kp LC(Z)       &kp LC(PG_UP)   &kp LG(LBKT)    &kp LG(RBKT)    &kp LC(PG_DN)
                                                                 &cp_tab         &cp_enter       &mkp MB2        &kp ENTER       &mkp MB1        &to CAD
                 >;
             };
