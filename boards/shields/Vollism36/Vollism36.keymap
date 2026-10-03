@@ -35,6 +35,10 @@
     #define AML 22
     #define BLE 23
 
+    &mkp_input_listener {
+        input-processors =< &zip_temp_layer AML 3000>;
+    };
+
     &mt {
         flavor = "hold-preferred";
         tapping-term-ms = <160>;
@@ -5298,7 +5302,7 @@
             // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
                 &trans          &trans          &trans          &trans          &trans                                          &trans          &trans          &trans          &trans          &trans
                 &trans          &trans          &trans          &trans                                          &trans          &trans          &trans          &trans          &trans          &kp RCTRL
-                &trans          &trans          &trans          &mkp MB1                                        &trans          &mkp MB1        &trans          &mkp MB3        &mkp MB2        &trans
+                &trans          &trans          &trans          &mkp MB1                                        &trans          &mkp MB1        &trans          &mkp MB3        &mkp MB2        &mt_s LALT SLASH
                                                 &trans          &trans          &mt LCTRL SPACE &trans          &trans          &kp RSHFT       &trans
                 >;
             };
