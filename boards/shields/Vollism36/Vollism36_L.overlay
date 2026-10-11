@@ -61,12 +61,12 @@
             #input-processor-cells = <0>;
             rotation-angle = <255>;
         };
-        /* 新設：別のレイヤで使いたい角度（例：75度） */
-        sensor_rotation_alt: sensor_rotation_alt {
-            compatible = "zmk,input-processor-sensor-rotation";
-            #input-processor-cells = <0>;
-            rotation-angle = <75>;  /* ここに対象レイヤで使いたい角度を指定 */
-        };
+        // /* 新設：別のレイヤで使いたい角度（例：75度） */
+        // sensor_rotation_alt: sensor_rotation_alt {
+        //     compatible = "zmk,input-processor-sensor-rotation";
+        //     #input-processor-cells = <0>;
+        //     rotation-angle = <75>;  /* ここに対象レイヤで使いたい角度を指定 */
+        // };
 
         xy_to_keys: xy_to_keys {
             compatible = "zmk,input-processor-keybind";
