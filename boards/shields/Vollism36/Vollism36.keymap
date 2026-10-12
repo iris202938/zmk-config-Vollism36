@@ -564,12 +564,12 @@
                 layers = <QWE LIN CAD WINS>;
                 timeout-ms = <80>;
             };
-            mb3_mb1 {
-                bindings = <&mb3_mb1>;
-                key-positions = <27 28 29>;
-                layers = <CAD>;
-                timeout-ms = <80>;
-            };
+            // mb3_mb1 {
+            //     bindings = <&mb3_mb1>;
+            //     key-positions = <27 28 29>;
+            //     layers = <CAD>;
+            //     timeout-ms = <80>;
+            // };
             int5_g_c {
                 bindings = <&int5_g>;
                 key-positions = <19 29>;
@@ -3231,16 +3231,16 @@
                     , <&macro_tap     &kp S>
                     ;
             };
-            mb3_mb1: mb3_mb1 { //FreeCADのマウスボタン3+1 (トグル動作例)
-                compatible = "zmk,behavior-macro";
-                #binding-cells = <0>;
-                bindings
-                    = <&macro_press &mkp MB3>
-                    , <&macro_press &mkp MB1>
-                    , <&macro_pause_for_release>
-                    , <&macro_release &mkp MB3>
-                    , <&macro_release &mkp MB1>;
-            };
+            // mb3_mb1: mb3_mb1 { //FreeCADのマウスボタン3+1 (トグル動作例)
+            //     compatible = "zmk,behavior-macro";
+            //     #binding-cells = <0>;
+            //     bindings
+            //         = <&macro_press &mkp MB3>
+            //         , <&macro_press &mkp MB1>
+            //         , <&macro_pause_for_release>
+            //         , <&macro_release &mkp MB3>
+            //         , <&macro_release &mkp MB1>;
+            // };
             // // HiMacro変換版：コピー ➔ TAB移動 ➔ 画面切り替え ➔ 貼り付け ➔ 元の画面に戻る
             // ecl_transfer_t: ecl_transfer_t {
             //     compatible = "zmk,behavior-macro";
