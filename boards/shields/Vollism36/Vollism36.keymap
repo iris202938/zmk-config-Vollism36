@@ -2899,7 +2899,7 @@
                     , <&macro_release &kp LCTRL>
                     ;
             };
-            S_G(RIGHT): S_G(RIGHT) {
+            S_G_RIGHT: S_G_RIGHT {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
                 bindings
@@ -2910,7 +2910,7 @@
                     , <&macro_release &kp LSHFT>
                     ;
             };
-            S(END): _S(END) {
+            S_END: S_END {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
                 bindings
