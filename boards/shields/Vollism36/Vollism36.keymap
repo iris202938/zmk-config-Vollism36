@@ -538,13 +538,13 @@
                 bindings = <&shft_mb1>;
                 key-positions = <26 27 28>;
                 layers = <CAD LWRW AML>;
-                timeout-ms = <70>;
+                timeout-ms = <80>;
             };
             mb1_shft_cad_l {
                 bindings = <&shft_mb1>;
                 key-positions = <13 22 32>;
-                layers = <CAD>;
-                timeout-ms = <70>;
+                layers = <CAD AML>;
+                timeout-ms = <80>;
             };
             mb1_l_cad {
                 bindings = <&mkp MB1>;
