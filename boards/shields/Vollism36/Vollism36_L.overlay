@@ -59,14 +59,8 @@
         sensor_rotation: sensor_rotation {
             compatible = "zmk,input-processor-sensor-rotation";
             #input-processor-cells = <0>;
-            rotation-angle = <255>;
+            rotation-angle = <100>;
         };
-        // /* 新設：別のレイヤで使いたい角度（例：75度） */
-        // sensor_rotation_alt: sensor_rotation_alt {
-        //     compatible = "zmk,input-processor-sensor-rotation";
-        //     #input-processor-cells = <0>;
-        //     rotation-angle = <75>;  /* ここに対象レイヤで使いたい角度を指定 */
-        // };
 
         xy_to_keys: xy_to_keys {
             compatible = "zmk,input-processor-keybind";
@@ -89,8 +83,10 @@
         ========================================================== */
         l_ble {
             layers = <BLE>;
-            input-processors = <&sensor_rotation>
-                            , <&zip_xy_scaler 100 100>; // スケーリング（100/100）
+            input-processors = 
+                <&sensor_rotation>,
+                <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT)>,
+                <&zip_xy_scaler 100 100>; // スケーリング（100/100）
         };
 
         /* ==========================================================
@@ -100,6 +96,7 @@
             layers = <WINS>;
             input-processors = 
                 <&sensor_rotation>,
+                <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT)>,
                 <&zip_temp_layer AML 100000>,
                 <&zip_xy_scaler 100 100>; // スケーリング（100/100）
         };
@@ -149,7 +146,8 @@
         l_movw {
             layers = <MOVW>; 
             input-processors = 
-                <&sensor_rotation>, 
+                <&sensor_rotation>,
+                <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT)>,
                 <&zip_xy_scaler 200 100>, 
                 <&xy_to_keys>;
             process-next;
@@ -166,7 +164,8 @@
         l_movl {
             layers = <MOVL>; 
             input-processors = 
-                <&sensor_rotation>, 
+                <&sensor_rotation>,
+                <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT)>,
                 <&zip_xy_scaler 200 100>, 
                 <&xy_to_keys>;
             process-next;
@@ -183,7 +182,8 @@
         l_mov {
             layers = <MOV>; 
             input-processors = 
-                <&sensor_rotation>, 
+                <&sensor_rotation>,
+                <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT)>,
                 <&zip_xy_scaler 200 100>, 
                 <&xy_to_keys>;
             process-next;
@@ -201,6 +201,7 @@
             layers = <ADJW>;
             input-processors = 
                 <&sensor_rotation>,
+                <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT)>,
                 <&zip_temp_layer AML 100000>,
                 <&zip_xy_scaler 120 100>; // スケーリング（120/100）
         };
@@ -212,6 +213,7 @@
             layers = <ADJL>;
             input-processors = 
                 <&sensor_rotation>,
+                <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT)>,
                 <&zip_temp_layer AML 100000>,
                 <&zip_xy_scaler 120 100>; // スケーリング（120/100）
         };
@@ -223,6 +225,7 @@
             layers = <ADJ>;
             input-processors = 
                 <&sensor_rotation>,
+                <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT)>,
                 <&zip_temp_layer AML 100000>,
                 <&zip_xy_scaler 120 100>; // スケーリング（120/100）
         };
@@ -234,7 +237,7 @@
             layers = <RSEW>;
             input-processors = 
                 <&sensor_rotation>,
-                <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>,
+                <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT)>,
                 <&zip_xy_scaler 1 30>,
                 <&zip_xy_to_scroll_mapper>,
                 <&zip_xy_scaler 0 1>; 
@@ -247,7 +250,7 @@
             layers = <RSEL>;
             input-processors = 
                 <&sensor_rotation>,
-                <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>,
+                <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT)>,
                 <&zip_xy_scaler 1 30>,
                 <&zip_xy_to_scroll_mapper>,
                 <&zip_xy_scaler 0 1>; 
@@ -260,7 +263,7 @@
             layers = <RSE>;
             input-processors = 
                 <&sensor_rotation>,
-                <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>,
+                <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT)>,
                 <&zip_xy_scaler 1 30>,
                 <&zip_xy_to_scroll_mapper>,
                 <&zip_xy_scaler 0 1>; 
@@ -271,8 +274,10 @@
         ========================================================== */
         l_lwrw {
             layers = <LWRW>;
-            input-processors = <&sensor_rotation>
-                            , <&zip_xy_scaler 80 100>; // スケーリング（80/100）
+            input-processors = 
+                <&sensor_rotation>,
+                <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT)>,
+                <&zip_xy_scaler 50 100>; // スケーリング（50/100）
         };
 
         /* ==========================================================
@@ -280,8 +285,10 @@
         ========================================================== */
         l_lwrl {
             layers = <LWRL>;
-            input-processors = <&sensor_rotation>
-                            , <&zip_xy_scaler 80 100>; // スケーリング（80/100）
+            input-processors = 
+                <&sensor_rotation>,
+                <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT)>,
+                <&zip_xy_scaler 50 100>; // スケーリング（50/100）
         };
 
         /* ==========================================================
@@ -289,8 +296,10 @@
         ========================================================== */
         l_lwr {
             layers = <LWR>;
-            input-processors = <&sensor_rotation>
-                            , <&zip_xy_scaler 80 100>; // スケーリング（80/100）
+            input-processors = 
+                <&sensor_rotation>,
+                <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT)>,
+                <&zip_xy_scaler 50 100>; // スケーリング（50/100）
         };
 
         /* ==========================================================
@@ -300,6 +309,7 @@
             layers = <WIN>;
             input-processors = 
                 <&sensor_rotation>,
+                <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT)>,
                 <&zip_temp_layer AML 100000>,
                 <&zip_xy_scaler 100 100>; // スケーリング（100/100）
         };
@@ -311,6 +321,7 @@
             layers = <CAD>;
             input-processors = 
                 <&sensor_rotation>,
+                <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT)>,
                 <&zip_temp_layer AML 100000>,
                 <&zip_xy_scaler 100 100>; // スケーリング（100/100）
         };
@@ -322,6 +333,7 @@
             layers = <NICL>;
             input-processors = 
                 <&sensor_rotation>,
+                <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT)>,
                 <&zip_temp_layer AML 100000>,
                 <&zip_xy_scaler 100 100>; // スケーリング（100/100）
         };
@@ -333,6 +345,7 @@
             layers = <LIN>;
             input-processors = 
                 <&sensor_rotation>,
+                <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT)>,
                 <&zip_temp_layer AML 100000>,
                 <&zip_xy_scaler 100 100>; // スケーリング（100/100）
         };
@@ -344,6 +357,7 @@
             layers = <NIC>;
             input-processors = 
                 <&sensor_rotation>,
+                <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT)>,
                 <&zip_temp_layer AML 100000>,
                 <&zip_xy_scaler 100 100>; // スケーリング（100/100）
         };
@@ -355,6 +369,7 @@
             layers = <QWE>;
             input-processors = 
                 <&sensor_rotation>,
+                <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT)>,
                 <&zip_temp_layer AML 100000>,
                 <&zip_xy_scaler 120 100>; // スケーリング（120/100）
         };
@@ -390,11 +405,14 @@
 
     trackball: trackball@0 {
         status = "okay";
-        compatible = "pixart,pmw3610";
+        compatible = "pixart,pmw3610-alt";
         reg = <0>;
         spi-max-frequency = <2000000>;
         irq-gpios = <&xiao_d 0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-        automouse-layer = <AML>; /* 自動マウスレイヤーをAMLに設定 */
+        // automouse-layer = <AML>; /* 自動マウスレイヤーをAMLに設定 */
+        evt-type = <INPUT_EV_REL>;
+        x-input-code = <INPUT_REL_X>;
+        y-input-code = <INPUT_REL_Y>;
     };
 };
 
