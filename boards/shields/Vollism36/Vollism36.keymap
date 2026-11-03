@@ -3265,6 +3265,14 @@
                     , <&macro_tap     &kp S>
                     ;
             };
+            // 修飾キーを強制解除するマクロの定義
+            clear_mods: clear_mods {
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings
+                    = <&macro_release &kp LSHFT &kp RSHFT &kp LCTRL &kp RCTRL &kp LALT &kp RALT &kp LGUI &kp RGUI>
+                    ;
+            };
             // mb3_mb1: mb3_mb1 { //FreeCADのマウスボタン3+1 (トグル動作例)
             //     compatible = "zmk,behavior-macro";
             //     #binding-cells = <0>;
@@ -5344,7 +5352,7 @@
             BLE {
                 bindings = <
             // +---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------
-                &sys_reset      &bootloader     &kp INT3        &kp INT6        &mkp MB2                                        &bt BT_CLR_ALL  &m_hi_con   	&kp GRAVE       &bootloader     &sys_reset
+                &clear_mods     &bootloader     &kp INT3        &kp INT6        &mkp MB2                                        &bt BT_CLR_ALL  &m_hi_con   	&kp GRAVE       &bootloader     &sys_reset
                 &kp LC(LG(T))   &kp LC(LG(C))   &kp LC(LG(P))   &kp LC(LG(G))                                   &trans          &trans          &kp LC(LG(E))   &kp LC(LG(A))   &kp LC(LG(L))   &kp LC(LG(X))
                 &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3                                    &to CAD         &bootloader     &bt4_lLIN       &kp TILDE       &kp TILDE2      &kp K_CALC
                                                                 &trans          &mkp MB3        &mkp MB1        &bt BT_CLR      &kp LA(LG(G))   &trans
