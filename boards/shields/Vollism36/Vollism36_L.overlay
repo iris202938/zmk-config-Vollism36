@@ -8,6 +8,7 @@
 #include <dt-bindings/input/input-event-codes.h>
 #include <input/processors/sensor_rotation.dtsi>
 #include <input/processors/zmk-input-processor-keybind.dtsi>
+#include <scroll-snap.dtsi>
 
 #define QWE 0
 #define NIC 1
@@ -112,6 +113,7 @@
                 <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>,
                 <&zip_xy_scaler 1 30>,
                 <&zip_xy_to_scroll_mapper>,
+                <&zip_scroll_snap>,
                 <&zip_xy_scaler 0 1>; 
         };
 
@@ -126,6 +128,7 @@
                 <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>,
                 <&zip_xy_scaler 1 30>,
                 <&zip_xy_to_scroll_mapper>,
+                <&zip_scroll_snap>,
                 <&zip_xy_scaler 0 1>; 
         };
 
@@ -140,6 +143,7 @@
                 <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>,
                 <&zip_xy_scaler 1 30>,
                 <&zip_xy_to_scroll_mapper>,
+                <&zip_scroll_snap>,
                 <&zip_xy_scaler 0 1>; 
         };
 
@@ -244,6 +248,7 @@
                 <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>,
                 <&zip_xy_scaler 1 30>,
                 <&zip_xy_to_scroll_mapper>,
+                <&zip_scroll_snap>,
                 <&zip_xy_scaler 0 1>; 
         };
 
@@ -258,6 +263,7 @@
                 <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>,
                 <&zip_xy_scaler 1 30>,
                 <&zip_xy_to_scroll_mapper>,
+                <&zip_scroll_snap>,
                 <&zip_xy_scaler 0 1>; 
         };
 
@@ -272,6 +278,7 @@
                 <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>,
                 <&zip_xy_scaler 1 30>,
                 <&zip_xy_to_scroll_mapper>,
+                <&zip_scroll_snap>,
                 <&zip_xy_scaler 0 1>; 
         };
 

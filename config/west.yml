@@ -12,8 +12,8 @@ manifest:
       url-base: https://github.com/iris202938
     - name: hsgw
       url-base: https://github.com/hsgw
-    # - name: eswai
-    #   url-base: https://github.com/eswai
+    - name: kot149
+      url-base: https://github.com/kot149
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -38,9 +38,9 @@ manifest:
       remote: badjeff
       revision: main
       path: modules/zmk-input-processor-report-rate-limit
-    # - name: zmk-naginata
-      # remote: eswai
-      # revision: main
+    - name: zmk-scroll-snap
+      remote: kot149
+      revision: v1
   self:
     path: config
     
