@@ -804,7 +804,42 @@
                 layers = <NUMW>;
                 timeout-ms = <80>;
             };
-
+            combo_ctrl_f_e {  // ECAD閉じる
+                bindings = <&ctrl_f_e>;
+                key-positions = <2 12>; // E,Dのキー位置に書き換えてください
+                layers = <LWRW>;
+                timeout-ms = <80>;
+            };
+            combo_ctrl_f_s {  // ECAD上書き保存
+                bindings = <&ctrl_f_s>;
+                key-positions = <1 11>; // W,Sのキー位置に書き換えてください
+                layers = <LWRW>;
+                timeout-ms = <80>;
+            };
+            combo_z_red {  // ECAD属性変更 赤
+                bindings = <&z_red>;
+                key-positions = <19 3>; // Z,Rのキー位置に書き換えてください
+                layers = <LWRW>;
+                timeout-ms = <80>;
+            };
+            combo_z_light_blue {  // ECAD属性変更 薄青
+                bindings = <&z_light_blue>;
+                key-positions = <19 23>; // Z,Bのキー位置に書き換えてください
+                layers = <LWRW>;
+                timeout-ms = <80>;
+            };
+            combo_z_green {  // ECAD属性変更 緑
+                bindings = <&z_green>;
+                key-positions = <19 29>; // Z,Gのキー位置に書き換えてください
+                layers = <LWRW>;
+                timeout-ms = <80>;
+            };
+            combo_z_white {  // ECAD属性変更 白
+                bindings = <&z_white>;
+                key-positions = <19 1>; // Z,Wのキー位置に書き換えてください
+                layers = <LWRW>;
+                timeout-ms = <80>;
+            };
             // exl_ecd_paste {
             //     bindings = <&exl_ecd_paste>;
             //     key-positions = <0 10>;
@@ -3960,10 +3995,24 @@
             ctrl_d_k: ctrl_d_k {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
+                wait-ms = <30>;
+                tap-ms = <30>;
                 bindings
                     = <&macro_press &kp LCTRL>
                     , <&macro_tap &kp D>, <&macro_release &kp LCTRL>
                     , <&macro_tap &kp K>
+                    , <&macro_tap &kp TAB> //1
+                    , <&macro_tap &kp TAB> //2
+                    , <&macro_tap &kp TAB> //3
+                    , <&macro_tap &kp TAB> //4
+                    , <&macro_tap &kp TAB> //5
+                    , <&macro_tap &kp TAB> //6
+                    , <&macro_tap &kp TAB> //7
+                    , <&macro_tap &kp TAB> //8
+                    , <&macro_tap &kp TAB> //9
+                    , <&macro_tap &kp TAB> //10
+                    , <&macro_tap &kp N1>
+                    , <&macro_tap &kp ENTER>
                     ;
             };
 
