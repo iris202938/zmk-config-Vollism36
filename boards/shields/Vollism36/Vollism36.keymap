@@ -4603,6 +4603,7 @@
                     // = <&macro_tap &kp Z>
                     // , <&macro_tap &mkp MB1>
                     = <&macro_tap &kp ENTER>
+                    , <&macro_wait_time 40>
                     , <&macro_tap &kp DOWN> // 下1
                     , <&macro_tap &kp DOWN> // 下2
                     , <&macro_tap &kp DOWN> // 青
@@ -4619,6 +4620,7 @@
                     // = <&macro_tap &kp Z>
                     // , <&macro_tap &mkp MB1>
                     = <&macro_tap &kp ENTER>
+                    , <&macro_wait_time 40>
                     , <&macro_tap &kp DOWN> // 下1
                     , <&macro_tap &kp DOWN> // 下2
                     , <&macro_tap &kp DOWN> // 青
@@ -4638,6 +4640,7 @@
                     // = <&macro_tap &kp Z>
                     // , <&macro_tap &mkp MB1>
                     = <&macro_tap &kp ENTER>
+                    , <&macro_wait_time 40>
                     , <&macro_tap &kp DOWN> // 下1
                     , <&macro_tap &kp DOWN> // 下2
                     , <&macro_tap &kp DOWN> // 青
@@ -4656,6 +4659,7 @@
                     // = <&macro_tap &kp Z>
                     // , <&macro_tap &mkp MB1>
                     = <&macro_tap &kp ENTER>
+                    , <&macro_wait_time 40>
                     , <&macro_tap &kp DOWN> // 下1
                     , <&macro_tap &kp DOWN> // 下2
                     , <&macro_tap &kp DOWN> // 青
