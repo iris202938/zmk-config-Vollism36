@@ -4600,8 +4600,9 @@
                 tap-ms = <30>;
                 #binding-cells = <0>;
                 bindings
-                    = <&macro_tap &kp Z>
-                    , <&macro_tap &mkp MB1>
+                    // = <&macro_tap &kp Z>
+                    // , <&macro_tap &mkp MB1>
+                    = <&macro_tap &kp ENTER>
                     , <&macro_tap &kp DOWN> // 下1
                     , <&macro_tap &kp DOWN> // 下2
                     , <&macro_tap &kp DOWN> // 青
@@ -4615,8 +4616,9 @@
                 tap-ms = <30>;
                 #binding-cells = <0>;
                 bindings
-                    = <&macro_tap &kp Z>
-                    , <&macro_tap &mkp MB1>
+                    // = <&macro_tap &kp Z>
+                    // , <&macro_tap &mkp MB1>
+                    = <&macro_tap &kp ENTER>
                     , <&macro_tap &kp DOWN> // 下1
                     , <&macro_tap &kp DOWN> // 下2
                     , <&macro_tap &kp DOWN> // 青
@@ -4633,8 +4635,9 @@
                 tap-ms = <30>;
                 #binding-cells = <0>;
                 bindings
-                    = <&macro_tap &kp Z>
-                    , <&macro_tap &mkp MB1>
+                    // = <&macro_tap &kp Z>
+                    // , <&macro_tap &mkp MB1>
+                    = <&macro_tap &kp ENTER>
                     , <&macro_tap &kp DOWN> // 下1
                     , <&macro_tap &kp DOWN> // 下2
                     , <&macro_tap &kp DOWN> // 青
@@ -4650,8 +4653,9 @@
                 tap-ms = <30>;
                 #binding-cells = <0>;
                 bindings
-                    = <&macro_tap &kp Z>
-                    , <&macro_tap &mkp MB1>
+                    // = <&macro_tap &kp Z>
+                    // , <&macro_tap &mkp MB1>
+                    = <&macro_tap &kp ENTER>
                     , <&macro_tap &kp DOWN> // 下1
                     , <&macro_tap &kp DOWN> // 下2
                     , <&macro_tap &kp DOWN> // 青
