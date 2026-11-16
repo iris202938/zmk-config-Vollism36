@@ -840,6 +840,12 @@
                 layers = <LWRW>;
                 timeout-ms = <80>;
             };
+            combo_z_yellow {  // ECAD属性変更 黄
+                bindings = <&z_yellow>;
+                key-positions = <20 5>; // Z,Yのキー位置に書き換えてください
+                layers = <LWRW>;
+                timeout-ms = <80>;
+            };
             combo_z_white {  // ECAD属性変更 白
                 bindings = <&z_white>;
                 key-positions = <20 1>; // Z,Wのキー位置に書き換えてください
@@ -4669,6 +4675,27 @@
                     , <&macro_tap &kp RIGHT> // ピンク
                     , <&macro_tap &kp RIGHT> // 緑
                     , <&macro_tap &kp RIGHT> // 薄青
+                    , <&macro_tap &kp ENTER>
+                    ;
+            };
+            z_yellow: z_yellow { // ECAD属性変更 黄
+                compatible = "zmk,behavior-macro";
+                wait-ms = <30>;
+                tap-ms = <30>;
+                #binding-cells = <0>;
+                bindings
+                    // = <&macro_tap &kp Z>
+                    // , <&macro_tap &mkp MB1>
+                    = <&macro_tap &kp ENTER>
+                    , <&macro_wait_time 80>
+                    , <&macro_tap &kp DOWN> // 下1
+                    , <&macro_tap &kp DOWN> // 下2
+                    , <&macro_tap &kp DOWN> // 青
+                    , <&macro_tap &kp RIGHT> // 赤
+                    , <&macro_tap &kp RIGHT> // ピンク
+                    , <&macro_tap &kp RIGHT> // 緑
+                    , <&macro_tap &kp RIGHT> // 薄青
+                    , <&macro_tap &kp RIGHT> // 黄
                     , <&macro_tap &kp ENTER>
                     ;
             };
