@@ -852,6 +852,13 @@
                 layers = <LWRW>;
                 timeout-ms = <80>;
             };
+            combo_macro_unzip {  // 解凍
+                bindings = <&macro_unzip>;
+                key-positions = <13 23>; // F,Vのキー位置に書き換えてください
+                layers = <ADJL ADJW>;
+                timeout-ms = <80>;
+            };
+
             // exl_ecd_paste {
             //     bindings = <&exl_ecd_paste>;
             //     key-positions = <0 10>;
