@@ -108,7 +108,7 @@
             process-next;
         };
 
-        l_movw_prevent {
+        l_ble_prevent {
             layers = <BLE>;
             input-processors = <&zip_xy_scaler 0 1>;
         };
