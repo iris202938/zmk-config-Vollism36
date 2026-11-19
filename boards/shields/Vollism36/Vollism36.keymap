@@ -4014,7 +4014,7 @@
             ctrl_d_k: ctrl_d_k {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
-                wait-ms = <50>;
+                wait-ms = <60>;
                 tap-ms = <30>;
                 bindings
                     = <&macro_press &kp LCTRL>
