@@ -5221,8 +5221,8 @@
             macro_unzip: macro_unzip {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
-                wait-ms = <80>;
-                tap-ms = <30>;
+                wait-ms = <100>;
+                tap-ms = <40>;
                 bindings
                     = <&macro_tap &kp K_APP>
                     , <&macro_wait_time 200>
