@@ -4014,13 +4014,13 @@
             ctrl_d_k: ctrl_d_k {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
-                wait-ms = <60>;
+                wait-ms = <80>;
                 tap-ms = <30>;
                 bindings
                     = <&macro_press &kp LCTRL>
                     , <&macro_tap &kp D>, <&macro_release &kp LCTRL>
                     , <&macro_tap &kp K>
-                    , <&macro_wait_time 80>
+                    , <&macro_wait_time 100>
                     , <&macro_tap &kp TAB> //1
                     , <&macro_tap &kp TAB> //2
                     , <&macro_tap &kp TAB> //3
