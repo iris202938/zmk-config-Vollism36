@@ -4015,7 +4015,7 @@
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
                 wait-ms = <80>;
-                tap-ms = <30>;
+                tap-ms = <40>;
                 bindings
                     = <&macro_press &kp LCTRL>
                     , <&macro_tap &kp D>, <&macro_release &kp LCTRL>
