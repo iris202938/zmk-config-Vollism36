@@ -4014,7 +4014,7 @@
             ctrl_d_k: ctrl_d_k {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
-                wait-ms = <30>;
+                wait-ms = <50>;
                 tap-ms = <30>;
                 bindings
                     = <&macro_press &kp LCTRL>
@@ -5221,7 +5221,7 @@
             macro_unzip: macro_unzip {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
-                wait-ms = <30>;
+                wait-ms = <50>;
                 tap-ms = <30>;
                 bindings
                     = <&macro_tap &kp K_APP>
