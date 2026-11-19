@@ -73,6 +73,21 @@
 			wait-ms = <0>; // 待機時間
 			tap-ms = <50>; // タップ時間
         };
+
+        zip_keybind_keys_file: zip_keybind_keys_file {
+			compatible = "zmk,input-processor-keybind";
+			#input-processor-cells = <0>;
+		track_remainders;
+			bindings = <&nx_pg>  // 右：次ページ切り替え
+					 , <&pr_pg>  // 左：前ページ切り替え
+					 , <&file_r> // 上：ファイルの切り替え逆
+					 , <&file_f> // 下：ファイルの切り替え正
+					 ;
+			tick = <150>;
+			wait-ms = <100>;
+			tap-ms = <50>;
+			mode = <1>;
+        };
     };
 
     trackball_listener_local {
@@ -80,14 +95,22 @@
         device = <&trackball>;
 
         /* ==========================================================
-        Layer 23: BLE (通常マウス)
+        Layer 23: BLE (ファイル切替・ページ切替)
         ========================================================== */
         l_ble {
             layers = <BLE>;
             input-processors = 
                 <&sensor_rotation>,
                 <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT)>,
-                <&zip_xy_scaler 100 100>; // スケーリング（100/100）
+                <&zip_xy_scaler 200 100>, 
+                <&zip_scroll_snap>,
+                <&zip_keybind_keys_file>;
+            process-next;
+        };
+
+        l_ble_prevent {
+            layers = <BLE>;
+            input-processors = <&zip_xy_scaler 0 1>;
         };
 
         /* ==========================================================
