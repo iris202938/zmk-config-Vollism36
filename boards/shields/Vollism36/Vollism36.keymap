@@ -5225,7 +5225,7 @@
                 tap-ms = <30>;
                 bindings
                     = <&macro_tap &kp K_APP>
-                    , <&macro_wait_time 80>
+                    , <&macro_wait_time 200>
                     , <&macro_tap &kp TAB> //1
                     , <&macro_tap &kp TAB> //2
                     , <&macro_tap &kp TAB> //3
@@ -5235,7 +5235,7 @@
                     , <&macro_tap &kp TAB> //7
                     , <&macro_tap &kp TAB> //8
                     , <&macro_tap &kp TAB> //9
-                    , <&macro_tap &kp ENTER>
+                    // , <&macro_tap &kp ENTER>
                     ;
             };
             // Excel: シート名変更マクロ
