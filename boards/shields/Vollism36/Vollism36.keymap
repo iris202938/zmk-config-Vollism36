@@ -5228,21 +5228,13 @@
             macro_unzip: macro_unzip {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
-                wait-ms = <100>;
-                tap-ms = <40>;
+                wait-ms = <80>;
+                tap-ms = <80>;
                 bindings
                     = <&macro_tap &kp K_APP>
-                    , <&macro_wait_time 200>
-                    , <&macro_tap &kp TAB> //1
-                    , <&macro_tap &kp TAB> //2
-                    , <&macro_tap &kp TAB> //3
-                    , <&macro_tap &kp TAB> //4
-                    , <&macro_tap &kp TAB> //5
-                    , <&macro_tap &kp TAB> //6
-                    , <&macro_tap &kp TAB> //7
-                    , <&macro_tap &kp TAB> //8
-                    , <&macro_tap &kp TAB> //9
-                    // , <&macro_tap &kp ENTER>
+                    , <&macro_tap &kp LALT>
+                    , <&macro_tap &kp T>
+                    , <&macro_tap &kp N2>
                     ;
             };
             // Excel: シート名変更マクロ
