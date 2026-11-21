@@ -4037,6 +4037,7 @@
                     , <&macro_tap &kp TAB> //8
                     , <&macro_tap &kp TAB> //9
                     , <&macro_tap &kp TAB> //10
+                    , <&macro_wait_time 100>
                     , <&macro_tap &kp N1>
                     // , <&macro_tap &kp ENTER>
                     ;
