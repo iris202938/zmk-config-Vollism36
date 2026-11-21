@@ -5228,8 +5228,8 @@
             macro_unzip: macro_unzip {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
-                wait-ms = <80>;
-                tap-ms = <80>;
+                wait-ms = <50>;
+                tap-ms = <30>;
                 bindings
                     = <&macro_tap &kp K_APP>
                     , <&macro_tap &kp LALT>
