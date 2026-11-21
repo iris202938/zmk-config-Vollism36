@@ -210,6 +210,12 @@
                 layers = <QWE LIN CAD>;
                 timeout-ms = <80>;
             };
+            combo_minus {
+                bindings = <&kp MINUS>;
+                key-positions = <8 9>;
+                layers = <QWE LIN CAD>;
+                timeout-ms = <80>;
+            };
             alt_slash {
                 bindings = <&file_f>;
                 key-positions = <18 29>;
